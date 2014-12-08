@@ -1,0 +1,111 @@
+.TH "DECRTCDevice" 3 "18 Dec 2013" "Doxygen" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+DECRTCDevice \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <decrtc.h>\fP
+.PP
+Inherits \fBDeviceMap\fP, and \fBDeviceInt\fP.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBClockTrigger\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDECRTCDevice\fP (\fBClock\fP *_clock, uint32 _irq)"
+.br
+.ti -1c
+.RI "virtual \fB~DECRTCDevice\fP ()"
+.br
+.ti -1c
+.RI "uint32 \fBfetch_word\fP (uint32 offset, int mode, \fBDeviceExc\fP *client)"
+.br
+.ti -1c
+.RI "void \fBstore_word\fP (uint32 offset, uint32 data, \fBDeviceExc\fP *client)"
+.br
+.ti -1c
+.RI "const char * \fBdescriptor_str\fP () const "
+.br
+.ti -1c
+.RI "void \fBready_clock\fP ()"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBupdate_host_time\fP ()"
+.br
+.ti -1c
+.RI "struct tm * \fBget_host_time\fP () const "
+.br
+.ti -1c
+.RI "void \fBunready_clock\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBClockTrigger\fP * \fBclock_trigger\fP"
+.br
+.ti -1c
+.RI "\fBClock\fP * \fBclock\fP"
+.br
+.ti -1c
+.RI "uint8 \fBrtc_reg\fP [64]"
+.br
+.ti -1c
+.RI "uint8 \fBwrite_masks\fP [64]"
+.br
+.ti -1c
+.RI "uint32 \fBfrequency_ns\fP"
+.br
+.ti -1c
+.RI "uint32 \fBirq\fP"
+.br
+.ti -1c
+.RI "bool \fBinterrupt_enable\fP"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "DECRTCDevice::DECRTCDevice (\fBClock\fP * _clock, uint32 _irq)"
+.SS "DECRTCDevice::~DECRTCDevice ()\fC [virtual]\fP"
+.SH "Member Function Documentation"
+.PP 
+.SS "const char* DECRTCDevice::descriptor_str (void) const\fC [inline, virtual]\fP"
+.PP
+Implements \fBDeviceInt\fP.
+.SS "uint32 DECRTCDevice::fetch_word (uint32 offset, int mode, \fBDeviceExc\fP * client)\fC [virtual]\fP"
+.PP
+Implements \fBDeviceMap\fP.
+.SS "struct tm * DECRTCDevice::get_host_time () const\fC [read, private]\fP"
+.SS "void DECRTCDevice::ready_clock ()"
+.SS "void DECRTCDevice::store_word (uint32 offset, uint32 data, \fBDeviceExc\fP * client)\fC [virtual]\fP"
+.PP
+Implements \fBDeviceMap\fP.
+.SS "void DECRTCDevice::unready_clock ()\fC [private]\fP"
+.SS "void DECRTCDevice::update_host_time ()\fC [private]\fP"
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBClock\fP* \fBDECRTCDevice::clock\fP\fC [private]\fP"
+.SS "\fBClockTrigger\fP* \fBDECRTCDevice::clock_trigger\fP\fC [private]\fP"
+.SS "uint32 \fBDECRTCDevice::frequency_ns\fP\fC [private]\fP"
+.SS "bool \fBDECRTCDevice::interrupt_enable\fP\fC [private]\fP"
+.SS "uint32 \fBDECRTCDevice::irq\fP\fC [private]\fP"
+.SS "uint8 \fBDECRTCDevice::rtc_reg\fP[64]\fC [private]\fP"
+.SS "uint8 \fBDECRTCDevice::write_masks\fP[64]\fC [private]\fP"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen from the source code.

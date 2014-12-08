@@ -1,0 +1,771 @@
+\hypertarget{classCPU}{
+\section{CPU Class Reference}
+\label{classCPU}\index{CPU@{CPU}}
+}
+Inheritance diagram for CPU:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classCPU}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classCPU_a7e03d573f476dd6b729afed1c7c9085c}{
+uint16 {\bfseries opcode} (const uint32 instr) const }
+\label{classCPU_a7e03d573f476dd6b729afed1c7c9085c}
+
+\item 
+\hypertarget{classCPU_a6a41d0dbc478e502ef7cb599e52a17cc}{
+uint16 {\bfseries rs} (const uint32 instr) const }
+\label{classCPU_a6a41d0dbc478e502ef7cb599e52a17cc}
+
+\item 
+\hypertarget{classCPU_a9697aa735fc4033872a5a6702e6fb60b}{
+uint16 {\bfseries rt} (const uint32 instr) const }
+\label{classCPU_a9697aa735fc4033872a5a6702e6fb60b}
+
+\item 
+\hypertarget{classCPU_a04e2dcd4a7db27fde59a4a8bad328aa3}{
+uint16 {\bfseries rd} (const uint32 instr) const }
+\label{classCPU_a04e2dcd4a7db27fde59a4a8bad328aa3}
+
+\item 
+\hypertarget{classCPU_a30a56a622f0b0330a0623cce118bfa57}{
+uint16 {\bfseries immed} (const uint32 instr) const }
+\label{classCPU_a30a56a622f0b0330a0623cce118bfa57}
+
+\item 
+\hypertarget{classCPU_a71d0d69f2f7099a062379c1fa464eb43}{
+uint16 {\bfseries shamt} (const uint32 instr) const }
+\label{classCPU_a71d0d69f2f7099a062379c1fa464eb43}
+
+\item 
+\hypertarget{classCPU_a8625d083f6783d5f7a46fce21f405441}{
+uint16 {\bfseries funct} (const uint32 instr) const }
+\label{classCPU_a8625d083f6783d5f7a46fce21f405441}
+
+\item 
+\hypertarget{classCPU_a442c4dff6234e6c2476d19c0cdd8fdab}{
+uint32 {\bfseries jumptarg} (const uint32 instr) const }
+\label{classCPU_a442c4dff6234e6c2476d19c0cdd8fdab}
+
+\item 
+\hypertarget{classCPU_a20fac2a174c994dc0e85e3896fab07f7}{
+int16 {\bfseries s\_\-immed} (const uint32 instr) const }
+\label{classCPU_a20fac2a174c994dc0e85e3896fab07f7}
+
+\item 
+\hypertarget{classCPU_a9545138874d05b828db69651ba74d04e}{
+uint32 {\bfseries stacktop} () const }
+\label{classCPU_a9545138874d05b828db69651ba74d04e}
+
+\item 
+\hypertarget{classCPU_a6b45c2cd1ca67d3a7a9af544c49628e8}{
+{\bfseries CPU} (\hyperlink{classMapper}{Mapper} \&m, \hyperlink{classIntCtrl}{IntCtrl} \&i)}
+\label{classCPU_a6b45c2cd1ca67d3a7a9af544c49628e8}
+
+\item 
+\hypertarget{classCPU_aaeb5869fd90b6462918d3d116332d8b5}{
+virtual void {\bfseries dump\_\-regs} (FILE $\ast$f)}
+\label{classCPU_aaeb5869fd90b6462918d3d116332d8b5}
+
+\item 
+\hypertarget{classCPU_ae24bbf9f230ba35d3d11d00e7e449dff}{
+virtual void {\bfseries dump\_\-regs\_\-and\_\-stack} (FILE $\ast$f)}
+\label{classCPU_ae24bbf9f230ba35d3d11d00e7e449dff}
+
+\item 
+\hypertarget{classCPU_af737d7d7d3c78fdae2e614787289ffad}{
+virtual void {\bfseries cpzero\_\-dump\_\-regs\_\-and\_\-tlb} (FILE $\ast$f)}
+\label{classCPU_af737d7d7d3c78fdae2e614787289ffad}
+
+\item 
+\hypertarget{classCPU_af4f84a4193a44aeef676abe4402b8c71}{
+virtual void {\bfseries step} ()}
+\label{classCPU_af4f84a4193a44aeef676abe4402b8c71}
+
+\item 
+\hypertarget{classCPU_acff6e2d8359b7ebea9153ea30b6c7596}{
+char $\ast$const {\bfseries strexccode} (const uint16 excCode)}
+\label{classCPU_acff6e2d8359b7ebea9153ea30b6c7596}
+
+\item 
+\hypertarget{classCPU_a7849dd448a89f9a7ca3f247ed2b9d757}{
+char $\ast$const {\bfseries strdelaystate} (const int state)}
+\label{classCPU_a7849dd448a89f9a7ca3f247ed2b9d757}
+
+\item 
+\hypertarget{classCPU_a5cc22e9cb5a61f8d0c2b226883974e15}{
+char $\ast$const {\bfseries strmemmode} (const int memmode)}
+\label{classCPU_a5cc22e9cb5a61f8d0c2b226883974e15}
+
+\item 
+\hypertarget{classCPU_a585862b2d962819486be215064fce20e}{
+virtual void {\bfseries exception} (uint16 excCode, int mode=ANY, int coprocno=-\/1)}
+\label{classCPU_a585862b2d962819486be215064fce20e}
+
+\item 
+\hypertarget{classCPU_a01e04d32f15a7812673db7fda78c3f33}{
+virtual void {\bfseries reset} (void)}
+\label{classCPU_a01e04d32f15a7812673db7fda78c3f33}
+
+\item 
+\hypertarget{classCPU_ae85238b9e47bee2df7a07eef2cba3e80}{
+void {\bfseries maybe\_\-dump\_\-trace} ()}
+\label{classCPU_ae85238b9e47bee2df7a07eef2cba3e80}
+
+\item 
+\hypertarget{classCPU_a7ab194fa6e72e7941646f095df76bff8}{
+char $\ast$ {\bfseries debug\_\-registers\_\-to\_\-packet} (void)}
+\label{classCPU_a7ab194fa6e72e7941646f095df76bff8}
+
+\item 
+\hypertarget{classCPU_a0fcea0002fb73af0ccdc07c8637b4020}{
+void {\bfseries debug\_\-packet\_\-to\_\-registers} (char $\ast$packet)}
+\label{classCPU_a0fcea0002fb73af0ccdc07c8637b4020}
+
+\item 
+\hypertarget{classCPU_a5be6cb440e54fb4f675fd9d6c1c1cb09}{
+uint8 {\bfseries pending\_\-exception} (void)}
+\label{classCPU_a5be6cb440e54fb4f675fd9d6c1c1cb09}
+
+\item 
+\hypertarget{classCPU_a9c56f582e6047ddd8bd2326c5af8d6f4}{
+uint32 {\bfseries debug\_\-get\_\-pc} (void)}
+\label{classCPU_a9c56f582e6047ddd8bd2326c5af8d6f4}
+
+\item 
+\hypertarget{classCPU_ae91c482028158094c67a9e3c626453e5}{
+void {\bfseries debug\_\-set\_\-pc} (uint32 newpc)}
+\label{classCPU_ae91c482028158094c67a9e3c626453e5}
+
+\item 
+\hypertarget{classCPU_a80b7efe3902cde8b1bab4849aa56d092}{
+void {\bfseries debug\_\-packet\_\-push\_\-word} (char $\ast$packet, uint32 n)}
+\label{classCPU_a80b7efe3902cde8b1bab4849aa56d092}
+
+\item 
+\hypertarget{classCPU_a8d2f406bc498ebe8a5f06c8461668c09}{
+void {\bfseries debug\_\-packet\_\-push\_\-byte} (char $\ast$packet, uint8 n)}
+\label{classCPU_a8d2f406bc498ebe8a5f06c8461668c09}
+
+\item 
+\hypertarget{classCPU_a7a38e0be35e2562521592c90170878fc}{
+int {\bfseries debug\_\-fetch\_\-region} (uint32 addr, uint32 len, char $\ast$packet, \hyperlink{classDeviceExc}{DeviceExc} $\ast$client)}
+\label{classCPU_a7a38e0be35e2562521592c90170878fc}
+
+\item 
+\hypertarget{classCPU_a19ccd19ddb57bcb4dfb13083a989bfe3}{
+int {\bfseries debug\_\-store\_\-region} (uint32 addr, uint32 len, char $\ast$packet, \hyperlink{classDeviceExc}{DeviceExc} $\ast$client)}
+\label{classCPU_a19ccd19ddb57bcb4dfb13083a989bfe3}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classCPU_a801bca1865875594f3d36de6c0764cbb}{
+static int32 {\bfseries srl} (int32, int32)}
+\label{classCPU_a801bca1865875594f3d36de6c0764cbb}
+
+\item 
+\hypertarget{classCPU_a8e214a3b7f472087372e8dc826364304}{
+static int32 {\bfseries sra} (int32, int32)}
+\label{classCPU_a8e214a3b7f472087372e8dc826364304}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classCPU_ac7b1309543175ded1def959bee53bf5f}{
+void {\bfseries start\_\-tracing} ()}
+\label{classCPU_ac7b1309543175ded1def959bee53bf5f}
+
+\item 
+\hypertarget{classCPU_acd376de653b6c7bbf81fc3bb0e359563}{
+void {\bfseries write\_\-trace\_\-to\_\-file} ()}
+\label{classCPU_acd376de653b6c7bbf81fc3bb0e359563}
+
+\item 
+\hypertarget{classCPU_a16485b63e1e7ebf2344cf7f6f959f0ae}{
+void {\bfseries write\_\-trace\_\-instr\_\-inputs} (uint32 instr)}
+\label{classCPU_a16485b63e1e7ebf2344cf7f6f959f0ae}
+
+\item 
+\hypertarget{classCPU_afbaf48c07fa50fbe34921ae1d8fd1330}{
+void {\bfseries write\_\-trace\_\-instr\_\-outputs} (uint32 instr)}
+\label{classCPU_afbaf48c07fa50fbe34921ae1d8fd1330}
+
+\item 
+\hypertarget{classCPU_ac27e6471c16b2ef8db492741c378027d}{
+void {\bfseries write\_\-trace\_\-record\_\-1} (uint32 pc, uint32 instr)}
+\label{classCPU_ac27e6471c16b2ef8db492741c378027d}
+
+\item 
+\hypertarget{classCPU_ad4a6a675396f2e28d2ba597db7a046bb}{
+void {\bfseries write\_\-trace\_\-record\_\-2} (uint32 pc, uint32 instr)}
+\label{classCPU_ad4a6a675396f2e28d2ba597db7a046bb}
+
+\item 
+\hypertarget{classCPU_a4e7a051007781885d65efa15f178f04c}{
+void {\bfseries stop\_\-tracing} ()}
+\label{classCPU_a4e7a051007781885d65efa15f178f04c}
+
+\item 
+\hypertarget{classCPU_a3f626e9294073c7863592d0dc701556e}{
+int {\bfseries exception\_\-priority} (uint16 excCode, int mode)}
+\label{classCPU_a3f626e9294073c7863592d0dc701556e}
+
+\item 
+\hypertarget{classCPU_a634b14f9cd44bb7d9cdafe47944a354c}{
+uint32 {\bfseries calc\_\-jump\_\-target} (uint32 instr, uint32 pc)}
+\label{classCPU_a634b14f9cd44bb7d9cdafe47944a354c}
+
+\item 
+\hypertarget{classCPU_a3a8fb342dcef449afe2b7ee20841baf2}{
+void {\bfseries branch} (uint32 instr, uint32 pc)}
+\label{classCPU_a3a8fb342dcef449afe2b7ee20841baf2}
+
+\item 
+\hypertarget{classCPU_a4351cf31e0eaf15e424bdb33476f42e6}{
+void {\bfseries mult64} (uint32 $\ast$hi, uint32 $\ast$lo, uint32 n, uint32 m)}
+\label{classCPU_a4351cf31e0eaf15e424bdb33476f42e6}
+
+\item 
+\hypertarget{classCPU_a0c8fd1eb3a6ad3f2f33a637ff6f76f01}{
+void {\bfseries mult64s} (uint32 $\ast$hi, uint32 $\ast$lo, int32 n, int32 m)}
+\label{classCPU_a0c8fd1eb3a6ad3f2f33a637ff6f76f01}
+
+\item 
+\hypertarget{classCPU_a715c75aebed3ddb517d7435bce911b8b}{
+void {\bfseries cop\_\-unimpl} (int coprocno, uint32 instr, uint32 pc)}
+\label{classCPU_a715c75aebed3ddb517d7435bce911b8b}
+
+\item 
+\hypertarget{classCPU_a38aa633a220cd3b9fc704f4bb651b518}{
+uint32 {\bfseries lwr} (uint32 regval, uint32 memval, uint8 offset)}
+\label{classCPU_a38aa633a220cd3b9fc704f4bb651b518}
+
+\item 
+\hypertarget{classCPU_af19ad6fc54955e43d233a3c8c0d6eae8}{
+uint32 {\bfseries lwl} (uint32 regval, uint32 memval, uint8 offset)}
+\label{classCPU_af19ad6fc54955e43d233a3c8c0d6eae8}
+
+\item 
+\hypertarget{classCPU_a19ffe3daae5a78ce118f0e293e1e4a44}{
+uint32 {\bfseries swl} (uint32 regval, uint32 memval, uint8 offset)}
+\label{classCPU_a19ffe3daae5a78ce118f0e293e1e4a44}
+
+\item 
+\hypertarget{classCPU_aa1bcf3714f30fdcb8e7439396c7e60f8}{
+uint32 {\bfseries swr} (uint32 regval, uint32 memval, uint8 offset)}
+\label{classCPU_aa1bcf3714f30fdcb8e7439396c7e60f8}
+
+\item 
+\hypertarget{classCPU_a72d2375d4bda77bef899439c7f9b9b0f}{
+virtual void {\bfseries funct\_\-emulate} (uint32 instr, uint32 pc)}
+\label{classCPU_a72d2375d4bda77bef899439c7f9b9b0f}
+
+\item 
+\hypertarget{classCPU_a7f73382ebb68eeb29e5898f2088f3dbb}{
+virtual void {\bfseries regimm\_\-emulate} (uint32 instr, uint32 pc)}
+\label{classCPU_a7f73382ebb68eeb29e5898f2088f3dbb}
+
+\item 
+\hypertarget{classCPU_a6c941506a048425212cda8dff079a9c5}{
+virtual void {\bfseries j\_\-emulate} (uint32 instr, uint32 pc)}
+\label{classCPU_a6c941506a048425212cda8dff079a9c5}
+
+\item 
+\hypertarget{classCPU_aa65d0dc6f6e345d632d962cda7415ffc}{
+virtual void {\bfseries jal\_\-emulate} (uint32 instr, uint32 pc)}
+\label{classCPU_aa65d0dc6f6e345d632d962cda7415ffc}
+
+\item 
+\hypertarget{classCPU_ab8483602543bb291a6bcab1873226e6d}{
+virtual void {\bfseries beq\_\-emulate} (uint32 instr, uint32 pc)}
+\label{classCPU_ab8483602543bb291a6bcab1873226e6d}
+
+\item 
+\hypertarget{classCPU_ae1bbc7bdc294a982307db5dd92f3f29a}{
+virtual void {\bfseries bne\_\-emulate} (uint32 instr, uint32 pc)}
+\label{classCPU_ae1bbc7bdc294a982307db5dd92f3f29a}
+
+\item 
+\hypertarget{classCPU_a07d85530f9f0e3cd63d4e38e770c37df}{
+virtual void {\bfseries blez\_\-emulate} (uint32 instr, uint32 pc)}
+\label{classCPU_a07d85530f9f0e3cd63d4e38e770c37df}
+
+\item 
+\hypertarget{classCPU_ad099b433c0dd31578883fb7aab329c21}{
+virtual void {\bfseries bgtz\_\-emulate} (uint32 instr, uint32 pc)}
+\label{classCPU_ad099b433c0dd31578883fb7aab329c21}
+
+\item 
+\hypertarget{classCPU_ac59325c43ac5db28acdd841fc4755cc2}{
+virtual void {\bfseries addi\_\-emulate} (uint32 instr, uint32 pc)}
+\label{classCPU_ac59325c43ac5db28acdd841fc4755cc2}
+
+\item 
+\hypertarget{classCPU_adcf694d210e2340a1dcba7e1b1d8f147}{
+virtual void {\bfseries addiu\_\-emulate} (uint32 instr, uint32 pc)}
+\label{classCPU_adcf694d210e2340a1dcba7e1b1d8f147}
+
+\item 
+\hypertarget{classCPU_a6e6b0514f1ae4b8a92c5356bda7b6edc}{
+virtual void {\bfseries slti\_\-emulate} (uint32 instr, uint32 pc)}
+\label{classCPU_a6e6b0514f1ae4b8a92c5356bda7b6edc}
+
+\item 
+\hypertarget{classCPU_a7720b01681dae29df475f52a88d687d9}{
+virtual void {\bfseries sltiu\_\-emulate} (uint32 instr, uint32 pc)}
+\label{classCPU_a7720b01681dae29df475f52a88d687d9}
+
+\item 
+\hypertarget{classCPU_a428a65c6ca86430e3d5c34bae25aec4d}{
+virtual void {\bfseries andi\_\-emulate} (uint32 instr, uint32 pc)}
+\label{classCPU_a428a65c6ca86430e3d5c34bae25aec4d}
+
+\item 
+\hypertarget{classCPU_a881a19abc96daf5b3a010660f9f36e81}{
+virtual void {\bfseries ori\_\-emulate} (uint32 instr, uint32 pc)}
+\label{classCPU_a881a19abc96daf5b3a010660f9f36e81}
+
+\item 
+\hypertarget{classCPU_a76461399b3717c9feac047162f95824b}{
+virtual void {\bfseries xori\_\-emulate} (uint32 instr, uint32 pc)}
+\label{classCPU_a76461399b3717c9feac047162f95824b}
+
+\item 
+\hypertarget{classCPU_ab3bb4e55218c71542705abacc85cbbef}{
+virtual void {\bfseries lui\_\-emulate} (uint32 instr, uint32 pc)}
+\label{classCPU_ab3bb4e55218c71542705abacc85cbbef}
+
+\item 
+\hypertarget{classCPU_aab8c941ebf88267b842c8b63092c7df8}{
+virtual void {\bfseries cpzero\_\-emulate} (uint32 instr, uint32 pc)}
+\label{classCPU_aab8c941ebf88267b842c8b63092c7df8}
+
+\item 
+\hypertarget{classCPU_a221f6f3223e32a3b1f3b3d4c68628aac}{
+virtual void {\bfseries cpone\_\-emulate} (uint32 instr, uint32 pc)}
+\label{classCPU_a221f6f3223e32a3b1f3b3d4c68628aac}
+
+\item 
+\hypertarget{classCPU_ae338c1e5c3bc11c4f33bc7654b76edd4}{
+virtual void {\bfseries cptwo\_\-emulate} (uint32 instr, uint32 pc)}
+\label{classCPU_ae338c1e5c3bc11c4f33bc7654b76edd4}
+
+\item 
+\hypertarget{classCPU_a55223ec98f748ce379420d4eba934dbf}{
+virtual void {\bfseries cpthree\_\-emulate} (uint32 instr, uint32 pc)}
+\label{classCPU_a55223ec98f748ce379420d4eba934dbf}
+
+\item 
+\hypertarget{classCPU_a7f7353bd53ccdbd154658895ccb1790b}{
+virtual void {\bfseries lb\_\-emulate} (uint32 instr, uint32 pc)}
+\label{classCPU_a7f7353bd53ccdbd154658895ccb1790b}
+
+\item 
+\hypertarget{classCPU_a2431d002e82968109f1dc358c3e33ef7}{
+virtual void {\bfseries lh\_\-emulate} (uint32 instr, uint32 pc)}
+\label{classCPU_a2431d002e82968109f1dc358c3e33ef7}
+
+\item 
+\hypertarget{classCPU_ac1db353a9a93c7e47aa1f410bc23fec3}{
+virtual void {\bfseries lwl\_\-emulate} (uint32 instr, uint32 pc)}
+\label{classCPU_ac1db353a9a93c7e47aa1f410bc23fec3}
+
+\item 
+\hypertarget{classCPU_a0257d77024421e4c682789a1e981de02}{
+virtual void {\bfseries lw\_\-emulate} (uint32 instr, uint32 pc)}
+\label{classCPU_a0257d77024421e4c682789a1e981de02}
+
+\item 
+\hypertarget{classCPU_a784f872d9934535f849ca5533e6d2344}{
+virtual void {\bfseries lbu\_\-emulate} (uint32 instr, uint32 pc)}
+\label{classCPU_a784f872d9934535f849ca5533e6d2344}
+
+\item 
+\hypertarget{classCPU_a4fee10b21105794779b58964d69788bc}{
+virtual void {\bfseries lhu\_\-emulate} (uint32 instr, uint32 pc)}
+\label{classCPU_a4fee10b21105794779b58964d69788bc}
+
+\item 
+\hypertarget{classCPU_ae7a86c3813087678b5fef55d4b976400}{
+virtual void {\bfseries lwr\_\-emulate} (uint32 instr, uint32 pc)}
+\label{classCPU_ae7a86c3813087678b5fef55d4b976400}
+
+\item 
+\hypertarget{classCPU_a6399b7217b5d74860e5e815b0f36ec45}{
+virtual void {\bfseries sb\_\-emulate} (uint32 instr, uint32 pc)}
+\label{classCPU_a6399b7217b5d74860e5e815b0f36ec45}
+
+\item 
+\hypertarget{classCPU_afcdf6fb7c204c83a587efddbf16dea2e}{
+virtual void {\bfseries sh\_\-emulate} (uint32 instr, uint32 pc)}
+\label{classCPU_afcdf6fb7c204c83a587efddbf16dea2e}
+
+\item 
+\hypertarget{classCPU_ad6e88cf043663ae4d8e72e3bc16ba52d}{
+virtual void {\bfseries swl\_\-emulate} (uint32 instr, uint32 pc)}
+\label{classCPU_ad6e88cf043663ae4d8e72e3bc16ba52d}
+
+\item 
+\hypertarget{classCPU_a4360afbe04f87387ad1d43f7904548da}{
+virtual void {\bfseries sw\_\-emulate} (uint32 instr, uint32 pc)}
+\label{classCPU_a4360afbe04f87387ad1d43f7904548da}
+
+\item 
+\hypertarget{classCPU_a6c8501261f20dbfd3d1b62c63ab8b75b}{
+virtual void {\bfseries swr\_\-emulate} (uint32 instr, uint32 pc)}
+\label{classCPU_a6c8501261f20dbfd3d1b62c63ab8b75b}
+
+\item 
+\hypertarget{classCPU_acc036fc3519f4f57491748a374ea53a4}{
+virtual void {\bfseries lwc1\_\-emulate} (uint32 instr, uint32 pc)}
+\label{classCPU_acc036fc3519f4f57491748a374ea53a4}
+
+\item 
+\hypertarget{classCPU_ab970502c538f46c135abdd5f4de9b81a}{
+virtual void {\bfseries lwc2\_\-emulate} (uint32 instr, uint32 pc)}
+\label{classCPU_ab970502c538f46c135abdd5f4de9b81a}
+
+\item 
+\hypertarget{classCPU_afd81fbeb5e17dfd25d9179bdc7d14db7}{
+virtual void {\bfseries lwc3\_\-emulate} (uint32 instr, uint32 pc)}
+\label{classCPU_afd81fbeb5e17dfd25d9179bdc7d14db7}
+
+\item 
+\hypertarget{classCPU_ad870b60115457a544ea3a918d8857ff1}{
+virtual void {\bfseries swc1\_\-emulate} (uint32 instr, uint32 pc)}
+\label{classCPU_ad870b60115457a544ea3a918d8857ff1}
+
+\item 
+\hypertarget{classCPU_a865e0b2b102058612e50e881cba1d2c2}{
+virtual void {\bfseries swc2\_\-emulate} (uint32 instr, uint32 pc)}
+\label{classCPU_a865e0b2b102058612e50e881cba1d2c2}
+
+\item 
+\hypertarget{classCPU_a203756a36c870eb6a021e4b973aaa323}{
+virtual void {\bfseries swc3\_\-emulate} (uint32 instr, uint32 pc)}
+\label{classCPU_a203756a36c870eb6a021e4b973aaa323}
+
+\item 
+\hypertarget{classCPU_aad350e5ee056964fd731a202cc78bd89}{
+virtual void {\bfseries sll\_\-emulate} (uint32 instr, uint32 pc)}
+\label{classCPU_aad350e5ee056964fd731a202cc78bd89}
+
+\item 
+\hypertarget{classCPU_ac64c37e5dfdb289b3afd52edc2d149da}{
+virtual void {\bfseries srl\_\-emulate} (uint32 instr, uint32 pc)}
+\label{classCPU_ac64c37e5dfdb289b3afd52edc2d149da}
+
+\item 
+\hypertarget{classCPU_a741bf7a0064e8537e6b2928a87d884f7}{
+virtual void {\bfseries sra\_\-emulate} (uint32 instr, uint32 pc)}
+\label{classCPU_a741bf7a0064e8537e6b2928a87d884f7}
+
+\item 
+\hypertarget{classCPU_a70107be5ef7958b4f8dcb16dc6afb508}{
+virtual void {\bfseries sllv\_\-emulate} (uint32 instr, uint32 pc)}
+\label{classCPU_a70107be5ef7958b4f8dcb16dc6afb508}
+
+\item 
+\hypertarget{classCPU_a381d274b6a98e34bee7eaee59b9fcb25}{
+virtual void {\bfseries srlv\_\-emulate} (uint32 instr, uint32 pc)}
+\label{classCPU_a381d274b6a98e34bee7eaee59b9fcb25}
+
+\item 
+\hypertarget{classCPU_ad9cfbc8582d0e893f7f651c7d5862681}{
+virtual void {\bfseries srav\_\-emulate} (uint32 instr, uint32 pc)}
+\label{classCPU_ad9cfbc8582d0e893f7f651c7d5862681}
+
+\item 
+\hypertarget{classCPU_a4f76c106a8442177c26c4d9e8f21ab00}{
+virtual void {\bfseries jr\_\-emulate} (uint32 instr, uint32 pc)}
+\label{classCPU_a4f76c106a8442177c26c4d9e8f21ab00}
+
+\item 
+\hypertarget{classCPU_ac8473a1739c9f36114c17ca090c96029}{
+virtual void {\bfseries jalr\_\-emulate} (uint32 instr, uint32 pc)}
+\label{classCPU_ac8473a1739c9f36114c17ca090c96029}
+
+\item 
+\hypertarget{classCPU_a69221569c1d91b9846ff0b7298b1ed0a}{
+virtual void {\bfseries syscall\_\-emulate} (uint32 instr, uint32 pc)}
+\label{classCPU_a69221569c1d91b9846ff0b7298b1ed0a}
+
+\item 
+\hypertarget{classCPU_a995494b1b1fd54168872ca4f42b29660}{
+virtual void {\bfseries break\_\-emulate} (uint32 instr, uint32 pc)}
+\label{classCPU_a995494b1b1fd54168872ca4f42b29660}
+
+\item 
+\hypertarget{classCPU_a8da9a59554ff9a53472709ee814e74e0}{
+virtual void {\bfseries mfhi\_\-emulate} (uint32 instr, uint32 pc)}
+\label{classCPU_a8da9a59554ff9a53472709ee814e74e0}
+
+\item 
+\hypertarget{classCPU_a64b4ec5e152118af94b96d6d4c91fe17}{
+virtual void {\bfseries mthi\_\-emulate} (uint32 instr, uint32 pc)}
+\label{classCPU_a64b4ec5e152118af94b96d6d4c91fe17}
+
+\item 
+\hypertarget{classCPU_a2d07b1303a8304c8735a73303e8d5910}{
+virtual void {\bfseries mflo\_\-emulate} (uint32 instr, uint32 pc)}
+\label{classCPU_a2d07b1303a8304c8735a73303e8d5910}
+
+\item 
+\hypertarget{classCPU_ae3c368a547d34fc80304e37803b72aa4}{
+virtual void {\bfseries mtlo\_\-emulate} (uint32 instr, uint32 pc)}
+\label{classCPU_ae3c368a547d34fc80304e37803b72aa4}
+
+\item 
+\hypertarget{classCPU_a647a5f5891972fd74c5890912a8555c0}{
+virtual void {\bfseries mult\_\-emulate} (uint32 instr, uint32 pc)}
+\label{classCPU_a647a5f5891972fd74c5890912a8555c0}
+
+\item 
+\hypertarget{classCPU_af8628854d517536beef3881efe38fd49}{
+virtual void {\bfseries multu\_\-emulate} (uint32 instr, uint32 pc)}
+\label{classCPU_af8628854d517536beef3881efe38fd49}
+
+\item 
+\hypertarget{classCPU_ab95168699ff1d7584235ee5c809f44b1}{
+virtual void {\bfseries div\_\-emulate} (uint32 instr, uint32 pc)}
+\label{classCPU_ab95168699ff1d7584235ee5c809f44b1}
+
+\item 
+\hypertarget{classCPU_a2b590f2e5e763f6da34d0fcea9e7c8f9}{
+virtual void {\bfseries divu\_\-emulate} (uint32 instr, uint32 pc)}
+\label{classCPU_a2b590f2e5e763f6da34d0fcea9e7c8f9}
+
+\item 
+\hypertarget{classCPU_ad0484160ae69b0ac2846b1b3b0b1999c}{
+virtual void {\bfseries add\_\-emulate} (uint32 instr, uint32 pc)}
+\label{classCPU_ad0484160ae69b0ac2846b1b3b0b1999c}
+
+\item 
+\hypertarget{classCPU_ab3e34c227c2b9fdedb4864bff4b74b58}{
+virtual void {\bfseries addu\_\-emulate} (uint32 instr, uint32 pc)}
+\label{classCPU_ab3e34c227c2b9fdedb4864bff4b74b58}
+
+\item 
+\hypertarget{classCPU_a2068ff82e63f8cc9d1c592bf43beb136}{
+virtual void {\bfseries sub\_\-emulate} (uint32 instr, uint32 pc)}
+\label{classCPU_a2068ff82e63f8cc9d1c592bf43beb136}
+
+\item 
+\hypertarget{classCPU_a021ea426761c59fa7ffcfbcd4e66a645}{
+virtual void {\bfseries subu\_\-emulate} (uint32 instr, uint32 pc)}
+\label{classCPU_a021ea426761c59fa7ffcfbcd4e66a645}
+
+\item 
+\hypertarget{classCPU_a692f230fa6a061aea3c841c7370f6d1c}{
+virtual void {\bfseries and\_\-emulate} (uint32 instr, uint32 pc)}
+\label{classCPU_a692f230fa6a061aea3c841c7370f6d1c}
+
+\item 
+\hypertarget{classCPU_aafea7d93d1b958836509d66dd0e7076a}{
+virtual void {\bfseries or\_\-emulate} (uint32 instr, uint32 pc)}
+\label{classCPU_aafea7d93d1b958836509d66dd0e7076a}
+
+\item 
+\hypertarget{classCPU_a1ba85e418ee61a271a9aafbfde3351d7}{
+virtual void {\bfseries xor\_\-emulate} (uint32 instr, uint32 pc)}
+\label{classCPU_a1ba85e418ee61a271a9aafbfde3351d7}
+
+\item 
+\hypertarget{classCPU_a083835bce0c15e35ca834d0a0ecf2d22}{
+virtual void {\bfseries nor\_\-emulate} (uint32 instr, uint32 pc)}
+\label{classCPU_a083835bce0c15e35ca834d0a0ecf2d22}
+
+\item 
+\hypertarget{classCPU_a559d3f67d5b4119fe3fd595132a5185e}{
+virtual void {\bfseries slt\_\-emulate} (uint32 instr, uint32 pc)}
+\label{classCPU_a559d3f67d5b4119fe3fd595132a5185e}
+
+\item 
+\hypertarget{classCPU_ab96315f07f7fa574462e490bfdcfab3a}{
+virtual void {\bfseries sltu\_\-emulate} (uint32 instr, uint32 pc)}
+\label{classCPU_ab96315f07f7fa574462e490bfdcfab3a}
+
+\item 
+\hypertarget{classCPU_a646c50f8a1c19a8969417b746006a858}{
+virtual void {\bfseries bltz\_\-emulate} (uint32 instr, uint32 pc)}
+\label{classCPU_a646c50f8a1c19a8969417b746006a858}
+
+\item 
+\hypertarget{classCPU_a2a254799bd1e3545a1ec4d0cb65bb46e}{
+virtual void {\bfseries bgez\_\-emulate} (uint32 instr, uint32 pc)}
+\label{classCPU_a2a254799bd1e3545a1ec4d0cb65bb46e}
+
+\item 
+\hypertarget{classCPU_aff3e31b1a382ffc29f1ac7ba522735d8}{
+virtual void {\bfseries bltzal\_\-emulate} (uint32 instr, uint32 pc)}
+\label{classCPU_aff3e31b1a382ffc29f1ac7ba522735d8}
+
+\item 
+\hypertarget{classCPU_a14fa3b5c3dd0d71e36a71d7d3615cac9}{
+virtual void {\bfseries bgezal\_\-emulate} (uint32 instr, uint32 pc)}
+\label{classCPU_a14fa3b5c3dd0d71e36a71d7d3615cac9}
+
+\item 
+\hypertarget{classCPU_a2220cac151f1745874a46eed35761ddb}{
+virtual void {\bfseries RI\_\-emulate} (uint32 instr, uint32 pc)}
+\label{classCPU_a2220cac151f1745874a46eed35761ddb}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classCPU_a30e8bf76edeea76f1f19a3bf7588f08a}{
+bool {\bfseries tracing}}
+\label{classCPU_a30e8bf76edeea76f1f19a3bf7588f08a}
+
+\item 
+\hypertarget{classCPU_acf034d26af3bd99a779aa8cb03e4670b}{
+\hyperlink{classTrace}{Trace} {\bfseries current\_\-trace}}
+\label{classCPU_acf034d26af3bd99a779aa8cb03e4670b}
+
+\item 
+\hypertarget{classCPU_a07aec7e8072099db8530d76af2335014}{
+\hyperlink{structTrace_1_1Record}{Trace::Record} {\bfseries current\_\-trace\_\-record}}
+\label{classCPU_a07aec7e8072099db8530d76af2335014}
+
+\item 
+\hypertarget{classCPU_a814367f222141355ec6deb579b6f0c58}{
+uint32 {\bfseries pc}}
+\label{classCPU_a814367f222141355ec6deb579b6f0c58}
+
+\item 
+\hypertarget{classCPU_a2a203ccf5813098e0dbedff0e47a76d3}{
+uint32 {\bfseries reg} \mbox{[}CPU\_\-REG\_\-NUMBER\mbox{]}}
+\label{classCPU_a2a203ccf5813098e0dbedff0e47a76d3}
+
+\item 
+\hypertarget{classCPU_ad754b47111e41660a7707bf0002bfa76}{
+uint32 {\bfseries instr}}
+\label{classCPU_ad754b47111e41660a7707bf0002bfa76}
+
+\item 
+\hypertarget{classCPU_af3f7d0decfadf0044fca99c868108055}{
+uint32 {\bfseries hi}}
+\label{classCPU_af3f7d0decfadf0044fca99c868108055}
+
+\item 
+\hypertarget{classCPU_a0ae013325ebf52209475496f1e45264d}{
+uint32 {\bfseries lo}}
+\label{classCPU_a0ae013325ebf52209475496f1e45264d}
+
+\item 
+\hypertarget{classCPU_a9474f06e26d535fb212ca3b594729214}{
+uint32 {\bfseries last\_\-epc}}
+\label{classCPU_a9474f06e26d535fb212ca3b594729214}
+
+\item 
+\hypertarget{classCPU_a5e994b9bd7c9e4cdd9f96c05b8628508}{
+int {\bfseries last\_\-prio}}
+\label{classCPU_a5e994b9bd7c9e4cdd9f96c05b8628508}
+
+\item 
+\hypertarget{classCPU_a6c4ebc6669d7ae0a967877f71edba69a}{
+uint32 {\bfseries next\_\-epc}}
+\label{classCPU_a6c4ebc6669d7ae0a967877f71edba69a}
+
+\item 
+\hypertarget{classCPU_ab29063010314e2c43e895175dcaa5da8}{
+\hyperlink{classMapper}{Mapper} $\ast$ {\bfseries mem}}
+\label{classCPU_ab29063010314e2c43e895175dcaa5da8}
+
+\item 
+\hypertarget{classCPU_ad63e0dcf43cf8203364537060f74f606}{
+\hyperlink{classCPZero}{CPZero} $\ast$ {\bfseries cpzero}}
+\label{classCPU_ad63e0dcf43cf8203364537060f74f606}
+
+\item 
+\hypertarget{classCPU_afce2b5a5943b8c065445c5c42a838a7a}{
+int {\bfseries delay\_\-state}}
+\label{classCPU_afce2b5a5943b8c065445c5c42a838a7a}
+
+\item 
+\hypertarget{classCPU_ae574769b3080a6e127e1cd4c197aca24}{
+uint32 {\bfseries delay\_\-pc}}
+\label{classCPU_ae574769b3080a6e127e1cd4c197aca24}
+
+\item 
+\hypertarget{classCPU_ab0d52929cc1df68657aba325d6e54316}{
+bool {\bfseries opt\_\-excmsg}}
+\label{classCPU_ab0d52929cc1df68657aba325d6e54316}
+
+\item 
+\hypertarget{classCPU_a1af3a29649ffaa317ada183a9d4cf5e6}{
+bool {\bfseries opt\_\-reportirq}}
+\label{classCPU_a1af3a29649ffaa317ada183a9d4cf5e6}
+
+\item 
+\hypertarget{classCPU_a5beb05958a1b9f3a1fdb22ce76ec5eb3}{
+bool {\bfseries opt\_\-excpriomsg}}
+\label{classCPU_a5beb05958a1b9f3a1fdb22ce76ec5eb3}
+
+\item 
+\hypertarget{classCPU_a0ba7f30aa285d7dce17cbe1e7aceade3}{
+bool {\bfseries opt\_\-haltbreak}}
+\label{classCPU_a0ba7f30aa285d7dce17cbe1e7aceade3}
+
+\item 
+\hypertarget{classCPU_a2c30e69ecfc26798e226c3393dfbc00a}{
+bool {\bfseries opt\_\-haltibe}}
+\label{classCPU_a2c30e69ecfc26798e226c3393dfbc00a}
+
+\item 
+\hypertarget{classCPU_a6143c857e05b425ac338f02bec98acc9}{
+bool {\bfseries opt\_\-haltjrra}}
+\label{classCPU_a6143c857e05b425ac338f02bec98acc9}
+
+\item 
+\hypertarget{classCPU_ac110631313f904bec3a220d09ff2059e}{
+bool {\bfseries opt\_\-instdump}}
+\label{classCPU_ac110631313f904bec3a220d09ff2059e}
+
+\item 
+\hypertarget{classCPU_a71cb0088ee9232425f0d91b2515e63c7}{
+bool {\bfseries opt\_\-tracing}}
+\label{classCPU_a71cb0088ee9232425f0d91b2515e63c7}
+
+\item 
+\hypertarget{classCPU_ad4b5995ace46f91553d1587748bce505}{
+uint32 {\bfseries opt\_\-tracesize}}
+\label{classCPU_ad4b5995ace46f91553d1587748bce505}
+
+\item 
+\hypertarget{classCPU_af9bf7995b16fdb0835c5ab6b6ab615d5}{
+uint32 {\bfseries opt\_\-tracestartpc}}
+\label{classCPU_af9bf7995b16fdb0835c5ab6b6ab615d5}
+
+\item 
+\hypertarget{classCPU_a9f48aa68d5317676ff8f433fe5605149}{
+uint32 {\bfseries opt\_\-traceendpc}}
+\label{classCPU_a9f48aa68d5317676ff8f433fe5605149}
+
+\item 
+\hypertarget{classCPU_a72f0d1686f2261398e815a9e5658de69}{
+bool {\bfseries opt\_\-bigendian}}
+\label{classCPU_a72f0d1686f2261398e815a9e5658de69}
+
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classCPU_ae03ffac5ee6974e43cec96baf6063c70}{
+class \hyperlink{classCPU_ae03ffac5ee6974e43cec96baf6063c70}{CPZero}}
+\label{classCPU_ae03ffac5ee6974e43cec96baf6063c70}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+cpu.h\item 
+cpu.cc\end{DoxyCompactItemize}

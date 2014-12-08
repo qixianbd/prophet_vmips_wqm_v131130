@@ -1,0 +1,79 @@
+.TH "Clock" 3 "18 Dec 2013" "Doxygen" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Clock \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <clock.h>\fP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBDeferredTasks\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBClock\fP (const timespec &start_time)  throw ()"
+.br
+.ti -1c
+.RI "virtual \fB~Clock\fP ()  throw ()"
+.br
+.ti -1c
+.RI "virtual void \fBincrement_time\fP (long nanoseconds)"
+.br
+.ti -1c
+.RI "virtual void \fBpass_realtime\fP (uint32 timeratio)  throw ()"
+.br
+.ti -1c
+.RI "virtual void \fBadd_deferred_task\fP (\fBTask\fP *task, long nanoseconds)"
+.br
+.ti -1c
+.RI "virtual timespec \fBget_time\fP ()  throw ()"
+.br
+.ti -1c
+.RI "virtual void \fBset_time\fP (const timespec &\fBtime\fP)  throw ()"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "timespec \fBtime\fP"
+.br
+.ti -1c
+.RI "timespec \fBthen\fP"
+.br
+.ti -1c
+.RI "long \fBspill_ns\fP"
+.br
+.ti -1c
+.RI "std::list< \fBDeferredTasks\fP * > \fBdeferred_tasks\fP"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Clock::Clock (const timespec & start_time)  throw ()"
+.SS "Clock::~Clock ()  throw ()\fC [virtual]\fP"
+.SH "Member Function Documentation"
+.PP 
+.SS "void Clock::add_deferred_task (\fBTask\fP * task, long nanoseconds)\fC [virtual]\fP"
+.SS "timespec Clock::get_time ()  throw ()\fC [virtual]\fP"
+.SS "void Clock::increment_time (long nanoseconds)\fC [virtual]\fP"
+.SS "void Clock::pass_realtime (uint32 timeratio)  throw ()\fC [virtual]\fP"
+.SS "void Clock::set_time (const timespec & time)  throw ()\fC [virtual]\fP"
+.SH "Member Data Documentation"
+.PP 
+.SS "std::list< \fBDeferredTasks\fP* > \fBClock::deferred_tasks\fP\fC [protected]\fP"
+.SS "long \fBClock::spill_ns\fP\fC [protected]\fP"
+.SS "timespec \fBClock::then\fP\fC [protected]\fP"
+.SS "timespec \fBClock::time\fP\fC [protected]\fP"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen from the source code.

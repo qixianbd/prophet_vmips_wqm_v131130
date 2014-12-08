@@ -1,0 +1,94 @@
+.TH "Trace" 3 "18 Dec 2013" "Doxygen" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Trace \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <cpu.h>\fP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBOperand\fP"
+.br
+.ti -1c
+.RI "struct \fBRecord\fP"
+.br
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef std::deque< \fBRecord\fP > \fBRecordListType\fP"
+.br
+.ti -1c
+.RI "typedef RecordListType::iterator \fBrecord_iterator\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBrecord_iterator\fP \fBrbegin\fP ()"
+.br
+.ti -1c
+.RI "\fBrecord_iterator\fP \fBrend\fP ()"
+.br
+.ti -1c
+.RI "void \fBclear\fP ()"
+.br
+.ti -1c
+.RI "size_t \fBrecord_size\fP () const "
+.br
+.ti -1c
+.RI "void \fBpop_front_record\fP ()"
+.br
+.ti -1c
+.RI "void \fBpush_back_record\fP (\fBTrace::Record\fP &r)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "std::map< int, \fBlast_change\fP > \fBlast_change_for_reg\fP"
+.br
+.ti -1c
+.RI "bool \fBexception_happened\fP"
+.br
+.ti -1c
+.RI "int \fBlast_exception_code\fP"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBRecordListType\fP \fBrecords\fP"
+.br
+.in -1c
+.SH "Member Typedef Documentation"
+.PP 
+.SS "typedef RecordListType::iterator \fBTrace::record_iterator\fP"
+.SS "typedef std::deque<\fBRecord\fP> \fBTrace::RecordListType\fP"
+.SH "Member Function Documentation"
+.PP 
+.SS "void Trace::clear ()\fC [inline]\fP"
+.SS "void Trace::pop_front_record ()\fC [inline]\fP"
+.SS "void Trace::push_back_record (\fBTrace::Record\fP & r)\fC [inline]\fP"
+.SS "\fBrecord_iterator\fP Trace::rbegin ()\fC [inline]\fP"
+.SS "size_t Trace::record_size () const\fC [inline]\fP"
+.SS "\fBrecord_iterator\fP Trace::rend ()\fC [inline]\fP"
+.SH "Member Data Documentation"
+.PP 
+.SS "bool \fBTrace::exception_happened\fP"
+.SS "std::map<int, \fBlast_change\fP> \fBTrace::last_change_for_reg\fP"
+.SS "int \fBTrace::last_exception_code\fP"
+.SS "\fBRecordListType\fP \fBTrace::records\fP\fC [private]\fP"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen from the source code.

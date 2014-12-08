@@ -1,0 +1,29 @@
+digraph G
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir=LR;
+  Node1 [label="CPU::write_trace_record_2",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="last_change::make",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structlast__change.html#a8371a85941a88825f636d36a56a22d28"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="Trace::pop_front_record",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classTrace.html#a86280544f756d1de4ca1b2ac94343a3e"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="Trace::push_back_record",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classTrace.html#a047322e249c7d70db314689bea6dc2e0"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="Trace::record_size",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classTrace.html#a80451c390ed1f70bba6b4ed422b8bfa3"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="CPU::write_trace_instr_outputs",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classCPU.html#afbaf48c07fa50fbe34921ae1d8fd1330"];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="CPU::funct",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classCPU.html#a8625d083f6783d5f7a46fce21f405441"];
+  Node6 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="CPU::opcode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classCPU.html#a7e03d573f476dd6b729afed1c7c9085c"];
+  Node6 -> Node9 [color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="Trace::Record::outputs_push_back_op",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structTrace_1_1Record.html#a61484ad788baaa57462ebfb23637942d"];
+  Node9 -> Node10 [color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="Trace::Operand::make",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structTrace_1_1Operand.html#a447d15d9296741d1932284be020a7e72"];
+  Node6 -> Node11 [color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="CPU::rd",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classCPU.html#a04e2dcd4a7db27fde59a4a8bad328aa3"];
+  Node6 -> Node12 [color="midnightblue",fontsize="10",style="solid"];
+  Node12 [label="CPU::rt",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classCPU.html#a9697aa735fc4033872a5a6702e6fb60b"];
+}

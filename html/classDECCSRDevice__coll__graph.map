@@ -1,0 +1,5 @@
+<map id="G" name="G">
+<area shape="rect" href="$classDeviceMap.html" title="DeviceMap" alt="" coords="5,83,91,112"/>
+<area shape="rect" href="$classRange.html" title="Range" alt="" coords="19,5,77,35"/>
+<area shape="rect" href="$classDeviceInt.html" title="DeviceInt" alt="" coords="115,83,189,112"/>
+</map>

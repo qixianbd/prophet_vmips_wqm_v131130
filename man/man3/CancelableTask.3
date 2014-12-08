@@ -1,0 +1,64 @@
+.TH "CancelableTask" 3 "18 Dec 2013" "Doxygen" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+CancelableTask \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <task.h>\fP
+.PP
+Inherits \fBTask\fP.
+.PP
+Inherited by \fBClockDevice::ClockTrigger\fP, \fBDECRTCDevice::ClockTrigger\fP, \fBSpimConsoleDevice::ClockTrigger\fP, \fBTerminalController::DisplayDelay\fP, \fBTerminalController::KeyboardPoll\fP, and \fBTerminalController::KeyboardRepoll\fP.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCancelableTask\fP ()  throw ()"
+.br
+.ti -1c
+.RI "virtual \fB~CancelableTask\fP ()  throw ()"
+.br
+.ti -1c
+.RI "virtual void \fBcancel\fP ()  throw ()"
+.br
+.ti -1c
+.RI "virtual void \fBtask\fP ()"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBreal_task\fP ()=0"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "bool \fBneeded\fP"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "CancelableTask::CancelableTask ()  throw ()\fC [inline]\fP"
+.SS "virtual CancelableTask::~CancelableTask ()  throw ()\fC [inline, virtual]\fP"
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual void CancelableTask::cancel ()  throw ()\fC [inline, virtual]\fP"
+.SS "virtual void CancelableTask::real_task ()\fC [protected, pure virtual]\fP"
+.PP
+Implemented in \fBClockDevice::ClockTrigger\fP, \fBDECRTCDevice::ClockTrigger\fP, \fBSpimConsoleDevice::ClockTrigger\fP, \fBTerminalController::DisplayDelay\fP, \fBTerminalController::KeyboardRepoll\fP, and \fBTerminalController::KeyboardPoll\fP.
+.SS "virtual void CancelableTask::task ()\fC [inline, virtual]\fP"
+.PP
+Implements \fBTask\fP.
+.SH "Member Data Documentation"
+.PP 
+.SS "bool \fBCancelableTask::needed\fP\fC [protected]\fP"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen from the source code.

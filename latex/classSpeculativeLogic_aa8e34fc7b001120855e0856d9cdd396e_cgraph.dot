@@ -1,0 +1,23 @@
+digraph G
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir=LR;
+  Node1 [label="SpeculativeLogic::SquashSubthread",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="ProphetStat::ProphetCpuStat::getProCpuStatInstance",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classProphetStat_1_1ProphetCpuStat.html#a1dfee1a62c17b8e9035b68563368702e"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="Options::option",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classOptions.html#a3a535c4c76588d00f62c9817bc0ff63b"];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="fatal_error",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$error_8cc.html#ab5b64997b285ceb84915e7f321b4db20"];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="format_help",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$error_8cc.html#aa182c84a77010100b5b8a15b1ff22e70"];
+  Node3 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="Options::optstruct",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classOptions.html#a4a9be4a96d5b12a8abb469fef02af7ee"];
+  Node2 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="ProphetStat::ProphetCpuStat::ProphetCpuStat",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classProphetStat_1_1ProphetCpuStat.html#aa31ca8b7cbaa45a3fd2260a2ac5a17f4"];
+  Node7 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="ProphetStat::SquashOnSpList::getInstance",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classProphetStat_1_1SquashOnSpList.html#a7ab26166ecb4d874d08b565c287e7124"];
+  Node8 -> Node9 [color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="ProphetStat::SquashOnSpList::SquashOnSpList",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classProphetStat_1_1SquashOnSpList.html#abd011c56edcddd7a11e806c3174805bf"];
+}

@@ -1,0 +1,95 @@
+testcaseName             	freeTime    	psliceTime  	SquashTime  	waitTime    	Sptime      	NoSpTime    
+testcase/em3d.rom        	0.000000    	0.000000    	0.000000    	0.000000    	0.000000    	1.000000    	   
+testcase/em3d.rom        	0.159598    	0.165929    	0.010420    	0.000265    	0.043043    	0.620745    	   
+testcase/em3d.rom        	0.355675    	0.156779    	0.048124    	0.000269    	0.143965    	0.295187    	   
+testcase/em3d.rom        	0.556944    	0.123890    	0.038770    	0.000650    	0.136756    	0.142991    	
+
+
+
+testcase/em3d.rom2       	0.159598    	0.165929    	0.010420    	0.000265    	0.043043    	0.620745    	   
+testcase/em3d.rom4       	0.355675    	0.156779    	0.048124    	0.000269    	0.143965    	0.295187    	
+testcase/em3d.rom8       	0.556944    	0.123890    	0.038770    	0.000650    	0.136756    	0.142991    	
+******************************CpuTime***************************
+testcaseName             	freeTime    	psliceTime  	SquashTime  	waitTime    	Sptime      	NoSpTime    
+testcase/em3d.rom2       	0.157412    	0.163656    	0.010278    	0.000262    	0.042453    	0.625939    	
+******************************CpuTime***************************
+testcaseName             	freeTime    	psliceTime  	SquashTime  	waitTime    	Sptime      	NoSpTime    
+testcase/em3d.rom2       	0.157412    	0.163656    	0.010278    	0.000262    	0.042453    	0.625939    	
+******************************CpuTime***************************
+testcaseName             	freeTime    	psliceTime  	SquashTime  	waitTime    	Sptime      	NoSpTime    
+testcase/em3d.rom2       	0.157412    	0.163656    	0.010278    	0.000262    	0.042453    	0.625939    	
+******************************CpuTime***************************
+testcaseName             	freeTime    	psliceTime  	SquashTime  	waitTime    	Sptime      	NoSpTime    
+testcase/em3d.rom2       	0.157412    	0.163656    	0.010278    	0.000262    	0.042453    	0.625939    	
+******************************CpuTime***************************
+testcaseName             	freeTime    	psliceTime  	SquashTime  	waitTime    	Sptime      	NoSpTime    
+testcase/em3d.rom2       	0.157412    	0.163656    	0.010278    	0.000262    	0.042453    	0.625939    	
+******************************CpuTime***************************
+testcaseName             	freeTime    	psliceTime  	SquashTime  	waitTime    	Sptime      	NoSpTime    
+testcase/em3d.rom2       	0.157412    	0.163656    	0.010278    	0.000262    	0.042453    	0.625939    	
+******************************CpuTime***************************
+testcaseName             	freeTime    	psliceTime  	SquashTime  	waitTime    	Sptime      	NoSpTime    
+testcase/em3d.rom8       	0.565233    	0.118822    	0.037184    	0.000702    	0.131162    	0.146897    	
+******************************CpuTime***************************
+testcaseName             	freeTime    	psliceTime  	SquashTime  	waitTime    	Sptime      	NoSpTime    
+testcase/em3d.rom8       	0.565233    	0.118822    	0.037184    	0.000702    	0.131162    	0.146897    	
+******************************CpuTime***************************
+testcaseName             	freeTime    	psliceTime  	SquashTime  	waitTime    	Sptime      	NoSpTime    
+testcase/em3d.rom8       	0.565233    	0.118822    	0.037184    	0.000702    	0.131162    	0.146897    	
+******************************CpuTime***************************
+testcaseName             	freeTime    	psliceTime  	SquashTime  	waitTime    	Sptime      	NoSpTime    
+testcase/em3d.rom8       	0.565233    	0.118822    	0.037184    	0.000702    	0.131162    	0.146897    	
+******************************CpuTime***************************
+testcaseName             	freeTime    	psliceTime  	SquashTime  	waitTime    	Sptime      	NoSpTime    
+testcase/em3d.rom1       	0.000000    	0.000000    	0.000000    	0.000000    	0.000000    	1.000000    	
+******************************CpuTime***************************
+testcaseName             	freeTime    	psliceTime  	SquashTime  	waitTime    	Sptime      	NoSpTime    
+testcase/em3d.rom4       	0.358454    	0.152765    	0.046892    	0.000275    	0.140280    	0.301334    	
+******************************CpuTime***************************
+testcaseName             	freeTime    	psliceTime  	SquashTime  	waitTime    	Sptime      	NoSpTime    
+testcase/bh.rom4         	0.488188    	0.121538    	0.024012    	0.000013    	0.095820    	0.270429    	
+******************************CpuTime***************************
+testcaseName             	freeTime    	psliceTime  	SquashTime  	waitTime    	Sptime      	NoSpTime    
+testcase/bh.rom1         	0.000000    	0.000000    	0.000000    	0.000000    	0.000000    	1.000000    	
+******************************CpuTime***************************
+testcaseName             	freeTime    	psliceTime  	SquashTime  	waitTime    	Sptime      	NoSpTime    
+testcase/bisort.rom1     	0.000000    	0.000000    	0.000000    	0.000000    	0.000000    	1.000000    	
+******************************CpuTime***************************
+testcaseName             	freeTime    	psliceTime  	SquashTime  	waitTime    	Sptime      	NoSpTime    
+testcase/bisort.rom4     	0.421791    	0.092328    	0.148613    	0.000009    	0.050217    	0.287041    	
+******************************CpuTime***************************
+testcaseName             	freeTime    	psliceTime  	SquashTime  	waitTime    	Sptime      	NoSpTime    
+testcase/tsp.rom4        	0.416879    	0.149858    	0.143007    	0.000000    	0.030546    	0.259710    	
+******************************CpuTime***************************
+testcaseName             	freeTime    	psliceTime  	SquashTime  	waitTime    	Sptime      	NoSpTime    
+testcase/tsp.rom1        	0.000000    	0.000000    	0.000000    	0.000000    	0.000000    	1.000000    	
+******************************CpuTime***************************
+testcaseName             	freeTime    	psliceTime  	SquashTime  	waitTime    	Sptime      	NoSpTime    
+testcase/health.rom1     	0.000000    	0.000000    	0.000000    	0.000000    	0.000000    	1.000000    	
+******************************CpuTime***************************
+testcaseName             	freeTime    	psliceTime  	SquashTime  	waitTime    	Sptime      	NoSpTime    
+testcase/health.rom1     	0.000000    	0.000000    	0.000000    	0.000000    	0.000000    	1.000000    	
+******************************CpuTime***************************
+testcaseName             	freeTime    	psliceTime  	SquashTime  	waitTime    	Sptime      	NoSpTime    
+testcase/treeadd.rom1    	0.000000    	0.000000    	0.000000    	0.000000    	0.000000    	1.000000    	
+******************************CpuTime***************************
+testcaseName             	freeTime    	psliceTime  	SquashTime  	waitTime    	Sptime      	NoSpTime    
+testcase/treeadd.rom4    	0.587854    	0.046666    	0.090370    	0.000025    	0.027921    	0.247165    	
+******************************CpuTime***************************
+testcaseName             	freeTime    	psliceTime  	SquashTime  	waitTime    	Sptime      	NoSpTime    
+testcase/voronoi.rom1    	0.000000    	0.000000    	0.000000    	0.000000    	0.000000    	1.000000    	
+******************************CpuTime***************************
+testcaseName             	freeTime    	psliceTime  	SquashTime  	waitTime    	Sptime      	NoSpTime    
+testcase/voronoi.rom4    	0.504425    	0.114406    	0.038474    	0.000036    	0.085209    	0.257450    	
+******************************CpuTime***************************
+testcaseName             	freeTime    	psliceTime  	SquashTime  	waitTime    	Sptime      	NoSpTime    
+testcase/perimeter.rom1  	0.000000    	0.000000    	0.000000    	0.000000    	0.000000    	1.000000    	
+******************************CpuTime***************************
+testcaseName             	freeTime    	psliceTime  	SquashTime  	waitTime    	Sptime      	NoSpTime    
+testcase/perimeter.rom4  	0.581289    	0.039526    	0.071631    	0.000000    	0.017516    	0.290037    	
+******************************CpuTime***************************
+testcaseName             	freeTime    	psliceTime  	SquashTime  	waitTime    	Sptime      	NoSpTime    
+testcase/mst.rom1        	0.000000    	0.000000    	0.000000    	0.000000    	0.000000    	1.000000    	
+******************************CpuTime***************************
+testcaseName             	freeTime    	psliceTime  	SquashTime  	waitTime    	Sptime      	NoSpTime    
+testcase/mst.rom4        	0.411753    	0.085184    	0.101838    	0.005344    	0.046054    	0.349827    	

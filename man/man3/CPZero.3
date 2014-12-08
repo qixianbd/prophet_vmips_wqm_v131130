@@ -1,0 +1,196 @@
+.TH "CPZero" 3 "18 Dec 2013" "Doxygen" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+CPZero \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <cpzero.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBtlb_write\fP (unsigned index)"
+.br
+.ti -1c
+.RI "uint32 \fBread_reg\fP (uint32 \fBreg\fP)"
+.br
+.ti -1c
+.RI "void \fBwrite_reg\fP (uint32 \fBreg\fP, uint32 data)"
+.br
+.ti -1c
+.RI "bool \fBcpCond\fP ()"
+.br
+.ti -1c
+.RI "\fBCPZero\fP (\fBCPU\fP *m, \fBIntCtrl\fP *i)"
+.br
+.ti -1c
+.RI "void \fBreset\fP (void)"
+.br
+.ti -1c
+.RI "uint32 \fBaddress_trans\fP (uint32 vaddr, int mode, bool *cacheable, \fBDeviceExc\fP *client)"
+.br
+.ti -1c
+.RI "void \fBenter_exception\fP (uint32 pc, uint32 excCode, uint32 ce, bool dly)"
+.br
+.ti -1c
+.RI "bool \fBuse_boot_excp_address\fP (void)"
+.br
+.ti -1c
+.RI "bool \fBcaches_isolated\fP (void)"
+.br
+.ti -1c
+.RI "bool \fBcaches_swapped\fP (void)"
+.br
+.ti -1c
+.RI "bool \fBcop_usable\fP (int coprocno)"
+.br
+.ti -1c
+.RI "void \fBcpzero_emulate\fP (uint32 instr, uint32 pc)"
+.br
+.ti -1c
+.RI "void \fBdump_regs\fP (FILE *f)"
+.br
+.ti -1c
+.RI "void \fBdump_tlb\fP (FILE *f)"
+.br
+.ti -1c
+.RI "void \fBdump_regs_and_tlb\fP (FILE *f)"
+.br
+.ti -1c
+.RI "void \fBadjust_random\fP (void)"
+.br
+.ti -1c
+.RI "bool \fBinterrupt_pending\fP (void)"
+.br
+.ti -1c
+.RI "void \fBread_debug_info\fP (uint32 *status, uint32 *bad, uint32 *cause)"
+.br
+.ti -1c
+.RI "void \fBwrite_debug_info\fP (uint32 status, uint32 bad, uint32 cause)"
+.br
+.ti -1c
+.RI "bool \fBdebug_tlb_translate\fP (uint32 vaddr, uint32 *paddr)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "bool \fBtlb_miss_user\fP"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBinterrupts_enabled\fP (void) const "
+.br
+.ti -1c
+.RI "bool \fBkernel_mode\fP (void) const "
+.br
+.ti -1c
+.RI "uint32 \fBgetIP\fP (void)"
+.br
+.ti -1c
+.RI "void \fBmfc0_emulate\fP (uint32 instr, uint32 pc)"
+.br
+.ti -1c
+.RI "void \fBmtc0_emulate\fP (uint32 instr, uint32 pc)"
+.br
+.ti -1c
+.RI "void \fBbc0x_emulate\fP (uint32 instr, uint32 pc)"
+.br
+.ti -1c
+.RI "void \fBtlbr_emulate\fP (uint32 instr, uint32 pc)"
+.br
+.ti -1c
+.RI "void \fBtlbwi_emulate\fP (uint32 instr, uint32 pc)"
+.br
+.ti -1c
+.RI "void \fBtlbwr_emulate\fP (uint32 instr, uint32 pc)"
+.br
+.ti -1c
+.RI "void \fBtlbp_emulate\fP (uint32 instr, uint32 pc)"
+.br
+.ti -1c
+.RI "void \fBrfe_emulate\fP (uint32 instr, uint32 pc)"
+.br
+.ti -1c
+.RI "void \fBload_addr_trans_excp_info\fP (uint32 va, uint32 vpn, \fBTLBEntry\fP *match)"
+.br
+.ti -1c
+.RI "int \fBfind_matching_tlb_entry\fP (uint32, uint32)"
+.br
+.ti -1c
+.RI "uint32 \fBtlb_translate\fP (uint32 seg, uint32 vaddr, int mode, bool *cacheable, \fBDeviceExc\fP *client)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBTLBEntry\fP \fBtlb\fP [TLB_ENTRIES]"
+.br
+.ti -1c
+.RI "uint32 \fBreg\fP [32]"
+.br
+.ti -1c
+.RI "\fBCPU\fP * \fBcpu\fP"
+.br
+.ti -1c
+.RI "\fBIntCtrl\fP * \fBintc\fP"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "CPZero::CPZero (\fBCPU\fP * m, \fBIntCtrl\fP * i)\fC [inline]\fP"
+.SH "Member Function Documentation"
+.PP 
+.SS "uint32 CPZero::address_trans (uint32 vaddr, int mode, bool * cacheable, \fBDeviceExc\fP * client)"
+.SS "void CPZero::adjust_random (void)"
+.SS "void CPZero::bc0x_emulate (uint32 instr, uint32 pc)\fC [private]\fP"
+.SS "bool CPZero::caches_isolated (void)"
+.SS "bool CPZero::caches_swapped (void)"
+.SS "bool CPZero::cop_usable (int coprocno)"
+.SS "bool CPZero::cpCond ()\fC [inline]\fP"
+.SS "void CPZero::cpzero_emulate (uint32 instr, uint32 pc)"
+.SS "bool CPZero::debug_tlb_translate (uint32 vaddr, uint32 * paddr)"
+.SS "void CPZero::dump_regs (FILE * f)"
+.SS "void CPZero::dump_regs_and_tlb (FILE * f)"
+.SS "void CPZero::dump_tlb (FILE * f)"
+.SS "void CPZero::enter_exception (uint32 pc, uint32 excCode, uint32 ce, bool dly)"
+.SS "int CPZero::find_matching_tlb_entry (uint32 vpn, uint32 asid)\fC [private]\fP"
+.SS "uint32 CPZero::getIP (void)\fC [private]\fP"
+.SS "bool CPZero::interrupt_pending (void)"
+.SS "bool CPZero::interrupts_enabled (void) const\fC [private]\fP"
+.SS "bool CPZero::kernel_mode (void) const\fC [private]\fP"
+.SS "void CPZero::load_addr_trans_excp_info (uint32 va, uint32 vpn, \fBTLBEntry\fP * match)\fC [private]\fP"
+.SS "void CPZero::mfc0_emulate (uint32 instr, uint32 pc)\fC [private]\fP"
+.SS "void CPZero::mtc0_emulate (uint32 instr, uint32 pc)\fC [private]\fP"
+.SS "void CPZero::read_debug_info (uint32 * status, uint32 * bad, uint32 * cause)"
+.SS "uint32 CPZero::read_reg (uint32 reg)"
+.SS "void CPZero::reset (void)"
+.SS "void CPZero::rfe_emulate (uint32 instr, uint32 pc)\fC [private]\fP"
+.SS "uint32 CPZero::tlb_translate (uint32 seg, uint32 vaddr, int mode, bool * cacheable, \fBDeviceExc\fP * client)\fC [private]\fP"
+.SS "void CPZero::tlb_write (unsigned index)"
+.SS "void CPZero::tlbp_emulate (uint32 instr, uint32 pc)\fC [private]\fP"
+.SS "void CPZero::tlbr_emulate (uint32 instr, uint32 pc)\fC [private]\fP"
+.SS "void CPZero::tlbwi_emulate (uint32 instr, uint32 pc)\fC [private]\fP"
+.SS "void CPZero::tlbwr_emulate (uint32 instr, uint32 pc)\fC [private]\fP"
+.SS "bool CPZero::use_boot_excp_address (void)"
+.SS "void CPZero::write_debug_info (uint32 status, uint32 bad, uint32 cause)"
+.SS "void CPZero::write_reg (uint32 reg, uint32 data)"
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBCPU\fP* \fBCPZero::cpu\fP\fC [private]\fP"
+.SS "\fBIntCtrl\fP* \fBCPZero::intc\fP\fC [private]\fP"
+.SS "uint32 \fBCPZero::reg\fP[32]\fC [private]\fP"
+.SS "\fBTLBEntry\fP \fBCPZero::tlb\fP[TLB_ENTRIES]\fC [private]\fP"
+.SS "bool \fBCPZero::tlb_miss_user\fP"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen from the source code.

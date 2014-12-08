@@ -1,0 +1,292 @@
+.TH "XmlElement" 3 "18 Dec 2013" "Doxygen" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+XmlElement \- 
+.PP
+A XML Element.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <prophetxmlelement.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBXmlElement\fP (std::string elementName, std::string content='')"
+.br
+.RI "\fIConstructs an element with the specified name and string content. \fP"
+.ti -1c
+.RI "\fBXmlElement\fP (std::string elementName, int numericContent)"
+.br
+.RI "\fIConstructs an element with the specified name and numeric content. \fP"
+.ti -1c
+.RI "virtual \fB~XmlElement\fP ()"
+.br
+.RI "\fIDestructs the element and its child elements. \fP"
+.ti -1c
+.RI "std::string \fBname\fP () const "
+.br
+.RI "\fIReturns the name of the element. \fP"
+.ti -1c
+.RI "std::string \fBcontent\fP () const "
+.br
+.RI "\fIReturns the content of the element. \fP"
+.ti -1c
+.RI "void \fBsetName\fP (const std::string &name)"
+.br
+.RI "\fISets the name of the element. \fP"
+.ti -1c
+.RI "void \fBsetContent\fP (const std::string &content)"
+.br
+.RI "\fISets the content of the element. \fP"
+.ti -1c
+.RI "void \fBsetContent\fP (int numericContent)"
+.br
+.ti -1c
+.RI "void \fBaddAttribute\fP (std::string attributeName, std::string value)"
+.br
+.RI "\fIAdds an attribute with the specified string value. \fP"
+.ti -1c
+.RI "void \fBaddAttribute\fP (std::string attributeName, int numericValue)"
+.br
+.RI "\fIAdds an attribute with the specified numeric value. \fP"
+.ti -1c
+.RI "void \fBaddElement\fP (\fBXmlElement\fP *element)"
+.br
+.RI "\fIAdds a child element to the element. \fP"
+.ti -1c
+.RI "int \fBelementCount\fP () const "
+.br
+.RI "\fIReturns the number of child elements. \fP"
+.ti -1c
+.RI "\fBXmlElement\fP * \fBelementAt\fP (int index) const "
+.br
+.RI "\fIReturns the child element at the specified index. \fP"
+.ti -1c
+.RI "\fBXmlElement\fP * \fBelementFor\fP (const std::string &name) const "
+.br
+.RI "\fIReturns the first child element with the specified name. \fP"
+.ti -1c
+.RI "std::string \fBtoString\fP (const std::string &indent='') const "
+.br
+.RI "\fIReturns a XML string that represents the element. \fP"
+.in -1c
+.SS "Private Types"
+
+.in +1c
+.ti -1c
+.RI "typedef std::pair< std::string, std::string > \fBAttribute\fP"
+.br
+.ti -1c
+.RI "typedef std::deque< \fBAttribute\fP > \fBAttributes\fP"
+.br
+.ti -1c
+.RI "typedef std::deque< \fBXmlElement\fP * > \fBElements\fP"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "std::string \fBattributesAsString\fP () const "
+.br
+.ti -1c
+.RI "std::string \fBescape\fP (std::string value) const "
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "std::string \fBm_name\fP"
+.br
+.ti -1c
+.RI "std::string \fBm_content\fP"
+.br
+.ti -1c
+.RI "\fBAttributes\fP \fBm_attributes\fP"
+.br
+.ti -1c
+.RI "\fBElements\fP \fBm_elements\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+A XML Element. 
+
+A XML element has:
+.IP "\(bu" 2
+a name, specified on construction,
+.IP "\(bu" 2
+a content, specified on construction (may be empty),
+.IP "\(bu" 2
+zero or more attributes, added with \fBaddAttribute()\fP,
+.IP "\(bu" 2
+zero or more child elements, added with \fBaddElement()\fP. 
+.PP
+
+.SH "Member Typedef Documentation"
+.PP 
+.SS "typedef std::pair<std::string,std::string> \fBXmlElement::Attribute\fP\fC [private]\fP"
+.SS "typedef std::deque<\fBAttribute\fP> \fBXmlElement::Attributes\fP\fC [private]\fP"
+.SS "typedef std::deque<\fBXmlElement\fP *> \fBXmlElement::Elements\fP\fC [private]\fP"
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "XmlElement::XmlElement (std::string elementName, std::string content = \fC''\fP)"
+.PP
+Constructs an element with the specified name and string content. \fBParameters:\fP
+.RS 4
+\fIelementName\fP Name of the element. Must not be empty. 
+.br
+\fIcontent\fP Content of the element. 
+.RE
+.PP
+
+.SS "XmlElement::XmlElement (std::string elementName, int numericContent)"
+.PP
+Constructs an element with the specified name and numeric content. \fBParameters:\fP
+.RS 4
+\fIelementName\fP Name of the element. Must not be empty. 
+.br
+\fInumericContent\fP Content of the element. 
+.RE
+.PP
+
+.SS "XmlElement::~XmlElement ()\fC [virtual]\fP"
+.PP
+Destructs the element and its child elements. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void XmlElement::addAttribute (std::string attributeName, int numericValue)"
+.PP
+Adds an attribute with the specified numeric value. \fBParameters:\fP
+.RS 4
+\fIattributeName\fP Name of the attribute. Must not be empty. 
+.br
+\fInumericValue\fP Numeric value of the attribute. 
+.RE
+.PP
+
+.SS "void XmlElement::addAttribute (std::string attributeName, std::string value)"
+.PP
+Adds an attribute with the specified string value. \fBParameters:\fP
+.RS 4
+\fIattributeName\fP Name of the attribute. Must not be an empty. 
+.br
+\fIvalue\fP Value of the attribute. 
+.RE
+.PP
+
+.SS "void XmlElement::addElement (\fBXmlElement\fP * element)"
+.PP
+Adds a child element to the element. \fBParameters:\fP
+.RS 4
+\fIelement\fP Child element to add. Must not be \fCNULL\fP. 
+.RE
+.PP
+
+.SS "std::string XmlElement::attributesAsString () const\fC [private]\fP"
+.SS "std::string XmlElement::content () const"
+.PP
+Returns the content of the element. \fBReturns:\fP
+.RS 4
+Content of the element. 
+.RE
+.PP
+
+.SS "\fBXmlElement\fP * XmlElement::elementAt (int index) const"
+.PP
+Returns the child element at the specified index. \fBParameters:\fP
+.RS 4
+\fIindex\fP Zero based index of the element to return. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Element at the specified index. Never \fCNULL\fP. 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIstd::invalid_argument\fP if \fIindex\fP < 0 or index >= \fBelementCount()\fP. 
+.RE
+.PP
+
+.SS "int XmlElement::elementCount () const"
+.PP
+Returns the number of child elements. \fBReturns:\fP
+.RS 4
+Number of child elements (element added with \fBaddElement()\fP). 
+.RE
+.PP
+
+.SS "\fBXmlElement\fP * XmlElement::elementFor (const std::string & name) const"
+.PP
+Returns the first child element with the specified name. \fBParameters:\fP
+.RS 4
+\fIname\fP Name of the child element to return. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+First child element found which is named \fIname\fP. 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIstd::invalid_argument\fP if there is no child element with the specified name. 
+.RE
+.PP
+
+.SS "std::string XmlElement::escape (std::string value) const\fC [private]\fP"
+.SS "std::string XmlElement::name () const"
+.PP
+Returns the name of the element. \fBReturns:\fP
+.RS 4
+Name of the element. 
+.RE
+.PP
+
+.SS "void XmlElement::setContent (int numericContent)"
+.SS "void XmlElement::setContent (const std::string & content)"
+.PP
+Sets the content of the element. \fBParameters:\fP
+.RS 4
+\fIcontent\fP New content for the element.
+.RE
+.PP
+This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. 
+.SS "void XmlElement::setName (const std::string & name)"
+.PP
+Sets the name of the element. \fBParameters:\fP
+.RS 4
+\fIname\fP New name for the element. 
+.RE
+.PP
+
+.SS "std::string XmlElement::toString (const std::string & indent = \fC''\fP) const"
+.PP
+Returns a XML string that represents the element. \fBParameters:\fP
+.RS 4
+\fIindent\fP String of spaces representing the amount of 'indent'. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+XML string that represents the element, its attributes and its child elements. 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBAttributes\fP \fBXmlElement::m_attributes\fP\fC [private]\fP"
+.SS "std::string \fBXmlElement::m_content\fP\fC [private]\fP"
+.SS "\fBElements\fP \fBXmlElement::m_elements\fP\fC [private]\fP"
+.SS "std::string \fBXmlElement::m_name\fP\fC [private]\fP"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen from the source code.

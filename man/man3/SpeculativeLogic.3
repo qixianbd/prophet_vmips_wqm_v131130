@@ -1,0 +1,154 @@
+.TH "SpeculativeLogic" 3 "18 Dec 2013" "Doxygen" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SpeculativeLogic \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <speculativelogic.h>\fP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef std::list< SpeculativeCPU * > \fBSpList\fP"
+.br
+.ti -1c
+.RI "typedef std::list< SpeculativeCPU * >::iterator \fBSpListIterator\fP"
+.br
+.ti -1c
+.RI "typedef std::list< SpeculativeCPU * >::const_iterator \fBSpListConstIterator\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBSwapToSpList\fP (SpeculativeCPU *, SpeculativeCPU *)"
+.br
+.ti -1c
+.RI "void \fBSwapToFreeList\fP (SpeculativeCPU *)"
+.br
+.ti -1c
+.RI "SpeculativeCPU * \fBGetParent\fP (SpeculativeCPU *)"
+.br
+.ti -1c
+.RI "SpeculativeCPU * \fBGetSubthread\fP (SpeculativeCPU *)"
+.br
+.ti -1c
+.RI "SpeculativeCPU * \fBNotifySpawn\fP (SpeculativeCPU *)"
+.br
+.ti -1c
+.RI "void \fBSquashSubthread\fP (SpeculativeCPU *, SpeculativeCPU::SQUASH_REASON)"
+.br
+.ti -1c
+.RI "bool \fBVerifySubthread\fP (SpeculativeCPU *)"
+.br
+.ti -1c
+.RI "bool \fBPassStableToken\fP (SpeculativeCPU *)"
+.br
+.ti -1c
+.RI "uint32 \fBGetStackTop\fP (SpeculativeCPU *)"
+.br
+.ti -1c
+.RI "SpeculativeCPU * \fBGetRunner\fP ()"
+.br
+.ti -1c
+.RI "void \fBStep\fP (void)"
+.br
+.ti -1c
+.RI "void \fBReset\fP (void)"
+.br
+.ti -1c
+.RI "bool \fBCheckStateOnQuit\fP ()"
+.br
+.ti -1c
+.RI "size_t \fBFreeListSize\fP ()"
+.br
+.ti -1c
+.RI "size_t \fBSpListSize\fP ()"
+.br
+.ti -1c
+.RI "int \fBPosInSpList\fP (SpeculativeCPU *sender, SpeculativeCPU *)"
+.br
+.ti -1c
+.RI "int \fBgetSpDegree\fP (SpeculativeCPU *)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBSpeculativeLogic\fP * \fBGetInstance\fP ()"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPLOG_CLASS\fP (\fBSpeculativeLogic\fP)"
+.br
+.ti -1c
+.RI "\fBSpeculativeLogic\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBSpList\fP \fBm_FreeList\fP"
+.br
+.ti -1c
+.RI "\fBSpList\fP \fBm_SpList\fP"
+.br
+.ti -1c
+.RI "SpeculativeCPU * \fBm_CPU\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static \fBSpeculativeLogic\fP * \fBm_Instance\fP = NULL"
+.br
+.in -1c
+.SH "Member Typedef Documentation"
+.PP 
+.SS "typedef std::list<SpeculativeCPU*> \fBSpeculativeLogic::SpList\fP"
+.SS "typedef std::list<SpeculativeCPU*>::const_iterator \fBSpeculativeLogic::SpListConstIterator\fP"
+.SS "typedef std::list<SpeculativeCPU*>::iterator \fBSpeculativeLogic::SpListIterator\fP"
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "SpeculativeLogic::SpeculativeLogic ()\fC [private]\fP"
+.SH "Member Function Documentation"
+.PP 
+.SS "bool SpeculativeLogic::CheckStateOnQuit ()"
+.SS "size_t SpeculativeLogic::FreeListSize ()"
+.SS "\fBSpeculativeLogic\fP * SpeculativeLogic::GetInstance ()\fC [static]\fP"
+.SS "SpeculativeCPU * SpeculativeLogic::GetParent (SpeculativeCPU * cpu)"
+.SS "SpeculativeCPU * SpeculativeLogic::GetRunner ()"
+.SS "int SpeculativeLogic::getSpDegree (SpeculativeCPU * cpu)"
+.SS "uint32 SpeculativeLogic::GetStackTop (SpeculativeCPU * cpu)"
+.SS "SpeculativeCPU * SpeculativeLogic::GetSubthread (SpeculativeCPU * cpu)"
+.SS "SpeculativeCPU * SpeculativeLogic::NotifySpawn (SpeculativeCPU * sender)"
+.SS "bool SpeculativeLogic::PassStableToken (SpeculativeCPU * sender)"
+.SS "SpeculativeLogic::PLOG_CLASS (\fBSpeculativeLogic\fP)\fC [private]\fP"
+.SS "int SpeculativeLogic::PosInSpList (SpeculativeCPU * sender, SpeculativeCPU * cpu)"
+.SS "void SpeculativeLogic::Reset (void)"
+.SS "size_t SpeculativeLogic::SpListSize ()"
+.SS "void SpeculativeLogic::SquashSubthread (SpeculativeCPU * sender, SpeculativeCPU::SQUASH_REASON reason)"
+.SS "void SpeculativeLogic::Step (void)"
+.SS "void SpeculativeLogic::SwapToFreeList (SpeculativeCPU * cpu)"
+.SS "void SpeculativeLogic::SwapToSpList (SpeculativeCPU * parentcpu, SpeculativeCPU * subcpu)"
+.SS "bool SpeculativeLogic::VerifySubthread (SpeculativeCPU * sender)"
+.SH "Member Data Documentation"
+.PP 
+.SS "SpeculativeCPU* \fBSpeculativeLogic::m_CPU\fP\fC [private]\fP"
+.SS "\fBSpList\fP \fBSpeculativeLogic::m_FreeList\fP\fC [private]\fP"
+.SS "\fBSpeculativeLogic\fP * \fBSpeculativeLogic::m_Instance\fP = NULL\fC [static, private]\fP"
+.SS "\fBSpList\fP \fBSpeculativeLogic::m_SpList\fP\fC [private]\fP"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen from the source code.

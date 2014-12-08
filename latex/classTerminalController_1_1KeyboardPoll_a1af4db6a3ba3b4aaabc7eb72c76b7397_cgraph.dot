@@ -1,0 +1,15 @@
+digraph G
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir=LR;
+  Node1 [label="TerminalController::KeyboardPoll::real_task",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="TerminalController::poll_keyboards",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classTerminalController.html#a343a40e774eeb2506b0bfbc5817d0c62"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="Clock::add_deferred_task",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classClock.html#a78c89e7b78e718b21f4374eb84559d6f"];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="TerminalController::copy_unready_keyboards",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classTerminalController.html#a43234a11dfcdbca163d940a214f11009"];
+  Node2 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="TerminalController::ready_keyboard",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classTerminalController.html#a0475271dfd2cbed03ea8c95964771b20"];
+}

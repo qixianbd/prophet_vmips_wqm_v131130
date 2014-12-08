@@ -1,0 +1,58 @@
+\hypertarget{decstat_8cc}{
+\section{decstat.cc File Reference}
+\label{decstat_8cc}\index{decstat.cc@{decstat.cc}}
+}
+{\ttfamily \#include \char`\"{}deviceexc.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}cpu.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}decstat.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}devicemap.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}mapper.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}vmips.h\char`\"{}}\par
+Include dependency graph for decstat.cc:This graph shows which files directly or indirectly include this file:\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{decstat_8cc_a9071e04bd1789e4e89749429a70a0198}{ERRADR\_\-VALID}~0x80000000
+\item 
+\#define \hyperlink{decstat_8cc_a8a1f015352dc91c8d681d2026e2097e9}{ERRADR\_\-CPU}~0x40000000
+\item 
+\#define \hyperlink{decstat_8cc_ac3742324f47f1dee4a9d5acf886b152a}{ERRADR\_\-WRITE}~0x20000000
+\item 
+\#define \hyperlink{decstat_8cc_a47d3b0631c29a4bd416040cc3ddb46e8}{ERRADR\_\-ECCERR}~0x10000000
+\item 
+\#define \hyperlink{decstat_8cc_a4fa1c6685c1685dc1315f2003ec0c086}{ERRADR\_\-RSRVD}~0x08000000
+\item 
+\#define \hyperlink{decstat_8cc_af28db73ec257127ae726081ca9e19189}{ERRADR\_\-ADDRESS}~0x07FFFFFF
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{decstat_8cc_af28db73ec257127ae726081ca9e19189}{
+\index{decstat.cc@{decstat.cc}!ERRADR\_\-ADDRESS@{ERRADR\_\-ADDRESS}}
+\index{ERRADR\_\-ADDRESS@{ERRADR\_\-ADDRESS}!decstat.cc@{decstat.cc}}
+\subsubsection[{ERRADR\_\-ADDRESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define ERRADR\_\-ADDRESS~0x07FFFFFF}}
+\label{decstat_8cc_af28db73ec257127ae726081ca9e19189}
+\hypertarget{decstat_8cc_a8a1f015352dc91c8d681d2026e2097e9}{
+\index{decstat.cc@{decstat.cc}!ERRADR\_\-CPU@{ERRADR\_\-CPU}}
+\index{ERRADR\_\-CPU@{ERRADR\_\-CPU}!decstat.cc@{decstat.cc}}
+\subsubsection[{ERRADR\_\-CPU}]{\setlength{\rightskip}{0pt plus 5cm}\#define ERRADR\_\-CPU~0x40000000}}
+\label{decstat_8cc_a8a1f015352dc91c8d681d2026e2097e9}
+\hypertarget{decstat_8cc_a47d3b0631c29a4bd416040cc3ddb46e8}{
+\index{decstat.cc@{decstat.cc}!ERRADR\_\-ECCERR@{ERRADR\_\-ECCERR}}
+\index{ERRADR\_\-ECCERR@{ERRADR\_\-ECCERR}!decstat.cc@{decstat.cc}}
+\subsubsection[{ERRADR\_\-ECCERR}]{\setlength{\rightskip}{0pt plus 5cm}\#define ERRADR\_\-ECCERR~0x10000000}}
+\label{decstat_8cc_a47d3b0631c29a4bd416040cc3ddb46e8}
+\hypertarget{decstat_8cc_a4fa1c6685c1685dc1315f2003ec0c086}{
+\index{decstat.cc@{decstat.cc}!ERRADR\_\-RSRVD@{ERRADR\_\-RSRVD}}
+\index{ERRADR\_\-RSRVD@{ERRADR\_\-RSRVD}!decstat.cc@{decstat.cc}}
+\subsubsection[{ERRADR\_\-RSRVD}]{\setlength{\rightskip}{0pt plus 5cm}\#define ERRADR\_\-RSRVD~0x08000000}}
+\label{decstat_8cc_a4fa1c6685c1685dc1315f2003ec0c086}
+\hypertarget{decstat_8cc_a9071e04bd1789e4e89749429a70a0198}{
+\index{decstat.cc@{decstat.cc}!ERRADR\_\-VALID@{ERRADR\_\-VALID}}
+\index{ERRADR\_\-VALID@{ERRADR\_\-VALID}!decstat.cc@{decstat.cc}}
+\subsubsection[{ERRADR\_\-VALID}]{\setlength{\rightskip}{0pt plus 5cm}\#define ERRADR\_\-VALID~0x80000000}}
+\label{decstat_8cc_a9071e04bd1789e4e89749429a70a0198}
+\hypertarget{decstat_8cc_ac3742324f47f1dee4a9d5acf886b152a}{
+\index{decstat.cc@{decstat.cc}!ERRADR\_\-WRITE@{ERRADR\_\-WRITE}}
+\index{ERRADR\_\-WRITE@{ERRADR\_\-WRITE}!decstat.cc@{decstat.cc}}
+\subsubsection[{ERRADR\_\-WRITE}]{\setlength{\rightskip}{0pt plus 5cm}\#define ERRADR\_\-WRITE~0x20000000}}
+\label{decstat_8cc_ac3742324f47f1dee4a9d5acf886b152a}

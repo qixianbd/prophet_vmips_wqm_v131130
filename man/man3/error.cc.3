@@ -1,0 +1,48 @@
+.TH "error.cc" 3 "18 Dec 2013" "Doxygen" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+error.cc \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <cstdio>\fP
+.br
+\fC#include <cstdarg>\fP
+.br
+\fC#include <cassert>\fP
+.br
+\fC#include <cstdlib>\fP
+.br
+\fC#include 'error.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBformat_help\fP (FILE *file, const char *pre, const char *post, const char *fmt, va_list ap)  throw ()"
+.br
+.ti -1c
+.RI "void \fBerror\fP (const char *msg,...)  throw ()"
+.br
+.ti -1c
+.RI "void \fBerror_exit\fP (const char *msg,...)  throw ()"
+.br
+.ti -1c
+.RI "void \fBfatal_error\fP (const char *msg,...)  throw ()"
+.br
+.ti -1c
+.RI "void \fBwarning\fP (const char *msg,...)  throw ()"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "void error (const char * msg,  ...)  throw ()"
+.SS "void error_exit (const char * msg,  ...)  throw ()"
+.SS "void fatal_error (const char * msg,  ...)  throw ()"
+.SS "static void format_help (FILE * file, const char * pre, const char * post, const char * fmt, va_list ap)  throw ()\fC [static]\fP"
+.SS "void warning (const char * msg,  ...)  throw ()"
+.SH "Author"
+.PP 
+Generated automatically by Doxygen from the source code.

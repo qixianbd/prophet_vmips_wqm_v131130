@@ -1,0 +1,58 @@
+.TH "decrtc.cc" 3 "18 Dec 2013" "Doxygen" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+decrtc.cc \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'devicemap.h'\fP
+.br
+\fC#include 'clock.h'\fP
+.br
+\fC#include 'decrtcreg.h'\fP
+.br
+\fC#include 'deviceint.h'\fP
+.br
+\fC#include 'task.h'\fP
+.br
+\fC#include <cstdio>\fP
+.br
+\fC#include <cassert>\fP
+.br
+\fC#include <time.h>\fP
+.br
+
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "static const uint32 \fBint_freqs\fP [16]"
+.br
+.ti -1c
+.RI "static const char * \fBreg_names\fP [15]"
+.br
+.in -1c
+.SH "Variable Documentation"
+.PP 
+.SS "const uint32 \fBint_freqs\fP[16]\fC [static]\fP"\fBInitial value:\fP
+.PP
+.nf
+ {
+  0, 3906250, 7812500, 122070, 244141, 488281, 976562, 1953125,
+  3906250, 7812500, 15625000, 31250000, 62500000, 125000000,
+  250000000, 500000000
+}
+.fi
+.SS "const char* \fBreg_names\fP[15]\fC [static]\fP"\fBInitial value:\fP
+.PP
+.nf
+ {
+  'RTC_SEC', 'RTC_ALMS', 'RTC_MIN', 'RTC_ALMM', 'RTC_HOUR',
+  'RTC_ALMH', 'RTC_DOW', 'RTC_DAY', 'RTC_MON', 'RTC_YEAR',
+  'RTC_REGA', 'RTC_REGB', 'RTC_REGC', 'RTC_REGD', 'RTC_RAM'
+}
+.fi
+.SH "Author"
+.PP 
+Generated automatically by Doxygen from the source code.

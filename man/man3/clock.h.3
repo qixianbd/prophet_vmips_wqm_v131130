@@ -1,0 +1,95 @@
+.TH "clock.h" 3 "18 Dec 2013" "Doxygen" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+clock.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'task.h'\fP
+.br
+\fC#include 'types.h'\fP
+.br
+\fC#include <list>\fP
+.br
+\fC#include <sys/time.h>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBClock\fP"
+.br
+.ti -1c
+.RI "class \fBClock::DeferredTasks\fP"
+.br
+.in -1c
+.SS "Defines"
+
+.in +1c
+.ti -1c
+.RI "#define \fBtimespecclear\fP(tvp)   ((tvp)->tv_sec = (tvp)->tv_nsec = 0)"
+.br
+.ti -1c
+.RI "#define \fBtimespecisset\fP(tvp)   ((tvp)->tv_sec || (tvp)->tv_nsec)"
+.br
+.ti -1c
+.RI "#define \fBtimespeccmp\fP(tvp, uvp, cmp)"
+.br
+.ti -1c
+.RI "#define \fBtimespecadd\fP(vvp, uvp)"
+.br
+.ti -1c
+.RI "#define \fBtimespecsub\fP(vvp, uvp)"
+.br
+.ti -1c
+.RI "#define \fBTIMEVAL_TO_TIMESPEC\fP(tv, ts)"
+.br
+.in -1c
+.SH "Define Documentation"
+.PP 
+.SS "#define timespecadd(vvp, uvp)"\fBValue:\fP
+.PP
+.nf
+do {                                                              \
+                (vvp)->tv_sec += (uvp)->tv_sec;                         \
+                (vvp)->tv_nsec += (uvp)->tv_nsec;                       \
+                if ((vvp)->tv_nsec >= 1000000000) {                     \
+                        (vvp)->tv_sec++;                                \
+                        (vvp)->tv_nsec -= 1000000000;                   \
+                }                                                       \
+        } while (0)
+.fi
+.SS "#define timespecclear(tvp)   ((tvp)->tv_sec = (tvp)->tv_nsec = 0)"
+.SS "#define timespeccmp(tvp, uvp, cmp)"\fBValue:\fP
+.PP
+.nf
+(((tvp)->tv_sec == (uvp)->tv_sec) ?                             \
+                ((tvp)->tv_nsec cmp (uvp)->tv_nsec) :                   \
+                ((tvp)->tv_sec cmp (uvp)->tv_sec))
+.fi
+.SS "#define timespecisset(tvp)   ((tvp)->tv_sec || (tvp)->tv_nsec)"
+.SS "#define timespecsub(vvp, uvp)"\fBValue:\fP
+.PP
+.nf
+do {                                                            \
+                (vvp)->tv_sec -= (uvp)->tv_sec;                         \
+                (vvp)->tv_nsec -= (uvp)->tv_nsec;                       \
+                if ((vvp)->tv_nsec < 0) {                               \
+                        (vvp)->tv_sec--;                                \
+                        (vvp)->tv_nsec += 1000000000;                   \
+                }                                                       \
+        } while (0)
+.fi
+.SS "#define TIMEVAL_TO_TIMESPEC(tv, ts)"\fBValue:\fP
+.PP
+.nf
+do {                                         \
+        (ts)->tv_sec = (tv)->tv_sec;            \
+        (ts)->tv_nsec = (tv)->tv_usec * 1000;   \
+} while(0)
+.fi
+.SH "Author"
+.PP 
+Generated automatically by Doxygen from the source code.

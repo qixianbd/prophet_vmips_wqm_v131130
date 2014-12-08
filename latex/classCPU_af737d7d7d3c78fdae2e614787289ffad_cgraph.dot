@@ -1,0 +1,29 @@
+digraph G
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir=LR;
+  Node1 [label="CPU::cpzero_dump_regs_and_tlb",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="CPZero::dump_regs_and_tlb",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classCPZero.html#a2bf7aa14a71d8ae4ffb4a3f9c352e971"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="CPZero::dump_regs",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classCPZero.html#aee1b391ace97d07fcd551133a6725ac2"];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="CPZero::dump_tlb",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classCPZero.html#a7b1425b75a48855fe10c88a7a01eab26"];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="dump_tlb_entry",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$cpzero_8cc.html#a4fe6b690f5ea991f8b55fca166015a20"];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="TLBEntry::asid",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classTLBEntry.html#a9ea42aca3ac9841e50ca88717a57675d"];
+  Node5 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="TLBEntry::dirty",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classTLBEntry.html#a035428d115899db13cad9ae4a0bd19d6"];
+  Node5 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="TLBEntry::global",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classTLBEntry.html#a958ad780663c9f6ff19f5011223abc4a"];
+  Node5 -> Node9 [color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="TLBEntry::noncacheable",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classTLBEntry.html#ac2a92150e0568daa9810e624d39a235b"];
+  Node5 -> Node10 [color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="TLBEntry::pfn",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classTLBEntry.html#a4595566739ea73c5b89a1bb9a8b472fc"];
+  Node5 -> Node11 [color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="TLBEntry::valid",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classTLBEntry.html#a29878217888278dbe3bc4ab3abbf081e"];
+  Node5 -> Node12 [color="midnightblue",fontsize="10",style="solid"];
+  Node12 [label="TLBEntry::vpn",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classTLBEntry.html#a4febc7aae3fda3da47da131e28cbdf50"];
+}

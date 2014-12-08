@@ -1,0 +1,15 @@
+<map id="G" name="G">
+<area shape="rect" href="$classDeviceInt.html" title="DeviceInt" alt="" coords="137,112,212,141"/>
+<area shape="rect" href="$classClockDevice.html" title="ClockDevice" alt="" coords="308,219,401,248"/>
+<area shape="rect" href="$classDECCSRDevice.html" title="DECCSRDevice" alt="" coords="297,112,412,141"/>
+<area shape="rect" href="$classDECRTCDevice.html" title="DECRTCDevice" alt="" coords="299,165,411,195"/>
+<area shape="rect" href="$classDECSerialDevice.html" title="DECSerialDevice" alt="" coords="295,59,415,88"/>
+<area shape="rect" href="$classSpimConsoleDevice.html" title="SpimConsoleDevice" alt="" coords="285,5,424,35"/>
+<area shape="rect" href="$classRange.html" title="Range" alt="" coords="5,165,64,195"/>
+<area shape="rect" href="$classDeviceMap.html" title="DeviceMap" alt="" coords="132,165,217,195"/>
+<area shape="rect" href="$classMemoryModule.html" title="MemoryModule" alt="" coords="120,219,229,248"/>
+<area shape="rect" href="$classROMModule.html" title="ROMModule" alt="" coords="128,59,221,88"/>
+<area shape="rect" href="$classDECStatDevice.html" title="DECStatDevice" alt="" coords="299,272,411,301"/>
+<area shape="rect" href="$classHaltDevice.html" title="HaltDevice" alt="" coords="313,325,396,355"/>
+<area shape="rect" href="$classTerminalController.html" title="TerminalController" alt="" coords="112,5,237,35"/>
+</map>

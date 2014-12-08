@@ -1,0 +1,63 @@
+\hypertarget{cpu_8cc}{
+\section{cpu.cc File Reference}
+\label{cpu_8cc}\index{cpu.cc@{cpu.cc}}
+}
+{\ttfamily \#include \char`\"{}cpu.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}accesstypes.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}types.h\char`\"{}}\par
+{\ttfamily \#include $<$cstdio$>$}\par
+{\ttfamily \#include $<$deque$>$}\par
+{\ttfamily \#include $<$map$>$}\par
+{\ttfamily \#include $<$vector$>$}\par
+{\ttfamily \#include \char`\"{}config.h\char`\"{}}\par
+{\ttfamily \#include $<$cstdlib$>$}\par
+{\ttfamily \#include \char`\"{}deviceexc.h\char`\"{}}\par
+{\ttfamily \#include $<$set$>$}\par
+{\ttfamily \#include \char`\"{}range.h\char`\"{}}\par
+{\ttfamily \#include $<$new$>$}\par
+{\ttfamily \#include $<$string$>$}\par
+{\ttfamily \#include \char`\"{}cpzeroreg.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}error.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}bfd.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}dis-\/asm.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}string.h\char`\"{}}\par
+Include dependency graph for cpu.cc:This graph shows which files directly or indirectly include this file:\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void(CPU::$\ast$ \hyperlink{cpu_8cc_a92141a512e6f3999bc961a80e736d60f}{emulate\_\-funptr} )(uint32, uint32)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static const int \hyperlink{cpu_8cc_adc7e4ae36fd203d3a23c14ec7173bf85}{reg\_\-zero} = 0
+\item 
+static const int \hyperlink{cpu_8cc_aa25352b5cb4137b391becb3e7dceb7d5}{reg\_\-sp} = 29
+\item 
+static const int \hyperlink{cpu_8cc_a2aaeeeff9b8adcd5dff0984a6386d8c5}{reg\_\-ra} = 31
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{cpu_8cc_a92141a512e6f3999bc961a80e736d60f}{
+\index{cpu.cc@{cpu.cc}!emulate\_\-funptr@{emulate\_\-funptr}}
+\index{emulate\_\-funptr@{emulate\_\-funptr}!cpu.cc@{cpu.cc}}
+\subsubsection[{emulate\_\-funptr}]{\setlength{\rightskip}{0pt plus 5cm}typedef void(CPU::$\ast$ {\bf emulate\_\-funptr})(uint32, uint32)}}
+\label{cpu_8cc_a92141a512e6f3999bc961a80e736d60f}
+
+
+\subsection{Variable Documentation}
+\hypertarget{cpu_8cc_a2aaeeeff9b8adcd5dff0984a6386d8c5}{
+\index{cpu.cc@{cpu.cc}!reg\_\-ra@{reg\_\-ra}}
+\index{reg\_\-ra@{reg\_\-ra}!cpu.cc@{cpu.cc}}
+\subsubsection[{reg\_\-ra}]{\setlength{\rightskip}{0pt plus 5cm}const int {\bf reg\_\-ra} = 31\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{cpu_8cc_a2aaeeeff9b8adcd5dff0984a6386d8c5}
+\hypertarget{cpu_8cc_aa25352b5cb4137b391becb3e7dceb7d5}{
+\index{cpu.cc@{cpu.cc}!reg\_\-sp@{reg\_\-sp}}
+\index{reg\_\-sp@{reg\_\-sp}!cpu.cc@{cpu.cc}}
+\subsubsection[{reg\_\-sp}]{\setlength{\rightskip}{0pt plus 5cm}const int {\bf reg\_\-sp} = 29\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{cpu_8cc_aa25352b5cb4137b391becb3e7dceb7d5}
+\hypertarget{cpu_8cc_adc7e4ae36fd203d3a23c14ec7173bf85}{
+\index{cpu.cc@{cpu.cc}!reg\_\-zero@{reg\_\-zero}}
+\index{reg\_\-zero@{reg\_\-zero}!cpu.cc@{cpu.cc}}
+\subsubsection[{reg\_\-zero}]{\setlength{\rightskip}{0pt plus 5cm}const int {\bf reg\_\-zero} = 0\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{cpu_8cc_adc7e4ae36fd203d3a23c14ec7173bf85}

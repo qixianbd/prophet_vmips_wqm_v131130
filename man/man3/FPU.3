@@ -1,0 +1,232 @@
+.TH "FPU" 3 "18 Dec 2013" "Doxygen" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+FPU \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <prophetfpu.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBinterpret_float_value\fP (uint32, float &)"
+.br
+.ti -1c
+.RI "void \fBinterpret_double_value\fP (uint64, double &d)"
+.br
+.ti -1c
+.RI "uint32 \fBuninterpret_float_value\fP (float f)"
+.br
+.ti -1c
+.RI "uint64 \fBuninterpret_double_value\fP (double d)"
+.br
+.ti -1c
+.RI "void \fBmfc1_emulate\fP (uint32 instr, uint32 pc)"
+.br
+.ti -1c
+.RI "void \fBmtc1_emulate\fP (uint32 instr, uint32 pc)"
+.br
+.ti -1c
+.RI "void \fBadds_emulate\fP (uint32 instr, uint32 pc)"
+.br
+.ti -1c
+.RI "void \fBaddd_emulate\fP (uint32 instr, uint32 pc)"
+.br
+.ti -1c
+.RI "void \fBsubs_emulate\fP (uint32 instr, uint32 pc)"
+.br
+.ti -1c
+.RI "void \fBsubd_emulate\fP (uint32 instr, uint32 pc)"
+.br
+.ti -1c
+.RI "void \fBmuls_emulate\fP (uint32 instr, uint32 pc)"
+.br
+.ti -1c
+.RI "void \fBmuld_emulate\fP (uint32 instr, uint32 pc)"
+.br
+.ti -1c
+.RI "void \fBdivs_emulate\fP (uint32 instr, uint32 pc)"
+.br
+.ti -1c
+.RI "void \fBdivd_emulate\fP (uint32 instr, uint32 pc)"
+.br
+.ti -1c
+.RI "void \fBabss_emulate\fP (uint32 instr, uint32 pc)"
+.br
+.ti -1c
+.RI "void \fBabsd_emulate\fP (uint32 instr, uint32 pc)"
+.br
+.ti -1c
+.RI "void \fBmovs_emulate\fP (uint32 instr, uint32 pc)"
+.br
+.ti -1c
+.RI "void \fBmovd_emulate\fP (uint32 instr, uint32 pc)"
+.br
+.ti -1c
+.RI "void \fBnegs_emulate\fP (uint32 instr, uint32 pc)"
+.br
+.ti -1c
+.RI "void \fBnegd_emulate\fP (uint32 instr, uint32 pc)"
+.br
+.ti -1c
+.RI "void \fBcvtsd_emulate\fP (uint32 instr, uint32 pc)"
+.br
+.ti -1c
+.RI "void \fBcvtsw_emulate\fP (uint32 instr, uint32 pc)"
+.br
+.ti -1c
+.RI "void \fBcvtds_emulate\fP (uint32 instr, uint32 pc)"
+.br
+.ti -1c
+.RI "void \fBcvtdw_emulate\fP (uint32 instr, uint32 pc)"
+.br
+.ti -1c
+.RI "void \fBcvtws_emulate\fP (uint32 instr, uint32 pc)"
+.br
+.ti -1c
+.RI "void \fBcvtwd_emulate\fP (uint32 instr, uint32 pc)"
+.br
+.ti -1c
+.RI "void \fBcsfs_emulate\fP (uint32 instr, uint32 pc)"
+.br
+.ti -1c
+.RI "void \fBcsfd_emulate\fP (uint32 instr, uint32 pc)"
+.br
+.ti -1c
+.RI "void \fBcseqs_emulate\fP (uint32 instr, uint32 pc)"
+.br
+.ti -1c
+.RI "void \fBcseqd_emulate\fP (uint32 instr, uint32 pc)"
+.br
+.ti -1c
+.RI "void \fBclts_emulate\fP (uint32 instr, uint32 pc)"
+.br
+.ti -1c
+.RI "void \fBcltd_emulate\fP (uint32 instr, uint32 pc)"
+.br
+.ti -1c
+.RI "void \fBcles_emulate\fP (uint32 instr, uint32 pc)"
+.br
+.ti -1c
+.RI "void \fBcled_emulate\fP (uint32 instr, uint32 pc)"
+.br
+.ti -1c
+.RI "void \fBbc1f_emulate\fP (uint32 instr, uint32 pc)"
+.br
+.ti -1c
+.RI "void \fBbc1t_emulate\fP (uint32 instr, uint32 pc)"
+.br
+.ti -1c
+.RI "void \fBcpone_emulate\fP (uint32 instr, uint32 pc)"
+.br
+.ti -1c
+.RI "\fBFPU\fP (SpeculativeCPU *m, \fBIntCtrl\fP *i)"
+.br
+.ti -1c
+.RI "void \fBClear_condition\fP (uint32 &)"
+.br
+.ti -1c
+.RI "void \fBSet_condition\fP (uint32 &)"
+.br
+.ti -1c
+.RI "void \fBreset\fP ()"
+.br
+.ti -1c
+.RI "bool \fBFloat_is_NAN\fP (uint32)"
+.br
+.ti -1c
+.RI "bool \fBDouble_is_NAN\fP (uint64)"
+.br
+.ti -1c
+.RI "bool \fBFpcondition\fP (uint32)"
+.br
+.ti -1c
+.RI "uint16 \fBft\fP (const uint32 instr) const "
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "uint32 \fBfreg\fP [32]"
+.br
+.ti -1c
+.RI "SpeculativeCPU * \fBspeculativecpu\fP"
+.br
+.ti -1c
+.RI "\fBIntCtrl\fP * \fBintc\fP"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "uint16 \fBfs\fP (const uint32 instr) const "
+.br
+.ti -1c
+.RI "uint16 \fBfd\fP (const uint32 instr) const "
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "FPU::FPU (SpeculativeCPU * m, \fBIntCtrl\fP * i)\fC [inline]\fP"
+.SH "Member Function Documentation"
+.PP 
+.SS "void FPU::absd_emulate (uint32 instr, uint32 pc)"
+.SS "void FPU::abss_emulate (uint32 instr, uint32 pc)"
+.SS "void FPU::addd_emulate (uint32 instr, uint32 pc)"
+.SS "void FPU::adds_emulate (uint32 instr, uint32 pc)"
+.SS "void FPU::bc1f_emulate (uint32 instr, uint32 pc)"
+.SS "void FPU::bc1t_emulate (uint32 instr, uint32 pc)"
+.SS "void FPU::Clear_condition (uint32 & x)"
+.SS "void FPU::cled_emulate (uint32 instr, uint32 pc)"
+.SS "void FPU::cles_emulate (uint32 instr, uint32 pc)"
+.SS "void FPU::cltd_emulate (uint32 instr, uint32 pc)"
+.SS "void FPU::clts_emulate (uint32 instr, uint32 pc)"
+.SS "void FPU::cpone_emulate (uint32 instr, uint32 pc)"
+.SS "void FPU::cseqd_emulate (uint32 instr, uint32 pc)"
+.SS "void FPU::cseqs_emulate (uint32 instr, uint32 pc)"
+.SS "void FPU::csfd_emulate (uint32 instr, uint32 pc)"
+.SS "void FPU::csfs_emulate (uint32 instr, uint32 pc)"
+.SS "void FPU::cvtds_emulate (uint32 instr, uint32 pc)"
+.SS "void FPU::cvtdw_emulate (uint32 instr, uint32 pc)"
+.SS "void FPU::cvtsd_emulate (uint32 instr, uint32 pc)"
+.SS "void FPU::cvtsw_emulate (uint32 instr, uint32 pc)"
+.SS "void FPU::cvtwd_emulate (uint32 instr, uint32 pc)"
+.SS "void FPU::cvtws_emulate (uint32 instr, uint32 pc)"
+.SS "void FPU::divd_emulate (uint32 instr, uint32 pc)"
+.SS "void FPU::divs_emulate (uint32 instr, uint32 pc)"
+.SS "bool FPU::Double_is_NAN (uint64 x)"
+.SS "uint16 FPU::fd (const uint32 instr) const\fC [private]\fP"
+.SS "bool FPU::Float_is_NAN (uint32 x)"
+.SS "bool FPU::Fpcondition (uint32 x)"
+.SS "uint16 FPU::fs (const uint32 instr) const\fC [private]\fP"
+.SS "uint16 FPU::ft (const uint32 instr) const"
+.SS "void FPU::interpret_double_value (uint64 x, double & d)"
+.SS "void FPU::interpret_float_value (uint32 x, float & f)"
+.SS "void FPU::mfc1_emulate (uint32 instr, uint32 pc)"
+.SS "void FPU::movd_emulate (uint32 instr, uint32 pc)"
+.SS "void FPU::movs_emulate (uint32 instr, uint32 pc)"
+.SS "void FPU::mtc1_emulate (uint32 instr, uint32 pc)"
+.SS "void FPU::muld_emulate (uint32 instr, uint32 pc)"
+.SS "void FPU::muls_emulate (uint32 instr, uint32 pc)"
+.SS "void FPU::negd_emulate (uint32 instr, uint32 pc)"
+.SS "void FPU::negs_emulate (uint32 instr, uint32 pc)"
+.SS "void FPU::reset (void)"
+.SS "void FPU::Set_condition (uint32 & x)"
+.SS "void FPU::subd_emulate (uint32 instr, uint32 pc)"
+.SS "void FPU::subs_emulate (uint32 instr, uint32 pc)"
+.SS "uint64 FPU::uninterpret_double_value (double d)"
+.SS "uint32 FPU::uninterpret_float_value (float f)"
+.SH "Member Data Documentation"
+.PP 
+.SS "uint32 \fBFPU::freg\fP[32]"
+.SS "\fBIntCtrl\fP* \fBFPU::intc\fP"
+.SS "SpeculativeCPU* \fBFPU::speculativecpu\fP"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen from the source code.

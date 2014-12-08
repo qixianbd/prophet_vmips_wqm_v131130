@@ -1,0 +1,148 @@
+\hypertarget{classTerminalController}{
+\section{TerminalController Class Reference}
+\label{classTerminalController}\index{TerminalController@{TerminalController}}
+}
+Inheritance diagram for TerminalController:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classTerminalController}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classTerminalController_1_1DisplayDelay}{DisplayDelay}
+\item 
+class \hyperlink{classTerminalController_1_1KeyboardPoll}{KeyboardPoll}
+\item 
+class \hyperlink{classTerminalController_1_1KeyboardRepoll}{KeyboardRepoll}
+\item 
+struct \hyperlink{structTerminalController_1_1LineState}{LineState}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classTerminalController_a1c0eb6e303af08fd8a3339f148947d45}{
+{\bfseries TerminalController} (\hyperlink{classClock}{Clock} $\ast$clock, long keyboard\_\-poll\_\-ns, long keyboard\_\-repoll\_\-ns, long display\_\-ready\_\-delay\_\-ns)  throw ( std::bad\_\-alloc )}
+\label{classTerminalController_a1c0eb6e303af08fd8a3339f148947d45}
+
+\item 
+\hypertarget{classTerminalController_acf0828324151635cac47807c736a1308}{
+virtual bool {\bfseries connect\_\-terminal} (int tty\_\-fd, int line)  throw ()}
+\label{classTerminalController_acf0828324151635cac47807c736a1308}
+
+\item 
+\hypertarget{classTerminalController_aea2409c72052fcd47289b447f83eb10a}{
+virtual void {\bfseries remove\_\-terminal} (int line)  throw ()}
+\label{classTerminalController_aea2409c72052fcd47289b447f83eb10a}
+
+\item 
+\hypertarget{classTerminalController_a157b1f7b289043c3b27470230875d9c3}{
+bool {\bfseries line\_\-connected} (const int line) const }
+\label{classTerminalController_a157b1f7b289043c3b27470230875d9c3}
+
+\item 
+\hypertarget{classTerminalController_a0e2d66f0e2cbe7373bf8e0ba4ac6c5b1}{
+virtual void {\bfseries reinitialize\_\-terminals} ()  throw ()}
+\label{classTerminalController_a0e2d66f0e2cbe7373bf8e0ba4ac6c5b1}
+
+\item 
+\hypertarget{classTerminalController_a343a40e774eeb2506b0bfbc5817d0c62}{
+virtual void {\bfseries poll\_\-keyboards} ()  throw ( std::bad\_\-alloc )}
+\label{classTerminalController_a343a40e774eeb2506b0bfbc5817d0c62}
+
+\item 
+\hypertarget{classTerminalController_a985b6892fc255a919238acecb947a978}{
+virtual void {\bfseries repoll\_\-keyboard} (int line)  throw ( std::bad\_\-alloc )}
+\label{classTerminalController_a985b6892fc255a919238acecb947a978}
+
+\item 
+\hypertarget{classTerminalController_acf0314b08dad27cfe57bf374cecbc5a3}{
+virtual void {\bfseries unready\_\-display} (int line, char data)  throw ( std::bad\_\-alloc )}
+\label{classTerminalController_acf0314b08dad27cfe57bf374cecbc5a3}
+
+\item 
+\hypertarget{classTerminalController_a38a988039e7bcb29a7b6b74273d99ffa}{
+virtual void {\bfseries ready\_\-display} (int line)  throw ()}
+\label{classTerminalController_a38a988039e7bcb29a7b6b74273d99ffa}
+
+\item 
+\hypertarget{classTerminalController_afe5b8685b5149db2b7cc5b2e395a479e}{
+virtual void {\bfseries unready\_\-keyboard} (int line)  throw ()}
+\label{classTerminalController_afe5b8685b5149db2b7cc5b2e395a479e}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bfseries State} \{ {\bfseries UNREADY} =  0, 
+{\bfseries READY} =  CTL\_\-RDY
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classTerminalController_a0475271dfd2cbed03ea8c95964771b20}{
+virtual void {\bfseries ready\_\-keyboard} (int line)  throw ()}
+\label{classTerminalController_a0475271dfd2cbed03ea8c95964771b20}
+
+\item 
+\hypertarget{classTerminalController_a2b3bc99eae822e9fec9b54e0a3aad57a}{
+virtual bool {\bfseries prepare\_\-tty} (int line)  throw ()}
+\label{classTerminalController_a2b3bc99eae822e9fec9b54e0a3aad57a}
+
+\item 
+\hypertarget{classTerminalController_a43234a11dfcdbca163d940a214f11009}{
+void {\bfseries copy\_\-unready\_\-keyboards} (fd\_\-set $\ast$set)}
+\label{classTerminalController_a43234a11dfcdbca163d940a214f11009}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classTerminalController_a33f5df34e7dfe739abd1917086a6951a}{
+const long {\bfseries keyboard\_\-poll\_\-ns}}
+\label{classTerminalController_a33f5df34e7dfe739abd1917086a6951a}
+
+\item 
+\hypertarget{classTerminalController_a9e1ac2e3cddddb5030363e5f307a4072}{
+const long {\bfseries keyboard\_\-repoll\_\-ns}}
+\label{classTerminalController_a9e1ac2e3cddddb5030363e5f307a4072}
+
+\item 
+\hypertarget{classTerminalController_a610627e857d986c28e833ee814b58707}{
+const long {\bfseries display\_\-ready\_\-delay\_\-ns}}
+\label{classTerminalController_a610627e857d986c28e833ee814b58707}
+
+\item 
+\hypertarget{classTerminalController_a8a717f21efebbc0355a617cdba2f058d}{
+\hyperlink{classTerminalController_1_1KeyboardPoll}{KeyboardPoll} $\ast$ {\bfseries keyboard\_\-poll}}
+\label{classTerminalController_a8a717f21efebbc0355a617cdba2f058d}
+
+\item 
+\hypertarget{classTerminalController_a06b8c5b177712c24a257c500116b7044}{
+\hyperlink{classClock}{Clock} $\ast$ {\bfseries clock}}
+\label{classTerminalController_a06b8c5b177712c24a257c500116b7044}
+
+\item 
+\hypertarget{classTerminalController_aaa95a9790c6ba7ed5901ae06431c29d6}{
+int {\bfseries max\_\-fd}}
+\label{classTerminalController_aaa95a9790c6ba7ed5901ae06431c29d6}
+
+\item 
+\hypertarget{classTerminalController_ae646b89a2d0ecd3b056d86c655064060}{
+fd\_\-set {\bfseries unready\_\-keyboards}}
+\label{classTerminalController_ae646b89a2d0ecd3b056d86c655064060}
+
+\item 
+\hypertarget{classTerminalController_a8396e3aef90eecaa4e97e31be16cac55}{
+\hyperlink{structTerminalController_1_1LineState}{LineState} {\bfseries lines} \mbox{[}MAX\_\-TERMINALS\mbox{]}}
+\label{classTerminalController_a8396e3aef90eecaa4e97e31be16cac55}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+terminalcontroller.h\item 
+terminalcontroller.cc\end{DoxyCompactItemize}

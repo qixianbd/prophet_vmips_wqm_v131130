@@ -1,0 +1,115 @@
+\hypertarget{prophetconsole_8cc}{
+\section{prophetconsole.cc File Reference}
+\label{prophetconsole_8cc}\index{prophetconsole.cc@{prophetconsole.cc}}
+}
+{\ttfamily \#include \char`\"{}prophetconsole.h\char`\"{}}\par
+{\ttfamily \#include $<$X11/Intrinsic.h$>$}\par
+{\ttfamily \#include $<$X11/StringDefs.h$>$}\par
+{\ttfamily \#include $<$X11/Shell.h$>$}\par
+{\ttfamily \#include $<$X11/Xlib.h$>$}\par
+{\ttfamily \#include $<$X11/Xaw/Cardinals.h$>$}\par
+{\ttfamily \#include $<$X11/Xaw/Paned.h$>$}\par
+{\ttfamily \#include $<$X11/Xaw/AsciiText.h$>$}\par
+{\ttfamily \#include $<$X11/Xaw/Text.h$>$}\par
+{\ttfamily \#include $<$X11/keysym.h$>$}\par
+{\ttfamily \#include $<$cstring$>$}\par
+{\ttfamily \#include $<$iostream$>$}\par
+{\ttfamily \#include $<$assert.h$>$}\par
+{\ttfamily \#include $<$stdarg.h$>$}\par
+{\ttfamily \#include $<$stdio.h$>$}\par
+{\ttfamily \#include $<$stdlib.h$>$}\par
+{\ttfamily \#include $<$signal.h$>$}\par
+Include dependency graph for prophetconsole.cc:\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \hyperlink{namespaceProphetConsole}{ProphetConsole}
+\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{prophetconsole_8cc_aa46a11fe4621d542673ad17725ab5ae9}{TEXTHEIGHT}~20
+\item 
+\#define \hyperlink{prophetconsole_8cc_aa80a6ba9b51f4499851f707985cc769b}{TEXTWIDTH}~10
+\item 
+\#define \hyperlink{prophetconsole_8cc_acb86c6f9941d09df9186bd6c245cd37f}{IO\_\-BUFFER}~1024
+\item 
+\#define \hyperlink{prophetconsole_8cc_aa348a2832ae8a548c1461de843c20cc8}{PROPHET\_\-CONSOLE}~\char`\"{}Prophet Console\char`\"{}
+\item 
+\#define \hyperlink{prophetconsole_8cc_a8afe34aea85ea6eab312cb9ebe9e602f}{CONSOLE\_\-INPUT}~SIGUSR1
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{namespaceProphetConsole_a7b37c2e91948d3ad2ab06bec5cd446c8}{ProphetConsole::output} (char $\ast$buf, int start, int len)
+\item 
+int \hyperlink{namespaceProphetConsole_a9b08f04467cb442203793ff5f1d77701}{ProphetConsole::input} (char $\ast$buf, int len)
+\item 
+static void \hyperlink{namespaceProphetConsole_aa224b4eeedc2c9ac6096de9876bb83a0}{ProphetConsole::ReadCallBack} (XtPointer clientdata, XtSignalId $\ast$psignalid)
+\item 
+static void \hyperlink{namespaceProphetConsole_aa0e06ee9606368d65aa9e1cc5fa797bd}{ProphetConsole::SignalCallBack} (int sig)
+\item 
+static void \hyperlink{namespaceProphetConsole_aaea488397c9990197639f360bbd3ebe6}{ProphetConsole::InputCallBack} (XtPointer clientdata, int $\ast$psource, XtInputId $\ast$pinputid)
+\item 
+int \hyperlink{namespaceProphetConsole_a5288993987502e611e67d9566be2dd8f}{ProphetConsole::Init} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\item 
+void \hyperlink{namespaceProphetConsole_a6ae825660773e54865dc0ac9568bd63e}{ProphetConsole::Write} (const char $\ast$format,...)
+\item 
+void \hyperlink{namespaceProphetConsole_ad51f152582680b146f09579634aeae51}{ProphetConsole::Read} (char $\ast$buffer, int buflen)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+Widget \hyperlink{namespaceProphetConsole_a65fb6a744b093095ffe002fbf229c6e4}{ProphetConsole::toplevel}
+\item 
+Widget \hyperlink{namespaceProphetConsole_aca0431d512656abfc92b8a20330cc82e}{ProphetConsole::shell}
+\item 
+Widget \hyperlink{namespaceProphetConsole_a12ede826728b7a2bd60b92c970be8f08}{ProphetConsole::pane}
+\item 
+Widget \hyperlink{namespaceProphetConsole_a6e47fe6a637e31d3f31bb25183f32fdd}{ProphetConsole::console}
+\item 
+XtAppContext \hyperlink{namespaceProphetConsole_a2fa78a4607b47dba4d37dd1a50a1b781}{ProphetConsole::appcontext}
+\item 
+Arg \hyperlink{namespaceProphetConsole_a56788fa0b0179bd4f312a4fda738879a}{ProphetConsole::args} \mbox{[}10\mbox{]}
+\item 
+Cardinal \hyperlink{namespaceProphetConsole_a386b8e0d22668784ef9f3920d6544771}{ProphetConsole::n}
+\item 
+XtInputId \hyperlink{namespaceProphetConsole_aabfbbc62f97e57fa86f188582d319616}{ProphetConsole::inputid}
+\item 
+XtSignalId \hyperlink{namespaceProphetConsole_ae0568d1dd3e97dd9923105c700e63b5a}{ProphetConsole::signalid}
+\item 
+pid\_\-t \hyperlink{namespaceProphetConsole_a4800a1dcfd4727b2b0650363a2b480fd}{ProphetConsole::pid}
+\item 
+int \hyperlink{namespaceProphetConsole_a6603e349864186499731abb41b47c017}{ProphetConsole::fd} \mbox{[}2\mbox{]}
+\item 
+int \hyperlink{namespaceProphetConsole_a9f6dc9cae622c7bee67d34033d679ddb}{ProphetConsole::fd\_\-in} \mbox{[}2\mbox{]}
+\item 
+bool \hyperlink{namespaceProphetConsole_aef27750d6e044bcbfc3086c930d3ef66}{ProphetConsole::inited} = false
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{prophetconsole_8cc_a8afe34aea85ea6eab312cb9ebe9e602f}{
+\index{prophetconsole.cc@{prophetconsole.cc}!CONSOLE\_\-INPUT@{CONSOLE\_\-INPUT}}
+\index{CONSOLE\_\-INPUT@{CONSOLE\_\-INPUT}!prophetconsole.cc@{prophetconsole.cc}}
+\subsubsection[{CONSOLE\_\-INPUT}]{\setlength{\rightskip}{0pt plus 5cm}\#define CONSOLE\_\-INPUT~SIGUSR1}}
+\label{prophetconsole_8cc_a8afe34aea85ea6eab312cb9ebe9e602f}
+\hypertarget{prophetconsole_8cc_acb86c6f9941d09df9186bd6c245cd37f}{
+\index{prophetconsole.cc@{prophetconsole.cc}!IO\_\-BUFFER@{IO\_\-BUFFER}}
+\index{IO\_\-BUFFER@{IO\_\-BUFFER}!prophetconsole.cc@{prophetconsole.cc}}
+\subsubsection[{IO\_\-BUFFER}]{\setlength{\rightskip}{0pt plus 5cm}\#define IO\_\-BUFFER~1024}}
+\label{prophetconsole_8cc_acb86c6f9941d09df9186bd6c245cd37f}
+\hypertarget{prophetconsole_8cc_aa348a2832ae8a548c1461de843c20cc8}{
+\index{prophetconsole.cc@{prophetconsole.cc}!PROPHET\_\-CONSOLE@{PROPHET\_\-CONSOLE}}
+\index{PROPHET\_\-CONSOLE@{PROPHET\_\-CONSOLE}!prophetconsole.cc@{prophetconsole.cc}}
+\subsubsection[{PROPHET\_\-CONSOLE}]{\setlength{\rightskip}{0pt plus 5cm}\#define PROPHET\_\-CONSOLE~\char`\"{}Prophet Console\char`\"{}}}
+\label{prophetconsole_8cc_aa348a2832ae8a548c1461de843c20cc8}
+\hypertarget{prophetconsole_8cc_aa46a11fe4621d542673ad17725ab5ae9}{
+\index{prophetconsole.cc@{prophetconsole.cc}!TEXTHEIGHT@{TEXTHEIGHT}}
+\index{TEXTHEIGHT@{TEXTHEIGHT}!prophetconsole.cc@{prophetconsole.cc}}
+\subsubsection[{TEXTHEIGHT}]{\setlength{\rightskip}{0pt plus 5cm}\#define TEXTHEIGHT~20}}
+\label{prophetconsole_8cc_aa46a11fe4621d542673ad17725ab5ae9}
+\hypertarget{prophetconsole_8cc_aa80a6ba9b51f4499851f707985cc769b}{
+\index{prophetconsole.cc@{prophetconsole.cc}!TEXTWIDTH@{TEXTWIDTH}}
+\index{TEXTWIDTH@{TEXTWIDTH}!prophetconsole.cc@{prophetconsole.cc}}
+\subsubsection[{TEXTWIDTH}]{\setlength{\rightskip}{0pt plus 5cm}\#define TEXTWIDTH~10}}
+\label{prophetconsole_8cc_aa80a6ba9b51f4499851f707985cc769b}

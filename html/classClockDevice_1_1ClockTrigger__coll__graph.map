@@ -1,0 +1,9 @@
+<map id="G" name="G">
+<area shape="rect" href="$classClockDevice.html" title="ClockDevice" alt="" coords="185,261,279,291"/>
+<area shape="rect" href="$classCancelableTask.html" title="CancelableTask" alt="" coords="336,85,448,115"/>
+<area shape="rect" href="$classTask.html" title="Task" alt="" coords="368,5,416,35"/>
+<area shape="rect" href="$classDeviceMap.html" title="DeviceMap" alt="" coords="5,165,91,195"/>
+<area shape="rect" href="$classRange.html" title="Range" alt="" coords="19,85,77,115"/>
+<area shape="rect" href="$classDeviceInt.html" title="DeviceInt" alt="" coords="115,165,189,195"/>
+<area shape="rect" href="$classClock.html" title="Clock" alt="" coords="213,165,267,195"/>
+</map>

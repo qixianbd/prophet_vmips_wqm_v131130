@@ -1,0 +1,104 @@
+.TH "prophet_vmips.cc" 3 "18 Dec 2013" "Doxygen" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+prophet_vmips.cc \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'prophet_vmips.h'\fP
+.br
+\fC#include 'vmips.h'\fP
+.br
+\fC#include <sstream>\fP
+.br
+\fC#include <iostream>\fP
+.br
+\fC#include <typeinfo>\fP
+.br
+\fC#include 'types.h'\fP
+.br
+\fC#include 'cpu.h'\fP
+.br
+\fC#include 'obstack.h'\fP
+.br
+\fC#include 'predefine.h'\fP
+.br
+\fC#include 'prophetlog.h'\fP
+.br
+\fC#include <deque>\fP
+.br
+\fC#include <string>\fP
+.br
+\fC#include <list>\fP
+.br
+\fC#include <map>\fP
+.br
+\fC#include <cstdio>\fP
+.br
+\fC#include 'speculativecpu.h'\fP
+.br
+\fC#include 'prophetstatistic.h'\fP
+.br
+\fC#include 'options.h'\fP
+.br
+\fC#include <signal.h>\fP
+.br
+\fC#include <sys/time.h>\fP
+.br
+\fC#include <stdio.h>\fP
+.br
+\fC#include <assert.h>\fP
+.br
+\fC#include <exception>\fP
+.br
+
+.SS "Defines"
+
+.in +1c
+.ti -1c
+.RI "#define \fBDEBUG_KEYMING\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBOnQuit\fP (int s)"
+.br
+.ti -1c
+.RI "static void \fBprophet_unexpected\fP ()"
+.br
+.ti -1c
+.RI "static void \fBprophet_terminate\fP ()"
+.br
+.ti -1c
+.RI "int \fBmain\fP (int argc, char **argv)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "int \fBrestart_counts\fP = 0"
+.br
+.ti -1c
+.RI "FILE * \fBmystderrlog\fP = NULL"
+.br
+.in -1c
+.SH "Define Documentation"
+.PP 
+.SS "#define DEBUG_KEYMING"
+.SH "Function Documentation"
+.PP 
+.SS "int main (int argc, char ** argv)"
+.SS "static void OnQuit (int s)\fC [static]\fP"
+.SS "static void prophet_terminate ()\fC [static]\fP"
+.SS "static void prophet_unexpected ()\fC [static]\fP"
+.SH "Variable Documentation"
+.PP 
+.SS "FILE* \fBmystderrlog\fP = NULL"
+.SS "int \fBrestart_counts\fP = 0"
+.SH "Author"
+.PP 
+Generated automatically by Doxygen from the source code.

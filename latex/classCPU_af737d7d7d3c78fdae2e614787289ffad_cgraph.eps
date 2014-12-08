@@ -1,0 +1,728 @@
+%!PS-Adobe-3.0 EPSF-3.0
+%%Creator: Graphviz version 2.20.2 (Tue Mar  2 21:46:26 UTC 2010)
+%%For: (qmwx) qmwx,,,
+%%Title: G
+%%Pages: (atend)
+%%BoundingBox: (atend)
+%%EndComments
+save
+%%BeginProlog
+/DotDict 200 dict def
+DotDict begin
+
+/setupLatin1 {
+mark
+/EncodingVector 256 array def
+ EncodingVector 0
+
+ISOLatin1Encoding 0 255 getinterval putinterval
+EncodingVector 45 /hyphen put
+
+% Set up ISO Latin 1 character encoding
+/starnetISO {
+        dup dup findfont dup length dict begin
+        { 1 index /FID ne { def }{ pop pop } ifelse
+        } forall
+        /Encoding EncodingVector def
+        currentdict end definefont
+} def
+/Times-Roman starnetISO def
+/Times-Italic starnetISO def
+/Times-Bold starnetISO def
+/Times-BoldItalic starnetISO def
+/Helvetica starnetISO def
+/Helvetica-Oblique starnetISO def
+/Helvetica-Bold starnetISO def
+/Helvetica-BoldOblique starnetISO def
+/Courier starnetISO def
+/Courier-Oblique starnetISO def
+/Courier-Bold starnetISO def
+/Courier-BoldOblique starnetISO def
+cleartomark
+} bind def
+
+%%BeginResource: procset graphviz 0 0
+/coord-font-family /Times-Roman def
+/default-font-family /Times-Roman def
+/coordfont coord-font-family findfont 8 scalefont def
+
+/InvScaleFactor 1.0 def
+/set_scale {
+       dup 1 exch div /InvScaleFactor exch def
+       scale
+} bind def
+
+% styles
+/solid { [] 0 setdash } bind def
+/dashed { [9 InvScaleFactor mul dup ] 0 setdash } bind def
+/dotted { [1 InvScaleFactor mul 6 InvScaleFactor mul] 0 setdash } bind def
+/invis {/fill {newpath} def /stroke {newpath} def /show {pop newpath} def} bind def
+/bold { 2 setlinewidth } bind def
+/filled { } bind def
+/unfilled { } bind def
+/rounded { } bind def
+/diagonals { } bind def
+
+% hooks for setting color 
+/nodecolor { sethsbcolor } bind def
+/edgecolor { sethsbcolor } bind def
+/graphcolor { sethsbcolor } bind def
+/nopcolor {pop pop pop} bind def
+
+/beginpage {	% i j npages
+	/npages exch def
+	/j exch def
+	/i exch def
+	/str 10 string def
+	npages 1 gt {
+		gsave
+			coordfont setfont
+			0 0 moveto
+			(\() show i str cvs show (,) show j str cvs show (\)) show
+		grestore
+	} if
+} bind def
+
+/set_font {
+	findfont exch
+	scalefont setfont
+} def
+
+% draw text fitted to its expected width
+/alignedtext {			% width text
+	/text exch def
+	/width exch def
+	gsave
+		width 0 gt {
+			[] 0 setdash
+			text stringwidth pop width exch sub text length div 0 text ashow
+		} if
+	grestore
+} def
+
+/boxprim {				% xcorner ycorner xsize ysize
+		4 2 roll
+		moveto
+		2 copy
+		exch 0 rlineto
+		0 exch rlineto
+		pop neg 0 rlineto
+		closepath
+} bind def
+
+/ellipse_path {
+	/ry exch def
+	/rx exch def
+	/y exch def
+	/x exch def
+	matrix currentmatrix
+	newpath
+	x y translate
+	rx ry scale
+	0 0 1 0 360 arc
+	setmatrix
+} bind def
+
+/endpage { showpage } bind def
+/showpage { } def
+
+/layercolorseq
+	[	% layer color sequence - darkest to lightest
+		[0 0 0]
+		[.2 .8 .8]
+		[.4 .8 .8]
+		[.6 .8 .8]
+		[.8 .8 .8]
+	]
+def
+
+/layerlen layercolorseq length def
+
+/setlayer {/maxlayer exch def /curlayer exch def
+	layercolorseq curlayer 1 sub layerlen mod get
+	aload pop sethsbcolor
+	/nodecolor {nopcolor} def
+	/edgecolor {nopcolor} def
+	/graphcolor {nopcolor} def
+} bind def
+
+/onlayer { curlayer ne {invis} if } def
+
+/onlayers {
+	/myupper exch def
+	/mylower exch def
+	curlayer mylower lt
+	curlayer myupper gt
+	or
+	{invis} if
+} def
+
+/curlayer 0 def
+
+%%EndResource
+%%EndProlog
+%%BeginSetup
+14 default-font-family set_font
+1 setmiterlimit
+% /arrowlength 10 def
+% /arrowwidth 5 def
+
+% make sure pdfmark is harmless for PS-interpreters other than Distiller
+/pdfmark where {pop} {userdict /pdfmark /cleartomark load put} ifelse
+% make '<<' and '>>' safe on PS Level 1 devices
+/languagelevel where {pop languagelevel}{1} ifelse
+2 lt {
+    userdict (<<) cvn ([) cvn load put
+    userdict (>>) cvn ([) cvn load put
+} if
+
+%%EndSetup
+setupLatin1
+%%Page: 1 1
+%%PageBoundingBox: 36 36 798 306
+%%PageOrientation: Portrait
+0 0 1 beginpage
+gsave
+36 36 762 270 boxprim clip newpath
+1 1 set_scale 0 rotate 40 40 translate
+% Node1
+gsave
+0.000 0.000 0.749 nodecolor
+newpath 0 140 moveto
+0 162 lineto
+162 162 lineto
+162 140 lineto
+closepath fill
+1 setlinewidth
+filled
+0.000 0.000 0.000 nodecolor
+newpath 0 140 moveto
+0 162 lineto
+162 162 lineto
+162 140 lineto
+closepath stroke
+0.000 0.000 0.000 nodecolor
+10 /FreeSans set_font
+8 149 moveto 146 (CPU::cpzero_dump_regs_and_tlb) alignedtext
+grestore
+% Node2
+gsave
+[ /Rect [ 198 140 336 162 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($classCPZero.html#a2bf7aa14a71d8ae4ffb4a3f9c352e971) >>
+  /Subtype /Link
+/ANN pdfmark
+0.000 0.000 1.000 nodecolor
+newpath 198 140 moveto
+198 162 lineto
+336 162 lineto
+336 140 lineto
+closepath fill
+1 setlinewidth
+filled
+0.000 0.000 0.000 nodecolor
+newpath 198 140 moveto
+198 162 lineto
+336 162 lineto
+336 140 lineto
+closepath stroke
+0.000 0.000 0.000 nodecolor
+10 /FreeSans set_font
+206 149 moveto 122 (CPZero::dump_regs_and_tlb) alignedtext
+grestore
+% Node1->Node2
+gsave
+1 setlinewidth
+solid
+0.667 0.776 0.439 edgecolor
+newpath 162 151 moveto
+171 151 179 151 188 151 curveto
+stroke
+0.667 0.776 0.439 edgecolor
+newpath 188 154.5 moveto
+198 151 lineto
+188 147.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0.667 0.776 0.439 edgecolor
+newpath 188 154.5 moveto
+198 151 lineto
+188 147.5 lineto
+closepath stroke
+grestore
+% Node3
+gsave
+[ /Rect [ 372 160 474 182 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($classCPZero.html#aee1b391ace97d07fcd551133a6725ac2) >>
+  /Subtype /Link
+/ANN pdfmark
+0.000 0.000 1.000 nodecolor
+newpath 372 160 moveto
+372 182 lineto
+474 182 lineto
+474 160 lineto
+closepath fill
+1 setlinewidth
+filled
+0.000 0.000 0.000 nodecolor
+newpath 372 160 moveto
+372 182 lineto
+474 182 lineto
+474 160 lineto
+closepath stroke
+0.000 0.000 0.000 nodecolor
+10 /FreeSans set_font
+380 169 moveto 86 (CPZero::dump_regs) alignedtext
+grestore
+% Node2->Node3
+gsave
+1 setlinewidth
+solid
+0.667 0.776 0.439 edgecolor
+newpath 336 160 moveto
+345 161 353 162 362 163 curveto
+stroke
+0.667 0.776 0.439 edgecolor
+newpath 361.7 166.49 moveto
+372 164 lineto
+362.4 159.52 lineto
+closepath fill
+1 setlinewidth
+solid
+0.667 0.776 0.439 edgecolor
+newpath 361.7 166.49 moveto
+372 164 lineto
+362.4 159.52 lineto
+closepath stroke
+grestore
+% Node4
+gsave
+[ /Rect [ 377 120 469 142 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($classCPZero.html#a7b1425b75a48855fe10c88a7a01eab26) >>
+  /Subtype /Link
+/ANN pdfmark
+0.000 0.000 1.000 nodecolor
+newpath 377 120 moveto
+377 142 lineto
+470 142 lineto
+470 120 lineto
+closepath fill
+1 setlinewidth
+filled
+0.000 0.000 0.000 nodecolor
+newpath 377 120 moveto
+377 142 lineto
+470 142 lineto
+470 120 lineto
+closepath stroke
+0.000 0.000 0.000 nodecolor
+10 /FreeSans set_font
+384.5 129 moveto 77 (CPZero::dump_tlb) alignedtext
+grestore
+% Node2->Node4
+gsave
+1 setlinewidth
+solid
+0.667 0.776 0.439 edgecolor
+newpath 336 142 moveto
+346 141 357 140 367 138 curveto
+stroke
+0.667 0.776 0.439 edgecolor
+newpath 367.4 141.48 moveto
+377 137 lineto
+366.7 134.51 lineto
+closepath fill
+1 setlinewidth
+solid
+0.667 0.776 0.439 edgecolor
+newpath 367.4 141.48 moveto
+377 137 lineto
+366.7 134.51 lineto
+closepath stroke
+grestore
+% Node5
+gsave
+[ /Rect [ 511 120 593 142 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($cpzero_8cc.html#a4fe6b690f5ea991f8b55fca166015a20) >>
+  /Subtype /Link
+/ANN pdfmark
+0.000 0.000 1.000 nodecolor
+newpath 511 120 moveto
+511 142 lineto
+594 142 lineto
+594 120 lineto
+closepath fill
+1 setlinewidth
+filled
+0.000 0.000 0.000 nodecolor
+newpath 511 120 moveto
+511 142 lineto
+594 142 lineto
+594 120 lineto
+closepath stroke
+0.000 0.000 0.000 nodecolor
+10 /FreeSans set_font
+518.5 129 moveto 67 (dump_tlb_entry) alignedtext
+grestore
+% Node4->Node5
+gsave
+1 setlinewidth
+solid
+0.667 0.776 0.439 edgecolor
+newpath 470 131 moveto
+480 131 491 131 501 131 curveto
+stroke
+0.667 0.776 0.439 edgecolor
+newpath 501 134.5 moveto
+511 131 lineto
+501 127.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0.667 0.776 0.439 edgecolor
+newpath 501 134.5 moveto
+511 131 lineto
+501 127.5 lineto
+closepath stroke
+grestore
+% Node6
+gsave
+[ /Rect [ 652 240 732 262 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($classTLBEntry.html#a9ea42aca3ac9841e50ca88717a57675d) >>
+  /Subtype /Link
+/ANN pdfmark
+0.000 0.000 1.000 nodecolor
+newpath 652 240 moveto
+652 262 lineto
+733 262 lineto
+733 240 lineto
+closepath fill
+1 setlinewidth
+filled
+0.000 0.000 0.000 nodecolor
+newpath 652 240 moveto
+652 262 lineto
+733 262 lineto
+733 240 lineto
+closepath stroke
+0.000 0.000 0.000 nodecolor
+10 /FreeSans set_font
+659.5 249 moveto 65 (TLBEntry::asid) alignedtext
+grestore
+% Node5->Node6
+gsave
+1 setlinewidth
+solid
+0.667 0.776 0.439 edgecolor
+newpath 558 142 moveto
+569 163 596 206 630 231 curveto
+634 233 638 236 643 238 curveto
+stroke
+0.667 0.776 0.439 edgecolor
+newpath 641.44 241.14 moveto
+652 242 lineto
+644.28 234.74 lineto
+closepath fill
+1 setlinewidth
+solid
+0.667 0.776 0.439 edgecolor
+newpath 641.44 241.14 moveto
+652 242 lineto
+644.28 234.74 lineto
+closepath stroke
+grestore
+% Node7
+gsave
+[ /Rect [ 652 200 732 222 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($classTLBEntry.html#a035428d115899db13cad9ae4a0bd19d6) >>
+  /Subtype /Link
+/ANN pdfmark
+0.000 0.000 1.000 nodecolor
+newpath 652 200 moveto
+652 222 lineto
+733 222 lineto
+733 200 lineto
+closepath fill
+1 setlinewidth
+filled
+0.000 0.000 0.000 nodecolor
+newpath 652 200 moveto
+652 222 lineto
+733 222 lineto
+733 200 lineto
+closepath stroke
+0.000 0.000 0.000 nodecolor
+10 /FreeSans set_font
+659.5 209 moveto 65 (TLBEntry::dirty) alignedtext
+grestore
+% Node5->Node7
+gsave
+1 setlinewidth
+solid
+0.667 0.776 0.439 edgecolor
+newpath 564 142 moveto
+579 155 605 177 630 191 curveto
+634 193 638 194 642 196 curveto
+stroke
+0.667 0.776 0.439 edgecolor
+newpath 641.42 199.54 moveto
+652 200 lineto
+644.02 193.04 lineto
+closepath fill
+1 setlinewidth
+solid
+0.667 0.776 0.439 edgecolor
+newpath 641.42 199.54 moveto
+652 200 lineto
+644.02 193.04 lineto
+closepath stroke
+grestore
+% Node8
+gsave
+[ /Rect [ 648 160 736 182 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($classTLBEntry.html#a958ad780663c9f6ff19f5011223abc4a) >>
+  /Subtype /Link
+/ANN pdfmark
+0.000 0.000 1.000 nodecolor
+newpath 648 160 moveto
+648 182 lineto
+736 182 lineto
+736 160 lineto
+closepath fill
+1 setlinewidth
+filled
+0.000 0.000 0.000 nodecolor
+newpath 648 160 moveto
+648 182 lineto
+736 182 lineto
+736 160 lineto
+closepath stroke
+0.000 0.000 0.000 nodecolor
+10 /FreeSans set_font
+656 169 moveto 72 (TLBEntry::global) alignedtext
+grestore
+% Node5->Node8
+gsave
+1 setlinewidth
+solid
+0.667 0.776 0.439 edgecolor
+newpath 591 142 moveto
+607 147 626 152 643 157 curveto
+stroke
+0.667 0.776 0.439 edgecolor
+newpath 642.42 160.48 moveto
+653 160 lineto
+644.43 153.77 lineto
+closepath fill
+1 setlinewidth
+solid
+0.667 0.776 0.439 edgecolor
+newpath 642.42 160.48 moveto
+653 160 lineto
+644.43 153.77 lineto
+closepath stroke
+grestore
+% Node9
+gsave
+[ /Rect [ 631 120 753 142 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($classTLBEntry.html#ac2a92150e0568daa9810e624d39a235b) >>
+  /Subtype /Link
+/ANN pdfmark
+0.000 0.000 1.000 nodecolor
+newpath 631 120 moveto
+631 142 lineto
+754 142 lineto
+754 120 lineto
+closepath fill
+1 setlinewidth
+filled
+0.000 0.000 0.000 nodecolor
+newpath 631 120 moveto
+631 142 lineto
+754 142 lineto
+754 120 lineto
+closepath stroke
+0.000 0.000 0.000 nodecolor
+10 /FreeSans set_font
+638.5 129 moveto 107 (TLBEntry::noncacheable) alignedtext
+grestore
+% Node5->Node9
+gsave
+1 setlinewidth
+solid
+0.667 0.776 0.439 edgecolor
+newpath 594 131 moveto
+603 131 612 131 621 131 curveto
+stroke
+0.667 0.776 0.439 edgecolor
+newpath 621 134.5 moveto
+631 131 lineto
+621 127.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0.667 0.776 0.439 edgecolor
+newpath 621 134.5 moveto
+631 131 lineto
+621 127.5 lineto
+closepath stroke
+grestore
+% Node10
+gsave
+[ /Rect [ 654 80 730 102 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($classTLBEntry.html#a4595566739ea73c5b89a1bb9a8b472fc) >>
+  /Subtype /Link
+/ANN pdfmark
+0.000 0.000 1.000 nodecolor
+newpath 654 80 moveto
+654 102 lineto
+730 102 lineto
+730 80 lineto
+closepath fill
+1 setlinewidth
+filled
+0.000 0.000 0.000 nodecolor
+newpath 654 80 moveto
+654 102 lineto
+730 102 lineto
+730 80 lineto
+closepath stroke
+0.000 0.000 0.000 nodecolor
+10 /FreeSans set_font
+662 89 moveto 60 (TLBEntry::pfn) alignedtext
+grestore
+% Node5->Node10
+gsave
+1 setlinewidth
+solid
+0.667 0.776 0.439 edgecolor
+newpath 591 120 moveto
+607 115 627 110 644 105 curveto
+stroke
+0.667 0.776 0.439 edgecolor
+newpath 645.43 108.23 moveto
+654 102 lineto
+643.42 101.52 lineto
+closepath fill
+1 setlinewidth
+solid
+0.667 0.776 0.439 edgecolor
+newpath 645.43 108.23 moveto
+654 102 lineto
+643.42 101.52 lineto
+closepath stroke
+grestore
+% Node11
+gsave
+[ /Rect [ 651 40 733 62 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($classTLBEntry.html#a29878217888278dbe3bc4ab3abbf081e) >>
+  /Subtype /Link
+/ANN pdfmark
+0.000 0.000 1.000 nodecolor
+newpath 651 40 moveto
+651 62 lineto
+734 62 lineto
+734 40 lineto
+closepath fill
+1 setlinewidth
+filled
+0.000 0.000 0.000 nodecolor
+newpath 651 40 moveto
+651 62 lineto
+734 62 lineto
+734 40 lineto
+closepath stroke
+0.000 0.000 0.000 nodecolor
+10 /FreeSans set_font
+658.5 49 moveto 67 (TLBEntry::valid) alignedtext
+grestore
+% Node5->Node11
+gsave
+1 setlinewidth
+solid
+0.667 0.776 0.439 edgecolor
+newpath 564 120 moveto
+578 107 605 84 630 71 curveto
+634 69 638 67 641 65 curveto
+stroke
+0.667 0.776 0.439 edgecolor
+newpath 642.43 68.23 moveto
+651 62 lineto
+640.42 61.52 lineto
+closepath fill
+1 setlinewidth
+solid
+0.667 0.776 0.439 edgecolor
+newpath 642.43 68.23 moveto
+651 62 lineto
+640.42 61.52 lineto
+closepath stroke
+grestore
+% Node12
+gsave
+[ /Rect [ 653 0 731 22 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($classTLBEntry.html#a4febc7aae3fda3da47da131e28cbdf50) >>
+  /Subtype /Link
+/ANN pdfmark
+0.000 0.000 1.000 nodecolor
+newpath 653 0 moveto
+653 22 lineto
+731 22 lineto
+731 0 lineto
+closepath fill
+1 setlinewidth
+filled
+0.000 0.000 0.000 nodecolor
+newpath 653 0 moveto
+653 22 lineto
+731 22 lineto
+731 0 lineto
+closepath stroke
+0.000 0.000 0.000 nodecolor
+10 /FreeSans set_font
+661 9 moveto 62 (TLBEntry::vpn) alignedtext
+grestore
+% Node5->Node12
+gsave
+1 setlinewidth
+solid
+0.667 0.776 0.439 edgecolor
+newpath 558 120 moveto
+569 99 595 55 630 31 curveto
+634 28 639 25 643 23 curveto
+stroke
+0.667 0.776 0.439 edgecolor
+newpath 644.43 26.23 moveto
+653 20 lineto
+642.42 19.52 lineto
+closepath fill
+1 setlinewidth
+solid
+0.667 0.776 0.439 edgecolor
+newpath 644.43 26.23 moveto
+653 20 lineto
+642.42 19.52 lineto
+closepath stroke
+grestore
+endpage
+showpage
+grestore
+%%PageTrailer
+%%EndPage: 1
+%%Trailer
+%%Pages: 1
+%%BoundingBox: 36 36 798 306
+end
+restore
+%%EOF

@@ -1,0 +1,233 @@
+\hypertarget{remotegdb_8cc}{
+\section{remotegdb.cc File Reference}
+\label{remotegdb_8cc}\index{remotegdb.cc@{remotegdb.cc}}
+}
+{\ttfamily \#include $<$cstdarg$>$}\par
+{\ttfamily \#include $<$cstdio$>$}\par
+{\ttfamily \#include $<$cerrno$>$}\par
+{\ttfamily \#include $<$cstring$>$}\par
+{\ttfamily \#include $<$cstdlib$>$}\par
+{\ttfamily \#include $<$unistd.h$>$}\par
+{\ttfamily \#include $<$sys/time.h$>$}\par
+{\ttfamily \#include \char`\"{}remotegdb.h\char`\"{}}\par
+Include dependency graph for remotegdb.cc:\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{remotegdb_8cc_a8b5058fe9fe0b8174c34415852a15aa0}{printf\_\-filtered}~printf\_\-unfiltered
+\item 
+\#define \hyperlink{remotegdb_8cc_afd63d23830ad86d01b6fff2e6c615f7e}{MAX\_\-TRIES}~3
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{remotegdb_8cc_aa9e6b2b8aaaf37ac73fbf81a15c8b769}{serial\_\-readchar} (int fd, int timeout)
+\item 
+int \hyperlink{remotegdb_8cc_af4cf151763b1b6acadf1cfdcfdc9e3d0}{serial\_\-write} (int fd, const char $\ast$buf, int len)
+\item 
+static int \hyperlink{remotegdb_8cc_ab7615aba8571a90b0f419ca326db6720}{gdb\_\-flush} (FILE $\ast$f)
+\item 
+static int \hyperlink{remotegdb_8cc_a7afaebcf233fdc9dbffd1715da592edd}{max} (int i, int j)
+\item 
+static void \hyperlink{remotegdb_8cc_ab2991d7c0f1c8ca8197510fb12f0bc2a}{perror\_\-with\_\-name} (char $\ast$str)
+\item 
+static void \hyperlink{remotegdb_8cc_a8ff699775b27c3a360306817af74dbef}{puts\_\-filtered} (char $\ast$str)
+\item 
+static int \hyperlink{remotegdb_8cc_a0b70a303db17a51515b316d363eedb2a}{putchar\_\-unfiltered} (int c)
+\item 
+static int \hyperlink{remotegdb_8cc_afab46da8d7b164a99a90566adff8e9fd}{fprintf\_\-unfiltered} (FILE $\ast$f, char $\ast$fmt,...)
+\item 
+static int \hyperlink{remotegdb_8cc_a6aef864b575e1ddd1a75b575512df684}{printf\_\-unfiltered} (char $\ast$fmt,...)
+\item 
+static void \hyperlink{remotegdb_8cc_a4b6a0e8ea4b5b548f4fae68972ab835b}{error} (char $\ast$fmt,...)
+\item 
+int \hyperlink{remotegdb_8cc_abaf2da36c14363e87d968d2da3c6bcad}{fromhex} (int a)
+\item 
+int \hyperlink{remotegdb_8cc_af6e832cbb512d747c35b9002a3c43927}{tohex} (int nib)
+\item 
+int \hyperlink{remotegdb_8cc_aae4d649b8634c3fc4ecc29e9a021825a}{hexnumlen} (ULONGEST num)
+\item 
+int \hyperlink{remotegdb_8cc_a8e189f02ddb32d3d2efe6e5688a26c10}{readchar} (int timeout)
+\item 
+void \hyperlink{remotegdb_8cc_ac53cef6aa86fe3e10638ac753019bf34}{remote\_\-send} (char $\ast$buf)
+\item 
+int \hyperlink{remotegdb_8cc_a0135c7ea32412fff2a3b39f060d69ada}{putpkt} (char $\ast$buf)
+\item 
+int \hyperlink{remotegdb_8cc_a7d3b3911ce43672f39850bb99f8f82cb}{read\_\-frame} (char $\ast$buf)
+\item 
+void \hyperlink{remotegdb_8cc_a757631555908fd06213bb61cf6fd1cbd}{getpkt} (char $\ast$buf, int forever)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{remotegdb_8cc_ab222915c90ee61978f3519f8fdd922c7}{remote\_\-debug} = 0
+\item 
+int \hyperlink{remotegdb_8cc_a7b59dfba217b8f9caddc5b44591d455b}{remote\_\-desc}
+\item 
+int \hyperlink{remotegdb_8cc_ac6decadce663ff98c95196919273e194}{remote\_\-timeout} = 2
+\item 
+static FILE $\ast$ \hyperlink{remotegdb_8cc_a0757705f9a48eeda7e5ca522fe44a766}{gdb\_\-stdout} = stderr
+\item 
+int \hyperlink{remotegdb_8cc_a2d39aa8806e170cd0e52bb8d58f367fb}{remotegdb\_\-backend\_\-error} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{remotegdb_8cc_afd63d23830ad86d01b6fff2e6c615f7e}{
+\index{remotegdb.cc@{remotegdb.cc}!MAX\_\-TRIES@{MAX\_\-TRIES}}
+\index{MAX\_\-TRIES@{MAX\_\-TRIES}!remotegdb.cc@{remotegdb.cc}}
+\subsubsection[{MAX\_\-TRIES}]{\setlength{\rightskip}{0pt plus 5cm}\#define MAX\_\-TRIES~3}}
+\label{remotegdb_8cc_afd63d23830ad86d01b6fff2e6c615f7e}
+\hypertarget{remotegdb_8cc_a8b5058fe9fe0b8174c34415852a15aa0}{
+\index{remotegdb.cc@{remotegdb.cc}!printf\_\-filtered@{printf\_\-filtered}}
+\index{printf\_\-filtered@{printf\_\-filtered}!remotegdb.cc@{remotegdb.cc}}
+\subsubsection[{printf\_\-filtered}]{\setlength{\rightskip}{0pt plus 5cm}\#define printf\_\-filtered~printf\_\-unfiltered}}
+\label{remotegdb_8cc_a8b5058fe9fe0b8174c34415852a15aa0}
+
+
+\subsection{Function Documentation}
+\hypertarget{remotegdb_8cc_a4b6a0e8ea4b5b548f4fae68972ab835b}{
+\index{remotegdb.cc@{remotegdb.cc}!error@{error}}
+\index{error@{error}!remotegdb.cc@{remotegdb.cc}}
+\subsubsection[{error}]{\setlength{\rightskip}{0pt plus 5cm}static void error (char $\ast$ {\em fmt}, \/   {\em ...})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}
+\label{remotegdb_8cc_a4b6a0e8ea4b5b548f4fae68972ab835b}
+\hypertarget{remotegdb_8cc_afab46da8d7b164a99a90566adff8e9fd}{
+\index{remotegdb.cc@{remotegdb.cc}!fprintf\_\-unfiltered@{fprintf\_\-unfiltered}}
+\index{fprintf\_\-unfiltered@{fprintf\_\-unfiltered}!remotegdb.cc@{remotegdb.cc}}
+\subsubsection[{fprintf\_\-unfiltered}]{\setlength{\rightskip}{0pt plus 5cm}static int fprintf\_\-unfiltered (FILE $\ast$ {\em f}, \/  char $\ast$ {\em fmt}, \/   {\em ...})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}
+\label{remotegdb_8cc_afab46da8d7b164a99a90566adff8e9fd}
+\hypertarget{remotegdb_8cc_abaf2da36c14363e87d968d2da3c6bcad}{
+\index{remotegdb.cc@{remotegdb.cc}!fromhex@{fromhex}}
+\index{fromhex@{fromhex}!remotegdb.cc@{remotegdb.cc}}
+\subsubsection[{fromhex}]{\setlength{\rightskip}{0pt plus 5cm}int fromhex (int {\em a})}}
+\label{remotegdb_8cc_abaf2da36c14363e87d968d2da3c6bcad}
+
+
+Here is the call graph for this function:
+
+\hypertarget{remotegdb_8cc_ab7615aba8571a90b0f419ca326db6720}{
+\index{remotegdb.cc@{remotegdb.cc}!gdb\_\-flush@{gdb\_\-flush}}
+\index{gdb\_\-flush@{gdb\_\-flush}!remotegdb.cc@{remotegdb.cc}}
+\subsubsection[{gdb\_\-flush}]{\setlength{\rightskip}{0pt plus 5cm}static int gdb\_\-flush (FILE $\ast$ {\em f})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}
+\label{remotegdb_8cc_ab7615aba8571a90b0f419ca326db6720}
+\hypertarget{remotegdb_8cc_a757631555908fd06213bb61cf6fd1cbd}{
+\index{remotegdb.cc@{remotegdb.cc}!getpkt@{getpkt}}
+\index{getpkt@{getpkt}!remotegdb.cc@{remotegdb.cc}}
+\subsubsection[{getpkt}]{\setlength{\rightskip}{0pt plus 5cm}void getpkt (char $\ast$ {\em buf}, \/  int {\em forever})}}
+\label{remotegdb_8cc_a757631555908fd06213bb61cf6fd1cbd}
+
+
+Here is the call graph for this function:
+
+\hypertarget{remotegdb_8cc_aae4d649b8634c3fc4ecc29e9a021825a}{
+\index{remotegdb.cc@{remotegdb.cc}!hexnumlen@{hexnumlen}}
+\index{hexnumlen@{hexnumlen}!remotegdb.cc@{remotegdb.cc}}
+\subsubsection[{hexnumlen}]{\setlength{\rightskip}{0pt plus 5cm}int hexnumlen (ULONGEST {\em num})}}
+\label{remotegdb_8cc_aae4d649b8634c3fc4ecc29e9a021825a}
+
+
+Here is the call graph for this function:
+
+\hypertarget{remotegdb_8cc_a7afaebcf233fdc9dbffd1715da592edd}{
+\index{remotegdb.cc@{remotegdb.cc}!max@{max}}
+\index{max@{max}!remotegdb.cc@{remotegdb.cc}}
+\subsubsection[{max}]{\setlength{\rightskip}{0pt plus 5cm}static int max (int {\em i}, \/  int {\em j})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}
+\label{remotegdb_8cc_a7afaebcf233fdc9dbffd1715da592edd}
+\hypertarget{remotegdb_8cc_ab2991d7c0f1c8ca8197510fb12f0bc2a}{
+\index{remotegdb.cc@{remotegdb.cc}!perror\_\-with\_\-name@{perror\_\-with\_\-name}}
+\index{perror\_\-with\_\-name@{perror\_\-with\_\-name}!remotegdb.cc@{remotegdb.cc}}
+\subsubsection[{perror\_\-with\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}static void perror\_\-with\_\-name (char $\ast$ {\em str})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}
+\label{remotegdb_8cc_ab2991d7c0f1c8ca8197510fb12f0bc2a}
+\hypertarget{remotegdb_8cc_a6aef864b575e1ddd1a75b575512df684}{
+\index{remotegdb.cc@{remotegdb.cc}!printf\_\-unfiltered@{printf\_\-unfiltered}}
+\index{printf\_\-unfiltered@{printf\_\-unfiltered}!remotegdb.cc@{remotegdb.cc}}
+\subsubsection[{printf\_\-unfiltered}]{\setlength{\rightskip}{0pt plus 5cm}static int printf\_\-unfiltered (char $\ast$ {\em fmt}, \/   {\em ...})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}
+\label{remotegdb_8cc_a6aef864b575e1ddd1a75b575512df684}
+\hypertarget{remotegdb_8cc_a0b70a303db17a51515b316d363eedb2a}{
+\index{remotegdb.cc@{remotegdb.cc}!putchar\_\-unfiltered@{putchar\_\-unfiltered}}
+\index{putchar\_\-unfiltered@{putchar\_\-unfiltered}!remotegdb.cc@{remotegdb.cc}}
+\subsubsection[{putchar\_\-unfiltered}]{\setlength{\rightskip}{0pt plus 5cm}static int putchar\_\-unfiltered (int {\em c})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}
+\label{remotegdb_8cc_a0b70a303db17a51515b316d363eedb2a}
+\hypertarget{remotegdb_8cc_a0135c7ea32412fff2a3b39f060d69ada}{
+\index{remotegdb.cc@{remotegdb.cc}!putpkt@{putpkt}}
+\index{putpkt@{putpkt}!remotegdb.cc@{remotegdb.cc}}
+\subsubsection[{putpkt}]{\setlength{\rightskip}{0pt plus 5cm}int putpkt (char $\ast$ {\em buf})}}
+\label{remotegdb_8cc_a0135c7ea32412fff2a3b39f060d69ada}
+
+
+Here is the call graph for this function:
+
+\hypertarget{remotegdb_8cc_a8ff699775b27c3a360306817af74dbef}{
+\index{remotegdb.cc@{remotegdb.cc}!puts\_\-filtered@{puts\_\-filtered}}
+\index{puts\_\-filtered@{puts\_\-filtered}!remotegdb.cc@{remotegdb.cc}}
+\subsubsection[{puts\_\-filtered}]{\setlength{\rightskip}{0pt plus 5cm}static void puts\_\-filtered (char $\ast$ {\em str})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}
+\label{remotegdb_8cc_a8ff699775b27c3a360306817af74dbef}
+\hypertarget{remotegdb_8cc_a7d3b3911ce43672f39850bb99f8f82cb}{
+\index{remotegdb.cc@{remotegdb.cc}!read\_\-frame@{read\_\-frame}}
+\index{read\_\-frame@{read\_\-frame}!remotegdb.cc@{remotegdb.cc}}
+\subsubsection[{read\_\-frame}]{\setlength{\rightskip}{0pt plus 5cm}int read\_\-frame (char $\ast$ {\em buf})}}
+\label{remotegdb_8cc_a7d3b3911ce43672f39850bb99f8f82cb}
+
+
+Here is the call graph for this function:
+
+\hypertarget{remotegdb_8cc_a8e189f02ddb32d3d2efe6e5688a26c10}{
+\index{remotegdb.cc@{remotegdb.cc}!readchar@{readchar}}
+\index{readchar@{readchar}!remotegdb.cc@{remotegdb.cc}}
+\subsubsection[{readchar}]{\setlength{\rightskip}{0pt plus 5cm}int readchar (int {\em timeout})}}
+\label{remotegdb_8cc_a8e189f02ddb32d3d2efe6e5688a26c10}
+
+
+Here is the call graph for this function:
+
+\hypertarget{remotegdb_8cc_ac53cef6aa86fe3e10638ac753019bf34}{
+\index{remotegdb.cc@{remotegdb.cc}!remote\_\-send@{remote\_\-send}}
+\index{remote\_\-send@{remote\_\-send}!remotegdb.cc@{remotegdb.cc}}
+\subsubsection[{remote\_\-send}]{\setlength{\rightskip}{0pt plus 5cm}void remote\_\-send (char $\ast$ {\em buf})}}
+\label{remotegdb_8cc_ac53cef6aa86fe3e10638ac753019bf34}
+
+
+Here is the call graph for this function:
+
+\hypertarget{remotegdb_8cc_aa9e6b2b8aaaf37ac73fbf81a15c8b769}{
+\index{remotegdb.cc@{remotegdb.cc}!serial\_\-readchar@{serial\_\-readchar}}
+\index{serial\_\-readchar@{serial\_\-readchar}!remotegdb.cc@{remotegdb.cc}}
+\subsubsection[{serial\_\-readchar}]{\setlength{\rightskip}{0pt plus 5cm}int serial\_\-readchar (int {\em fd}, \/  int {\em timeout})}}
+\label{remotegdb_8cc_aa9e6b2b8aaaf37ac73fbf81a15c8b769}
+\hypertarget{remotegdb_8cc_af4cf151763b1b6acadf1cfdcfdc9e3d0}{
+\index{remotegdb.cc@{remotegdb.cc}!serial\_\-write@{serial\_\-write}}
+\index{serial\_\-write@{serial\_\-write}!remotegdb.cc@{remotegdb.cc}}
+\subsubsection[{serial\_\-write}]{\setlength{\rightskip}{0pt plus 5cm}int serial\_\-write (int {\em fd}, \/  const char $\ast$ {\em buf}, \/  int {\em len})}}
+\label{remotegdb_8cc_af4cf151763b1b6acadf1cfdcfdc9e3d0}
+\hypertarget{remotegdb_8cc_af6e832cbb512d747c35b9002a3c43927}{
+\index{remotegdb.cc@{remotegdb.cc}!tohex@{tohex}}
+\index{tohex@{tohex}!remotegdb.cc@{remotegdb.cc}}
+\subsubsection[{tohex}]{\setlength{\rightskip}{0pt plus 5cm}int tohex (int {\em nib})}}
+\label{remotegdb_8cc_af6e832cbb512d747c35b9002a3c43927}
+
+
+\subsection{Variable Documentation}
+\hypertarget{remotegdb_8cc_a0757705f9a48eeda7e5ca522fe44a766}{
+\index{remotegdb.cc@{remotegdb.cc}!gdb\_\-stdout@{gdb\_\-stdout}}
+\index{gdb\_\-stdout@{gdb\_\-stdout}!remotegdb.cc@{remotegdb.cc}}
+\subsubsection[{gdb\_\-stdout}]{\setlength{\rightskip}{0pt plus 5cm}FILE$\ast$ {\bf gdb\_\-stdout} = stderr\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{remotegdb_8cc_a0757705f9a48eeda7e5ca522fe44a766}
+\hypertarget{remotegdb_8cc_ab222915c90ee61978f3519f8fdd922c7}{
+\index{remotegdb.cc@{remotegdb.cc}!remote\_\-debug@{remote\_\-debug}}
+\index{remote\_\-debug@{remote\_\-debug}!remotegdb.cc@{remotegdb.cc}}
+\subsubsection[{remote\_\-debug}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf remote\_\-debug} = 0}}
+\label{remotegdb_8cc_ab222915c90ee61978f3519f8fdd922c7}
+\hypertarget{remotegdb_8cc_a7b59dfba217b8f9caddc5b44591d455b}{
+\index{remotegdb.cc@{remotegdb.cc}!remote\_\-desc@{remote\_\-desc}}
+\index{remote\_\-desc@{remote\_\-desc}!remotegdb.cc@{remotegdb.cc}}
+\subsubsection[{remote\_\-desc}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf remote\_\-desc}}}
+\label{remotegdb_8cc_a7b59dfba217b8f9caddc5b44591d455b}
+\hypertarget{remotegdb_8cc_ac6decadce663ff98c95196919273e194}{
+\index{remotegdb.cc@{remotegdb.cc}!remote\_\-timeout@{remote\_\-timeout}}
+\index{remote\_\-timeout@{remote\_\-timeout}!remotegdb.cc@{remotegdb.cc}}
+\subsubsection[{remote\_\-timeout}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf remote\_\-timeout} = 2}}
+\label{remotegdb_8cc_ac6decadce663ff98c95196919273e194}
+\hypertarget{remotegdb_8cc_a2d39aa8806e170cd0e52bb8d58f367fb}{
+\index{remotegdb.cc@{remotegdb.cc}!remotegdb\_\-backend\_\-error@{remotegdb\_\-backend\_\-error}}
+\index{remotegdb\_\-backend\_\-error@{remotegdb\_\-backend\_\-error}!remotegdb.cc@{remotegdb.cc}}
+\subsubsection[{remotegdb\_\-backend\_\-error}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf remotegdb\_\-backend\_\-error} = 0}}
+\label{remotegdb_8cc_a2d39aa8806e170cd0e52bb8d58f367fb}

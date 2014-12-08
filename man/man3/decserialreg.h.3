@@ -1,0 +1,205 @@
+.TH "decserialreg.h" 3 "18 Dec 2013" "Doxygen" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+decserialreg.h \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Defines"
+
+.in +1c
+.ti -1c
+.RI "#define \fBDECSERIAL_BASE\fP   0x1fe00000"
+.br
+.ti -1c
+.RI "#define \fBDECSERIAL_ADDR\fP   0xbfe00000"
+.br
+.ti -1c
+.RI "#define \fBDZ_CSR\fP   0x00"
+.br
+.ti -1c
+.RI "#define \fBDZ_CSR_TRDY\fP   0x8000"
+.br
+.ti -1c
+.RI "#define \fBDZ_CSR_TIE\fP   0x4000"
+.br
+.ti -1c
+.RI "#define \fBDZ_CSR_TLINE\fP   0x0300"
+.br
+.ti -1c
+.RI "#define \fBDZ_CSR_RDONE\fP   0x0080"
+.br
+.ti -1c
+.RI "#define \fBDZ_CSR_RIE\fP   0x0040"
+.br
+.ti -1c
+.RI "#define \fBDZ_CSR_MSE\fP   0x0020"
+.br
+.ti -1c
+.RI "#define \fBDZ_CSR_CLR\fP   0x0010"
+.br
+.ti -1c
+.RI "#define \fBDZ_CSR_MAINT\fP   0x0008"
+.br
+.ti -1c
+.RI "#define \fBDZ_RBUF\fP   0x08"
+.br
+.ti -1c
+.RI "#define \fBDZ_RBUF_DVAL\fP   0x8000"
+.br
+.ti -1c
+.RI "#define \fBDZ_RBUF_OERR\fP   0x4000"
+.br
+.ti -1c
+.RI "#define \fBDZ_RBUF_FERR\fP   0x2000"
+.br
+.ti -1c
+.RI "#define \fBDZ_RBUF_PERR\fP   0x1000"
+.br
+.ti -1c
+.RI "#define \fBDZ_RBUF_RLINE\fP   0x0300"
+.br
+.ti -1c
+.RI "#define \fBDZ_RBUF_RBUF\fP   0x00ff"
+.br
+.ti -1c
+.RI "#define \fBDZ_LPR\fP   0x08"
+.br
+.ti -1c
+.RI "#define \fBDZ_LPR_RXENAB\fP   0x1000"
+.br
+.ti -1c
+.RI "#define \fBDZ_LPR_SC\fP   0x0f00"
+.br
+.ti -1c
+.RI "#define \fBDZ_LPR_ODDPAR\fP   0x0080"
+.br
+.ti -1c
+.RI "#define \fBDZ_LPR_PARENB\fP   0x0040"
+.br
+.ti -1c
+.RI "#define \fBDZ_LPR_STOP\fP   0x0020"
+.br
+.ti -1c
+.RI "#define \fBDZ_LPR_CHAR\fP   0x0018"
+.br
+.ti -1c
+.RI "#define \fBDZ_LPR_LINE\fP   0x0003"
+.br
+.ti -1c
+.RI "#define \fBDZ_TCR\fP   0x10"
+.br
+.ti -1c
+.RI "#define \fBDZ_TCR_RTS2\fP   0x0800"
+.br
+.ti -1c
+.RI "#define \fBDZ_TCR_DTR2\fP   0x0400"
+.br
+.ti -1c
+.RI "#define \fBDZ_TCR_RTS3\fP   0x0200"
+.br
+.ti -1c
+.RI "#define \fBDZ_TCR_DTR3\fP   0x0100"
+.br
+.ti -1c
+.RI "#define \fBDZ_TCR_LNENB3\fP   0x0008"
+.br
+.ti -1c
+.RI "#define \fBDZ_TCR_LNENB2\fP   0x0004"
+.br
+.ti -1c
+.RI "#define \fBDZ_TCR_LNENB1\fP   0x0002"
+.br
+.ti -1c
+.RI "#define \fBDZ_TCR_LNENB0\fP   0x0001"
+.br
+.ti -1c
+.RI "#define \fBDZ_MSR\fP   0x18"
+.br
+.ti -1c
+.RI "#define \fBDZ_MSR_RI2\fP   0x0800"
+.br
+.ti -1c
+.RI "#define \fBDZ_MSR_CD2\fP   0x0400"
+.br
+.ti -1c
+.RI "#define \fBDZ_MSR_DSR2\fP   0x0200"
+.br
+.ti -1c
+.RI "#define \fBDZ_MSR_CTS2\fP   0x0100"
+.br
+.ti -1c
+.RI "#define \fBDZ_MSR_RI3\fP   0x0008"
+.br
+.ti -1c
+.RI "#define \fBDZ_MSR_CD3\fP   0x0004"
+.br
+.ti -1c
+.RI "#define \fBDZ_MSR_DSR3\fP   0x0002"
+.br
+.ti -1c
+.RI "#define \fBDZ_MSR_CTS3\fP   0x0001"
+.br
+.ti -1c
+.RI "#define \fBDZ_TDR\fP   0x18"
+.br
+.ti -1c
+.RI "#define \fBDZ_TDR_BRK\fP   0x0f00"
+.br
+.ti -1c
+.RI "#define \fBDZ_TDR_TBUF\fP   0x00ff"
+.br
+.in -1c
+.SH "Define Documentation"
+.PP 
+.SS "#define DECSERIAL_ADDR   0xbfe00000"
+.SS "#define DECSERIAL_BASE   0x1fe00000"
+.SS "#define DZ_CSR   0x00"
+.SS "#define DZ_CSR_CLR   0x0010"
+.SS "#define DZ_CSR_MAINT   0x0008"
+.SS "#define DZ_CSR_MSE   0x0020"
+.SS "#define DZ_CSR_RDONE   0x0080"
+.SS "#define DZ_CSR_RIE   0x0040"
+.SS "#define DZ_CSR_TIE   0x4000"
+.SS "#define DZ_CSR_TLINE   0x0300"
+.SS "#define DZ_CSR_TRDY   0x8000"
+.SS "#define DZ_LPR   0x08"
+.SS "#define DZ_LPR_CHAR   0x0018"
+.SS "#define DZ_LPR_LINE   0x0003"
+.SS "#define DZ_LPR_ODDPAR   0x0080"
+.SS "#define DZ_LPR_PARENB   0x0040"
+.SS "#define DZ_LPR_RXENAB   0x1000"
+.SS "#define DZ_LPR_SC   0x0f00"
+.SS "#define DZ_LPR_STOP   0x0020"
+.SS "#define DZ_MSR   0x18"
+.SS "#define DZ_MSR_CD2   0x0400"
+.SS "#define DZ_MSR_CD3   0x0004"
+.SS "#define DZ_MSR_CTS2   0x0100"
+.SS "#define DZ_MSR_CTS3   0x0001"
+.SS "#define DZ_MSR_DSR2   0x0200"
+.SS "#define DZ_MSR_DSR3   0x0002"
+.SS "#define DZ_MSR_RI2   0x0800"
+.SS "#define DZ_MSR_RI3   0x0008"
+.SS "#define DZ_RBUF   0x08"
+.SS "#define DZ_RBUF_DVAL   0x8000"
+.SS "#define DZ_RBUF_FERR   0x2000"
+.SS "#define DZ_RBUF_OERR   0x4000"
+.SS "#define DZ_RBUF_PERR   0x1000"
+.SS "#define DZ_RBUF_RBUF   0x00ff"
+.SS "#define DZ_RBUF_RLINE   0x0300"
+.SS "#define DZ_TCR   0x10"
+.SS "#define DZ_TCR_DTR2   0x0400"
+.SS "#define DZ_TCR_DTR3   0x0100"
+.SS "#define DZ_TCR_LNENB0   0x0001"
+.SS "#define DZ_TCR_LNENB1   0x0002"
+.SS "#define DZ_TCR_LNENB2   0x0004"
+.SS "#define DZ_TCR_LNENB3   0x0008"
+.SS "#define DZ_TCR_RTS2   0x0800"
+.SS "#define DZ_TCR_RTS3   0x0200"
+.SS "#define DZ_TDR   0x18"
+.SS "#define DZ_TDR_BRK   0x0f00"
+.SS "#define DZ_TDR_TBUF   0x00ff"
+.SH "Author"
+.PP 
+Generated automatically by Doxygen from the source code.

@@ -1,0 +1,58 @@
+.TH "IntCtrl" 3 "18 Dec 2013" "Doxygen" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+IntCtrl \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <intctrl.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBIntCtrl\fP ()  throw ()"
+.br
+.ti -1c
+.RI "virtual \fB~IntCtrl\fP ()  throw ()"
+.br
+.ti -1c
+.RI "virtual uint32 \fBcalculateIP\fP ()  throw ()"
+.br
+.ti -1c
+.RI "virtual void \fBconnectLine\fP (uint32 line, \fBDeviceInt\fP *dev)"
+.br
+.in -1c
+.SS "Private Types"
+
+.in +1c
+.ti -1c
+.RI "typedef std::vector< \fBDeviceInt\fP * > \fBDevices\fP"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBDevices\fP \fBdevs\fP"
+.br
+.in -1c
+.SH "Member Typedef Documentation"
+.PP 
+.SS "typedef std::vector<\fBDeviceInt\fP *> \fBIntCtrl::Devices\fP\fC [private]\fP"
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "IntCtrl::IntCtrl ()  throw ()\fC [inline]\fP"
+.SS "virtual IntCtrl::~IntCtrl ()  throw ()\fC [inline, virtual]\fP"
+.SH "Member Function Documentation"
+.PP 
+.SS "uint32 IntCtrl::calculateIP ()  throw ()\fC [virtual]\fP"
+.SS "void IntCtrl::connectLine (uint32 line, \fBDeviceInt\fP * dev)\fC [virtual]\fP"
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBDevices\fP \fBIntCtrl::devs\fP\fC [private]\fP"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen from the source code.

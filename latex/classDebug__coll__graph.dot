@@ -1,0 +1,30 @@
+digraph G
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node1 [label="Debug",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node2 -> Node1 [dir=back,color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="DeviceExc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classDeviceExc.html"];
+  Node3 -> Node1 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="cpu"];
+  Node3 [label="CPU",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classCPU.html"];
+  Node2 -> Node3 [dir=back,color="midnightblue",fontsize="10",style="solid"];
+  Node4 -> Node3 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="current_trace"];
+  Node4 [label="Trace",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classTrace.html"];
+  Node5 -> Node3 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="cpzero"];
+  Node5 [label="CPZero",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classCPZero.html"];
+  Node6 -> Node5 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="intc"];
+  Node6 [label="IntCtrl",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classIntCtrl.html"];
+  Node3 -> Node5 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="cpu"];
+  Node7 -> Node5 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="tlb"];
+  Node7 [label="TLBEntry",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classTLBEntry.html"];
+  Node8 -> Node3 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="mem"];
+  Node8 [label="Mapper",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classMapper.html"];
+  Node9 -> Node8 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="last_used_mapping"];
+  Node9 [label="Range",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classRange.html"];
+  Node10 -> Node8 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="last_berr_info"];
+  Node10 [label="Mapper::BusErrorInfo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structMapper_1_1BusErrorInfo.html"];
+  Node2 -> Node10 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="client"];
+  Node11 -> Node3 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="current_trace_record"];
+  Node11 [label="Trace::Record",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structTrace_1_1Record.html"];
+  Node8 -> Node1 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="mem"];
+}

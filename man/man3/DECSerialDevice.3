@@ -1,0 +1,164 @@
+.TH "DECSerialDevice" 3 "18 Dec 2013" "Doxygen" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+DECSerialDevice \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <decserial.h>\fP
+.PP
+Inherits \fBDeviceMap\fP, \fBDeviceInt\fP, and \fBTerminalController\fP.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDECSerialDevice\fP (\fBClock\fP *\fBclock\fP, uint8 deccsr_irq_)  throw ()"
+.br
+.ti -1c
+.RI "virtual \fB~DECSerialDevice\fP ()  throw ()"
+.br
+.ti -1c
+.RI "uint32 \fBfetch_word\fP (uint32 offset, int mode, \fBDeviceExc\fP *client)"
+.br
+.ti -1c
+.RI "void \fBstore_word\fP (uint32 offset, uint32 data, \fBDeviceExc\fP *client)"
+.br
+.ti -1c
+.RI "const char * \fBdescriptor_str\fP () const "
+.br
+.ti -1c
+.RI "virtual void \fBready_display\fP (int line)  throw ()"
+.br
+.ti -1c
+.RI "virtual void \fBunready_display\fP (int line, char data)  throw (std::bad_alloc)"
+.br
+.ti -1c
+.RI "virtual void \fBunready_keyboard\fP (int line)  throw ()"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBready_keyboard\fP (int line)  throw ()"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBmaster_clear\fP ()"
+.br
+.ti -1c
+.RI "void \fBassertCSRInt\fP ()"
+.br
+.ti -1c
+.RI "void \fBdeassertCSRInt\fP ()"
+.br
+.ti -1c
+.RI "bool \fBreceiver_done\fP (const int line) const "
+.br
+.ti -1c
+.RI "bool \fBtransmitter_ready\fP (const int line) const "
+.br
+.ti -1c
+.RI "bool \fBkeyboardInterruptReadyForLine\fP (const int line) const "
+.br
+.ti -1c
+.RI "bool \fBdisplayInterruptReadyForLine\fP (const int line) const "
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "uint32 \fBcsr\fP"
+.br
+.ti -1c
+.RI "uint32 \fBrbuf\fP"
+.br
+.ti -1c
+.RI "uint32 \fBlpr\fP"
+.br
+.ti -1c
+.RI "uint32 \fBtcr\fP"
+.br
+.ti -1c
+.RI "uint32 \fBmsr\fP"
+.br
+.ti -1c
+.RI "uint8 \fBdeccsr_irq\fP"
+.br
+.ti -1c
+.RI "bool \fBkeyboard_interrupt_enable\fP"
+.br
+.ti -1c
+.RI "bool \fBdisplay_interrupt_enable\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static const int \fBKEYBOARD_POLL_NS\fP = 100"
+.br
+.ti -1c
+.RI "static const int \fBKEYBOARD_REPOLL_NS\fP = 100"
+.br
+.ti -1c
+.RI "static const int \fBDISPLAY_READY_DELAY_NS\fP = 100"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "DECSerialDevice::DECSerialDevice (\fBClock\fP * clock, uint8 deccsr_irq_)  throw ()"
+.SS "virtual DECSerialDevice::~DECSerialDevice ()  throw ()\fC [inline, virtual]\fP"
+.SH "Member Function Documentation"
+.PP 
+.SS "void DECSerialDevice::assertCSRInt ()\fC [private]\fP"
+.SS "void DECSerialDevice::deassertCSRInt ()\fC [private]\fP"
+.SS "const char* DECSerialDevice::descriptor_str (void) const\fC [inline, virtual]\fP"
+.PP
+Implements \fBDeviceInt\fP.
+.SS "bool DECSerialDevice::displayInterruptReadyForLine (const int line) const\fC [private]\fP"
+.SS "uint32 DECSerialDevice::fetch_word (uint32 offset, int mode, \fBDeviceExc\fP * client)\fC [virtual]\fP"
+.PP
+Implements \fBDeviceMap\fP.
+.SS "bool DECSerialDevice::keyboardInterruptReadyForLine (const int line) const\fC [private]\fP"
+.SS "void DECSerialDevice::master_clear ()\fC [private]\fP"
+.SS "void DECSerialDevice::ready_display (int line)  throw ()\fC [virtual]\fP"
+.PP
+Reimplemented from \fBTerminalController\fP.
+.SS "void DECSerialDevice::ready_keyboard (int line)  throw ()\fC [protected, virtual]\fP"
+.PP
+Reimplemented from \fBTerminalController\fP.
+.SS "bool DECSerialDevice::receiver_done (const int line) const\fC [private]\fP"
+.SS "void DECSerialDevice::store_word (uint32 offset, uint32 data, \fBDeviceExc\fP * client)\fC [virtual]\fP"
+.PP
+Implements \fBDeviceMap\fP.
+.SS "bool DECSerialDevice::transmitter_ready (const int line) const\fC [private]\fP"
+.SS "void DECSerialDevice::unready_display (int line, char data)  throw (std::bad_alloc)\fC [virtual]\fP"
+.PP
+Reimplemented from \fBTerminalController\fP.
+.SS "void DECSerialDevice::unready_keyboard (int line)  throw ()\fC [virtual]\fP"
+.PP
+Reimplemented from \fBTerminalController\fP.
+.SH "Member Data Documentation"
+.PP 
+.SS "uint32 \fBDECSerialDevice::csr\fP\fC [private]\fP"
+.SS "uint8 \fBDECSerialDevice::deccsr_irq\fP\fC [private]\fP"
+.SS "bool \fBDECSerialDevice::display_interrupt_enable\fP\fC [private]\fP"
+.SS "const int \fBDECSerialDevice::DISPLAY_READY_DELAY_NS\fP = 100\fC [static, private]\fP"
+.SS "bool \fBDECSerialDevice::keyboard_interrupt_enable\fP\fC [private]\fP"
+.SS "const int \fBDECSerialDevice::KEYBOARD_POLL_NS\fP = 100\fC [static, private]\fP"
+.SS "const int \fBDECSerialDevice::KEYBOARD_REPOLL_NS\fP = 100\fC [static, private]\fP"
+.SS "uint32 \fBDECSerialDevice::lpr\fP\fC [private]\fP"
+.SS "uint32 \fBDECSerialDevice::msr\fP\fC [private]\fP"
+.SS "uint32 \fBDECSerialDevice::rbuf\fP\fC [private]\fP"
+.SS "uint32 \fBDECSerialDevice::tcr\fP\fC [private]\fP"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen from the source code.

@@ -1,0 +1,32 @@
+digraph G
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir=LR;
+  Node1 [label="Mapper::fetch_word",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="Mapper::bus_error",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classMapper.html#a79b29cfdb440f48772303d66c8f33ad1"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="DeviceExc::exception",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classDeviceExc.html#adfa40efde878b6499d3ffc66b4fa7166"];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="Options::option",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classOptions.html#a3a535c4c76588d00f62c9817bc0ff63b"];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="fatal_error",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$error_8cc.html#ab5b64997b285ceb84915e7f321b4db20"];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="format_help",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$error_8cc.html#aa182c84a77010100b5b8a15b1ff22e70"];
+  Node4 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="Options::optstruct",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classOptions.html#a4a9be4a96d5b12a8abb469fef02af7ee"];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="Range::canRead",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classRange.html#a14cad9824900aba8bea2da530e365062"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node1 -> Node9 [color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="Range::fetch_word",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classRange.html#a28e79e890739dd67a6c23bf0f7c02af9"];
+  Node1 -> Node10 [color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="Mapper::find_mapping_range",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classMapper.html#af8ef34c52d4c0fdf5f5e7c12587cf455"];
+  Node1 -> Node11 [color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="Range::getBase",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classRange.html#ab4b6e3925cd4559eb8879deed47cb806"];
+  Node1 -> Node12 [color="midnightblue",fontsize="10",style="solid"];
+  Node12 [label="Mapper::host_to_mips_word",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classMapper.html#ab63092a89802fab46fe3c4e2191e76fd"];
+  Node12 -> Node13 [color="midnightblue",fontsize="10",style="solid"];
+  Node13 [label="Mapper::swap_word",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classMapper.html#aad996f69d0a2aca785f5a8e9440789be"];
+}

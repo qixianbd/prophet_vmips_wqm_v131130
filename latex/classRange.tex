@@ -1,0 +1,127 @@
+\hypertarget{classRange}{
+\section{Range Class Reference}
+\label{classRange}\index{Range@{Range}}
+}
+Inheritance diagram for Range:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.80451cm]{classRange}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classRange_a714d831416094daf2f534435c36b2c8e}{
+{\bfseries Range} (uint32 \_\-base, uint32 \_\-extent, caddr\_\-t \_\-address, int \_\-perms)}
+\label{classRange_a714d831416094daf2f534435c36b2c8e}
+
+\item 
+\hypertarget{classRange_a5076637f68d20251b9800db6a1922ca7}{
+virtual bool {\bfseries incorporates} (uint32 addr)  throw ()}
+\label{classRange_a5076637f68d20251b9800db6a1922ca7}
+
+\item 
+\hypertarget{classRange_a73ad70c479cc77fcf6cb65a8da2993cb}{
+virtual bool {\bfseries overlaps} (\hyperlink{classRange}{Range} $\ast$r)  throw ()}
+\label{classRange_a73ad70c479cc77fcf6cb65a8da2993cb}
+
+\item 
+\hypertarget{classRange_ab4b6e3925cd4559eb8879deed47cb806}{
+virtual uint32 {\bfseries getBase} () const }
+\label{classRange_ab4b6e3925cd4559eb8879deed47cb806}
+
+\item 
+\hypertarget{classRange_addefe753334150b3cbaca2d5f157f17b}{
+virtual uint32 {\bfseries getExtent} () const }
+\label{classRange_addefe753334150b3cbaca2d5f157f17b}
+
+\item 
+\hypertarget{classRange_accb1e300390e551b7b35408413aa99b5}{
+virtual void $\ast$ {\bfseries getAddress} () const }
+\label{classRange_accb1e300390e551b7b35408413aa99b5}
+
+\item 
+\hypertarget{classRange_ac2cb371b9e99eacd063e422b1691204b}{
+virtual int {\bfseries getPerms} () const }
+\label{classRange_ac2cb371b9e99eacd063e422b1691204b}
+
+\item 
+\hypertarget{classRange_a5f60a7e0ad9e6d61d86b82163a78f776}{
+virtual void {\bfseries setBase} (uint32 newBase)  throw ()}
+\label{classRange_a5f60a7e0ad9e6d61d86b82163a78f776}
+
+\item 
+\hypertarget{classRange_a8228499c091dc0eae49f66877a6352c2}{
+virtual void {\bfseries setPerms} (int newPerms)  throw ()}
+\label{classRange_a8228499c091dc0eae49f66877a6352c2}
+
+\item 
+\hypertarget{classRange_a14cad9824900aba8bea2da530e365062}{
+virtual bool {\bfseries canRead} (uint32 offset)  throw ()}
+\label{classRange_a14cad9824900aba8bea2da530e365062}
+
+\item 
+\hypertarget{classRange_aff1be6b26b1c8e4d2b9da3aed0047f61}{
+virtual bool {\bfseries canWrite} (uint32 offset)  throw ()}
+\label{classRange_aff1be6b26b1c8e4d2b9da3aed0047f61}
+
+\item 
+\hypertarget{classRange_a28e79e890739dd67a6c23bf0f7c02af9}{
+virtual uint32 {\bfseries fetch\_\-word} (uint32 offset, int mode, \hyperlink{classDeviceExc}{DeviceExc} $\ast$client)}
+\label{classRange_a28e79e890739dd67a6c23bf0f7c02af9}
+
+\item 
+\hypertarget{classRange_a50db2c6c72990ee650848a1c1fa4fec6}{
+virtual uint16 {\bfseries fetch\_\-halfword} (uint32 offset, \hyperlink{classDeviceExc}{DeviceExc} $\ast$client)}
+\label{classRange_a50db2c6c72990ee650848a1c1fa4fec6}
+
+\item 
+\hypertarget{classRange_af1c0d52a57febea4a3028bdaa09e30f1}{
+virtual uint8 {\bfseries fetch\_\-byte} (uint32 offset, \hyperlink{classDeviceExc}{DeviceExc} $\ast$client)}
+\label{classRange_af1c0d52a57febea4a3028bdaa09e30f1}
+
+\item 
+\hypertarget{classRange_ae39949a0fa25f9496279f8af55ba941a}{
+virtual void {\bfseries store\_\-word} (uint32 offset, uint32 data, \hyperlink{classDeviceExc}{DeviceExc} $\ast$client)}
+\label{classRange_ae39949a0fa25f9496279f8af55ba941a}
+
+\item 
+\hypertarget{classRange_ad2b6650ff9971e2dd21f401008b445ca}{
+virtual void {\bfseries store\_\-halfword} (uint32 offset, uint16 data, \hyperlink{classDeviceExc}{DeviceExc} $\ast$client)}
+\label{classRange_ad2b6650ff9971e2dd21f401008b445ca}
+
+\item 
+\hypertarget{classRange_ac33096c6c3db8aad007facc14f5c0617}{
+virtual void {\bfseries store\_\-byte} (uint32 offset, uint8 data, \hyperlink{classDeviceExc}{DeviceExc} $\ast$client)}
+\label{classRange_ac33096c6c3db8aad007facc14f5c0617}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classRange_a4086c61cc8ad865a384f469efd86bf65}{
+uint32 {\bfseries base}}
+\label{classRange_a4086c61cc8ad865a384f469efd86bf65}
+
+\item 
+\hypertarget{classRange_a760eb4f06062a8ac89bafc956b2639a2}{
+uint32 {\bfseries extent}}
+\label{classRange_a760eb4f06062a8ac89bafc956b2639a2}
+
+\item 
+\hypertarget{classRange_a6b5d02990f5f9e483e48bcd69047093b}{
+void $\ast$ {\bfseries address}}
+\label{classRange_a6b5d02990f5f9e483e48bcd69047093b}
+
+\item 
+\hypertarget{classRange_a360eeae0c0bdf8b0095c879c9f4cb111}{
+int {\bfseries perms}}
+\label{classRange_a360eeae0c0bdf8b0095c879c9f4cb111}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+range.h\item 
+range.cc\end{DoxyCompactItemize}

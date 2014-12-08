@@ -1,0 +1,197 @@
+\hypertarget{prophetstatistic_8h}{
+\section{prophetstatistic.h File Reference}
+\label{prophetstatistic_8h}\index{prophetstatistic.h@{prophetstatistic.h}}
+}
+{\ttfamily \#include \char`\"{}prophetxmlelement.h\char`\"{}}\par
+{\ttfamily \#include $<$list$>$}\par
+{\ttfamily \#include $<$map$>$}\par
+{\ttfamily \#include \char`\"{}types.h\char`\"{}}\par
+Include dependency graph for prophetstatistic.h:This graph shows which files directly or indirectly include this file:\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structProphetStat_1_1StatTime}{ProphetStat::StatTime}
+\item 
+struct \hyperlink{structProphetStat_1_1StatCpu}{ProphetStat::StatCpu}
+\item 
+class \hyperlink{classProphetStat_1_1StatRecord}{ProphetStat::StatRecord}
+\begin{DoxyCompactList}\small\item\em a class to store the statistical variables \item\end{DoxyCompactList}\item 
+class \hyperlink{classProphetStat_1_1RecAdder}{ProphetStat::RecAdder}
+\begin{DoxyCompactList}\small\item\em class \hyperlink{classProphetStat_1_1RecAdder}{RecAdder} wil be inherited by the classes needing statistic to add a \hyperlink{classProphetStat_1_1StatRecord}{StatRecord} instance \item\end{DoxyCompactList}\item 
+struct \hyperlink{structProphetStat_1_1StatItem}{ProphetStat::StatItem}
+\begin{DoxyCompactList}\small\item\em instruction hash list item, its content is loaded from setting file \item\end{DoxyCompactList}\item 
+struct \hyperlink{structSpawnClientData}{SpawnClientData}
+\begin{DoxyCompactList}\small\item\em user defined data passed to its associated actions \item\end{DoxyCompactList}\item 
+struct \hyperlink{structSquashClientData}{SquashClientData}
+\item 
+struct \hyperlink{structCpzeroClientData}{CpzeroClientData}
+\item 
+struct \hyperlink{structCponeClientData}{CponeClientData}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \hyperlink{namespaceProphetStat}{ProphetStat}
+\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{prophetstatistic_8h_af376292872436697ad4ab347c3554eb9}{STAT\_\-PATH}~\char`\"{}/home/qmwx/workspace/prophet\_\-vmips\_\-final\_\-keyming\_\-131130/inst\_\-cost.ini\char`\"{}
+\item 
+\#define \hyperlink{prophetstatistic_8h_adcc7a6e3107f2bbb9c252de649886157}{PROPHET\_\-STAT\_\-CLASS}(name)~class name : public \hyperlink{classProphetStat_1_1RecAdder}{ProphetStat::RecAdder}
+\begin{DoxyCompactList}\small\item\em macros for declareing the class needing statistic \item\end{DoxyCompactList}\item 
+\#define \hyperlink{prophetstatistic_8h_a35d0c89398cce1d475dd8a5670ea92df}{WITH\_\-PUBLIC\_\-ROOT}(name)~, public name
+\item 
+\#define \hyperlink{prophetstatistic_8h_a509d7d3c3dfa9172b157818efa865545}{WITH\_\-PRIVATE\_\-ROOT}(name)~, private name
+\item 
+\#define \hyperlink{prophetstatistic_8h_a9730a124c6ba38926eae2358eb80a3e6}{WITH\_\-PROTECTED\_\-ROOT}(name)~, protected name
+\item 
+\#define \hyperlink{prophetstatistic_8h_a0212dc9818b621594239c595b5104ce2}{DO\_\-STATISTIC}(instname, condition, userdata...)
+\begin{DoxyCompactList}\small\item\em this macros can only be used in a member function inherited from PROPHET\_\-STAT\_\-CLASS \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void($\ast$ \hyperlink{namespaceProphetStat_aa235556f639244982affb5e72b6575de}{ProphetStat::STAT\_\-ACTION} )(StatRecord $\ast$, \hyperlink{prophetstatistic_8h_ae3a9cc5ee7b2f23a3e3c9888084c4a58}{StatCondition}, int, void $\ast$)
+\begin{DoxyCompactList}\small\item\em statistic action for a specific instruction \item\end{DoxyCompactList}\item 
+typedef struct \hyperlink{structProphetStat_1_1StatItem}{ProphetStat::StatItem} \hyperlink{namespaceProphetStat_ad0df59d3070b60c7d43dd57ae841d45e}{ProphetStat::StatItem}
+\begin{DoxyCompactList}\small\item\em instruction hash list item, its content is loaded from setting file \item\end{DoxyCompactList}\item 
+typedef std::map$<$ std::string, StatItem $>$ \hyperlink{namespaceProphetStat_a9443e033b59fb07e46a2a96a53d2dd1d}{ProphetStat::StatMap}
+\item 
+typedef struct \hyperlink{structSpawnClientData}{SpawnClientData} \hyperlink{prophetstatistic_8h_a8a50cb468247a033087b9dcd8ce24f66}{SpawnClientData}
+\begin{DoxyCompactList}\small\item\em user defined data passed to its associated actions \item\end{DoxyCompactList}\item 
+typedef struct \hyperlink{structSquashClientData}{SquashClientData} \hyperlink{prophetstatistic_8h_a92fc124e1fa6c6baf08b90025c81fced}{SquashClientData}
+\item 
+typedef struct \hyperlink{structCpzeroClientData}{CpzeroClientData} \hyperlink{prophetstatistic_8h_a332ff0b28b623f4d7f49721666fe10fe}{CpzeroClientData}
+\item 
+typedef struct \hyperlink{structCponeClientData}{CponeClientData} \hyperlink{prophetstatistic_8h_a8ac3ee24d3daa7bc5130392c5465a2f2}{CponeClientData}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{prophetstatistic_8h_ae3a9cc5ee7b2f23a3e3c9888084c4a58}{StatCondition} \{ \hyperlink{prophetstatistic_8h_ae3a9cc5ee7b2f23a3e3c9888084c4a58aecedb56d1405a60c6069f4a0139bdec5}{FAILED} =  0, 
+\hyperlink{prophetstatistic_8h_ae3a9cc5ee7b2f23a3e3c9888084c4a58ac7f69f7c9e5aea9b8f54cf02870e2bf8}{SUCCESS} =  1
+ \}
+\begin{DoxyCompactList}\small\item\em enumerate all the instruction condition for statistic \item\end{DoxyCompactList}\item 
+enum \hyperlink{namespaceProphetStat_aa800ec2b34e02457c7d0c3a0ea9deee4}{ProphetStat::StatState} \{ \par
+\hyperlink{namespaceProphetStat_aa800ec2b34e02457c7d0c3a0ea9deee4acfc74f93dceae6768486807614241e90}{ProphetStat::IDLE} =  0, 
+\hyperlink{namespaceProphetStat_aa800ec2b34e02457c7d0c3a0ea9deee4a058ab2d450a5a0a931d9b11a72715067}{ProphetStat::PSLICE}, 
+\hyperlink{namespaceProphetStat_aa800ec2b34e02457c7d0c3a0ea9deee4ace097e0e51dd3ef50cec7c34f6ac7d40}{ProphetStat::SPEXE}, 
+\hyperlink{namespaceProphetStat_aa800ec2b34e02457c7d0c3a0ea9deee4a3ffb9aa9aa7b5b19de43cb5039fdab6b}{ProphetStat::NOSPEXE}, 
+\par
+\hyperlink{namespaceProphetStat_aa800ec2b34e02457c7d0c3a0ea9deee4aff1c5e06c3af8ed6fa803f1bf6cecfbe}{ProphetStat::WAIT}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{namespaceProphetStat_a336f36557250c0d05869558bc589a73f}{ProphetStat::InitStat} (const char $\ast$prgname)
+\begin{DoxyCompactList}\small\item\em initialize the \hyperlink{classProphetStat_1_1Statistic}{Statistic} module \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceProphetStat_a4f759380f02b37883f0cc3acaf47c45d}{ProphetStat::ReportStat} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{prophetstatistic_8h_a0212dc9818b621594239c595b5104ce2}{
+\index{prophetstatistic.h@{prophetstatistic.h}!DO\_\-STATISTIC@{DO\_\-STATISTIC}}
+\index{DO\_\-STATISTIC@{DO\_\-STATISTIC}!prophetstatistic.h@{prophetstatistic.h}}
+\subsubsection[{DO\_\-STATISTIC}]{\setlength{\rightskip}{0pt plus 5cm}\#define DO\_\-STATISTIC(instname, \/  condition, \/  userdata...)}}
+\label{prophetstatistic_8h_a0212dc9818b621594239c595b5104ce2}
+{\bfseries Value:}
+\begin{DoxyCode}
+if(ProphetStat::gStatInited) \
+        { \
+                ProphetStat::StatItem item = ProphetStat::gStatMap[instname]; \
+                ProphetStat::STAT_ACTION action = item.m_Action; \
+                action(RecAdder::m_Record, condition, item.m_Cost, ##userdata); \
+      
+                /*std::cerr<< "in DO_STATSTICS" << std::endl;*/ \
+        }NULL
+\end{DoxyCode}
+
+
+this macros can only be used in a member function inherited from PROPHET\_\-STAT\_\-CLASS 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em instname}]the name of the instruction \item[{\em condition}]the condition state of the execution of the instruction \item[{\em userdata}]the data needed to pass to the registered action function for {\bfseries instname} \end{DoxyParams}
+\hypertarget{prophetstatistic_8h_adcc7a6e3107f2bbb9c252de649886157}{
+\index{prophetstatistic.h@{prophetstatistic.h}!PROPHET\_\-STAT\_\-CLASS@{PROPHET\_\-STAT\_\-CLASS}}
+\index{PROPHET\_\-STAT\_\-CLASS@{PROPHET\_\-STAT\_\-CLASS}!prophetstatistic.h@{prophetstatistic.h}}
+\subsubsection[{PROPHET\_\-STAT\_\-CLASS}]{\setlength{\rightskip}{0pt plus 5cm}\#define PROPHET\_\-STAT\_\-CLASS(name)~class name : public {\bf ProphetStat::RecAdder}}}
+\label{prophetstatistic_8h_adcc7a6e3107f2bbb9c252de649886157}
+
+
+macros for declareing the class needing statistic 
+
+\hypertarget{prophetstatistic_8h_af376292872436697ad4ab347c3554eb9}{
+\index{prophetstatistic.h@{prophetstatistic.h}!STAT\_\-PATH@{STAT\_\-PATH}}
+\index{STAT\_\-PATH@{STAT\_\-PATH}!prophetstatistic.h@{prophetstatistic.h}}
+\subsubsection[{STAT\_\-PATH}]{\setlength{\rightskip}{0pt plus 5cm}\#define STAT\_\-PATH~\char`\"{}/home/qmwx/workspace/prophet\_\-vmips\_\-final\_\-keyming\_\-131130/inst\_\-cost.ini\char`\"{}}}
+\label{prophetstatistic_8h_af376292872436697ad4ab347c3554eb9}
+\hypertarget{prophetstatistic_8h_a509d7d3c3dfa9172b157818efa865545}{
+\index{prophetstatistic.h@{prophetstatistic.h}!WITH\_\-PRIVATE\_\-ROOT@{WITH\_\-PRIVATE\_\-ROOT}}
+\index{WITH\_\-PRIVATE\_\-ROOT@{WITH\_\-PRIVATE\_\-ROOT}!prophetstatistic.h@{prophetstatistic.h}}
+\subsubsection[{WITH\_\-PRIVATE\_\-ROOT}]{\setlength{\rightskip}{0pt plus 5cm}\#define WITH\_\-PRIVATE\_\-ROOT(name)~, private name}}
+\label{prophetstatistic_8h_a509d7d3c3dfa9172b157818efa865545}
+\hypertarget{prophetstatistic_8h_a9730a124c6ba38926eae2358eb80a3e6}{
+\index{prophetstatistic.h@{prophetstatistic.h}!WITH\_\-PROTECTED\_\-ROOT@{WITH\_\-PROTECTED\_\-ROOT}}
+\index{WITH\_\-PROTECTED\_\-ROOT@{WITH\_\-PROTECTED\_\-ROOT}!prophetstatistic.h@{prophetstatistic.h}}
+\subsubsection[{WITH\_\-PROTECTED\_\-ROOT}]{\setlength{\rightskip}{0pt plus 5cm}\#define WITH\_\-PROTECTED\_\-ROOT(name)~, protected name}}
+\label{prophetstatistic_8h_a9730a124c6ba38926eae2358eb80a3e6}
+\hypertarget{prophetstatistic_8h_a35d0c89398cce1d475dd8a5670ea92df}{
+\index{prophetstatistic.h@{prophetstatistic.h}!WITH\_\-PUBLIC\_\-ROOT@{WITH\_\-PUBLIC\_\-ROOT}}
+\index{WITH\_\-PUBLIC\_\-ROOT@{WITH\_\-PUBLIC\_\-ROOT}!prophetstatistic.h@{prophetstatistic.h}}
+\subsubsection[{WITH\_\-PUBLIC\_\-ROOT}]{\setlength{\rightskip}{0pt plus 5cm}\#define WITH\_\-PUBLIC\_\-ROOT(name)~, public name}}
+\label{prophetstatistic_8h_a35d0c89398cce1d475dd8a5670ea92df}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{prophetstatistic_8h_a8ac3ee24d3daa7bc5130392c5465a2f2}{
+\index{prophetstatistic.h@{prophetstatistic.h}!CponeClientData@{CponeClientData}}
+\index{CponeClientData@{CponeClientData}!prophetstatistic.h@{prophetstatistic.h}}
+\subsubsection[{CponeClientData}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf CponeClientData} {\bf CponeClientData}}}
+\label{prophetstatistic_8h_a8ac3ee24d3daa7bc5130392c5465a2f2}
+\hypertarget{prophetstatistic_8h_a332ff0b28b623f4d7f49721666fe10fe}{
+\index{prophetstatistic.h@{prophetstatistic.h}!CpzeroClientData@{CpzeroClientData}}
+\index{CpzeroClientData@{CpzeroClientData}!prophetstatistic.h@{prophetstatistic.h}}
+\subsubsection[{CpzeroClientData}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf CpzeroClientData} {\bf CpzeroClientData}}}
+\label{prophetstatistic_8h_a332ff0b28b623f4d7f49721666fe10fe}
+\hypertarget{prophetstatistic_8h_a8a50cb468247a033087b9dcd8ce24f66}{
+\index{prophetstatistic.h@{prophetstatistic.h}!SpawnClientData@{SpawnClientData}}
+\index{SpawnClientData@{SpawnClientData}!prophetstatistic.h@{prophetstatistic.h}}
+\subsubsection[{SpawnClientData}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf SpawnClientData} {\bf SpawnClientData}}}
+\label{prophetstatistic_8h_a8a50cb468247a033087b9dcd8ce24f66}
+
+
+user defined data passed to its associated actions 
+
+\hypertarget{prophetstatistic_8h_a92fc124e1fa6c6baf08b90025c81fced}{
+\index{prophetstatistic.h@{prophetstatistic.h}!SquashClientData@{SquashClientData}}
+\index{SquashClientData@{SquashClientData}!prophetstatistic.h@{prophetstatistic.h}}
+\subsubsection[{SquashClientData}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf SquashClientData} {\bf SquashClientData}}}
+\label{prophetstatistic_8h_a92fc124e1fa6c6baf08b90025c81fced}
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{prophetstatistic_8h_ae3a9cc5ee7b2f23a3e3c9888084c4a58}{
+\index{prophetstatistic.h@{prophetstatistic.h}!StatCondition@{StatCondition}}
+\index{StatCondition@{StatCondition}!prophetstatistic.h@{prophetstatistic.h}}
+\subsubsection[{StatCondition}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf StatCondition}}}
+\label{prophetstatistic_8h_ae3a9cc5ee7b2f23a3e3c9888084c4a58}
+
+
+enumerate all the instruction condition for statistic 
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{FAILED@{FAILED}!prophetstatistic.h@{prophetstatistic.h}}\index{prophetstatistic.h@{prophetstatistic.h}!FAILED@{FAILED}}\item[{\em 
+\hypertarget{prophetstatistic_8h_ae3a9cc5ee7b2f23a3e3c9888084c4a58aecedb56d1405a60c6069f4a0139bdec5}{
+FAILED}
+\label{prophetstatistic_8h_ae3a9cc5ee7b2f23a3e3c9888084c4a58aecedb56d1405a60c6069f4a0139bdec5}
+}]\index{SUCCESS@{SUCCESS}!prophetstatistic.h@{prophetstatistic.h}}\index{prophetstatistic.h@{prophetstatistic.h}!SUCCESS@{SUCCESS}}\item[{\em 
+\hypertarget{prophetstatistic_8h_ae3a9cc5ee7b2f23a3e3c9888084c4a58ac7f69f7c9e5aea9b8f54cf02870e2bf8}{
+SUCCESS}
+\label{prophetstatistic_8h_ae3a9cc5ee7b2f23a3e3c9888084c4a58ac7f69f7c9e5aea9b8f54cf02870e2bf8}
+}]\end{description}
+\end{Desc}
+

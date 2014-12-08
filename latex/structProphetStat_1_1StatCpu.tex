@@ -1,0 +1,64 @@
+\hypertarget{structProphetStat_1_1StatCpu}{
+\section{ProphetStat::StatCpu Struct Reference}
+\label{structProphetStat_1_1StatCpu}\index{ProphetStat::StatCpu@{ProphetStat::StatCpu}}
+}
+
+
+{\ttfamily \#include $<$prophetstatistic.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{structProphetStat_1_1StatCpu_a6e4ce4ed546daef76b87825bc2b4a52c}{
+double {\bfseries averageCoreNum} ()}
+\label{structProphetStat_1_1StatCpu_a6e4ce4ed546daef76b87825bc2b4a52c}
+
+\item 
+\hypertarget{structProphetStat_1_1StatCpu_a9fba1d4e54315792e05bc32ff3908e6e}{
+double $\ast$ {\bfseries calProportion} ()}
+\label{structProphetStat_1_1StatCpu_a9fba1d4e54315792e05bc32ff3908e6e}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{structProphetStat_1_1StatCpu_a8bcebe874f1f2281914831c2f29e7b94}{
+static \hyperlink{structProphetStat_1_1StatCpu}{StatCpu} $\ast$ {\bfseries getStatCpuInstance} (int n)}
+\label{structProphetStat_1_1StatCpu_a8bcebe874f1f2281914831c2f29e7b94}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{structProphetStat_1_1StatCpu_a17060d381054d9f4cfde5e45a1a68801}{
+int {\bfseries num}}
+\label{structProphetStat_1_1StatCpu_a17060d381054d9f4cfde5e45a1a68801}
+
+\item 
+\hypertarget{structProphetStat_1_1StatCpu_a0ce6afabe767f77c09c722ee0ed2f5f2}{
+int $\ast$ {\bfseries coreNum}}
+\label{structProphetStat_1_1StatCpu_a0ce6afabe767f77c09c722ee0ed2f5f2}
+
+\item 
+\hypertarget{structProphetStat_1_1StatCpu_a5d8ad59ddc734b1bb5df2bb9340ff045}{
+double $\ast$ {\bfseries proportion}}
+\label{structProphetStat_1_1StatCpu_a5d8ad59ddc734b1bb5df2bb9340ff045}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{structProphetStat_1_1StatCpu_a23a77b4ddaf86f71fe1c4aed534ff303}{
+static \hyperlink{structProphetStat_1_1StatCpu}{StatCpu} $\ast$ {\bfseries hasone} = NULL}
+\label{structProphetStat_1_1StatCpu_a23a77b4ddaf86f71fe1c4aed534ff303}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+统计CPU核利用率， 主要从在某一时刻， 有多少个核在同时运行这个方面进行统计的。 这个是单例模式， 使用getStatCpuInstance来构造一个唯一的对象。 
+
+The documentation for this struct was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+prophetstatistic.h\item 
+prophetstatistic.cc\end{DoxyCompactItemize}

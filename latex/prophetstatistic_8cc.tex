@@ -1,0 +1,223 @@
+\hypertarget{prophetstatistic_8cc}{
+\section{prophetstatistic.cc File Reference}
+\label{prophetstatistic_8cc}\index{prophetstatistic.cc@{prophetstatistic.cc}}
+}
+{\ttfamily \#include \char`\"{}prophetstatistic.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}prophetxmldoc.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}prophetlog.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}prophet\_\-vmips.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}options.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}speculativelogic.h\char`\"{}}\par
+{\ttfamily \#include $<$string$>$}\par
+{\ttfamily \#include $<$cstring$>$}\par
+{\ttfamily \#include $<$fstream$>$}\par
+{\ttfamily \#include $<$iostream$>$}\par
+{\ttfamily \#include $<$time.h$>$}\par
+{\ttfamily \#include $<$stdio.h$>$}\par
+{\ttfamily \#include $<$assert.h$>$}\par
+{\ttfamily \#include $<$stdlib.h$>$}\par
+{\ttfamily \#include \char`\"{}prophetcpustat.h\char`\"{}}\par
+Include dependency graph for prophetstatistic.cc:\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classProphetStat_1_1Statistic}{ProphetStat::Statistic}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classProphetStat_1_1Statistic}{Statistic} maintains all the statistic record for the cpus. \item\end{DoxyCompactList}\item 
+struct \hyperlink{structProphetStat_1_1tstat}{ProphetStat::tstat}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \hyperlink{namespaceProphetStat}{ProphetStat}
+\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{prophetstatistic_8cc_aeb7ba12468b0187dc4703932ca5e45e9}{KEYMING\_\-PLUS}
+\item 
+\#define \hyperlink{prophetstatistic_8cc_a8e5ea7de63ec04a27b07e28c0efc8723}{KEYMING\_\-STATICS}
+\item 
+\#define \hyperlink{prophetstatistic_8cc_a8e5ea7de63ec04a27b07e28c0efc8723}{KEYMING\_\-STATICS}
+\item 
+\#define \hyperlink{prophetstatistic_8cc_a8e5ea7de63ec04a27b07e28c0efc8723}{KEYMING\_\-STATICS}
+\item 
+\#define \hyperlink{prophetstatistic_8cc_a8e5ea7de63ec04a27b07e28c0efc8723}{KEYMING\_\-STATICS}
+\item 
+\#define \hyperlink{prophetstatistic_8cc_a8e5ea7de63ec04a27b07e28c0efc8723}{KEYMING\_\-STATICS}
+\item 
+\#define \hyperlink{prophetstatistic_8cc_a8e5ea7de63ec04a27b07e28c0efc8723}{KEYMING\_\-STATICS}
+\item 
+\#define \hyperlink{prophetstatistic_8cc_a8e5ea7de63ec04a27b07e28c0efc8723}{KEYMING\_\-STATICS}
+\item 
+\#define \hyperlink{prophetstatistic_8cc_a8e5ea7de63ec04a27b07e28c0efc8723}{KEYMING\_\-STATICS}
+\item 
+\#define \hyperlink{prophetstatistic_8cc_a8e5ea7de63ec04a27b07e28c0efc8723}{KEYMING\_\-STATICS}
+\item 
+\#define \hyperlink{prophetstatistic_8cc_a8e5ea7de63ec04a27b07e28c0efc8723}{KEYMING\_\-STATICS}
+\item 
+\#define \hyperlink{prophetstatistic_8cc_aeb7ba12468b0187dc4703932ca5e45e9}{KEYMING\_\-PLUS}
+\item 
+\#define \hyperlink{prophetstatistic_8cc_a8e5ea7de63ec04a27b07e28c0efc8723}{KEYMING\_\-STATICS}
+\item 
+\#define \hyperlink{prophetstatistic_8cc_af48973cfc838e313e15a7eb9a26e625f}{DEBUG\_\-KEYMING}
+\item 
+\#define \hyperlink{prophetstatistic_8cc_a8e5ea7de63ec04a27b07e28c0efc8723}{KEYMING\_\-STATICS}
+\item 
+\#define \hyperlink{prophetstatistic_8cc_a8e5ea7de63ec04a27b07e28c0efc8723}{KEYMING\_\-STATICS}
+\item 
+\#define \hyperlink{prophetstatistic_8cc_a8e5ea7de63ec04a27b07e28c0efc8723}{KEYMING\_\-STATICS}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef StatMap::value\_\-type \hyperlink{namespaceProphetStat_aca08a7928fcf3b489999285e1759f445}{ProphetStat::StatMapValue}
+\item 
+typedef struct \hyperlink{structProphetStat_1_1tstat}{ProphetStat::tstat} \hyperlink{namespaceProphetStat_a7c6b8cfe60f98af8a4cf0bfc65626af7}{ProphetStat::tstats}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{namespaceProphetStat_a48e8eb9ef03063b2e23aed24ffa85edd}{ProphetStat::DefaultStatAction} (StatRecord $\ast$rec, \hyperlink{prophetstatistic_8h_ae3a9cc5ee7b2f23a3e3c9888084c4a58}{StatCondition} condition, int cost, void $\ast$clientdata=NULL)
+\begin{DoxyCompactList}\small\item\em if a \hyperlink{structProphetStat_1_1StatItem}{StatItem} with a NULL statistic action, the default one will be invoked \item\end{DoxyCompactList}\item 
+static void \hyperlink{namespaceProphetStat_a1f89b95e0a502d2c9664330851668834}{ProphetStat::CpzeroAction} (StatRecord $\ast$rec, \hyperlink{prophetstatistic_8h_ae3a9cc5ee7b2f23a3e3c9888084c4a58}{StatCondition} condition, int cost, void $\ast$clientdata=NULL)
+\begin{DoxyCompactList}\small\item\em user defined action for specified instruction \item\end{DoxyCompactList}\item 
+static void \hyperlink{namespaceProphetStat_af9cafd0f83be416dd58899bd1a0f9a6a}{ProphetStat::CponeAction} (StatRecord $\ast$rec, \hyperlink{prophetstatistic_8h_ae3a9cc5ee7b2f23a3e3c9888084c4a58}{StatCondition} condition, int cost, void $\ast$clientdata=NULL)
+\item 
+static void \hyperlink{namespaceProphetStat_af8471ad8689235e565995d45dd6335c7}{ProphetStat::SpawnAction} (StatRecord $\ast$rec, \hyperlink{prophetstatistic_8h_ae3a9cc5ee7b2f23a3e3c9888084c4a58}{StatCondition} condition, int cost, void $\ast$clientdata=NULL)
+\begin{DoxyCompactList}\small\item\em user defined actions for specified event \item\end{DoxyCompactList}\item 
+static void \hyperlink{namespaceProphetStat_aa5fef4fe8d6c3a03e6117c2becb452ba}{ProphetStat::BeginAction} (StatRecord $\ast$rec, \hyperlink{prophetstatistic_8h_ae3a9cc5ee7b2f23a3e3c9888084c4a58}{StatCondition} condition, int cost, void $\ast$clientdata=NULL)
+\item 
+static void \hyperlink{namespaceProphetStat_a3090ca3b30e27f7724f317d26de2ac2f}{ProphetStat::PsliceEntryAction} (StatRecord $\ast$rec, \hyperlink{prophetstatistic_8h_ae3a9cc5ee7b2f23a3e3c9888084c4a58}{StatCondition} condition, int cost, void $\ast$clientdata=NULL)
+\item 
+static void \hyperlink{namespaceProphetStat_a170fdbfd195e3162d861bdc55c07c631}{ProphetStat::PsliceExitAction} (StatRecord $\ast$rec, \hyperlink{prophetstatistic_8h_ae3a9cc5ee7b2f23a3e3c9888084c4a58}{StatCondition} condition, int cost, void $\ast$clientdata=NULL)
+\item 
+static void \hyperlink{namespaceProphetStat_a2a7037500258edda6984dff745232ab1}{ProphetStat::StableTokenAction} (StatRecord $\ast$rec, \hyperlink{prophetstatistic_8h_ae3a9cc5ee7b2f23a3e3c9888084c4a58}{StatCondition} condition, int cost, void $\ast$clientdata=NULL)
+\item 
+static void \hyperlink{namespaceProphetStat_aad1dfb811e4ec6ceebb6b650f2365364}{ProphetStat::CqipHoldAction} (StatRecord $\ast$rec, \hyperlink{prophetstatistic_8h_ae3a9cc5ee7b2f23a3e3c9888084c4a58}{StatCondition} condition, int cost, void $\ast$clientdata=NULL)
+\item 
+static void \hyperlink{namespaceProphetStat_a6395898643016a0f18dc85db04b6a952}{ProphetStat::CqipCommitAction} (StatRecord $\ast$rec, \hyperlink{prophetstatistic_8h_ae3a9cc5ee7b2f23a3e3c9888084c4a58}{StatCondition} condition, int cost, void $\ast$clientdata=NULL)
+\item 
+static void \hyperlink{namespaceProphetStat_a70d13939da4273563ac01504d85589c0}{ProphetStat::VerifyAction} (StatRecord $\ast$rec, \hyperlink{prophetstatistic_8h_ae3a9cc5ee7b2f23a3e3c9888084c4a58}{StatCondition} condition, int cost, void $\ast$clientdata=NULL)
+\item 
+static void \hyperlink{namespaceProphetStat_ae9324ce5fcd982a1c53394fe01d4c4bd}{ProphetStat::CommitAction} (StatRecord $\ast$rec, \hyperlink{prophetstatistic_8h_ae3a9cc5ee7b2f23a3e3c9888084c4a58}{StatCondition} condition, int cost, void $\ast$clientdata=NULL)
+\item 
+static void \hyperlink{namespaceProphetStat_a92a2d55413fc3d83484642520245ac8c}{ProphetStat::SquashAction} (StatRecord $\ast$rec, \hyperlink{prophetstatistic_8h_ae3a9cc5ee7b2f23a3e3c9888084c4a58}{StatCondition} condition, int cost, void $\ast$data=NULL)
+\item 
+static void \hyperlink{namespaceProphetStat_a78be33cec9171ad5bd7fbeada86da52c}{ProphetStat::RestartAction} (StatRecord $\ast$rec, \hyperlink{prophetstatistic_8h_ae3a9cc5ee7b2f23a3e3c9888084c4a58}{StatCondition} condition, int cost, void $\ast$clientdata=NULL)
+\item 
+void \hyperlink{namespaceProphetStat_a819fefc469a7728f8db37b8846e4d52f}{ProphetStat::RegisterActions} ()
+\begin{DoxyCompactList}\small\item\em this is a hook function, the user can register its own actions here \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceProphetStat_a336f36557250c0d05869558bc589a73f}{ProphetStat::InitStat} (const char $\ast$prgname)
+\begin{DoxyCompactList}\small\item\em initialize the \hyperlink{classProphetStat_1_1Statistic}{Statistic} module \item\end{DoxyCompactList}\item 
+void \hyperlink{namespaceProphetStat_a4f759380f02b37883f0cc3acaf47c45d}{ProphetStat::ReportStat} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+FILE $\ast$ \hyperlink{prophetstatistic_8cc_a9ce017ff2a6711908a496f054b082fca}{mystderrlog}
+\item 
+bool \hyperlink{namespaceProphetStat_a7019aeb9025149666ddb523217abd703}{ProphetStat::gStatInited} = false
+\begin{DoxyCompactList}\small\item\em indicating whether the statistic module is initialized or not \item\end{DoxyCompactList}\item 
+StatMap \hyperlink{namespaceProphetStat_a39c7996dccfb341330090f8c3d9cb2c4}{ProphetStat::gStatMap}
+\begin{DoxyCompactList}\small\item\em global variable to store the statistic settings \item\end{DoxyCompactList}\item 
+static char $\ast$ \hyperlink{namespaceProphetStat_af36b92ac464295246910be5c207c1eb1}{ProphetStat::file} = STAT\_\-PATH
+\begin{DoxyCompactList}\small\item\em setting file \item\end{DoxyCompactList}\item 
+static char \hyperlink{namespaceProphetStat_a6728493be809e810075bc232a76fe467}{ProphetStat::program} \mbox{[}100\mbox{]}
+\item 
+std::string \hyperlink{namespaceProphetStat_a44e9f91d8272acd8a91db9a05e9599d9}{ProphetStat::SettingVersion}
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{prophetstatistic_8cc_af48973cfc838e313e15a7eb9a26e625f}{
+\index{prophetstatistic.cc@{prophetstatistic.cc}!DEBUG\_\-KEYMING@{DEBUG\_\-KEYMING}}
+\index{DEBUG\_\-KEYMING@{DEBUG\_\-KEYMING}!prophetstatistic.cc@{prophetstatistic.cc}}
+\subsubsection[{DEBUG\_\-KEYMING}]{\setlength{\rightskip}{0pt plus 5cm}\#define DEBUG\_\-KEYMING}}
+\label{prophetstatistic_8cc_af48973cfc838e313e15a7eb9a26e625f}
+\hypertarget{prophetstatistic_8cc_aeb7ba12468b0187dc4703932ca5e45e9}{
+\index{prophetstatistic.cc@{prophetstatistic.cc}!KEYMING\_\-PLUS@{KEYMING\_\-PLUS}}
+\index{KEYMING\_\-PLUS@{KEYMING\_\-PLUS}!prophetstatistic.cc@{prophetstatistic.cc}}
+\subsubsection[{KEYMING\_\-PLUS}]{\setlength{\rightskip}{0pt plus 5cm}\#define KEYMING\_\-PLUS}}
+\label{prophetstatistic_8cc_aeb7ba12468b0187dc4703932ca5e45e9}
+\hypertarget{prophetstatistic_8cc_aeb7ba12468b0187dc4703932ca5e45e9}{
+\index{prophetstatistic.cc@{prophetstatistic.cc}!KEYMING\_\-PLUS@{KEYMING\_\-PLUS}}
+\index{KEYMING\_\-PLUS@{KEYMING\_\-PLUS}!prophetstatistic.cc@{prophetstatistic.cc}}
+\subsubsection[{KEYMING\_\-PLUS}]{\setlength{\rightskip}{0pt plus 5cm}\#define KEYMING\_\-PLUS}}
+\label{prophetstatistic_8cc_aeb7ba12468b0187dc4703932ca5e45e9}
+\hypertarget{prophetstatistic_8cc_a8e5ea7de63ec04a27b07e28c0efc8723}{
+\index{prophetstatistic.cc@{prophetstatistic.cc}!KEYMING\_\-STATICS@{KEYMING\_\-STATICS}}
+\index{KEYMING\_\-STATICS@{KEYMING\_\-STATICS}!prophetstatistic.cc@{prophetstatistic.cc}}
+\subsubsection[{KEYMING\_\-STATICS}]{\setlength{\rightskip}{0pt plus 5cm}\#define KEYMING\_\-STATICS}}
+\label{prophetstatistic_8cc_a8e5ea7de63ec04a27b07e28c0efc8723}
+\hypertarget{prophetstatistic_8cc_a8e5ea7de63ec04a27b07e28c0efc8723}{
+\index{prophetstatistic.cc@{prophetstatistic.cc}!KEYMING\_\-STATICS@{KEYMING\_\-STATICS}}
+\index{KEYMING\_\-STATICS@{KEYMING\_\-STATICS}!prophetstatistic.cc@{prophetstatistic.cc}}
+\subsubsection[{KEYMING\_\-STATICS}]{\setlength{\rightskip}{0pt plus 5cm}\#define KEYMING\_\-STATICS}}
+\label{prophetstatistic_8cc_a8e5ea7de63ec04a27b07e28c0efc8723}
+\hypertarget{prophetstatistic_8cc_a8e5ea7de63ec04a27b07e28c0efc8723}{
+\index{prophetstatistic.cc@{prophetstatistic.cc}!KEYMING\_\-STATICS@{KEYMING\_\-STATICS}}
+\index{KEYMING\_\-STATICS@{KEYMING\_\-STATICS}!prophetstatistic.cc@{prophetstatistic.cc}}
+\subsubsection[{KEYMING\_\-STATICS}]{\setlength{\rightskip}{0pt plus 5cm}\#define KEYMING\_\-STATICS}}
+\label{prophetstatistic_8cc_a8e5ea7de63ec04a27b07e28c0efc8723}
+\hypertarget{prophetstatistic_8cc_a8e5ea7de63ec04a27b07e28c0efc8723}{
+\index{prophetstatistic.cc@{prophetstatistic.cc}!KEYMING\_\-STATICS@{KEYMING\_\-STATICS}}
+\index{KEYMING\_\-STATICS@{KEYMING\_\-STATICS}!prophetstatistic.cc@{prophetstatistic.cc}}
+\subsubsection[{KEYMING\_\-STATICS}]{\setlength{\rightskip}{0pt plus 5cm}\#define KEYMING\_\-STATICS}}
+\label{prophetstatistic_8cc_a8e5ea7de63ec04a27b07e28c0efc8723}
+\hypertarget{prophetstatistic_8cc_a8e5ea7de63ec04a27b07e28c0efc8723}{
+\index{prophetstatistic.cc@{prophetstatistic.cc}!KEYMING\_\-STATICS@{KEYMING\_\-STATICS}}
+\index{KEYMING\_\-STATICS@{KEYMING\_\-STATICS}!prophetstatistic.cc@{prophetstatistic.cc}}
+\subsubsection[{KEYMING\_\-STATICS}]{\setlength{\rightskip}{0pt plus 5cm}\#define KEYMING\_\-STATICS}}
+\label{prophetstatistic_8cc_a8e5ea7de63ec04a27b07e28c0efc8723}
+\hypertarget{prophetstatistic_8cc_a8e5ea7de63ec04a27b07e28c0efc8723}{
+\index{prophetstatistic.cc@{prophetstatistic.cc}!KEYMING\_\-STATICS@{KEYMING\_\-STATICS}}
+\index{KEYMING\_\-STATICS@{KEYMING\_\-STATICS}!prophetstatistic.cc@{prophetstatistic.cc}}
+\subsubsection[{KEYMING\_\-STATICS}]{\setlength{\rightskip}{0pt plus 5cm}\#define KEYMING\_\-STATICS}}
+\label{prophetstatistic_8cc_a8e5ea7de63ec04a27b07e28c0efc8723}
+\hypertarget{prophetstatistic_8cc_a8e5ea7de63ec04a27b07e28c0efc8723}{
+\index{prophetstatistic.cc@{prophetstatistic.cc}!KEYMING\_\-STATICS@{KEYMING\_\-STATICS}}
+\index{KEYMING\_\-STATICS@{KEYMING\_\-STATICS}!prophetstatistic.cc@{prophetstatistic.cc}}
+\subsubsection[{KEYMING\_\-STATICS}]{\setlength{\rightskip}{0pt plus 5cm}\#define KEYMING\_\-STATICS}}
+\label{prophetstatistic_8cc_a8e5ea7de63ec04a27b07e28c0efc8723}
+\hypertarget{prophetstatistic_8cc_a8e5ea7de63ec04a27b07e28c0efc8723}{
+\index{prophetstatistic.cc@{prophetstatistic.cc}!KEYMING\_\-STATICS@{KEYMING\_\-STATICS}}
+\index{KEYMING\_\-STATICS@{KEYMING\_\-STATICS}!prophetstatistic.cc@{prophetstatistic.cc}}
+\subsubsection[{KEYMING\_\-STATICS}]{\setlength{\rightskip}{0pt plus 5cm}\#define KEYMING\_\-STATICS}}
+\label{prophetstatistic_8cc_a8e5ea7de63ec04a27b07e28c0efc8723}
+\hypertarget{prophetstatistic_8cc_a8e5ea7de63ec04a27b07e28c0efc8723}{
+\index{prophetstatistic.cc@{prophetstatistic.cc}!KEYMING\_\-STATICS@{KEYMING\_\-STATICS}}
+\index{KEYMING\_\-STATICS@{KEYMING\_\-STATICS}!prophetstatistic.cc@{prophetstatistic.cc}}
+\subsubsection[{KEYMING\_\-STATICS}]{\setlength{\rightskip}{0pt plus 5cm}\#define KEYMING\_\-STATICS}}
+\label{prophetstatistic_8cc_a8e5ea7de63ec04a27b07e28c0efc8723}
+\hypertarget{prophetstatistic_8cc_a8e5ea7de63ec04a27b07e28c0efc8723}{
+\index{prophetstatistic.cc@{prophetstatistic.cc}!KEYMING\_\-STATICS@{KEYMING\_\-STATICS}}
+\index{KEYMING\_\-STATICS@{KEYMING\_\-STATICS}!prophetstatistic.cc@{prophetstatistic.cc}}
+\subsubsection[{KEYMING\_\-STATICS}]{\setlength{\rightskip}{0pt plus 5cm}\#define KEYMING\_\-STATICS}}
+\label{prophetstatistic_8cc_a8e5ea7de63ec04a27b07e28c0efc8723}
+\hypertarget{prophetstatistic_8cc_a8e5ea7de63ec04a27b07e28c0efc8723}{
+\index{prophetstatistic.cc@{prophetstatistic.cc}!KEYMING\_\-STATICS@{KEYMING\_\-STATICS}}
+\index{KEYMING\_\-STATICS@{KEYMING\_\-STATICS}!prophetstatistic.cc@{prophetstatistic.cc}}
+\subsubsection[{KEYMING\_\-STATICS}]{\setlength{\rightskip}{0pt plus 5cm}\#define KEYMING\_\-STATICS}}
+\label{prophetstatistic_8cc_a8e5ea7de63ec04a27b07e28c0efc8723}
+\hypertarget{prophetstatistic_8cc_a8e5ea7de63ec04a27b07e28c0efc8723}{
+\index{prophetstatistic.cc@{prophetstatistic.cc}!KEYMING\_\-STATICS@{KEYMING\_\-STATICS}}
+\index{KEYMING\_\-STATICS@{KEYMING\_\-STATICS}!prophetstatistic.cc@{prophetstatistic.cc}}
+\subsubsection[{KEYMING\_\-STATICS}]{\setlength{\rightskip}{0pt plus 5cm}\#define KEYMING\_\-STATICS}}
+\label{prophetstatistic_8cc_a8e5ea7de63ec04a27b07e28c0efc8723}
+\hypertarget{prophetstatistic_8cc_a8e5ea7de63ec04a27b07e28c0efc8723}{
+\index{prophetstatistic.cc@{prophetstatistic.cc}!KEYMING\_\-STATICS@{KEYMING\_\-STATICS}}
+\index{KEYMING\_\-STATICS@{KEYMING\_\-STATICS}!prophetstatistic.cc@{prophetstatistic.cc}}
+\subsubsection[{KEYMING\_\-STATICS}]{\setlength{\rightskip}{0pt plus 5cm}\#define KEYMING\_\-STATICS}}
+\label{prophetstatistic_8cc_a8e5ea7de63ec04a27b07e28c0efc8723}
+\hypertarget{prophetstatistic_8cc_a8e5ea7de63ec04a27b07e28c0efc8723}{
+\index{prophetstatistic.cc@{prophetstatistic.cc}!KEYMING\_\-STATICS@{KEYMING\_\-STATICS}}
+\index{KEYMING\_\-STATICS@{KEYMING\_\-STATICS}!prophetstatistic.cc@{prophetstatistic.cc}}
+\subsubsection[{KEYMING\_\-STATICS}]{\setlength{\rightskip}{0pt plus 5cm}\#define KEYMING\_\-STATICS}}
+\label{prophetstatistic_8cc_a8e5ea7de63ec04a27b07e28c0efc8723}
+
+
+\subsection{Variable Documentation}
+\hypertarget{prophetstatistic_8cc_a9ce017ff2a6711908a496f054b082fca}{
+\index{prophetstatistic.cc@{prophetstatistic.cc}!mystderrlog@{mystderrlog}}
+\index{mystderrlog@{mystderrlog}!prophetstatistic.cc@{prophetstatistic.cc}}
+\subsubsection[{mystderrlog}]{\setlength{\rightskip}{0pt plus 5cm}FILE$\ast$ {\bf mystderrlog}}}
+\label{prophetstatistic_8cc_a9ce017ff2a6711908a496f054b082fca}

@@ -1,0 +1,28 @@
+digraph G
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir=LR;
+  Node1 [label="DECSerialDevice::fetch_word",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="CSR_TLINE",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$decserial_8cc.html#af90407d11c0e0a2c5cdba376a448e802"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="Mapper::mips_to_host_word",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classMapper.html#ac40b7a8813b99b8b71ac2ae9e18c07b6"];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="Mapper::swap_word",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classMapper.html#aad996f69d0a2aca785f5a8e9440789be"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="RBUF_RLINE",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$decserial_8cc.html#a078452080698754de2d3bd2463c16786"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="DECSerialDevice::receiver_done",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classDECSerialDevice.html#a8d994b3a7a0d44860b12303b2d4eb22c"];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="TerminalController::line_connected",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classTerminalController.html#a157b1f7b289043c3b27470230875d9c3"];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="DECSerialDevice::transmitter_ready",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classDECSerialDevice.html#a3c812e1198159c1d60aba3910d341c96"];
+  Node8 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 -> Node9 [color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="TCR_LINE_ENABLED",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$decserial_8cc.html#a381d404e7c194bd38c5f7017d9db571a"];
+  Node1 -> Node10 [color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="DECSerialDevice::unready_keyboard",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classDECSerialDevice.html#a018c7b26ebc09ce1529549f49a5eb4d4"];
+  Node10 -> Node11 [color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="TerminalController::unready_keyboard",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classTerminalController.html#afe5b8685b5149db2b7cc5b2e395a479e"];
+}

@@ -1,0 +1,29 @@
+digraph G
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir=LR;
+  Node1 [label="SpimConsoleDevice::store_word",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="DeviceInt::assertInt",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classDeviceInt.html#a2b7e17c5314630680c3a09a9e706f870"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="DeviceInt::reportAssert",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classDeviceInt.html#a043b0544625e7cbcb532fffbfe044425"];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="DeviceInt::descriptor_str",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classDeviceInt.html#a8e93853ae77b6a63a140ed498d9fc8b8"];
+  Node3 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="DeviceInt::strlineno",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classDeviceInt.html#a7b51658efadb002993df8b4475ce29eb"];
+  Node2 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="DeviceInt::reportAssertDisconnected",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classDeviceInt.html#abaef481c8ded1d9ddc5a7789e498856e"];
+  Node6 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="Mapper::host_to_mips_word",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classMapper.html#ab63092a89802fab46fe3c4e2191e76fd"];
+  Node7 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="Mapper::swap_word",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classMapper.html#aad996f69d0a2aca785f5a8e9440789be"];
+  Node1 -> Node9 [color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="TerminalController::line_connected",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classTerminalController.html#a157b1f7b289043c3b27470230875d9c3"];
+  Node1 -> Node10 [color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="SpimConsoleDevice::unready_display",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classSpimConsoleDevice.html#a05eaad591781ef58baad9905c2f3dbde"];
+  Node10 -> Node11 [color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="TerminalController::unready_display",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classTerminalController.html#acf0314b08dad27cfe57bf374cecbc5a3"];
+}

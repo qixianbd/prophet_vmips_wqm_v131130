@@ -1,0 +1,64 @@
+.TH "Trace::Operand" 3 "18 Dec 2013" "Doxygen" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Trace::Operand \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <cpu.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBOperand\fP ()"
+.br
+.ti -1c
+.RI "\fBOperand\fP (const char *tag_, int regno_, uint32 val_)"
+.br
+.ti -1c
+.RI "\fBOperand\fP (const char *tag_, uint32 val_)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBOperand\fP \fBmake\fP (const char *tag_, int regno_, uint32 val_)"
+.br
+.ti -1c
+.RI "static \fBOperand\fP \fBmake\fP (const char *tag_, uint32 val_)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "const char * \fBtag\fP"
+.br
+.ti -1c
+.RI "int \fBregno\fP"
+.br
+.ti -1c
+.RI "uint32 \fBval\fP"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Trace::Operand::Operand ()\fC [inline]\fP"
+.SS "Trace::Operand::Operand (const char * tag_, int regno_, uint32 val_)\fC [inline]\fP"
+.SS "Trace::Operand::Operand (const char * tag_, uint32 val_)\fC [inline]\fP"
+.SH "Member Function Documentation"
+.PP 
+.SS "static \fBOperand\fP Trace::Operand::make (const char * tag_, uint32 val_)\fC [inline, static]\fP"
+.SS "static \fBOperand\fP Trace::Operand::make (const char * tag_, int regno_, uint32 val_)\fC [inline, static]\fP"
+.SH "Member Data Documentation"
+.PP 
+.SS "int \fBTrace::Operand::regno\fP"
+.SS "const char* \fBTrace::Operand::tag\fP"
+.SS "uint32 \fBTrace::Operand::val\fP"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen from the source code.

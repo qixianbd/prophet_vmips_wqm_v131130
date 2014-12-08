@@ -1,0 +1,80 @@
+\hypertarget{classTrace}{
+\section{Trace Class Reference}
+\label{classTrace}\index{Trace@{Trace}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structTrace_1_1Operand}{Operand}
+\item 
+struct \hyperlink{structTrace_1_1Record}{Record}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classTrace_aad12016da100049193ab3d80539d3d1d}{
+typedef std::deque$<$ \hyperlink{structTrace_1_1Record}{Record} $>$ {\bfseries RecordListType}}
+\label{classTrace_aad12016da100049193ab3d80539d3d1d}
+
+\item 
+\hypertarget{classTrace_a97298d04d58f7f9e9ae9c61bb233d338}{
+typedef RecordListType::iterator {\bfseries record\_\-iterator}}
+\label{classTrace_a97298d04d58f7f9e9ae9c61bb233d338}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classTrace_aecfd5dcb23567239137fc3a0b8b95a07}{
+record\_\-iterator {\bfseries rbegin} ()}
+\label{classTrace_aecfd5dcb23567239137fc3a0b8b95a07}
+
+\item 
+\hypertarget{classTrace_a37e3f1074220029b6f693bafcc99dccf}{
+record\_\-iterator {\bfseries rend} ()}
+\label{classTrace_a37e3f1074220029b6f693bafcc99dccf}
+
+\item 
+\hypertarget{classTrace_a7e719f22d141f62d4da6f22d13e27972}{
+void {\bfseries clear} ()}
+\label{classTrace_a7e719f22d141f62d4da6f22d13e27972}
+
+\item 
+\hypertarget{classTrace_a80451c390ed1f70bba6b4ed422b8bfa3}{
+size\_\-t {\bfseries record\_\-size} () const }
+\label{classTrace_a80451c390ed1f70bba6b4ed422b8bfa3}
+
+\item 
+\hypertarget{classTrace_a86280544f756d1de4ca1b2ac94343a3e}{
+void {\bfseries pop\_\-front\_\-record} ()}
+\label{classTrace_a86280544f756d1de4ca1b2ac94343a3e}
+
+\item 
+\hypertarget{classTrace_a047322e249c7d70db314689bea6dc2e0}{
+void {\bfseries push\_\-back\_\-record} (\hyperlink{structTrace_1_1Record}{Trace::Record} \&r)}
+\label{classTrace_a047322e249c7d70db314689bea6dc2e0}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classTrace_a3b817748af702ec1e1f4f47c7c622c1a}{
+std::map$<$ int, \hyperlink{structlast__change}{last\_\-change} $>$ {\bfseries last\_\-change\_\-for\_\-reg}}
+\label{classTrace_a3b817748af702ec1e1f4f47c7c622c1a}
+
+\item 
+\hypertarget{classTrace_a829f74b75c3a0f8fe5d1be97ccafa5d1}{
+bool {\bfseries exception\_\-happened}}
+\label{classTrace_a829f74b75c3a0f8fe5d1be97ccafa5d1}
+
+\item 
+\hypertarget{classTrace_a52b0dd9f6e0b024ef6b0dd51e806537e}{
+int {\bfseries last\_\-exception\_\-code}}
+\label{classTrace_a52b0dd9f6e0b024ef6b0dd51e806537e}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+cpu.h\end{DoxyCompactItemize}

@@ -1,0 +1,71 @@
+\hypertarget{cpzero_8cc}{
+\section{cpzero.cc File Reference}
+\label{cpzero_8cc}\index{cpzero.cc@{cpzero.cc}}
+}
+{\ttfamily \#include \char`\"{}cpzero.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}mapper.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}excnames.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}cpu.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}cpzeroreg.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}intctrl.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}deviceexc.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}error.h\char`\"{}}\par
+Include dependency graph for cpzero.cc:\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{cpzero_8cc_a4fe6b690f5ea991f8b55fca166015a20}{dump\_\-tlb\_\-entry} (FILE $\ast$f, int index, const \hyperlink{classTLBEntry}{TLBEntry} \&e)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static uint32 \hyperlink{cpzero_8cc_adf1e059a646a06e4c5443e5a4de89cb9}{read\_\-masks} \mbox{[}$\,$\mbox{]}
+\item 
+static uint32 \hyperlink{cpzero_8cc_ae8e7dadc2fcdb9153cf3040725077dbd}{write\_\-masks} \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{cpzero_8cc_a4fe6b690f5ea991f8b55fca166015a20}{
+\index{cpzero.cc@{cpzero.cc}!dump\_\-tlb\_\-entry@{dump\_\-tlb\_\-entry}}
+\index{dump\_\-tlb\_\-entry@{dump\_\-tlb\_\-entry}!cpzero.cc@{cpzero.cc}}
+\subsubsection[{dump\_\-tlb\_\-entry}]{\setlength{\rightskip}{0pt plus 5cm}static void dump\_\-tlb\_\-entry (FILE $\ast$ {\em f}, \/  int {\em index}, \/  const {\bf TLBEntry} \& {\em e})\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{cpzero_8cc_a4fe6b690f5ea991f8b55fca166015a20}
+
+
+Here is the call graph for this function:
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{cpzero_8cc_adf1e059a646a06e4c5443e5a4de89cb9}{
+\index{cpzero.cc@{cpzero.cc}!read\_\-masks@{read\_\-masks}}
+\index{read\_\-masks@{read\_\-masks}!cpzero.cc@{cpzero.cc}}
+\subsubsection[{read\_\-masks}]{\setlength{\rightskip}{0pt plus 5cm}uint32 {\bf read\_\-masks}\mbox{[}$\,$\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{cpzero_8cc_adf1e059a646a06e4c5443e5a4de89cb9}
+{\bfseries Initial value:}
+\begin{DoxyCode}
+ {
+        Index_MASK, Random_MASK, EntryLo_MASK, 0, Context_MASK,
+        PageMask_MASK, Wired_MASK, Error_MASK, BadVAddr_MASK, Count_MASK,
+        EntryHi_MASK, Compare_MASK, Status_MASK, Cause_MASK, EPC_MASK,
+        PRId_MASK, Config_MASK, LLAddr_MASK, WatchLo_MASK, WatchHi_MASK,
+        0, 0, 0, 0, 0, 0, ECC_MASK, CacheErr_MASK, TagLo_MASK, TagHi_MASK,
+        ErrorEPC_MASK, 0
+}
+\end{DoxyCode}
+\hypertarget{cpzero_8cc_ae8e7dadc2fcdb9153cf3040725077dbd}{
+\index{cpzero.cc@{cpzero.cc}!write\_\-masks@{write\_\-masks}}
+\index{write\_\-masks@{write\_\-masks}!cpzero.cc@{cpzero.cc}}
+\subsubsection[{write\_\-masks}]{\setlength{\rightskip}{0pt plus 5cm}uint32 {\bf write\_\-masks}\mbox{[}$\,$\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{cpzero_8cc_ae8e7dadc2fcdb9153cf3040725077dbd}
+{\bfseries Initial value:}
+\begin{DoxyCode}
+ {
+        Index_MASK, 0, EntryLo_MASK, 0, Context_MASK & ~Context_BadVPN_MASK,
+        PageMask_MASK, Wired_MASK, Error_MASK, 0, Count_MASK,
+        EntryHi_MASK, Compare_MASK, Status_MASK,
+        Cause_MASK & ~Cause_IP_Ext_MASK, 0, 0, Config_MASK, LLAddr_MASK,
+        WatchLo_MASK, WatchHi_MASK, 0, 0, 0, 0, 0, 0, ECC_MASK,
+        CacheErr_MASK, TagLo_MASK, TagHi_MASK, ErrorEPC_MASK, 0
+}
+\end{DoxyCode}

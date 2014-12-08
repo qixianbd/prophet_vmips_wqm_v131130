@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding='ISO-8859-1' standalone='yes' ?>
+<statistic_report report_time="2013-12-21 11:05:27 ">
+  <settings>
+    <setting_file>/home/qmwx/workspace/prophet_vmips_final_keyming_131130/inst_cost.ini</setting_file>
+    <version>1.0</version>
+    <program>testcase/em3d.rom</program>
+  </settings>
+  <statistic cpu_id="0">
+    <total_inst>86531</total_inst>
+    <total_clock>86531</total_clock>
+    <spawned_thread>3067</spawned_thread>
+    <commited_thread>3233</commited_thread>
+    <failed_thread total="1654">
+      <OnDDV>0</OnDDV>
+      <OnInstruction>0</OnInstruction>
+      <OnRegisterVerification>74</OnRegisterVerification>
+      <OnMemoryVerification>0</OnMemoryVerification>
+      <OnLowPriority>1580</OnLowPriority>
+      <OnControlVoilate>0</OnControlVoilate>
+      <OnReset>0</OnReset>
+      <OnHalt>0</OnHalt>
+      <OnQuit>0</OnQuit>
+      <OnException>0</OnException>
+      <OnUnknown>0</OnUnknown>
+      <FailCount>
+        <Failed_CPU failed_ListId="0">0</Failed_CPU>
+        <Failed_CPU failed_ListId="1">1654</Failed_CPU>
+      </FailCount>
+    </failed_thread>
+    <TimeStat>
+      <FreeTime>14719</FreeTime>
+      <SquashTime>996</SquashTime>
+      <WaitTime>27</WaitTime>
+      <SpTime>4389</SpTime>
+      <NoSpTime>66182</NoSpTime>
+      <PsliceTime>16853</PsliceTime>
+    </TimeStat>
+  </statistic>
+  <statistic cpu_id="1">
+    <total_inst>83421</total_inst>
+    <total_clock>83421</total_clock>
+    <spawned_thread>3076</spawned_thread>
+    <commited_thread>3240</commited_thread>
+    <failed_thread total="1664">
+      <OnDDV>0</OnDDV>
+      <OnInstruction>0</OnInstruction>
+      <OnRegisterVerification>90</OnRegisterVerification>
+      <OnMemoryVerification>0</OnMemoryVerification>
+      <OnLowPriority>1574</OnLowPriority>
+      <OnControlVoilate>0</OnControlVoilate>
+      <OnReset>0</OnReset>
+      <OnHalt>0</OnHalt>
+      <OnQuit>0</OnQuit>
+      <OnException>0</OnException>
+      <OnUnknown>0</OnUnknown>
+      <FailCount>
+        <Failed_CPU failed_ListId="0">0</Failed_CPU>
+        <Failed_CPU failed_ListId="1">1664</Failed_CPU>
+      </FailCount>
+    </failed_thread>
+    <TimeStat>
+      <FreeTime>17751</FreeTime>
+      <SquashTime>1124</SquashTime>
+      <WaitTime>27</WaitTime>
+      <SpTime>4368</SpTime>
+      <NoSpTime>62933</NoSpTime>
+      <PsliceTime>16905</PsliceTime>
+    </TimeStat>
+  </statistic>
+  <analysis>
+    <sequential_time>158852</sequential_time>
+    <parallel_time>128212</parallel_time>
+    <speed_up>1.238979</speed_up>
+    <total_spawned>6143</total_spawned>
+    <success_ratio>0.459873</success_ratio>
+    <fail_stat total_failed="3318">
+      <TOnDDV total="0">0.000000</TOnDDV>
+      <TOnInstruction total="0">0.000000</TOnInstruction>
+      <TOnRegV total="164">0.049427</TOnRegV>
+      <TOnMMV total="0">0.000000</TOnMMV>
+      <TOnLowPriority total="3154">0.950573</TOnLowPriority>
+      <TOnControl total="0">0.000000</TOnControl>
+      <TOnReset total="0">0.000000</TOnReset>
+      <TOnHalt total="0">0.000000</TOnHalt>
+      <TOnQuit total="0">0.000000</TOnQuit>
+      <TOnException total="0">0.000000</TOnException>
+      <TOnUnknown total="0">0.000000</TOnUnknown>
+    </fail_stat>
+    <FailDistantStat MaxDistance="2">
+      <SquashDistance distance_len="0">9699328</SquashDistance>
+      <SquashDistance distance_len="1">171219462</SquashDistance>
+    </FailDistantStat>
+    <CPUTimeBreakdown>
+      <FreeTime FreeTime="32470">0.157412</FreeTime>
+      <PsliceTime PsliceTime="33758">0.163656</PsliceTime>
+      <SquashTime SquashTime="2120">0.010278</SquashTime>
+      <WaitTime WaitTime="54">0.000262</WaitTime>
+      <SpTime SpTime="8757">0.042453</SpTime>
+      <NoSpTime NoSpTime="129115">0.625939</NoSpTime>
+    </CPUTimeBreakdown>
+    <CPUStat averageCoreNumber="1">
+      <CoreNum corenum="1">6143/0.481049</CoreNum>
+      <CoreNum corenum="2">6627/0.518951</CoreNum>
+    averageCoreNumber: 1.518951
+    </CPUStat>
+  </analysis>
+  <ProStatData>
+    <SquashLenStat>
+      <SquashLen SquashLen ="0">0(0.000000)</SquashLen>
+      <SquashLen SquashLen ="1">3318(1.000000)</SquashLen>
+    </SquashLenStat>
+    <SquashOnSpListStat>
+      <OnSpList OnSpList ="0">0/0(-nan)</OnSpList>
+      <OnSpList OnSpList ="1">3318/6142(0.54021)</OnSpList>
+    </SquashOnSpListStat>
+  </ProStatData>
+</statistic_report>

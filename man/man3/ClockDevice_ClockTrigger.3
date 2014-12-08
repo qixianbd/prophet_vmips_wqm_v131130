@@ -1,0 +1,52 @@
+.TH "ClockDevice::ClockTrigger" 3 "18 Dec 2013" "Doxygen" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ClockDevice::ClockTrigger \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <clockdev.h>\fP
+.PP
+Inherits \fBCancelableTask\fP.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBClockTrigger\fP (\fBClockDevice\fP *\fBclock_device\fP)  throw ()"
+.br
+.ti -1c
+.RI "virtual \fB~ClockTrigger\fP ()  throw ()"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBreal_task\fP ()"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBClockDevice\fP * \fBclock_device\fP"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ClockDevice::ClockTrigger::ClockTrigger (\fBClockDevice\fP * clock_device)  throw ()"
+.SS "ClockDevice::ClockTrigger::~ClockTrigger ()  throw ()\fC [virtual]\fP"
+.SH "Member Function Documentation"
+.PP 
+.SS "void ClockDevice::ClockTrigger::real_task ()\fC [protected, virtual]\fP"
+.PP
+Implements \fBCancelableTask\fP.
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBClockDevice\fP* \fBClockDevice::ClockTrigger::clock_device\fP\fC [protected]\fP"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen from the source code.

@@ -1,0 +1,134 @@
+.TH "Range" 3 "18 Dec 2013" "Doxygen" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Range \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <range.h>\fP
+.PP
+Inherited by \fBDeviceMap\fP, \fBMemoryModule\fP, and \fBROMModule\fP.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBRange\fP (uint32 _base, uint32 _extent, caddr_t _address, int _perms)"
+.br
+.ti -1c
+.RI "virtual \fB~Range\fP ()"
+.br
+.ti -1c
+.RI "virtual bool \fBincorporates\fP (uint32 addr)  throw ()"
+.br
+.ti -1c
+.RI "virtual bool \fBoverlaps\fP (\fBRange\fP *r)  throw ()"
+.br
+.ti -1c
+.RI "virtual uint32 \fBgetBase\fP () const "
+.br
+.ti -1c
+.RI "virtual uint32 \fBgetExtent\fP () const "
+.br
+.ti -1c
+.RI "virtual void * \fBgetAddress\fP () const "
+.br
+.ti -1c
+.RI "virtual int \fBgetPerms\fP () const "
+.br
+.ti -1c
+.RI "virtual void \fBsetBase\fP (uint32 newBase)  throw ()"
+.br
+.ti -1c
+.RI "virtual void \fBsetPerms\fP (int newPerms)  throw ()"
+.br
+.ti -1c
+.RI "virtual bool \fBcanRead\fP (uint32 offset)  throw ()"
+.br
+.ti -1c
+.RI "virtual bool \fBcanWrite\fP (uint32 offset)  throw ()"
+.br
+.ti -1c
+.RI "virtual uint32 \fBfetch_word\fP (uint32 offset, int mode, \fBDeviceExc\fP *client)"
+.br
+.ti -1c
+.RI "virtual uint16 \fBfetch_halfword\fP (uint32 offset, \fBDeviceExc\fP *client)"
+.br
+.ti -1c
+.RI "virtual uint8 \fBfetch_byte\fP (uint32 offset, \fBDeviceExc\fP *client)"
+.br
+.ti -1c
+.RI "virtual void \fBstore_word\fP (uint32 offset, uint32 data, \fBDeviceExc\fP *client)"
+.br
+.ti -1c
+.RI "virtual void \fBstore_halfword\fP (uint32 offset, uint16 data, \fBDeviceExc\fP *client)"
+.br
+.ti -1c
+.RI "virtual void \fBstore_byte\fP (uint32 offset, uint8 data, \fBDeviceExc\fP *client)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "uint32 \fBbase\fP"
+.br
+.ti -1c
+.RI "uint32 \fBextent\fP"
+.br
+.ti -1c
+.RI "void * \fBaddress\fP"
+.br
+.ti -1c
+.RI "int \fBperms\fP"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Range::Range (uint32 _base, uint32 _extent, caddr_t _address, int _perms)\fC [inline]\fP"
+.SS "virtual Range::~Range ()\fC [inline, virtual]\fP"
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual bool Range::canRead (uint32 offset)  throw ()\fC [inline, virtual]\fP"
+.PP
+Reimplemented in \fBDeviceMap\fP.
+.SS "virtual bool Range::canWrite (uint32 offset)  throw ()\fC [inline, virtual]\fP"
+.PP
+Reimplemented in \fBDeviceMap\fP.
+.SS "uint8 Range::fetch_byte (uint32 offset, \fBDeviceExc\fP * client)\fC [virtual]\fP"
+.PP
+Reimplemented in \fBDeviceMap\fP.
+.SS "uint16 Range::fetch_halfword (uint32 offset, \fBDeviceExc\fP * client)\fC [virtual]\fP"
+.PP
+Reimplemented in \fBDeviceMap\fP.
+.SS "uint32 Range::fetch_word (uint32 offset, int mode, \fBDeviceExc\fP * client)\fC [virtual]\fP"
+.PP
+Reimplemented in \fBClockDevice\fP, \fBDECCSRDevice\fP, \fBDECRTCDevice\fP, \fBDECSerialDevice\fP, \fBDECStatDevice\fP, \fBDeviceMap\fP, \fBHaltDevice\fP, and \fBSpimConsoleDevice\fP.
+.SS "virtual void* Range::getAddress () const\fC [inline, virtual]\fP"
+.SS "virtual uint32 Range::getBase () const\fC [inline, virtual]\fP"
+.SS "virtual uint32 Range::getExtent () const\fC [inline, virtual]\fP"
+.SS "virtual int Range::getPerms () const\fC [inline, virtual]\fP"
+.SS "bool Range::incorporates (uint32 addr)  throw ()\fC [virtual]\fP"
+.SS "bool Range::overlaps (\fBRange\fP * r)  throw ()\fC [virtual]\fP"
+.SS "virtual void Range::setBase (uint32 newBase)  throw ()\fC [inline, virtual]\fP"
+.SS "virtual void Range::setPerms (int newPerms)  throw ()\fC [inline, virtual]\fP"
+.SS "void Range::store_byte (uint32 offset, uint8 data, \fBDeviceExc\fP * client)\fC [virtual]\fP"
+.PP
+Reimplemented in \fBDeviceMap\fP.
+.SS "void Range::store_halfword (uint32 offset, uint16 data, \fBDeviceExc\fP * client)\fC [virtual]\fP"
+.PP
+Reimplemented in \fBDeviceMap\fP.
+.SS "void Range::store_word (uint32 offset, uint32 data, \fBDeviceExc\fP * client)\fC [virtual]\fP"
+.PP
+Reimplemented in \fBClockDevice\fP, \fBDECCSRDevice\fP, \fBDECRTCDevice\fP, \fBDECSerialDevice\fP, \fBDECStatDevice\fP, \fBDeviceMap\fP, \fBHaltDevice\fP, and \fBSpimConsoleDevice\fP.
+.SH "Member Data Documentation"
+.PP 
+.SS "void* \fBRange::address\fP\fC [protected]\fP"
+.SS "uint32 \fBRange::base\fP\fC [protected]\fP"
+.SS "uint32 \fBRange::extent\fP\fC [protected]\fP"
+.SS "int \fBRange::perms\fP\fC [protected]\fP"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen from the source code.

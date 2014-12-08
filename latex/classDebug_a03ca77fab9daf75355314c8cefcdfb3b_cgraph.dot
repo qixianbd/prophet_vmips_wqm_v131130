@@ -1,0 +1,15 @@
+digraph G
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir=LR;
+  Node1 [label="Debug::target_read_registers",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="CPU::debug_registers_to_packet",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classCPU.html#a7ab194fa6e72e7941646f095df76bff8"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="CPU::debug_packet_push_word",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classCPU.html#a80b7efe3902cde8b1bab4849aa56d092"];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="Mapper::swap_word",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classMapper.html#aad996f69d0a2aca785f5a8e9440789be"];
+  Node2 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="CPZero::read_debug_info",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classCPZero.html#a57001ba4feae636ec47c8b6593e00e74"];
+}

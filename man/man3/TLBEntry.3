@@ -1,0 +1,68 @@
+.TH "TLBEntry" 3 "18 Dec 2013" "Doxygen" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+TLBEntry \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <tlbentry.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTLBEntry\fP ()"
+.br
+.ti -1c
+.RI "uint32 \fBvpn\fP () const "
+.br
+.ti -1c
+.RI "uint16 \fBasid\fP () const "
+.br
+.ti -1c
+.RI "uint32 \fBpfn\fP () const "
+.br
+.ti -1c
+.RI "bool \fBnoncacheable\fP () const "
+.br
+.ti -1c
+.RI "bool \fBdirty\fP () const "
+.br
+.ti -1c
+.RI "bool \fBvalid\fP () const "
+.br
+.ti -1c
+.RI "bool \fBglobal\fP () const "
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "uint32 \fBentryHi\fP"
+.br
+.ti -1c
+.RI "uint32 \fBentryLo\fP"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "TLBEntry::TLBEntry ()\fC [inline]\fP"
+.SH "Member Function Documentation"
+.PP 
+.SS "uint16 TLBEntry::asid () const\fC [inline]\fP"
+.SS "bool TLBEntry::dirty () const\fC [inline]\fP"
+.SS "bool TLBEntry::global () const\fC [inline]\fP"
+.SS "bool TLBEntry::noncacheable () const\fC [inline]\fP"
+.SS "uint32 TLBEntry::pfn () const\fC [inline]\fP"
+.SS "bool TLBEntry::valid () const\fC [inline]\fP"
+.SS "uint32 TLBEntry::vpn () const\fC [inline]\fP"
+.SH "Member Data Documentation"
+.PP 
+.SS "uint32 \fBTLBEntry::entryHi\fP"
+.SS "uint32 \fBTLBEntry::entryLo\fP"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen from the source code.

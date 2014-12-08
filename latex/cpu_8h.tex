@@ -1,0 +1,76 @@
+\hypertarget{cpu_8h}{
+\section{cpu.h File Reference}
+\label{cpu_8h}\index{cpu.h@{cpu.h}}
+}
+{\ttfamily \#include \char`\"{}deviceexc.h\char`\"{}}\par
+{\ttfamily \#include $<$cstdio$>$}\par
+{\ttfamily \#include $<$deque$>$}\par
+{\ttfamily \#include $<$map$>$}\par
+{\ttfamily \#include $<$vector$>$}\par
+Include dependency graph for cpu.h:This graph shows which files directly or indirectly include this file:\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structexcPriority}{excPriority}
+\item 
+struct \hyperlink{structlast__change}{last\_\-change}
+\item 
+class \hyperlink{classTrace}{Trace}
+\item 
+struct \hyperlink{structTrace_1_1Operand}{Trace::Operand}
+\item 
+struct \hyperlink{structTrace_1_1Record}{Trace::Record}
+\item 
+class \hyperlink{classCPU}{CPU}
+\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{cpu_8h_aeecf5f27e4f481d089d403561fe6aca7}{CPU\_\-REG\_\-NUMBER}~32
+\item 
+\#define \hyperlink{cpu_8h_a2ffcda63107d621363f663bfdc0a599e}{SP\_\-REG}~29
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \hyperlink{cpu_8h_a06fc87d81c62e9abb8790b6e5713c55ba50d1448013c6f17125caee18aa418af7}{NORMAL}, 
+\hyperlink{cpu_8h_a06fc87d81c62e9abb8790b6e5713c55baa8b35d8b34681cad2a9d474773d397a4}{DELAYING}, 
+\hyperlink{cpu_8h_a06fc87d81c62e9abb8790b6e5713c55ba2178bf41fc75c6607bfb1eab6e3e3f7b}{DELAYSLOT}
+ \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{cpu_8h_aeecf5f27e4f481d089d403561fe6aca7}{
+\index{cpu.h@{cpu.h}!CPU\_\-REG\_\-NUMBER@{CPU\_\-REG\_\-NUMBER}}
+\index{CPU\_\-REG\_\-NUMBER@{CPU\_\-REG\_\-NUMBER}!cpu.h@{cpu.h}}
+\subsubsection[{CPU\_\-REG\_\-NUMBER}]{\setlength{\rightskip}{0pt plus 5cm}\#define CPU\_\-REG\_\-NUMBER~32}}
+\label{cpu_8h_aeecf5f27e4f481d089d403561fe6aca7}
+\hypertarget{cpu_8h_a2ffcda63107d621363f663bfdc0a599e}{
+\index{cpu.h@{cpu.h}!SP\_\-REG@{SP\_\-REG}}
+\index{SP\_\-REG@{SP\_\-REG}!cpu.h@{cpu.h}}
+\subsubsection[{SP\_\-REG}]{\setlength{\rightskip}{0pt plus 5cm}\#define SP\_\-REG~29}}
+\label{cpu_8h_a2ffcda63107d621363f663bfdc0a599e}
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{cpu_8h_a06fc87d81c62e9abb8790b6e5713c55b}{
+\subsubsection[{"@0}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}}
+\label{cpu_8h_a06fc87d81c62e9abb8790b6e5713c55b}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{NORMAL@{NORMAL}!cpu.h@{cpu.h}}\index{cpu.h@{cpu.h}!NORMAL@{NORMAL}}\item[{\em 
+\hypertarget{cpu_8h_a06fc87d81c62e9abb8790b6e5713c55ba50d1448013c6f17125caee18aa418af7}{
+NORMAL}
+\label{cpu_8h_a06fc87d81c62e9abb8790b6e5713c55ba50d1448013c6f17125caee18aa418af7}
+}]\index{DELAYING@{DELAYING}!cpu.h@{cpu.h}}\index{cpu.h@{cpu.h}!DELAYING@{DELAYING}}\item[{\em 
+\hypertarget{cpu_8h_a06fc87d81c62e9abb8790b6e5713c55baa8b35d8b34681cad2a9d474773d397a4}{
+DELAYING}
+\label{cpu_8h_a06fc87d81c62e9abb8790b6e5713c55baa8b35d8b34681cad2a9d474773d397a4}
+}]\index{DELAYSLOT@{DELAYSLOT}!cpu.h@{cpu.h}}\index{cpu.h@{cpu.h}!DELAYSLOT@{DELAYSLOT}}\item[{\em 
+\hypertarget{cpu_8h_a06fc87d81c62e9abb8790b6e5713c55ba2178bf41fc75c6607bfb1eab6e3e3f7b}{
+DELAYSLOT}
+\label{cpu_8h_a06fc87d81c62e9abb8790b6e5713c55ba2178bf41fc75c6607bfb1eab6e3e3f7b}
+}]\end{description}
+\end{Desc}
+

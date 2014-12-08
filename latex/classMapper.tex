@@ -1,0 +1,124 @@
+\hypertarget{classMapper}{
+\section{Mapper Class Reference}
+\label{classMapper}\index{Mapper@{Mapper}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structMapper_1_1BusErrorInfo}{BusErrorInfo}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classMapper_a70bf3035f1c02611e55f05dfa7a80187}{
+typedef std::vector$<$ \hyperlink{classRange}{Range} $\ast$ $>$ {\bfseries Ranges}}
+\label{classMapper_a70bf3035f1c02611e55f05dfa7a80187}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classMapper_a8733fffed63e13e9a0584d2e3c85d0b4}{
+int {\bfseries add\_\-range} (\hyperlink{classRange}{Range} $\ast$r)}
+\label{classMapper_a8733fffed63e13e9a0584d2e3c85d0b4}
+
+\item 
+\hypertarget{classMapper_a1c30883b6490a8283f4dab8dfe797860}{
+int {\bfseries map\_\-at\_\-physical\_\-address} (\hyperlink{classRange}{Range} $\ast$r, uint32 pa)}
+\label{classMapper_a1c30883b6490a8283f4dab8dfe797860}
+
+\item 
+\hypertarget{classMapper_aad996f69d0a2aca785f5a8e9440789be}{
+uint32 {\bfseries swap\_\-word} (uint32 w)}
+\label{classMapper_aad996f69d0a2aca785f5a8e9440789be}
+
+\item 
+\hypertarget{classMapper_a51a9d4d84550d699fa738fccc0e227da}{
+uint16 {\bfseries swap\_\-halfword} (uint16 h)}
+\label{classMapper_a51a9d4d84550d699fa738fccc0e227da}
+
+\item 
+\hypertarget{classMapper_ac40b7a8813b99b8b71ac2ae9e18c07b6}{
+uint32 {\bfseries mips\_\-to\_\-host\_\-word} (uint32 w)}
+\label{classMapper_ac40b7a8813b99b8b71ac2ae9e18c07b6}
+
+\item 
+\hypertarget{classMapper_ab63092a89802fab46fe3c4e2191e76fd}{
+uint32 {\bfseries host\_\-to\_\-mips\_\-word} (uint32 w)}
+\label{classMapper_ab63092a89802fab46fe3c4e2191e76fd}
+
+\item 
+\hypertarget{classMapper_a071b247e7dc9ec05844a168dba047b85}{
+uint16 {\bfseries mips\_\-to\_\-host\_\-halfword} (uint16 h)}
+\label{classMapper_a071b247e7dc9ec05844a168dba047b85}
+
+\item 
+\hypertarget{classMapper_a18be0c1a96acac7cea7b32b9d46ba800}{
+uint16 {\bfseries host\_\-to\_\-mips\_\-halfword} (uint16 h)}
+\label{classMapper_a18be0c1a96acac7cea7b32b9d46ba800}
+
+\item 
+\hypertarget{classMapper_a79b29cfdb440f48772303d66c8f33ad1}{
+void {\bfseries bus\_\-error} (\hyperlink{classDeviceExc}{DeviceExc} $\ast$client, int32 mode, uint32 addr, int32 width, uint32 data=0xffffffff)}
+\label{classMapper_a79b29cfdb440f48772303d66c8f33ad1}
+
+\item 
+\hypertarget{classMapper_a4633b1f7ac51dfac73feff2fc4cc24e9}{
+uint32 {\bfseries fetch\_\-word} (uint32 addr, int32 mode, bool cacheable, \hyperlink{classDeviceExc}{DeviceExc} $\ast$client)}
+\label{classMapper_a4633b1f7ac51dfac73feff2fc4cc24e9}
+
+\item 
+\hypertarget{classMapper_a89eff1600c368db94fcd2cfecccc3d30}{
+uint16 {\bfseries fetch\_\-halfword} (uint32 addr, bool cacheable, \hyperlink{classDeviceExc}{DeviceExc} $\ast$client)}
+\label{classMapper_a89eff1600c368db94fcd2cfecccc3d30}
+
+\item 
+\hypertarget{classMapper_a8992f22898fce1355d26c9920fc0fd04}{
+uint8 {\bfseries fetch\_\-byte} (uint32 addr, bool cacheable, \hyperlink{classDeviceExc}{DeviceExc} $\ast$client)}
+\label{classMapper_a8992f22898fce1355d26c9920fc0fd04}
+
+\item 
+\hypertarget{classMapper_a7d9aef8d094254baf1a629ce7ac87366}{
+void {\bfseries store\_\-word} (uint32 addr, uint32 data, bool cacheable, \hyperlink{classDeviceExc}{DeviceExc} $\ast$client)}
+\label{classMapper_a7d9aef8d094254baf1a629ce7ac87366}
+
+\item 
+\hypertarget{classMapper_acc43182e1ae60925793b36ba7c35dbfd}{
+void {\bfseries store\_\-halfword} (uint32 addr, uint16 data, bool cacheable, \hyperlink{classDeviceExc}{DeviceExc} $\ast$client)}
+\label{classMapper_acc43182e1ae60925793b36ba7c35dbfd}
+
+\item 
+\hypertarget{classMapper_a161265d93e767b5e52fbfb4d83970f87}{
+void {\bfseries store\_\-byte} (uint32 addr, uint8 data, bool cacheable, \hyperlink{classDeviceExc}{DeviceExc} $\ast$client)}
+\label{classMapper_a161265d93e767b5e52fbfb4d83970f87}
+
+\item 
+\hypertarget{classMapper_af8ef34c52d4c0fdf5f5e7c12587cf455}{
+\hyperlink{classRange}{Range} $\ast$ {\bfseries find\_\-mapping\_\-range} (uint32 p)  throw ()}
+\label{classMapper_af8ef34c52d4c0fdf5f5e7c12587cf455}
+
+\item 
+\hypertarget{classMapper_ab77d2b3eea937495e705aaba009b3940}{
+void {\bfseries dump\_\-stack} (FILE $\ast$f, uint32 stackphys)}
+\label{classMapper_ab77d2b3eea937495e705aaba009b3940}
+
+\item 
+\hypertarget{classMapper_afe775b5a9960a04b565bc851755bb6e4}{
+void {\bfseries get\_\-last\_\-berr\_\-info} (\hyperlink{structMapper_1_1BusErrorInfo}{BusErrorInfo} \&info)}
+\label{classMapper_afe775b5a9960a04b565bc851755bb6e4}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classMapper_a0a22497e194768c9324d2b91d5d4d5af}{
+\hyperlink{structMapper_1_1BusErrorInfo}{BusErrorInfo} {\bfseries last\_\-berr\_\-info}}
+\label{classMapper_a0a22497e194768c9324d2b91d5d4d5af}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+mapper.h\item 
+mapper.cc\end{DoxyCompactItemize}

@@ -1,0 +1,6 @@
+<map id="G" name="G">
+<area shape="rect" href="$classProphetStat_1_1RecAdder.html" title="class RecAdder wil be inherited by the classes needing statistic to add a StatRecord..." alt="" coords="179,197,333,227"/>
+<area shape="rect" href="$classProphetStat_1_1StatRecord.html" title="a class to store the statistical variables" alt="" coords="175,101,337,131"/>
+<area shape="rect" href="$structProphetStat_1_1StatCpu.html" title="ProphetStat::StatCpu" alt="" coords="5,5,149,35"/>
+<area shape="rect" href="$structProphetStat_1_1StatTime.html" title="ProphetStat::StatTime" alt="" coords="240,5,392,35"/>
+</map>

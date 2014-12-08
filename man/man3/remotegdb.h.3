@@ -1,0 +1,108 @@
+.TH "remotegdb.h" 3 "18 Dec 2013" "Doxygen" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+remotegdb.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'types.h'\fP
+.br
+
+.SS "Defines"
+
+.in +1c
+.ti -1c
+.RI "#define \fBULONGEST\fP   uint64"
+.br
+.ti -1c
+.RI "#define \fBPARAMS\fP(x)   x"
+.br
+.ti -1c
+.RI "#define \fBPBUFSIZ\fP   728"
+.br
+.ti -1c
+.RI "#define \fBSERIAL_ERROR\fP   -1"
+.br
+.ti -1c
+.RI "#define \fBSERIAL_TIMEOUT\fP   -2"
+.br
+.ti -1c
+.RI "#define \fBSERIAL_EOF\fP   -3"
+.br
+.ti -1c
+.RI "#define \fBSERIAL_READCHAR\fP(SERIAL_T, TIMEOUT)   serial_readchar (SERIAL_T, TIMEOUT)"
+.br
+.ti -1c
+.RI "#define \fBSERIAL_WRITE\fP(SERIAL_T, STRING, LEN)   serial_write (SERIAL_T, STRING, LEN)"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef int \fBserial_t\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBfromhex\fP (int a)"
+.br
+.ti -1c
+.RI "int \fBtohex\fP (int nib)"
+.br
+.ti -1c
+.RI "int \fBhexnumlen\fP (ULONGEST num)"
+.br
+.ti -1c
+.RI "int \fBreadchar\fP (int timeout)"
+.br
+.ti -1c
+.RI "void \fBremote_send\fP (char *buf)"
+.br
+.ti -1c
+.RI "int \fBputpkt\fP (char *buf)"
+.br
+.ti -1c
+.RI "int \fBread_frame\fP (char *buf)"
+.br
+.ti -1c
+.RI "void \fBgetpkt\fP (char *buf, int forever)"
+.br
+.ti -1c
+.RI "int serial_readchar \fBPARAMS\fP ((\fBserial_t\fP scb, int timeout))"
+.br
+.ti -1c
+.RI "int serial_write \fBPARAMS\fP ((\fBserial_t\fP scb, const char *str, int len))"
+.br
+.in -1c
+.SH "Define Documentation"
+.PP 
+.SS "#define PARAMS(x)   x"
+.SS "#define PBUFSIZ   728"
+.SS "#define SERIAL_EOF   -3"
+.SS "#define SERIAL_ERROR   -1"
+.SS "#define SERIAL_READCHAR(SERIAL_T, TIMEOUT)   serial_readchar (SERIAL_T, TIMEOUT)"
+.SS "#define SERIAL_TIMEOUT   -2"
+.SS "#define SERIAL_WRITE(SERIAL_T, STRING, LEN)   serial_write (SERIAL_T, STRING, LEN)"
+.SS "#define ULONGEST   uint64"
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef int \fBserial_t\fP"
+.SH "Function Documentation"
+.PP 
+.SS "int fromhex (int a)"
+.SS "void getpkt (char * buf, int forever)"
+.SS "int hexnumlen (ULONGEST num)"
+.SS "int serial_write PARAMS ((\fBserial_t\fP scb, const char *str, int len))"
+.SS "int serial_readchar PARAMS ((\fBserial_t\fP scb, int timeout))"
+.SS "int putpkt (char * buf)"
+.SS "int read_frame (char * buf)"
+.SS "int readchar (int timeout)"
+.SS "void remote_send (char * buf)"
+.SS "int tohex (int nib)"
+.SH "Author"
+.PP 
+Generated automatically by Doxygen from the source code.

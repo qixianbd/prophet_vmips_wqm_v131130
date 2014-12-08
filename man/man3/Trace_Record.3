@@ -1,0 +1,76 @@
+.TH "Trace::Record" 3 "18 Dec 2013" "Doxygen" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Trace::Record \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <cpu.h>\fP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef std::vector< \fBOperand\fP > \fBOperandListType\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBinputs_push_back_op\fP (const char *tag, int regno, uint32 val)"
+.br
+.ti -1c
+.RI "void \fBinputs_push_back_op\fP (const char *tag, uint32 val)"
+.br
+.ti -1c
+.RI "void \fBoutputs_push_back_op\fP (const char *tag, int regno, uint32 val)"
+.br
+.ti -1c
+.RI "void \fBoutputs_push_back_op\fP (const char *tag, uint32 val)"
+.br
+.ti -1c
+.RI "void \fBclear\fP ()"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBOperandListType\fP \fBinputs\fP"
+.br
+.ti -1c
+.RI "\fBOperandListType\fP \fBoutputs\fP"
+.br
+.ti -1c
+.RI "uint32 \fBpc\fP"
+.br
+.ti -1c
+.RI "uint32 \fBinstr\fP"
+.br
+.ti -1c
+.RI "uint32 \fBsaved_reg\fP [CPU_REG_NUMBER]"
+.br
+.in -1c
+.SH "Member Typedef Documentation"
+.PP 
+.SS "typedef std::vector<\fBOperand\fP> \fBTrace::Record::OperandListType\fP"
+.SH "Member Function Documentation"
+.PP 
+.SS "void Trace::Record::clear ()\fC [inline]\fP"
+.SS "void Trace::Record::inputs_push_back_op (const char * tag, uint32 val)\fC [inline]\fP"
+.SS "void Trace::Record::inputs_push_back_op (const char * tag, int regno, uint32 val)\fC [inline]\fP"
+.SS "void Trace::Record::outputs_push_back_op (const char * tag, uint32 val)\fC [inline]\fP"
+.SS "void Trace::Record::outputs_push_back_op (const char * tag, int regno, uint32 val)\fC [inline]\fP"
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBOperandListType\fP \fBTrace::Record::inputs\fP"
+.SS "uint32 \fBTrace::Record::instr\fP"
+.SS "\fBOperandListType\fP \fBTrace::Record::outputs\fP"
+.SS "uint32 \fBTrace::Record::pc\fP"
+.SS "uint32 \fBTrace::Record::saved_reg\fP[CPU_REG_NUMBER]"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen from the source code.

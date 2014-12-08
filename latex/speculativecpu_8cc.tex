@@ -1,0 +1,482 @@
+\hypertarget{speculativecpu_8cc}{
+\section{speculativecpu.cc File Reference}
+\label{speculativecpu_8cc}\index{speculativecpu.cc@{speculativecpu.cc}}
+}
+{\ttfamily \#include \char`\"{}cpu.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}speculativecpu.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}speculativelogic.h\char`\"{}}\par
+{\ttfamily \#include $<$assert.h$>$}\par
+{\ttfamily \#include $<$limits.h$>$}\par
+{\ttfamily \#include \char`\"{}prophetlog.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}predefine.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}excnames.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}cpzero.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}mapper.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}vmips.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}stub-\/dis.h\char`\"{}}\par
+{\ttfamily \#include $<$stdio.h$>$}\par
+{\ttfamily \#include $<$signal.h$>$}\par
+{\ttfamily \#include $<$fstream$>$}\par
+{\ttfamily \#include \char`\"{}prophetconsole.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}prophetsyscall.h\char`\"{}}\par
+{\ttfamily \#include $<$string$>$}\par
+{\ttfamily \#include \char`\"{}prophetcpustat.h\char`\"{}}\par
+Include dependency graph for speculativecpu.cc:This graph shows which files directly or indirectly include this file:\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{speculativecpu_8cc_aaa1ac5caef84256eaeb39594e58e096f}{MAX\_\-INT}~(INT\_\-MAX -\/ 2)
+\item 
+\#define \hyperlink{speculativecpu_8cc_a384fcacf0b6110dc203b9944c94e2399}{MY\_\-MIN}(a, b)~((a) $<$ (b) ? (a) : (b))
+\item 
+\#define \hyperlink{speculativecpu_8cc_a2937811dfd0dd75814a357adf9f53174}{MAX\_\-VERSION}~MAX\_\-INT
+\item 
+\#define \hyperlink{speculativecpu_8cc_a10ffd65176663f1396a3607ebb41470c}{obstack\_\-chunk\_\-free}~free
+\item 
+\#define \hyperlink{speculativecpu_8cc_afe107f8385341e11aef32eaac290b39a}{obstack\_\-chunk\_\-alloc}~malloc
+\item 
+\#define \hyperlink{speculativecpu_8cc_a33c324eac415025ea47cf3c30897df9e}{faddr}(instr)~\&SpeculativeCPU::instr\#\#\_\-emulate
+\item 
+\#define \hyperlink{speculativecpu_8cc_aadf7d33471e9cfd794cead69d947c7ff}{sp\_\-fcaller}(fname, p1, p2)~(this-\/$>$$\ast$fname)(p1, p2)
+\item 
+\#define \hyperlink{speculativecpu_8cc_ab13922070b9500766ca1374a701c0b93}{CONSOLE\_\-PATH}~\char`\"{}/home/qmwx/workspace/prophet\_\-vmips\_\-final\_\-keyming\_\-131130/prophet\_\-console.txt\char`\"{}
+\item 
+\#define \hyperlink{speculativecpu_8cc_a8e5ea7de63ec04a27b07e28c0efc8723}{KEYMING\_\-STATICS}
+\item 
+\#define \hyperlink{speculativecpu_8cc_a4bcda21af9379c1a36a72be918ce09f9}{SAVE\_\-WORD}(e, a, v)
+\item 
+\#define \hyperlink{speculativecpu_8cc_adb9c6f8e1f8a91e3bb59dc5d6ab5dddd}{SAVE\_\-LOWHALFWORD}(e, a, v)
+\item 
+\#define \hyperlink{speculativecpu_8cc_a72bf9dc62537ab6e026c2e5c6ae55b77}{SAVE\_\-HIGHHALFWORD}(e, a, v)
+\item 
+\#define \hyperlink{speculativecpu_8cc_ac1d20f80c662bb1e020610f4e70e0f80}{SAVE\_\-BYTE}(e, a, v, offset)
+\item 
+\#define \hyperlink{speculativecpu_8cc_a6311834c0ee7c17a070d0fb75f28f3d0}{STORE\_\-WORD}(e, a, v)
+\item 
+\#define \hyperlink{speculativecpu_8cc_a8a014033b8c902752e220bf80c1a45e8}{STORE\_\-LOWHALFWORD}(e, a, v)
+\item 
+\#define \hyperlink{speculativecpu_8cc_a18bc98f82d841c8bfffa9568188c3de4}{STORE\_\-HIGHHALFWORD}(e, a, v)
+\item 
+\#define \hyperlink{speculativecpu_8cc_ae8bf0b288849d1fcd6e1926b77cb1558}{STORE\_\-BYTE}(e, a, v, offset)
+\item 
+\#define \hyperlink{speculativecpu_8cc_ad1641743554b0fa81d5faed21327d20f}{LoadByte}(entry, offset, holder)
+\begin{DoxyCompactList}\small\item\em Load a byte from a specific cache entry entry: a pointer to a specific cache entry holder: a UINT8 variable to contain the byte value byteoffset: a number indicating the offset of the byte in the entry. \item\end{DoxyCompactList}\item 
+\#define \hyperlink{speculativecpu_8cc_a1ff8b2263f2bf5dd080c772534988be9}{SpLoadFunction}(valuetype)
+\item 
+\#define \hyperlink{speculativecpu_8cc_abe6569b6278044ec9eb8964ed4c7cc44}{LocalLoadCaller32}(address, value, version...)
+\item 
+\#define \hyperlink{speculativecpu_8cc_ab3ce2359833cfb39f5b9f052fdb0b0dd}{LocalLoadCaller16}(address, value, version...)
+\item 
+\#define \hyperlink{speculativecpu_8cc_a5a01791ae260d49b7a5fc8d0129b1b4a}{LocalLoadCaller8}(address, value, version...)
+\item 
+\#define \hyperlink{speculativecpu_8cc_a010728076b6abd3b9ce5447d7bbdc2e0}{LocalLoadFunction}(loadtype, valuetype)
+\item 
+\#define \hyperlink{speculativecpu_8cc_a90e04d93c9217385e25e4cdf33b33133}{LocalLoadVFunction}(loadtype, valuetype)
+\item 
+\#define \hyperlink{speculativecpu_8cc_aeb7ba12468b0187dc4703932ca5e45e9}{KEYMING\_\-PLUS}
+\item 
+\#define \hyperlink{speculativecpu_8cc_a8e5ea7de63ec04a27b07e28c0efc8723}{KEYMING\_\-STATICS}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void(SpeculativeCPU::$\ast$ \hyperlink{speculativecpu_8cc_aec9ed85a8e8cb3fd682fda1c5e6c4c01}{sp\_\-fptr} )(uint32, uint32)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{speculativecpu_8cc_a724e13ba797450bec62a40e57f1c6fac}{SpLoadFunction} (uint32) SpLoadFunction(uint16) SpLoadFunction(uint8) LocalLoadFunction(32
+\item 
+uint32 \hyperlink{speculativecpu_8cc_a6a9de0c320b4d8b9218284f2cc727fa6}{LocalLoadFunction} (16, uint16) LocalLoadFunction(8
+\item 
+uint32 uint8 \hyperlink{speculativecpu_8cc_a4b94044fff43bb6be0bd50e51d61cf32}{LocalLoadVFunction} (32, uint32) LocalLoadVFunction(16
+\item 
+uint32 uint8 uint16 \hyperlink{speculativecpu_8cc_a6c46d845d04e169f49820e32167ce4cc}{LocalLoadVFunction} (8, uint8) bool SpeculativeCPU
+\item 
+std::ostream \& \hyperlink{speculativecpu_8cc_a08a5f3a420a133c991c499e41f3bde92}{operator$<$$<$} (std::ostream \&out, const SpeculativeCPU \&cpu)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static const int \hyperlink{speculativecpu_8cc_a1129701933a6791cd9bb910817a57d47}{Sreg\_\-zero} = 0
+\item 
+static const int \hyperlink{speculativecpu_8cc_aa7ab70f3e7261c3bfa7dcf3506a6fb46}{Sreg\_\-sp} = 29
+\item 
+static const int \hyperlink{speculativecpu_8cc_a9064c1b75cb69eabc0f6500863e3e8a7}{Sreg\_\-ra} = 31
+\item 
+int \hyperlink{speculativecpu_8cc_addde4e07a71d2fdac22673ac5fc2069c}{restart\_\-counts}
+\item 
+FILE $\ast$ \hyperlink{speculativecpu_8cc_a9ce017ff2a6711908a496f054b082fca}{mystderrlog}
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{speculativecpu_8cc_ab13922070b9500766ca1374a701c0b93}{
+\index{speculativecpu.cc@{speculativecpu.cc}!CONSOLE\_\-PATH@{CONSOLE\_\-PATH}}
+\index{CONSOLE\_\-PATH@{CONSOLE\_\-PATH}!speculativecpu.cc@{speculativecpu.cc}}
+\subsubsection[{CONSOLE\_\-PATH}]{\setlength{\rightskip}{0pt plus 5cm}\#define CONSOLE\_\-PATH~\char`\"{}/home/qmwx/workspace/prophet\_\-vmips\_\-final\_\-keyming\_\-131130/prophet\_\-console.txt\char`\"{}}}
+\label{speculativecpu_8cc_ab13922070b9500766ca1374a701c0b93}
+\hypertarget{speculativecpu_8cc_a33c324eac415025ea47cf3c30897df9e}{
+\index{speculativecpu.cc@{speculativecpu.cc}!faddr@{faddr}}
+\index{faddr@{faddr}!speculativecpu.cc@{speculativecpu.cc}}
+\subsubsection[{faddr}]{\setlength{\rightskip}{0pt plus 5cm}\#define faddr(instr)~\&SpeculativeCPU::instr\#\#\_\-emulate}}
+\label{speculativecpu_8cc_a33c324eac415025ea47cf3c30897df9e}
+\hypertarget{speculativecpu_8cc_aeb7ba12468b0187dc4703932ca5e45e9}{
+\index{speculativecpu.cc@{speculativecpu.cc}!KEYMING\_\-PLUS@{KEYMING\_\-PLUS}}
+\index{KEYMING\_\-PLUS@{KEYMING\_\-PLUS}!speculativecpu.cc@{speculativecpu.cc}}
+\subsubsection[{KEYMING\_\-PLUS}]{\setlength{\rightskip}{0pt plus 5cm}\#define KEYMING\_\-PLUS}}
+\label{speculativecpu_8cc_aeb7ba12468b0187dc4703932ca5e45e9}
+\hypertarget{speculativecpu_8cc_a8e5ea7de63ec04a27b07e28c0efc8723}{
+\index{speculativecpu.cc@{speculativecpu.cc}!KEYMING\_\-STATICS@{KEYMING\_\-STATICS}}
+\index{KEYMING\_\-STATICS@{KEYMING\_\-STATICS}!speculativecpu.cc@{speculativecpu.cc}}
+\subsubsection[{KEYMING\_\-STATICS}]{\setlength{\rightskip}{0pt plus 5cm}\#define KEYMING\_\-STATICS}}
+\label{speculativecpu_8cc_a8e5ea7de63ec04a27b07e28c0efc8723}
+\hypertarget{speculativecpu_8cc_a8e5ea7de63ec04a27b07e28c0efc8723}{
+\index{speculativecpu.cc@{speculativecpu.cc}!KEYMING\_\-STATICS@{KEYMING\_\-STATICS}}
+\index{KEYMING\_\-STATICS@{KEYMING\_\-STATICS}!speculativecpu.cc@{speculativecpu.cc}}
+\subsubsection[{KEYMING\_\-STATICS}]{\setlength{\rightskip}{0pt plus 5cm}\#define KEYMING\_\-STATICS}}
+\label{speculativecpu_8cc_a8e5ea7de63ec04a27b07e28c0efc8723}
+\hypertarget{speculativecpu_8cc_ad1641743554b0fa81d5faed21327d20f}{
+\index{speculativecpu.cc@{speculativecpu.cc}!LoadByte@{LoadByte}}
+\index{LoadByte@{LoadByte}!speculativecpu.cc@{speculativecpu.cc}}
+\subsubsection[{LoadByte}]{\setlength{\rightskip}{0pt plus 5cm}\#define LoadByte(entry, \/  offset, \/  holder)}}
+\label{speculativecpu_8cc_ad1641743554b0fa81d5faed21327d20f}
+{\bfseries Value:}
+\begin{DoxyCode}
+do{ \
+                if(IsValide##offset(entry)) \
+                { \
+                        uint32 data = Value(entry); \
+                        holder = Byte##offset##OfWord(data); \
+                }else{ \
+                        SpLoad(Address(entry) + offset, holder, false, &entry); \
+      
+                } \
+        }while(0)
+\end{DoxyCode}
+
+
+Load a byte from a specific cache entry entry: a pointer to a specific cache entry holder: a UINT8 variable to contain the byte value byteoffset: a number indicating the offset of the byte in the entry. 
+
+\hypertarget{speculativecpu_8cc_ab3ce2359833cfb39f5b9f052fdb0b0dd}{
+\index{speculativecpu.cc@{speculativecpu.cc}!LocalLoadCaller16@{LocalLoadCaller16}}
+\index{LocalLoadCaller16@{LocalLoadCaller16}!speculativecpu.cc@{speculativecpu.cc}}
+\subsubsection[{LocalLoadCaller16}]{\setlength{\rightskip}{0pt plus 5cm}\#define LocalLoadCaller16(address, \/  value, \/  version...)}}
+\label{speculativecpu_8cc_ab3ce2359833cfb39f5b9f052fdb0b0dd}
+{\bfseries Value:}
+\begin{DoxyCode}
+uint32 v; \
+        uint16 ret; \
+        if(LocalLoadCore(address, v, 16, ##version)) \
+        { \
+                ret = uint16(v); \
+                value = TrySwapHalfWord(ret); \
+                return true; \
+        } \
+        return false
+\end{DoxyCode}
+\hypertarget{speculativecpu_8cc_abe6569b6278044ec9eb8964ed4c7cc44}{
+\index{speculativecpu.cc@{speculativecpu.cc}!LocalLoadCaller32@{LocalLoadCaller32}}
+\index{LocalLoadCaller32@{LocalLoadCaller32}!speculativecpu.cc@{speculativecpu.cc}}
+\subsubsection[{LocalLoadCaller32}]{\setlength{\rightskip}{0pt plus 5cm}\#define LocalLoadCaller32(address, \/  value, \/  version...)}}
+\label{speculativecpu_8cc_abe6569b6278044ec9eb8964ed4c7cc44}
+{\bfseries Value:}
+\begin{DoxyCode}
+uint32 ret; \
+        if(LocalLoadCore(address, ret, 32, ##version)) \
+        { \
+                value = TrySwapWord(ret); \
+                return true; \
+        } \
+        return false
+\end{DoxyCode}
+\hypertarget{speculativecpu_8cc_a5a01791ae260d49b7a5fc8d0129b1b4a}{
+\index{speculativecpu.cc@{speculativecpu.cc}!LocalLoadCaller8@{LocalLoadCaller8}}
+\index{LocalLoadCaller8@{LocalLoadCaller8}!speculativecpu.cc@{speculativecpu.cc}}
+\subsubsection[{LocalLoadCaller8}]{\setlength{\rightskip}{0pt plus 5cm}\#define LocalLoadCaller8(address, \/  value, \/  version...)}}
+\label{speculativecpu_8cc_a5a01791ae260d49b7a5fc8d0129b1b4a}
+{\bfseries Value:}
+\begin{DoxyCode}
+uint32 v; \
+        if(LocalLoadCore(address, v, 8, ##version)) \
+        { \
+                value = uint8(v); \
+                return true; \
+        } \
+        return false
+\end{DoxyCode}
+\hypertarget{speculativecpu_8cc_a010728076b6abd3b9ce5447d7bbdc2e0}{
+\index{speculativecpu.cc@{speculativecpu.cc}!LocalLoadFunction@{LocalLoadFunction}}
+\index{LocalLoadFunction@{LocalLoadFunction}!speculativecpu.cc@{speculativecpu.cc}}
+\subsubsection[{LocalLoadFunction}]{\setlength{\rightskip}{0pt plus 5cm}\#define LocalLoadFunction(loadtype, \/  valuetype)}}
+\label{speculativecpu_8cc_a010728076b6abd3b9ce5447d7bbdc2e0}
+{\bfseries Value:}
+\begin{DoxyCode}
+bool SpeculativeCPU::LocalLoad(uint32 address, valuetype &value) \
+        { \
+                LocalLoadCaller##loadtype(address, value); \
+        }
+\end{DoxyCode}
+\hypertarget{speculativecpu_8cc_a90e04d93c9217385e25e4cdf33b33133}{
+\index{speculativecpu.cc@{speculativecpu.cc}!LocalLoadVFunction@{LocalLoadVFunction}}
+\index{LocalLoadVFunction@{LocalLoadVFunction}!speculativecpu.cc@{speculativecpu.cc}}
+\subsubsection[{LocalLoadVFunction}]{\setlength{\rightskip}{0pt plus 5cm}\#define LocalLoadVFunction(loadtype, \/  valuetype)}}
+\label{speculativecpu_8cc_a90e04d93c9217385e25e4cdf33b33133}
+{\bfseries Value:}
+\begin{DoxyCode}
+bool SpeculativeCPU::LocalLoad(uint32 address, valuetype &value, int version) \
+        { \
+                LocalLoadCaller##loadtype(address, value, version); \
+        }
+\end{DoxyCode}
+\hypertarget{speculativecpu_8cc_aaa1ac5caef84256eaeb39594e58e096f}{
+\index{speculativecpu.cc@{speculativecpu.cc}!MAX\_\-INT@{MAX\_\-INT}}
+\index{MAX\_\-INT@{MAX\_\-INT}!speculativecpu.cc@{speculativecpu.cc}}
+\subsubsection[{MAX\_\-INT}]{\setlength{\rightskip}{0pt plus 5cm}\#define MAX\_\-INT~(INT\_\-MAX -\/ 2)}}
+\label{speculativecpu_8cc_aaa1ac5caef84256eaeb39594e58e096f}
+\hypertarget{speculativecpu_8cc_a2937811dfd0dd75814a357adf9f53174}{
+\index{speculativecpu.cc@{speculativecpu.cc}!MAX\_\-VERSION@{MAX\_\-VERSION}}
+\index{MAX\_\-VERSION@{MAX\_\-VERSION}!speculativecpu.cc@{speculativecpu.cc}}
+\subsubsection[{MAX\_\-VERSION}]{\setlength{\rightskip}{0pt plus 5cm}\#define MAX\_\-VERSION~MAX\_\-INT}}
+\label{speculativecpu_8cc_a2937811dfd0dd75814a357adf9f53174}
+\hypertarget{speculativecpu_8cc_a384fcacf0b6110dc203b9944c94e2399}{
+\index{speculativecpu.cc@{speculativecpu.cc}!MY\_\-MIN@{MY\_\-MIN}}
+\index{MY\_\-MIN@{MY\_\-MIN}!speculativecpu.cc@{speculativecpu.cc}}
+\subsubsection[{MY\_\-MIN}]{\setlength{\rightskip}{0pt plus 5cm}\#define MY\_\-MIN(a, \/  b)~((a) $<$ (b) ? (a) : (b))}}
+\label{speculativecpu_8cc_a384fcacf0b6110dc203b9944c94e2399}
+\hypertarget{speculativecpu_8cc_afe107f8385341e11aef32eaac290b39a}{
+\index{speculativecpu.cc@{speculativecpu.cc}!obstack\_\-chunk\_\-alloc@{obstack\_\-chunk\_\-alloc}}
+\index{obstack\_\-chunk\_\-alloc@{obstack\_\-chunk\_\-alloc}!speculativecpu.cc@{speculativecpu.cc}}
+\subsubsection[{obstack\_\-chunk\_\-alloc}]{\setlength{\rightskip}{0pt plus 5cm}\#define obstack\_\-chunk\_\-alloc~malloc}}
+\label{speculativecpu_8cc_afe107f8385341e11aef32eaac290b39a}
+\hypertarget{speculativecpu_8cc_a10ffd65176663f1396a3607ebb41470c}{
+\index{speculativecpu.cc@{speculativecpu.cc}!obstack\_\-chunk\_\-free@{obstack\_\-chunk\_\-free}}
+\index{obstack\_\-chunk\_\-free@{obstack\_\-chunk\_\-free}!speculativecpu.cc@{speculativecpu.cc}}
+\subsubsection[{obstack\_\-chunk\_\-free}]{\setlength{\rightskip}{0pt plus 5cm}\#define obstack\_\-chunk\_\-free~free}}
+\label{speculativecpu_8cc_a10ffd65176663f1396a3607ebb41470c}
+\hypertarget{speculativecpu_8cc_ac1d20f80c662bb1e020610f4e70e0f80}{
+\index{speculativecpu.cc@{speculativecpu.cc}!SAVE\_\-BYTE@{SAVE\_\-BYTE}}
+\index{SAVE\_\-BYTE@{SAVE\_\-BYTE}!speculativecpu.cc@{speculativecpu.cc}}
+\subsubsection[{SAVE\_\-BYTE}]{\setlength{\rightskip}{0pt plus 5cm}\#define SAVE\_\-BYTE(e, \/  a, \/  v, \/  offset)}}
+\label{speculativecpu_8cc_ac1d20f80c662bb1e020610f4e70e0f80}
+{\bfseries Value:}
+\begin{DoxyCode}
+do{ \
+                Valide##offset(e) = true; \
+                RemoteLoaded##offset(e) = true; \
+                Modified##offset(e) = false; \
+                IsOld(e) = m_State == PRE_COMPUTATION; \
+                Version(e) = m_State == PRE_COMPUTATION ? 0 : m_ThreadVersion; \
+                Address(e) = a; \
+                Byte##offset##OfWord(Value(e)) = uint8(v); \
+        }while(0)
+\end{DoxyCode}
+\hypertarget{speculativecpu_8cc_a72bf9dc62537ab6e026c2e5c6ae55b77}{
+\index{speculativecpu.cc@{speculativecpu.cc}!SAVE\_\-HIGHHALFWORD@{SAVE\_\-HIGHHALFWORD}}
+\index{SAVE\_\-HIGHHALFWORD@{SAVE\_\-HIGHHALFWORD}!speculativecpu.cc@{speculativecpu.cc}}
+\subsubsection[{SAVE\_\-HIGHHALFWORD}]{\setlength{\rightskip}{0pt plus 5cm}\#define SAVE\_\-HIGHHALFWORD(e, \/  a, \/  v)}}
+\label{speculativecpu_8cc_a72bf9dc62537ab6e026c2e5c6ae55b77}
+{\bfseries Value:}
+\begin{DoxyCode}
+do{ \
+                Valide2(e) = Valide3(e) = true; \
+                RemoteLoaded2(e) = RemoteLoaded3(e) = true; \
+                Modified2(e) = Modified3(e) = false; \
+                IsOld(e) = m_State == PRE_COMPUTATION; \
+                Version(e) = m_State == PRE_COMPUTATION ? 0 : m_ThreadVersion; \
+                Address(e) = a; \
+                HighhalfOfWord(Value(e)) = uint16(v); \
+        }while(0)
+\end{DoxyCode}
+\hypertarget{speculativecpu_8cc_adb9c6f8e1f8a91e3bb59dc5d6ab5dddd}{
+\index{speculativecpu.cc@{speculativecpu.cc}!SAVE\_\-LOWHALFWORD@{SAVE\_\-LOWHALFWORD}}
+\index{SAVE\_\-LOWHALFWORD@{SAVE\_\-LOWHALFWORD}!speculativecpu.cc@{speculativecpu.cc}}
+\subsubsection[{SAVE\_\-LOWHALFWORD}]{\setlength{\rightskip}{0pt plus 5cm}\#define SAVE\_\-LOWHALFWORD(e, \/  a, \/  v)}}
+\label{speculativecpu_8cc_adb9c6f8e1f8a91e3bb59dc5d6ab5dddd}
+{\bfseries Value:}
+\begin{DoxyCode}
+do{ \
+                Valide0(e) = Valide1(e) = true; \
+                RemoteLoaded0(e) = RemoteLoaded1(e) = true; \
+                Modified0(e) = Modified1(e) = false; \
+                IsOld(e) = m_State == PRE_COMPUTATION; \
+                Version(e) = m_State == PRE_COMPUTATION ? 0 : m_ThreadVersion; \
+                Address(e) = a; \
+                LowhalfOfWord(Value(e)) = uint16(v); \
+        }while(0)
+\end{DoxyCode}
+\hypertarget{speculativecpu_8cc_a4bcda21af9379c1a36a72be918ce09f9}{
+\index{speculativecpu.cc@{speculativecpu.cc}!SAVE\_\-WORD@{SAVE\_\-WORD}}
+\index{SAVE\_\-WORD@{SAVE\_\-WORD}!speculativecpu.cc@{speculativecpu.cc}}
+\subsubsection[{SAVE\_\-WORD}]{\setlength{\rightskip}{0pt plus 5cm}\#define SAVE\_\-WORD(e, \/  a, \/  v)}}
+\label{speculativecpu_8cc_a4bcda21af9379c1a36a72be918ce09f9}
+{\bfseries Value:}
+\begin{DoxyCode}
+do{ \
+                Valide0(e) = Valide1(e) = Valide2(e) = Valide3(e) = true; \
+                RemoteLoaded0(e) = RemoteLoaded1(e) = RemoteLoaded2(e) =  
+      RemoteLoaded3(e) = true; \
+                Modified0(e) = Modified1(e) = Modified2(e) = Modified3(e) = false
+      ; \
+                IsOld(e) = m_State == PRE_COMPUTATION;\
+                Version(e) = m_State == PRE_COMPUTATION ? 0 : m_ThreadVersion; \
+                Address(e) = a; \
+                Value(e) = v; \
+        }while(0)
+\end{DoxyCode}
+\hypertarget{speculativecpu_8cc_aadf7d33471e9cfd794cead69d947c7ff}{
+\index{speculativecpu.cc@{speculativecpu.cc}!sp\_\-fcaller@{sp\_\-fcaller}}
+\index{sp\_\-fcaller@{sp\_\-fcaller}!speculativecpu.cc@{speculativecpu.cc}}
+\subsubsection[{sp\_\-fcaller}]{\setlength{\rightskip}{0pt plus 5cm}\#define sp\_\-fcaller(fname, \/  p1, \/  p2)~(this-\/$>$$\ast$fname)(p1, p2)}}
+\label{speculativecpu_8cc_aadf7d33471e9cfd794cead69d947c7ff}
+\hypertarget{speculativecpu_8cc_a1ff8b2263f2bf5dd080c772534988be9}{
+\index{speculativecpu.cc@{speculativecpu.cc}!SpLoadFunction@{SpLoadFunction}}
+\index{SpLoadFunction@{SpLoadFunction}!speculativecpu.cc@{speculativecpu.cc}}
+\subsubsection[{SpLoadFunction}]{\setlength{\rightskip}{0pt plus 5cm}\#define SpLoadFunction(valuetype)}}
+\label{speculativecpu_8cc_a1ff8b2263f2bf5dd080c772534988be9}
+{\bfseries Value:}
+\begin{DoxyCode}
+bool SpeculativeCPU::SpLoad(uint32 address, valuetype &value, bool checklocal, Me
+      mCacheEntry** pentry) \
+        { \
+                return SpLoadTemplate(address, value, checklocal, pentry); \
+        }
+\end{DoxyCode}
+\hypertarget{speculativecpu_8cc_ae8bf0b288849d1fcd6e1926b77cb1558}{
+\index{speculativecpu.cc@{speculativecpu.cc}!STORE\_\-BYTE@{STORE\_\-BYTE}}
+\index{STORE\_\-BYTE@{STORE\_\-BYTE}!speculativecpu.cc@{speculativecpu.cc}}
+\subsubsection[{STORE\_\-BYTE}]{\setlength{\rightskip}{0pt plus 5cm}\#define STORE\_\-BYTE(e, \/  a, \/  v, \/  offset)}}
+\label{speculativecpu_8cc_ae8bf0b288849d1fcd6e1926b77cb1558}
+{\bfseries Value:}
+\begin{DoxyCode}
+do{ \
+                Valide##offset(e) = true; \
+                Modified##offset(e) = true; \
+                IsOld(e) = m_State == PRE_COMPUTATION; \
+                Version(e) = m_State == PRE_COMPUTATION ? 0 : m_ThreadVersion; \
+                Address(e) = a; \
+                Byte##offset##OfWord(Value(e)) = uint8(v); \
+        }while(0)
+\end{DoxyCode}
+\hypertarget{speculativecpu_8cc_a18bc98f82d841c8bfffa9568188c3de4}{
+\index{speculativecpu.cc@{speculativecpu.cc}!STORE\_\-HIGHHALFWORD@{STORE\_\-HIGHHALFWORD}}
+\index{STORE\_\-HIGHHALFWORD@{STORE\_\-HIGHHALFWORD}!speculativecpu.cc@{speculativecpu.cc}}
+\subsubsection[{STORE\_\-HIGHHALFWORD}]{\setlength{\rightskip}{0pt plus 5cm}\#define STORE\_\-HIGHHALFWORD(e, \/  a, \/  v)}}
+\label{speculativecpu_8cc_a18bc98f82d841c8bfffa9568188c3de4}
+{\bfseries Value:}
+\begin{DoxyCode}
+do{ \
+                Valide2(e) = Valide3(e) = true; \
+                Modified2(e) = Modified3(e) = true; \
+                IsOld(e) = m_State == PRE_COMPUTATION; \
+                Version(e) = m_State == PRE_COMPUTATION ? 0 : m_ThreadVersion; \
+                Address(e) = a; \
+                HighhalfOfWord(Value(e)) = uint16(v); \
+        }while(0)
+\end{DoxyCode}
+\hypertarget{speculativecpu_8cc_a8a014033b8c902752e220bf80c1a45e8}{
+\index{speculativecpu.cc@{speculativecpu.cc}!STORE\_\-LOWHALFWORD@{STORE\_\-LOWHALFWORD}}
+\index{STORE\_\-LOWHALFWORD@{STORE\_\-LOWHALFWORD}!speculativecpu.cc@{speculativecpu.cc}}
+\subsubsection[{STORE\_\-LOWHALFWORD}]{\setlength{\rightskip}{0pt plus 5cm}\#define STORE\_\-LOWHALFWORD(e, \/  a, \/  v)}}
+\label{speculativecpu_8cc_a8a014033b8c902752e220bf80c1a45e8}
+{\bfseries Value:}
+\begin{DoxyCode}
+do{ \
+                Valide0(e) = Valide1(e) = true; \
+                Modified0(e) = Modified1(e) = true; \
+                IsOld(e) = m_State == PRE_COMPUTATION; \
+                Version(e) = m_State == PRE_COMPUTATION ? 0 : m_ThreadVersion; \
+                Address(e) = a; \
+                LowhalfOfWord(Value(e)) = uint16(v); \
+        }while(0)
+\end{DoxyCode}
+\hypertarget{speculativecpu_8cc_a6311834c0ee7c17a070d0fb75f28f3d0}{
+\index{speculativecpu.cc@{speculativecpu.cc}!STORE\_\-WORD@{STORE\_\-WORD}}
+\index{STORE\_\-WORD@{STORE\_\-WORD}!speculativecpu.cc@{speculativecpu.cc}}
+\subsubsection[{STORE\_\-WORD}]{\setlength{\rightskip}{0pt plus 5cm}\#define STORE\_\-WORD(e, \/  a, \/  v)}}
+\label{speculativecpu_8cc_a6311834c0ee7c17a070d0fb75f28f3d0}
+{\bfseries Value:}
+\begin{DoxyCode}
+do{ \
+                Valide0(e) = Valide1(e) = Valide2(e) = Valide3(e) = true; \
+                Modified0(e) = Modified1(e) = Modified2(e) = Modified3(e) = true;
+       \
+                IsOld(e) = m_State == PRE_COMPUTATION; \
+                Version(e) = m_State == PRE_COMPUTATION ? 0 : m_ThreadVersion; \
+                Address(e) = a; \
+                Value(e) = v; \
+        }while(0)
+\end{DoxyCode}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{speculativecpu_8cc_aec9ed85a8e8cb3fd682fda1c5e6c4c01}{
+\index{speculativecpu.cc@{speculativecpu.cc}!sp\_\-fptr@{sp\_\-fptr}}
+\index{sp\_\-fptr@{sp\_\-fptr}!speculativecpu.cc@{speculativecpu.cc}}
+\subsubsection[{sp\_\-fptr}]{\setlength{\rightskip}{0pt plus 5cm}typedef void(SpeculativeCPU::$\ast$ {\bf sp\_\-fptr})(uint32, uint32)}}
+\label{speculativecpu_8cc_aec9ed85a8e8cb3fd682fda1c5e6c4c01}
+
+
+\subsection{Function Documentation}
+\hypertarget{speculativecpu_8cc_a6a9de0c320b4d8b9218284f2cc727fa6}{
+\index{speculativecpu.cc@{speculativecpu.cc}!LocalLoadFunction@{LocalLoadFunction}}
+\index{LocalLoadFunction@{LocalLoadFunction}!speculativecpu.cc@{speculativecpu.cc}}
+\subsubsection[{LocalLoadFunction}]{\setlength{\rightskip}{0pt plus 5cm}uint32 LocalLoadFunction (16, \/  uint16)}}
+\label{speculativecpu_8cc_a6a9de0c320b4d8b9218284f2cc727fa6}
+\hypertarget{speculativecpu_8cc_a6c46d845d04e169f49820e32167ce4cc}{
+\index{speculativecpu.cc@{speculativecpu.cc}!LocalLoadVFunction@{LocalLoadVFunction}}
+\index{LocalLoadVFunction@{LocalLoadVFunction}!speculativecpu.cc@{speculativecpu.cc}}
+\subsubsection[{LocalLoadVFunction}]{\setlength{\rightskip}{0pt plus 5cm}uint32 uint8 uint16 LocalLoadVFunction (8, \/  uint8)}}
+\label{speculativecpu_8cc_a6c46d845d04e169f49820e32167ce4cc}
+32位读 
+\begin{DoxyParams}{Parameters}
+\item[{\em address}]\item[{\em value}]\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Here is the call graph for this function:
+
+\hypertarget{speculativecpu_8cc_a4b94044fff43bb6be0bd50e51d61cf32}{
+\index{speculativecpu.cc@{speculativecpu.cc}!LocalLoadVFunction@{LocalLoadVFunction}}
+\index{LocalLoadVFunction@{LocalLoadVFunction}!speculativecpu.cc@{speculativecpu.cc}}
+\subsubsection[{LocalLoadVFunction}]{\setlength{\rightskip}{0pt plus 5cm}uint32 uint8 LocalLoadVFunction (32, \/  uint32)}}
+\label{speculativecpu_8cc_a4b94044fff43bb6be0bd50e51d61cf32}
+\hypertarget{speculativecpu_8cc_a08a5f3a420a133c991c499e41f3bde92}{
+\index{speculativecpu.cc@{speculativecpu.cc}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!speculativecpu.cc@{speculativecpu.cc}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}std::ostream\& operator$<$$<$ (std::ostream \& {\em out}, \/  const SpeculativeCPU \& {\em cpu})}}
+\label{speculativecpu_8cc_a08a5f3a420a133c991c499e41f3bde92}
+\hypertarget{speculativecpu_8cc_a724e13ba797450bec62a40e57f1c6fac}{
+\index{speculativecpu.cc@{speculativecpu.cc}!SpLoadFunction@{SpLoadFunction}}
+\index{SpLoadFunction@{SpLoadFunction}!speculativecpu.cc@{speculativecpu.cc}}
+\subsubsection[{SpLoadFunction}]{\setlength{\rightskip}{0pt plus 5cm}SpLoadFunction (uint32)}}
+\label{speculativecpu_8cc_a724e13ba797450bec62a40e57f1c6fac}
+
+
+\subsection{Variable Documentation}
+\hypertarget{speculativecpu_8cc_a9ce017ff2a6711908a496f054b082fca}{
+\index{speculativecpu.cc@{speculativecpu.cc}!mystderrlog@{mystderrlog}}
+\index{mystderrlog@{mystderrlog}!speculativecpu.cc@{speculativecpu.cc}}
+\subsubsection[{mystderrlog}]{\setlength{\rightskip}{0pt plus 5cm}FILE$\ast$ {\bf mystderrlog}}}
+\label{speculativecpu_8cc_a9ce017ff2a6711908a496f054b082fca}
+\hypertarget{speculativecpu_8cc_addde4e07a71d2fdac22673ac5fc2069c}{
+\index{speculativecpu.cc@{speculativecpu.cc}!restart\_\-counts@{restart\_\-counts}}
+\index{restart\_\-counts@{restart\_\-counts}!speculativecpu.cc@{speculativecpu.cc}}
+\subsubsection[{restart\_\-counts}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf restart\_\-counts}}}
+\label{speculativecpu_8cc_addde4e07a71d2fdac22673ac5fc2069c}
+\hypertarget{speculativecpu_8cc_a9064c1b75cb69eabc0f6500863e3e8a7}{
+\index{speculativecpu.cc@{speculativecpu.cc}!Sreg\_\-ra@{Sreg\_\-ra}}
+\index{Sreg\_\-ra@{Sreg\_\-ra}!speculativecpu.cc@{speculativecpu.cc}}
+\subsubsection[{Sreg\_\-ra}]{\setlength{\rightskip}{0pt plus 5cm}const int {\bf Sreg\_\-ra} = 31\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{speculativecpu_8cc_a9064c1b75cb69eabc0f6500863e3e8a7}
+\hypertarget{speculativecpu_8cc_aa7ab70f3e7261c3bfa7dcf3506a6fb46}{
+\index{speculativecpu.cc@{speculativecpu.cc}!Sreg\_\-sp@{Sreg\_\-sp}}
+\index{Sreg\_\-sp@{Sreg\_\-sp}!speculativecpu.cc@{speculativecpu.cc}}
+\subsubsection[{Sreg\_\-sp}]{\setlength{\rightskip}{0pt plus 5cm}const int {\bf Sreg\_\-sp} = 29\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{speculativecpu_8cc_aa7ab70f3e7261c3bfa7dcf3506a6fb46}
+\hypertarget{speculativecpu_8cc_a1129701933a6791cd9bb910817a57d47}{
+\index{speculativecpu.cc@{speculativecpu.cc}!Sreg\_\-zero@{Sreg\_\-zero}}
+\index{Sreg\_\-zero@{Sreg\_\-zero}!speculativecpu.cc@{speculativecpu.cc}}
+\subsubsection[{Sreg\_\-zero}]{\setlength{\rightskip}{0pt plus 5cm}const int {\bf Sreg\_\-zero} = 0\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{speculativecpu_8cc_a1129701933a6791cd9bb910817a57d47}

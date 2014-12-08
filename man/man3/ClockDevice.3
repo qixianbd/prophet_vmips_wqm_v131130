@@ -1,0 +1,117 @@
+.TH "ClockDevice" 3 "18 Dec 2013" "Doxygen" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ClockDevice \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <clockdev.h>\fP
+.PP
+Inherits \fBDeviceMap\fP, and \fBDeviceInt\fP.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBClockTrigger\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBClockDevice\fP (\fBClock\fP *\fBclock\fP, uint32 \fBirq\fP, long \fBfrequency_ns\fP)  throw ( std::bad_alloc )"
+.br
+.ti -1c
+.RI "virtual \fB~ClockDevice\fP ()  throw ()"
+.br
+.ti -1c
+.RI "virtual void \fBready_clock\fP ()  throw ( std::bad_alloc )"
+.br
+.ti -1c
+.RI "virtual uint32 \fBfetch_word\fP (uint32 offset, int mode, \fBDeviceExc\fP *client)"
+.br
+.ti -1c
+.RI "virtual void \fBstore_word\fP (uint32 offset, uint32 data, \fBDeviceExc\fP *client)"
+.br
+.ti -1c
+.RI "virtual const char * \fBdescriptor_str\fP () const "
+.br
+.in -1c
+.SS "Protected Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBState\fP { \fBUNREADY\fP =  0, \fBREADY\fP =  CTL_RDY }"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBunready_clock\fP ()  throw ()"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "const uint32 \fBirq\fP"
+.br
+.ti -1c
+.RI "const long \fBfrequency_ns\fP"
+.br
+.ti -1c
+.RI "\fBClock\fP * \fBclock\fP"
+.br
+.ti -1c
+.RI "\fBClockTrigger\fP * \fBclock_trigger\fP"
+.br
+.ti -1c
+.RI "\fBState\fP \fBclock_state\fP"
+.br
+.ti -1c
+.RI "bool \fBinterrupt_enabled\fP"
+.br
+.in -1c
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum \fBClockDevice::State\fP\fC [protected]\fP"
+.PP
+\fBEnumerator: \fP
+.in +1c
+.TP
+\fB\fIUNREADY \fP\fP
+.TP
+\fB\fIREADY \fP\fP
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ClockDevice::ClockDevice (\fBClock\fP * clock, uint32 irq, long frequency_ns)  throw ( std::bad_alloc )"
+.SS "ClockDevice::~ClockDevice ()  throw ()\fC [virtual]\fP"
+.SH "Member Function Documentation"
+.PP 
+.SS "const char * ClockDevice::descriptor_str (void) const\fC [virtual]\fP"
+.PP
+Implements \fBDeviceInt\fP.
+.SS "uint32 ClockDevice::fetch_word (uint32 offset, int mode, \fBDeviceExc\fP * client)\fC [virtual]\fP"
+.PP
+Implements \fBDeviceMap\fP.
+.SS "void ClockDevice::ready_clock ()  throw ( std::bad_alloc )\fC [virtual]\fP"
+.SS "void ClockDevice::store_word (uint32 offset, uint32 data, \fBDeviceExc\fP * client)\fC [virtual]\fP"
+.PP
+Implements \fBDeviceMap\fP.
+.SS "void ClockDevice::unready_clock ()  throw ()\fC [protected, virtual]\fP"
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBClock\fP* \fBClockDevice::clock\fP\fC [protected]\fP"
+.SS "\fBState\fP \fBClockDevice::clock_state\fP\fC [protected]\fP"
+.SS "\fBClockTrigger\fP* \fBClockDevice::clock_trigger\fP\fC [protected]\fP"
+.SS "const long \fBClockDevice::frequency_ns\fP\fC [protected]\fP"
+.SS "bool \fBClockDevice::interrupt_enabled\fP\fC [protected]\fP"
+.SS "const uint32 \fBClockDevice::irq\fP\fC [protected]\fP"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen from the source code.

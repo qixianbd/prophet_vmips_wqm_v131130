@@ -1,0 +1,97 @@
+\hypertarget{classProphetStat_1_1ProphetCpuStat}{
+\section{ProphetStat::ProphetCpuStat Class Reference}
+\label{classProphetStat_1_1ProphetCpuStat}\index{ProphetStat::ProphetCpuStat@{ProphetStat::ProphetCpuStat}}
+}
+
+
+{\ttfamily \#include $<$prophetcpustat.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classProphetStat_1_1ProphetCpuStat_a80086134fec10a5180c7c7a2c3cc2378}{addSquashLen} (int cpuId, int len)
+\item 
+void \hyperlink{classProphetStat_1_1ProphetCpuStat_ae57688a78d61dcbe7370fefae03ecb98}{addProCpuStatToXml} (\hyperlink{classXmlElement}{XmlElement} $\ast$root)
+\item 
+void \hyperlink{classProphetStat_1_1ProphetCpuStat_a8343c003cef10d15351dbafcfc74962e}{printCpuStat} (FILE $\ast$fp=stderr)
+\item 
+\hypertarget{classProphetStat_1_1ProphetCpuStat_acd041425cbc0d744751b87a121047ab9}{
+\hyperlink{classProphetStat_1_1SquashOnSpList}{SquashOnSpList} $\ast$ {\bfseries getSquList} ()}
+\label{classProphetStat_1_1ProphetCpuStat_acd041425cbc0d744751b87a121047ab9}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classProphetStat_1_1ProphetCpuStat}{ProphetCpuStat} $\ast$ \hyperlink{classProphetStat_1_1ProphetCpuStat_a1dfee1a62c17b8e9035b68563368702e}{getProCpuStatInstance} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classProphetStat_1_1ProphetCpuStat_aa86b6ecd1908f2dcb64aa4c016758d81}{
+static int {\bfseries coreNum} = 0}
+\label{classProphetStat_1_1ProphetCpuStat_aa86b6ecd1908f2dcb64aa4c016758d81}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classProphetStat_1_1ProphetCpuStat_ad9e5aad82ee6015568bdfa6f3417458e}{
+void {\bfseries getTotalSquashLen} ()}
+\label{classProphetStat_1_1ProphetCpuStat_ad9e5aad82ee6015568bdfa6f3417458e}
+
+\item 
+\hypertarget{classProphetStat_1_1ProphetCpuStat_a515c271e82770fa4155b9aa30e6e6bf6}{
+void {\bfseries printSquashLen} (FILE $\ast$fp=stderr)}
+\label{classProphetStat_1_1ProphetCpuStat_a515c271e82770fa4155b9aa30e6e6bf6}
+
+\item 
+\hypertarget{classProphetStat_1_1ProphetCpuStat_ae07ae8a7fe5a86b18e4916673f5f8d0f}{
+void {\bfseries addSquashLenToXml} (\hyperlink{classXmlElement}{XmlElement} $\ast$root)}
+\label{classProphetStat_1_1ProphetCpuStat_ae07ae8a7fe5a86b18e4916673f5f8d0f}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+cpustat class 
+
+\subsection{Member Function Documentation}
+\hypertarget{classProphetStat_1_1ProphetCpuStat_ae57688a78d61dcbe7370fefae03ecb98}{
+\index{ProphetStat::ProphetCpuStat@{ProphetStat::ProphetCpuStat}!addProCpuStatToXml@{addProCpuStatToXml}}
+\index{addProCpuStatToXml@{addProCpuStatToXml}!ProphetStat::ProphetCpuStat@{ProphetStat::ProphetCpuStat}}
+\subsubsection[{addProCpuStatToXml}]{\setlength{\rightskip}{0pt plus 5cm}void ProphetStat::ProphetCpuStat::addProCpuStatToXml ({\bf XmlElement} $\ast$ {\em root})}}
+\label{classProphetStat_1_1ProphetCpuStat_ae57688a78d61dcbe7370fefae03ecb98}
+将ProphetCpuStat对象统计的信息加入到root元素下，(供统一打印) 
+\begin{DoxyParams}{Parameters}
+\item[{\em root}](代挂载的XmlElement元素指针) \end{DoxyParams}
+\hypertarget{classProphetStat_1_1ProphetCpuStat_a80086134fec10a5180c7c7a2c3cc2378}{
+\index{ProphetStat::ProphetCpuStat@{ProphetStat::ProphetCpuStat}!addSquashLen@{addSquashLen}}
+\index{addSquashLen@{addSquashLen}!ProphetStat::ProphetCpuStat@{ProphetStat::ProphetCpuStat}}
+\subsubsection[{addSquashLen}]{\setlength{\rightskip}{0pt plus 5cm}void ProphetStat::ProphetCpuStat::addSquashLen (int {\em cpuId}, \/  int {\em len})}}
+\label{classProphetStat_1_1ProphetCpuStat_a80086134fec10a5180c7c7a2c3cc2378}
+将核号为cpuid上的撤销长度为len的统计值加一 
+\begin{DoxyParams}{Parameters}
+\item[{\em cpuId}]核号\mbox{[}0..coreNum-\/1\mbox{]} \item[{\em len}]撤销长度(此次撤销总共撤销的线程数 ) \mbox{[}0..coreNum-\/1\mbox{]} \end{DoxyParams}
+\hypertarget{classProphetStat_1_1ProphetCpuStat_a1dfee1a62c17b8e9035b68563368702e}{
+\index{ProphetStat::ProphetCpuStat@{ProphetStat::ProphetCpuStat}!getProCpuStatInstance@{getProCpuStatInstance}}
+\index{getProCpuStatInstance@{getProCpuStatInstance}!ProphetStat::ProphetCpuStat@{ProphetStat::ProphetCpuStat}}
+\subsubsection[{getProCpuStatInstance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ProphetCpuStat} $\ast$ ProphetStat::ProphetCpuStat::getProCpuStatInstance ()\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classProphetStat_1_1ProphetCpuStat_a1dfee1a62c17b8e9035b68563368702e}
+单例模式， 调用该静态方法返回唯一的ProphetCpuStat对象。在返回该对象前， 将coreNum的值设为 用户在运行时附带的参数的值. \begin{DoxyReturn}{Returns}
+返回指向ProphetCpuStat对象的指针. 
+\end{DoxyReturn}
+\hypertarget{classProphetStat_1_1ProphetCpuStat_a8343c003cef10d15351dbafcfc74962e}{
+\index{ProphetStat::ProphetCpuStat@{ProphetStat::ProphetCpuStat}!printCpuStat@{printCpuStat}}
+\index{printCpuStat@{printCpuStat}!ProphetStat::ProphetCpuStat@{ProphetStat::ProphetCpuStat}}
+\subsubsection[{printCpuStat}]{\setlength{\rightskip}{0pt plus 5cm}void ProphetStat::ProphetCpuStat::printCpuStat (FILE $\ast$ {\em fp} = {\ttfamily stderr})}}
+\label{classProphetStat_1_1ProphetCpuStat_a8343c003cef10d15351dbafcfc74962e}
+向文件fp 打印出ProphetCpuStat对象统计的信息.fp 指向的为普通文本文件.调用此方法时， fp 为NULL, 或stderr, 或stdout, 其他的fp不接受。当fp 为NULL使， 由方法的实现决定 创建一个新文件， 并将fp指针指向该文件. 
+\begin{DoxyParams}{Parameters}
+\item[{\em fp}]\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+prophetcpustat.h\item 
+prophetcpustat.cc\end{DoxyCompactItemize}

@@ -1,0 +1,13 @@
+digraph G
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir=LR;
+  Node1 [label="CPU::debug_packet_to_registers",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="Debug::packet_pop_word",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classDebug.html#aa5ea3bb7cd9cadd5274c72b7bbe164fa"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="Mapper::swap_word",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classMapper.html#aad996f69d0a2aca785f5a8e9440789be"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="CPZero::write_debug_info",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classCPZero.html#a8a84d1e9ffad8ec964d15b4acba13b50"];
+}

@@ -1,0 +1,25 @@
+digraph G
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir=LR;
+  Node1 [label="Prophet::setup_machine",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="SpeculativeLogic::FreeListSize",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classSpeculativeLogic.html#ae8addd001c76eff87101f1c8a3911a23"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="SpeculativeLogic::GetInstance",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classSpeculativeLogic.html#af95e558b3c77884f73b10a0fcf480fe5"];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="SpeculativeLogic::SpeculativeLogic",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classSpeculativeLogic.html#a11e6d258e73e5d34f8128bbbbd8f1ddb"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="Options::option",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classOptions.html#a3a535c4c76588d00f62c9817bc0ff63b"];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="fatal_error",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$error_8cc.html#ab5b64997b285ceb84915e7f321b4db20"];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="format_help",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$error_8cc.html#aa182c84a77010100b5b8a15b1ff22e70"];
+  Node5 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="Options::optstruct",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classOptions.html#a4a9be4a96d5b12a8abb469fef02af7ee"];
+  Node1 -> Node9 [color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="SpeculativeLogic::SpListSize",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classSpeculativeLogic.html#aefbc24db69f077274b14f607955a7358"];
+  Node1 -> Node10 [color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="SpeculativeLogic::SwapToFreeList",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classSpeculativeLogic.html#a8e5f35ba96b8b0d8f43620550a994529"];
+}

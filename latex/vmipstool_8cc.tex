@@ -1,0 +1,370 @@
+\hypertarget{vmipstool_8cc}{
+\section{vmipstool.cc File Reference}
+\label{vmipstool_8cc}\index{vmipstool.cc@{vmipstool.cc}}
+}
+{\ttfamily \#include \char`\"{}endiantest.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}fileutils.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}stub-\/dis.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}error.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}options.h\char`\"{}}\par
+{\ttfamily \#include $<$cerrno$>$}\par
+{\ttfamily \#include $<$cstdarg$>$}\par
+{\ttfamily \#include $<$cstdio$>$}\par
+{\ttfamily \#include $<$iostream$>$}\par
+{\ttfamily \#include $<$sys/stat.h$>$}\par
+{\ttfamily \#include $<$sys/wait.h$>$}\par
+{\ttfamily \#include $<$unistd.h$>$}\par
+{\ttfamily \#include $<$vector$>$}\par
+{\ttfamily \#include $<$string.h$>$}\par
+{\ttfamily \#include $<$stdlib.h$>$}\par
+{\ttfamily \#include $<$limits.h$>$}\par
+Include dependency graph for vmipstool.cc:\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classVmipstoolOptions}{VmipstoolOptions}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{vmipstool_8cc_ab8d561780e03397eaa7fb210c5105152}{program\_\-available} (const char $\ast$execname)
+\item 
+int \hyperlink{vmipstool_8cc_ace7d667fbb6c9c93c1766a9463210dd2}{config\_\-error} (const char $\ast$programname, const char $\ast$execname)
+\item 
+void \hyperlink{vmipstool_8cc_af61041935a886b1530729156db3bfa28}{setup\_\-paths} (bool bigendian, const char $\ast$mipstoolprefix)
+\item 
+void \hyperlink{vmipstool_8cc_ae8605e2b78cd4a81b6c6b5c30cb7366a}{usage} (void)
+\item 
+void \hyperlink{vmipstool_8cc_af5c78071ff1efaa09840d66031a156c1}{maybe\_\-echo} (char $\ast$$\ast$newargv)
+\item 
+int \hyperlink{vmipstool_8cc_a4eddff63fba08e9547ff240959f74497}{maybe\_\-run} (char $\ast$$\ast$newargv)
+\item 
+int \hyperlink{vmipstool_8cc_afaf331a47c6b0fd91cf4c8d6f254b81f}{echo\_\-and\_\-run\_\-l} (char $\ast$c,...)
+\item 
+int \hyperlink{vmipstool_8cc_abe7101508d1a4326a9aa174b06b01bb9}{echo\_\-and\_\-run\_\-lv} (char $\ast$c,...)
+\item 
+bool \hyperlink{vmipstool_8cc_ab5e1ba6f3aee921a61e58c6fdc128f59}{search\_\-path} (char $\ast$result, char $\ast$path, const char $\ast$target)
+\item 
+int \hyperlink{vmipstool_8cc_a3208dd0df7bc5215cb4c65fe09a6c5b2}{can\_\-read\_\-default\_\-ldscript} ()
+\item 
+int \hyperlink{vmipstool_8cc_a76930b3a1acce5f9817cc86a08db6558}{do\_\-link} (int argc, char $\ast$$\ast$argv)
+\item 
+int \hyperlink{vmipstool_8cc_a9c73866d1c1cd2db22d364ccb32c1ca3}{copy\_\-with\_\-padded\_\-blocks} (char $\ast$in, char $\ast$out, long size)
+\item 
+int \hyperlink{vmipstool_8cc_a7deb391ca03fb244fa77a0b8c05a0f80}{make\_\-rom} (int argc, char $\ast$$\ast$argv)
+\item 
+int \hyperlink{vmipstool_8cc_a9730a0e8570e7841d45c0e223f5f77a8}{swap\_\-words} (int argc, char $\ast$$\ast$argv)
+\item 
+int \hyperlink{vmipstool_8cc_a33407f9cef6a45bb10a28cc720ad5e6b}{compile} (int argc, char $\ast$$\ast$argv)
+\item 
+int \hyperlink{vmipstool_8cc_ac4738288cab0200d9938ec73bd5cf5a0}{assemble} (int argc, char $\ast$$\ast$argv)
+\item 
+int \hyperlink{vmipstool_8cc_ae30ea8a68ba91d55b97791a36e2dc66d}{preprocess} (int argc, char $\ast$$\ast$argv)
+\item 
+int \hyperlink{vmipstool_8cc_a9809d972a96d10fb1bbb4eb81b9bd43b}{disassemble} (int argc, char $\ast$$\ast$argv)
+\item 
+int \hyperlink{vmipstool_8cc_aa83542cfc62dae946c6de4120771e3f1}{disassemble\_\-rom} (int argc, char $\ast$$\ast$argv)
+\item 
+int \hyperlink{vmipstool_8cc_ac0d47ba55975cbb7ffd9c761d5a82d12}{disassemble\_\-word} (int argc, char $\ast$$\ast$argv)
+\item 
+int \hyperlink{vmipstool_8cc_a7805bb9ff9e21a4aea89acb77bc77548}{version} (int argc, char $\ast$$\ast$argv)
+\item 
+int \hyperlink{vmipstool_8cc_a21e010e416b2c65cb56d927897b86226}{help} (int argc, char $\ast$$\ast$argv)
+\item 
+int \hyperlink{vmipstool_8cc_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const unsigned int \hyperlink{vmipstool_8cc_aa7cae548af81114793e7c055cd7d409f}{MAXARGV} = 500
+\item 
+const unsigned int \hyperlink{vmipstool_8cc_a68eb8b58113e11a05781507251827474}{TMPFNAMESIZE} = 26
+\item 
+int \hyperlink{vmipstool_8cc_a0b2caeb4b6f130be43e5a2f0267dd453}{verbose} = 0
+\item 
+int \hyperlink{vmipstool_8cc_ac13abb040ec0f2dbdef3ae8795647112}{dryrun} = 0
+\item 
+char \hyperlink{vmipstool_8cc_a6c7fd3f986cccd0184a81a377a56f16a}{pkgdatadir} \mbox{[}PATH\_\-MAX\mbox{]}
+\item 
+char \hyperlink{vmipstool_8cc_a15791e6ebebe77563f308b331b9e1341}{ccname} \mbox{[}PATH\_\-MAX\mbox{]}
+\item 
+char \hyperlink{vmipstool_8cc_ae283485ff4a69d8ec3ef4603fb97d2ad}{ldname} \mbox{[}PATH\_\-MAX\mbox{]}
+\item 
+char \hyperlink{vmipstool_8cc_a26a17fc851d4e1e069f315da683ce609}{objcopyname} \mbox{[}PATH\_\-MAX\mbox{]}
+\item 
+char \hyperlink{vmipstool_8cc_ad3eaa49cea60c9868d09eb6b3ea0b379}{objdumpname} \mbox{[}PATH\_\-MAX\mbox{]}
+\item 
+char \hyperlink{vmipstool_8cc_a506636c744bf9929df3c4e786583eac5}{endianflag} \mbox{[}4\mbox{]}
+\item 
+long \hyperlink{vmipstool_8cc_aa2bbb0c78612ca856fd777fc20b1d8d2}{pagesz} = 4096
+\item 
+char \hyperlink{vmipstool_8cc_a9bf44c70910447693edd276ef6bba410}{ldscript\_\-full\_\-path} \mbox{[}PATH\_\-MAX\mbox{]}
+\item 
+bool \hyperlink{vmipstool_8cc_abb215f7397a493a1043547133562ac00}{ldscript\_\-error} = false
+\item 
+int($\ast$ \hyperlink{vmipstool_8cc_a7dc5a9d7ae26a208821195733db033bb}{handler} )(int argc, char $\ast$$\ast$argv)
+\item 
+char $\ast$$\ast$ \hyperlink{vmipstool_8cc_a091e35cb32b8e182675e30d3000a0576}{handler\_\-argv} = 0
+\item 
+int \hyperlink{vmipstool_8cc_a2d6d9c45900fb7835975c51882a09be9}{handler\_\-argc} = -\/1
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{vmipstool_8cc_ac4738288cab0200d9938ec73bd5cf5a0}{
+\index{vmipstool.cc@{vmipstool.cc}!assemble@{assemble}}
+\index{assemble@{assemble}!vmipstool.cc@{vmipstool.cc}}
+\subsubsection[{assemble}]{\setlength{\rightskip}{0pt plus 5cm}int assemble (int {\em argc}, \/  char $\ast$$\ast$ {\em argv})}}
+\label{vmipstool_8cc_ac4738288cab0200d9938ec73bd5cf5a0}
+
+
+Here is the call graph for this function:
+
+\hypertarget{vmipstool_8cc_a3208dd0df7bc5215cb4c65fe09a6c5b2}{
+\index{vmipstool.cc@{vmipstool.cc}!can\_\-read\_\-default\_\-ldscript@{can\_\-read\_\-default\_\-ldscript}}
+\index{can\_\-read\_\-default\_\-ldscript@{can\_\-read\_\-default\_\-ldscript}!vmipstool.cc@{vmipstool.cc}}
+\subsubsection[{can\_\-read\_\-default\_\-ldscript}]{\setlength{\rightskip}{0pt plus 5cm}int can\_\-read\_\-default\_\-ldscript ()}}
+\label{vmipstool_8cc_a3208dd0df7bc5215cb4c65fe09a6c5b2}
+
+
+Here is the call graph for this function:
+
+\hypertarget{vmipstool_8cc_a33407f9cef6a45bb10a28cc720ad5e6b}{
+\index{vmipstool.cc@{vmipstool.cc}!compile@{compile}}
+\index{compile@{compile}!vmipstool.cc@{vmipstool.cc}}
+\subsubsection[{compile}]{\setlength{\rightskip}{0pt plus 5cm}int compile (int {\em argc}, \/  char $\ast$$\ast$ {\em argv})}}
+\label{vmipstool_8cc_a33407f9cef6a45bb10a28cc720ad5e6b}
+
+
+Here is the call graph for this function:
+
+\hypertarget{vmipstool_8cc_ace7d667fbb6c9c93c1766a9463210dd2}{
+\index{vmipstool.cc@{vmipstool.cc}!config\_\-error@{config\_\-error}}
+\index{config\_\-error@{config\_\-error}!vmipstool.cc@{vmipstool.cc}}
+\subsubsection[{config\_\-error}]{\setlength{\rightskip}{0pt plus 5cm}int config\_\-error (const char $\ast$ {\em programname}, \/  const char $\ast$ {\em execname})}}
+\label{vmipstool_8cc_ace7d667fbb6c9c93c1766a9463210dd2}
+\hypertarget{vmipstool_8cc_a9c73866d1c1cd2db22d364ccb32c1ca3}{
+\index{vmipstool.cc@{vmipstool.cc}!copy\_\-with\_\-padded\_\-blocks@{copy\_\-with\_\-padded\_\-blocks}}
+\index{copy\_\-with\_\-padded\_\-blocks@{copy\_\-with\_\-padded\_\-blocks}!vmipstool.cc@{vmipstool.cc}}
+\subsubsection[{copy\_\-with\_\-padded\_\-blocks}]{\setlength{\rightskip}{0pt plus 5cm}int copy\_\-with\_\-padded\_\-blocks (char $\ast$ {\em in}, \/  char $\ast$ {\em out}, \/  long {\em size})}}
+\label{vmipstool_8cc_a9c73866d1c1cd2db22d364ccb32c1ca3}
+\hypertarget{vmipstool_8cc_a9809d972a96d10fb1bbb4eb81b9bd43b}{
+\index{vmipstool.cc@{vmipstool.cc}!disassemble@{disassemble}}
+\index{disassemble@{disassemble}!vmipstool.cc@{vmipstool.cc}}
+\subsubsection[{disassemble}]{\setlength{\rightskip}{0pt plus 5cm}int disassemble (int {\em argc}, \/  char $\ast$$\ast$ {\em argv})}}
+\label{vmipstool_8cc_a9809d972a96d10fb1bbb4eb81b9bd43b}
+
+
+Here is the call graph for this function:
+
+\hypertarget{vmipstool_8cc_aa83542cfc62dae946c6de4120771e3f1}{
+\index{vmipstool.cc@{vmipstool.cc}!disassemble\_\-rom@{disassemble\_\-rom}}
+\index{disassemble\_\-rom@{disassemble\_\-rom}!vmipstool.cc@{vmipstool.cc}}
+\subsubsection[{disassemble\_\-rom}]{\setlength{\rightskip}{0pt plus 5cm}int disassemble\_\-rom (int {\em argc}, \/  char $\ast$$\ast$ {\em argv})}}
+\label{vmipstool_8cc_aa83542cfc62dae946c6de4120771e3f1}
+
+
+Here is the call graph for this function:
+
+\hypertarget{vmipstool_8cc_ac0d47ba55975cbb7ffd9c761d5a82d12}{
+\index{vmipstool.cc@{vmipstool.cc}!disassemble\_\-word@{disassemble\_\-word}}
+\index{disassemble\_\-word@{disassemble\_\-word}!vmipstool.cc@{vmipstool.cc}}
+\subsubsection[{disassemble\_\-word}]{\setlength{\rightskip}{0pt plus 5cm}int disassemble\_\-word (int {\em argc}, \/  char $\ast$$\ast$ {\em argv})}}
+\label{vmipstool_8cc_ac0d47ba55975cbb7ffd9c761d5a82d12}
+
+
+Here is the call graph for this function:
+
+\hypertarget{vmipstool_8cc_a76930b3a1acce5f9817cc86a08db6558}{
+\index{vmipstool.cc@{vmipstool.cc}!do\_\-link@{do\_\-link}}
+\index{do\_\-link@{do\_\-link}!vmipstool.cc@{vmipstool.cc}}
+\subsubsection[{do\_\-link}]{\setlength{\rightskip}{0pt plus 5cm}int do\_\-link (int {\em argc}, \/  char $\ast$$\ast$ {\em argv})}}
+\label{vmipstool_8cc_a76930b3a1acce5f9817cc86a08db6558}
+
+
+Here is the call graph for this function:
+
+\hypertarget{vmipstool_8cc_afaf331a47c6b0fd91cf4c8d6f254b81f}{
+\index{vmipstool.cc@{vmipstool.cc}!echo\_\-and\_\-run\_\-l@{echo\_\-and\_\-run\_\-l}}
+\index{echo\_\-and\_\-run\_\-l@{echo\_\-and\_\-run\_\-l}!vmipstool.cc@{vmipstool.cc}}
+\subsubsection[{echo\_\-and\_\-run\_\-l}]{\setlength{\rightskip}{0pt plus 5cm}int echo\_\-and\_\-run\_\-l (char $\ast$ {\em c}, \/   {\em ...})}}
+\label{vmipstool_8cc_afaf331a47c6b0fd91cf4c8d6f254b81f}
+
+
+Here is the call graph for this function:
+
+\hypertarget{vmipstool_8cc_abe7101508d1a4326a9aa174b06b01bb9}{
+\index{vmipstool.cc@{vmipstool.cc}!echo\_\-and\_\-run\_\-lv@{echo\_\-and\_\-run\_\-lv}}
+\index{echo\_\-and\_\-run\_\-lv@{echo\_\-and\_\-run\_\-lv}!vmipstool.cc@{vmipstool.cc}}
+\subsubsection[{echo\_\-and\_\-run\_\-lv}]{\setlength{\rightskip}{0pt plus 5cm}int echo\_\-and\_\-run\_\-lv (char $\ast$ {\em c}, \/   {\em ...})}}
+\label{vmipstool_8cc_abe7101508d1a4326a9aa174b06b01bb9}
+
+
+Here is the call graph for this function:
+
+\hypertarget{vmipstool_8cc_a21e010e416b2c65cb56d927897b86226}{
+\index{vmipstool.cc@{vmipstool.cc}!help@{help}}
+\index{help@{help}!vmipstool.cc@{vmipstool.cc}}
+\subsubsection[{help}]{\setlength{\rightskip}{0pt plus 5cm}int help (int {\em argc}, \/  char $\ast$$\ast$ {\em argv})}}
+\label{vmipstool_8cc_a21e010e416b2c65cb56d927897b86226}
+
+
+Here is the call graph for this function:
+
+\hypertarget{vmipstool_8cc_a3c04138a5bfe5d72780bb7e82a18e627}{
+\index{vmipstool.cc@{vmipstool.cc}!main@{main}}
+\index{main@{main}!vmipstool.cc@{vmipstool.cc}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (int {\em argc}, \/  char $\ast$$\ast$ {\em argv})}}
+\label{vmipstool_8cc_a3c04138a5bfe5d72780bb7e82a18e627}
+
+
+Here is the call graph for this function:
+
+\hypertarget{vmipstool_8cc_a7deb391ca03fb244fa77a0b8c05a0f80}{
+\index{vmipstool.cc@{vmipstool.cc}!make\_\-rom@{make\_\-rom}}
+\index{make\_\-rom@{make\_\-rom}!vmipstool.cc@{vmipstool.cc}}
+\subsubsection[{make\_\-rom}]{\setlength{\rightskip}{0pt plus 5cm}int make\_\-rom (int {\em argc}, \/  char $\ast$$\ast$ {\em argv})}}
+\label{vmipstool_8cc_a7deb391ca03fb244fa77a0b8c05a0f80}
+
+
+Here is the call graph for this function:
+
+\hypertarget{vmipstool_8cc_af5c78071ff1efaa09840d66031a156c1}{
+\index{vmipstool.cc@{vmipstool.cc}!maybe\_\-echo@{maybe\_\-echo}}
+\index{maybe\_\-echo@{maybe\_\-echo}!vmipstool.cc@{vmipstool.cc}}
+\subsubsection[{maybe\_\-echo}]{\setlength{\rightskip}{0pt plus 5cm}void maybe\_\-echo (char $\ast$$\ast$ {\em newargv})}}
+\label{vmipstool_8cc_af5c78071ff1efaa09840d66031a156c1}
+\hypertarget{vmipstool_8cc_a4eddff63fba08e9547ff240959f74497}{
+\index{vmipstool.cc@{vmipstool.cc}!maybe\_\-run@{maybe\_\-run}}
+\index{maybe\_\-run@{maybe\_\-run}!vmipstool.cc@{vmipstool.cc}}
+\subsubsection[{maybe\_\-run}]{\setlength{\rightskip}{0pt plus 5cm}int maybe\_\-run (char $\ast$$\ast$ {\em newargv})}}
+\label{vmipstool_8cc_a4eddff63fba08e9547ff240959f74497}
+
+
+Here is the call graph for this function:
+
+\hypertarget{vmipstool_8cc_ae30ea8a68ba91d55b97791a36e2dc66d}{
+\index{vmipstool.cc@{vmipstool.cc}!preprocess@{preprocess}}
+\index{preprocess@{preprocess}!vmipstool.cc@{vmipstool.cc}}
+\subsubsection[{preprocess}]{\setlength{\rightskip}{0pt plus 5cm}int preprocess (int {\em argc}, \/  char $\ast$$\ast$ {\em argv})}}
+\label{vmipstool_8cc_ae30ea8a68ba91d55b97791a36e2dc66d}
+
+
+Here is the call graph for this function:
+
+\hypertarget{vmipstool_8cc_ab8d561780e03397eaa7fb210c5105152}{
+\index{vmipstool.cc@{vmipstool.cc}!program\_\-available@{program\_\-available}}
+\index{program\_\-available@{program\_\-available}!vmipstool.cc@{vmipstool.cc}}
+\subsubsection[{program\_\-available}]{\setlength{\rightskip}{0pt plus 5cm}bool program\_\-available (const char $\ast$ {\em execname})}}
+\label{vmipstool_8cc_ab8d561780e03397eaa7fb210c5105152}
+\hypertarget{vmipstool_8cc_ab5e1ba6f3aee921a61e58c6fdc128f59}{
+\index{vmipstool.cc@{vmipstool.cc}!search\_\-path@{search\_\-path}}
+\index{search\_\-path@{search\_\-path}!vmipstool.cc@{vmipstool.cc}}
+\subsubsection[{search\_\-path}]{\setlength{\rightskip}{0pt plus 5cm}bool search\_\-path (char $\ast$ {\em result}, \/  char $\ast$ {\em path}, \/  const char $\ast$ {\em target})}}
+\label{vmipstool_8cc_ab5e1ba6f3aee921a61e58c6fdc128f59}
+
+
+Here is the call graph for this function:
+
+\hypertarget{vmipstool_8cc_af61041935a886b1530729156db3bfa28}{
+\index{vmipstool.cc@{vmipstool.cc}!setup\_\-paths@{setup\_\-paths}}
+\index{setup\_\-paths@{setup\_\-paths}!vmipstool.cc@{vmipstool.cc}}
+\subsubsection[{setup\_\-paths}]{\setlength{\rightskip}{0pt plus 5cm}void setup\_\-paths (bool {\em bigendian}, \/  const char $\ast$ {\em mipstoolprefix})}}
+\label{vmipstool_8cc_af61041935a886b1530729156db3bfa28}
+\hypertarget{vmipstool_8cc_a9730a0e8570e7841d45c0e223f5f77a8}{
+\index{vmipstool.cc@{vmipstool.cc}!swap\_\-words@{swap\_\-words}}
+\index{swap\_\-words@{swap\_\-words}!vmipstool.cc@{vmipstool.cc}}
+\subsubsection[{swap\_\-words}]{\setlength{\rightskip}{0pt plus 5cm}int swap\_\-words (int {\em argc}, \/  char $\ast$$\ast$ {\em argv})}}
+\label{vmipstool_8cc_a9730a0e8570e7841d45c0e223f5f77a8}
+\hypertarget{vmipstool_8cc_ae8605e2b78cd4a81b6c6b5c30cb7366a}{
+\index{vmipstool.cc@{vmipstool.cc}!usage@{usage}}
+\index{usage@{usage}!vmipstool.cc@{vmipstool.cc}}
+\subsubsection[{usage}]{\setlength{\rightskip}{0pt plus 5cm}void usage (void)}}
+\label{vmipstool_8cc_ae8605e2b78cd4a81b6c6b5c30cb7366a}
+\hypertarget{vmipstool_8cc_a7805bb9ff9e21a4aea89acb77bc77548}{
+\index{vmipstool.cc@{vmipstool.cc}!version@{version}}
+\index{version@{version}!vmipstool.cc@{vmipstool.cc}}
+\subsubsection[{version}]{\setlength{\rightskip}{0pt plus 5cm}int version (int {\em argc}, \/  char $\ast$$\ast$ {\em argv})}}
+\label{vmipstool_8cc_a7805bb9ff9e21a4aea89acb77bc77548}
+
+
+\subsection{Variable Documentation}
+\hypertarget{vmipstool_8cc_a15791e6ebebe77563f308b331b9e1341}{
+\index{vmipstool.cc@{vmipstool.cc}!ccname@{ccname}}
+\index{ccname@{ccname}!vmipstool.cc@{vmipstool.cc}}
+\subsubsection[{ccname}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf ccname}\mbox{[}PATH\_\-MAX\mbox{]}}}
+\label{vmipstool_8cc_a15791e6ebebe77563f308b331b9e1341}
+\hypertarget{vmipstool_8cc_ac13abb040ec0f2dbdef3ae8795647112}{
+\index{vmipstool.cc@{vmipstool.cc}!dryrun@{dryrun}}
+\index{dryrun@{dryrun}!vmipstool.cc@{vmipstool.cc}}
+\subsubsection[{dryrun}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf dryrun} = 0}}
+\label{vmipstool_8cc_ac13abb040ec0f2dbdef3ae8795647112}
+\hypertarget{vmipstool_8cc_a506636c744bf9929df3c4e786583eac5}{
+\index{vmipstool.cc@{vmipstool.cc}!endianflag@{endianflag}}
+\index{endianflag@{endianflag}!vmipstool.cc@{vmipstool.cc}}
+\subsubsection[{endianflag}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf endianflag}\mbox{[}4\mbox{]}}}
+\label{vmipstool_8cc_a506636c744bf9929df3c4e786583eac5}
+\hypertarget{vmipstool_8cc_a7dc5a9d7ae26a208821195733db033bb}{
+\index{vmipstool.cc@{vmipstool.cc}!handler@{handler}}
+\index{handler@{handler}!vmipstool.cc@{vmipstool.cc}}
+\subsubsection[{handler}]{\setlength{\rightskip}{0pt plus 5cm}int($\ast$ {\bf handler})(int argc, char $\ast$$\ast$argv)}}
+\label{vmipstool_8cc_a7dc5a9d7ae26a208821195733db033bb}
+\hypertarget{vmipstool_8cc_a2d6d9c45900fb7835975c51882a09be9}{
+\index{vmipstool.cc@{vmipstool.cc}!handler\_\-argc@{handler\_\-argc}}
+\index{handler\_\-argc@{handler\_\-argc}!vmipstool.cc@{vmipstool.cc}}
+\subsubsection[{handler\_\-argc}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf handler\_\-argc} = -\/1}}
+\label{vmipstool_8cc_a2d6d9c45900fb7835975c51882a09be9}
+\hypertarget{vmipstool_8cc_a091e35cb32b8e182675e30d3000a0576}{
+\index{vmipstool.cc@{vmipstool.cc}!handler\_\-argv@{handler\_\-argv}}
+\index{handler\_\-argv@{handler\_\-argv}!vmipstool.cc@{vmipstool.cc}}
+\subsubsection[{handler\_\-argv}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$$\ast$ {\bf handler\_\-argv} = 0}}
+\label{vmipstool_8cc_a091e35cb32b8e182675e30d3000a0576}
+\hypertarget{vmipstool_8cc_ae283485ff4a69d8ec3ef4603fb97d2ad}{
+\index{vmipstool.cc@{vmipstool.cc}!ldname@{ldname}}
+\index{ldname@{ldname}!vmipstool.cc@{vmipstool.cc}}
+\subsubsection[{ldname}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf ldname}\mbox{[}PATH\_\-MAX\mbox{]}}}
+\label{vmipstool_8cc_ae283485ff4a69d8ec3ef4603fb97d2ad}
+\hypertarget{vmipstool_8cc_abb215f7397a493a1043547133562ac00}{
+\index{vmipstool.cc@{vmipstool.cc}!ldscript\_\-error@{ldscript\_\-error}}
+\index{ldscript\_\-error@{ldscript\_\-error}!vmipstool.cc@{vmipstool.cc}}
+\subsubsection[{ldscript\_\-error}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf ldscript\_\-error} = false}}
+\label{vmipstool_8cc_abb215f7397a493a1043547133562ac00}
+\hypertarget{vmipstool_8cc_a9bf44c70910447693edd276ef6bba410}{
+\index{vmipstool.cc@{vmipstool.cc}!ldscript\_\-full\_\-path@{ldscript\_\-full\_\-path}}
+\index{ldscript\_\-full\_\-path@{ldscript\_\-full\_\-path}!vmipstool.cc@{vmipstool.cc}}
+\subsubsection[{ldscript\_\-full\_\-path}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf ldscript\_\-full\_\-path}\mbox{[}PATH\_\-MAX\mbox{]}}}
+\label{vmipstool_8cc_a9bf44c70910447693edd276ef6bba410}
+\hypertarget{vmipstool_8cc_aa7cae548af81114793e7c055cd7d409f}{
+\index{vmipstool.cc@{vmipstool.cc}!MAXARGV@{MAXARGV}}
+\index{MAXARGV@{MAXARGV}!vmipstool.cc@{vmipstool.cc}}
+\subsubsection[{MAXARGV}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned int {\bf MAXARGV} = 500}}
+\label{vmipstool_8cc_aa7cae548af81114793e7c055cd7d409f}
+\hypertarget{vmipstool_8cc_a26a17fc851d4e1e069f315da683ce609}{
+\index{vmipstool.cc@{vmipstool.cc}!objcopyname@{objcopyname}}
+\index{objcopyname@{objcopyname}!vmipstool.cc@{vmipstool.cc}}
+\subsubsection[{objcopyname}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf objcopyname}\mbox{[}PATH\_\-MAX\mbox{]}}}
+\label{vmipstool_8cc_a26a17fc851d4e1e069f315da683ce609}
+\hypertarget{vmipstool_8cc_ad3eaa49cea60c9868d09eb6b3ea0b379}{
+\index{vmipstool.cc@{vmipstool.cc}!objdumpname@{objdumpname}}
+\index{objdumpname@{objdumpname}!vmipstool.cc@{vmipstool.cc}}
+\subsubsection[{objdumpname}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf objdumpname}\mbox{[}PATH\_\-MAX\mbox{]}}}
+\label{vmipstool_8cc_ad3eaa49cea60c9868d09eb6b3ea0b379}
+\hypertarget{vmipstool_8cc_aa2bbb0c78612ca856fd777fc20b1d8d2}{
+\index{vmipstool.cc@{vmipstool.cc}!pagesz@{pagesz}}
+\index{pagesz@{pagesz}!vmipstool.cc@{vmipstool.cc}}
+\subsubsection[{pagesz}]{\setlength{\rightskip}{0pt plus 5cm}long {\bf pagesz} = 4096}}
+\label{vmipstool_8cc_aa2bbb0c78612ca856fd777fc20b1d8d2}
+\hypertarget{vmipstool_8cc_a6c7fd3f986cccd0184a81a377a56f16a}{
+\index{vmipstool.cc@{vmipstool.cc}!pkgdatadir@{pkgdatadir}}
+\index{pkgdatadir@{pkgdatadir}!vmipstool.cc@{vmipstool.cc}}
+\subsubsection[{pkgdatadir}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf pkgdatadir}\mbox{[}PATH\_\-MAX\mbox{]}}}
+\label{vmipstool_8cc_a6c7fd3f986cccd0184a81a377a56f16a}
+\hypertarget{vmipstool_8cc_a68eb8b58113e11a05781507251827474}{
+\index{vmipstool.cc@{vmipstool.cc}!TMPFNAMESIZE@{TMPFNAMESIZE}}
+\index{TMPFNAMESIZE@{TMPFNAMESIZE}!vmipstool.cc@{vmipstool.cc}}
+\subsubsection[{TMPFNAMESIZE}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned int {\bf TMPFNAMESIZE} = 26}}
+\label{vmipstool_8cc_a68eb8b58113e11a05781507251827474}
+\hypertarget{vmipstool_8cc_a0b2caeb4b6f130be43e5a2f0267dd453}{
+\index{vmipstool.cc@{vmipstool.cc}!verbose@{verbose}}
+\index{verbose@{verbose}!vmipstool.cc@{vmipstool.cc}}
+\subsubsection[{verbose}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf verbose} = 0}}
+\label{vmipstool_8cc_a0b2caeb4b6f130be43e5a2f0267dd453}

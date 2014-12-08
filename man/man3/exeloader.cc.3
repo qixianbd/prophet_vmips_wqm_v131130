@@ -1,0 +1,75 @@
+.TH "exeloader.cc" 3 "18 Dec 2013" "Doxygen" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+exeloader.cc \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <string>\fP
+.br
+\fC#include <cerrno>\fP
+.br
+\fC#include <cstdio>\fP
+.br
+\fC#include 'vmips.h'\fP
+.br
+\fC#include 'cpzeroreg.h'\fP
+.br
+\fC#include 'memorymodule.h'\fP
+.br
+\fC#include 'range.h'\fP
+.br
+\fC#include 'error.h'\fP
+.br
+\fC#include <string.h>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBcoff_file_header\fP"
+.br
+.ti -1c
+.RI "struct \fBcoff_section_header\fP"
+.br
+.ti -1c
+.RI "struct \fBcoff_info\fP"
+.br
+.in -1c
+.SS "Defines"
+
+.in +1c
+.ti -1c
+.RI "#define \fBMIPSEBMAGIC\fP   0x0160"
+.br
+.ti -1c
+.RI "#define \fBMIPSELMAGIC\fP   0x0162"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "static bool \fBgood_ecoff_magic\fP (struct \fBcoff_file_header\fP *fhdr)"
+.br
+.ti -1c
+.RI "static bool \fBfile_is_ecoff\fP (FILE *fp)"
+.br
+.ti -1c
+.RI "static bool \fBfile_is_elf\fP (FILE *fp)"
+.br
+.in -1c
+.SH "Define Documentation"
+.PP 
+.SS "#define MIPSEBMAGIC   0x0160"
+.SS "#define MIPSELMAGIC   0x0162"
+.SH "Function Documentation"
+.PP 
+.SS "static bool file_is_ecoff (FILE * fp)\fC [static]\fP"
+.SS "static bool file_is_elf (FILE * fp)\fC [static]\fP"
+.SS "static bool good_ecoff_magic (struct \fBcoff_file_header\fP * fhdr)\fC [inline, static]\fP"
+.SH "Author"
+.PP 
+Generated automatically by Doxygen from the source code.

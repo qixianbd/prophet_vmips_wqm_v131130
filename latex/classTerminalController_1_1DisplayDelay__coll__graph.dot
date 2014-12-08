@@ -1,0 +1,25 @@
+digraph G
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node1 [label="TerminalController::DisplayDelay",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node2 -> Node1 [dir=back,color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="CancelableTask",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classCancelableTask.html"];
+  Node3 -> Node2 [dir=back,color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="Task",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classTask.html"];
+  Node4 -> Node1 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="controller"];
+  Node4 [label="TerminalController",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classTerminalController.html"];
+  Node5 -> Node4 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="keyboard_poll"];
+  Node5 [label="TerminalController::KeyboardPoll",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classTerminalController_1_1KeyboardPoll.html"];
+  Node2 -> Node5 [dir=back,color="midnightblue",fontsize="10",style="solid"];
+  Node4 -> Node5 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="controller"];
+  Node6 -> Node4 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="lines"];
+  Node6 [label="TerminalController::LineState",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structTerminalController_1_1LineState.html"];
+  Node7 -> Node6 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="keyboard_repoll"];
+  Node7 [label="TerminalController::KeyboardRepoll",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classTerminalController_1_1KeyboardRepoll.html"];
+  Node2 -> Node7 [dir=back,color="midnightblue",fontsize="10",style="solid"];
+  Node4 -> Node7 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="controller"];
+  Node1 -> Node6 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="display_delay"];
+  Node8 -> Node4 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="clock"];
+  Node8 [label="Clock",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classClock.html"];
+}

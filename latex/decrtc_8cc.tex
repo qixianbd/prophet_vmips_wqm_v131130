@@ -1,0 +1,48 @@
+\hypertarget{decrtc_8cc}{
+\section{decrtc.cc File Reference}
+\label{decrtc_8cc}\index{decrtc.cc@{decrtc.cc}}
+}
+{\ttfamily \#include \char`\"{}devicemap.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}clock.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}decrtcreg.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}deviceint.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}task.h\char`\"{}}\par
+{\ttfamily \#include $<$cstdio$>$}\par
+{\ttfamily \#include $<$cassert$>$}\par
+{\ttfamily \#include $<$time.h$>$}\par
+Include dependency graph for decrtc.cc:This graph shows which files directly or indirectly include this file:\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static const uint32 \hyperlink{decrtc_8cc_adba170d31d011d64ae2bf9298d66e91e}{int\_\-freqs} \mbox{[}16\mbox{]}
+\item 
+static const char $\ast$ \hyperlink{decrtc_8cc_aea63b89eb0262b669f1a6aa67cd33887}{reg\_\-names} \mbox{[}15\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Variable Documentation}
+\hypertarget{decrtc_8cc_adba170d31d011d64ae2bf9298d66e91e}{
+\index{decrtc.cc@{decrtc.cc}!int\_\-freqs@{int\_\-freqs}}
+\index{int\_\-freqs@{int\_\-freqs}!decrtc.cc@{decrtc.cc}}
+\subsubsection[{int\_\-freqs}]{\setlength{\rightskip}{0pt plus 5cm}const uint32 {\bf int\_\-freqs}\mbox{[}16\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{decrtc_8cc_adba170d31d011d64ae2bf9298d66e91e}
+{\bfseries Initial value:}
+\begin{DoxyCode}
+ {
+  0, 3906250, 7812500, 122070, 244141, 488281, 976562, 1953125,
+  3906250, 7812500, 15625000, 31250000, 62500000, 125000000,
+  250000000, 500000000
+}
+\end{DoxyCode}
+\hypertarget{decrtc_8cc_aea63b89eb0262b669f1a6aa67cd33887}{
+\index{decrtc.cc@{decrtc.cc}!reg\_\-names@{reg\_\-names}}
+\index{reg\_\-names@{reg\_\-names}!decrtc.cc@{decrtc.cc}}
+\subsubsection[{reg\_\-names}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ {\bf reg\_\-names}\mbox{[}15\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{decrtc_8cc_aea63b89eb0262b669f1a6aa67cd33887}
+{\bfseries Initial value:}
+\begin{DoxyCode}
+ {
+  "RTC_SEC", "RTC_ALMS", "RTC_MIN", "RTC_ALMM", "RTC_HOUR",
+  "RTC_ALMH", "RTC_DOW", "RTC_DAY", "RTC_MON", "RTC_YEAR",
+  "RTC_REGA", "RTC_REGB", "RTC_REGC", "RTC_REGD", "RTC_RAM"
+}
+\end{DoxyCode}

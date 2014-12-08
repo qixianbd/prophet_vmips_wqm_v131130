@@ -1,0 +1,19 @@
+digraph G
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir=LR;
+  Node1 [label="CPU::write_trace_instr_inputs",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="CPU::funct",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classCPU.html#a8625d083f6783d5f7a46fce21f405441"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="Trace::Record::inputs_push_back_op",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structTrace_1_1Record.html#ac8273cd7c6aca64757a6dfe5b37d7236"];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="Trace::Operand::make",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structTrace_1_1Operand.html#a447d15d9296741d1932284be020a7e72"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="CPU::opcode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classCPU.html#a7e03d573f476dd6b729afed1c7c9085c"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="CPU::rs",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classCPU.html#a6a41d0dbc478e502ef7cb599e52a17cc"];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="CPU::rt",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classCPU.html#a9697aa735fc4033872a5a6702e6fb60b"];
+}

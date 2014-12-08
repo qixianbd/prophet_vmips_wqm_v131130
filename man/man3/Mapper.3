@@ -1,0 +1,149 @@
+.TH "Mapper" 3 "18 Dec 2013" "Doxygen" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Mapper \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <mapper.h>\fP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBBusErrorInfo\fP"
+.br
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef std::vector< \fBRange\fP * > \fBRanges\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBMapper\fP ()"
+.br
+.ti -1c
+.RI "\fB~Mapper\fP ()"
+.br
+.ti -1c
+.RI "int \fBadd_range\fP (\fBRange\fP *r)"
+.br
+.ti -1c
+.RI "int \fBmap_at_physical_address\fP (\fBRange\fP *r, uint32 pa)"
+.br
+.ti -1c
+.RI "uint32 \fBswap_word\fP (uint32 w)"
+.br
+.ti -1c
+.RI "uint16 \fBswap_halfword\fP (uint16 h)"
+.br
+.ti -1c
+.RI "uint32 \fBmips_to_host_word\fP (uint32 w)"
+.br
+.ti -1c
+.RI "uint32 \fBhost_to_mips_word\fP (uint32 w)"
+.br
+.ti -1c
+.RI "uint16 \fBmips_to_host_halfword\fP (uint16 h)"
+.br
+.ti -1c
+.RI "uint16 \fBhost_to_mips_halfword\fP (uint16 h)"
+.br
+.ti -1c
+.RI "void \fBbus_error\fP (\fBDeviceExc\fP *client, int32 mode, uint32 addr, int32 width, uint32 data=0xffffffff)"
+.br
+.ti -1c
+.RI "uint32 \fBfetch_word\fP (uint32 addr, int32 mode, bool cacheable, \fBDeviceExc\fP *client)"
+.br
+.ti -1c
+.RI "uint16 \fBfetch_halfword\fP (uint32 addr, bool cacheable, \fBDeviceExc\fP *client)"
+.br
+.ti -1c
+.RI "uint8 \fBfetch_byte\fP (uint32 addr, bool cacheable, \fBDeviceExc\fP *client)"
+.br
+.ti -1c
+.RI "void \fBstore_word\fP (uint32 addr, uint32 data, bool cacheable, \fBDeviceExc\fP *client)"
+.br
+.ti -1c
+.RI "void \fBstore_halfword\fP (uint32 addr, uint16 data, bool cacheable, \fBDeviceExc\fP *client)"
+.br
+.ti -1c
+.RI "void \fBstore_byte\fP (uint32 addr, uint8 data, bool cacheable, \fBDeviceExc\fP *client)"
+.br
+.ti -1c
+.RI "\fBRange\fP * \fBfind_mapping_range\fP (uint32 p)  throw ()"
+.br
+.ti -1c
+.RI "void \fBdump_stack\fP (FILE *f, uint32 stackphys)"
+.br
+.ti -1c
+.RI "void \fBget_last_berr_info\fP (\fBBusErrorInfo\fP &info)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBBusErrorInfo\fP \fBlast_berr_info\fP"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBRange\fP * \fBlast_used_mapping\fP"
+.br
+.ti -1c
+.RI "\fBRanges\fP \fBranges\fP"
+.br
+.ti -1c
+.RI "bool \fBopt_bigendian\fP"
+.br
+.ti -1c
+.RI "bool \fBbyteswapped\fP"
+.br
+.in -1c
+.SH "Member Typedef Documentation"
+.PP 
+.SS "typedef std::vector<\fBRange\fP *> \fBMapper::Ranges\fP"
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Mapper::Mapper ()"
+.SS "Mapper::~Mapper ()"
+.SH "Member Function Documentation"
+.PP 
+.SS "int Mapper::add_range (\fBRange\fP * r)"
+.SS "void Mapper::bus_error (\fBDeviceExc\fP * client, int32 mode, uint32 addr, int32 width, uint32 data = \fC0xffffffff\fP)"
+.SS "void Mapper::dump_stack (FILE * f, uint32 stackphys)"
+.SS "uint8 Mapper::fetch_byte (uint32 addr, bool cacheable, \fBDeviceExc\fP * client)"
+.SS "uint16 Mapper::fetch_halfword (uint32 addr, bool cacheable, \fBDeviceExc\fP * client)"
+.SS "uint32 Mapper::fetch_word (uint32 addr, int32 mode, bool cacheable, \fBDeviceExc\fP * client)"
+.SS "\fBRange\fP * Mapper::find_mapping_range (uint32 p)  throw ()"
+.SS "void Mapper::get_last_berr_info (\fBBusErrorInfo\fP & info)\fC [inline]\fP"
+.SS "uint16 Mapper::host_to_mips_halfword (uint16 h)"
+.SS "uint32 Mapper::host_to_mips_word (uint32 w)"
+.SS "int Mapper::map_at_physical_address (\fBRange\fP * r, uint32 pa)\fC [inline]\fP"
+.SS "uint16 Mapper::mips_to_host_halfword (uint16 h)"
+.SS "uint32 Mapper::mips_to_host_word (uint32 w)"
+.SS "void Mapper::store_byte (uint32 addr, uint8 data, bool cacheable, \fBDeviceExc\fP * client)"
+.SS "void Mapper::store_halfword (uint32 addr, uint16 data, bool cacheable, \fBDeviceExc\fP * client)"
+.SS "void Mapper::store_word (uint32 addr, uint32 data, bool cacheable, \fBDeviceExc\fP * client)"
+.SS "uint16 Mapper::swap_halfword (uint16 h)"
+.SS "uint32 Mapper::swap_word (uint32 w)"
+.SH "Member Data Documentation"
+.PP 
+.SS "bool \fBMapper::byteswapped\fP\fC [private]\fP"
+.SS "\fBBusErrorInfo\fP \fBMapper::last_berr_info\fP"
+.SS "\fBRange\fP* \fBMapper::last_used_mapping\fP\fC [private]\fP"
+.SS "bool \fBMapper::opt_bigendian\fP\fC [private]\fP"
+.SS "\fBRanges\fP \fBMapper::ranges\fP\fC [private]\fP"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen from the source code.

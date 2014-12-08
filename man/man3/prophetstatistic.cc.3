@@ -1,0 +1,232 @@
+.TH "prophetstatistic.cc" 3 "18 Dec 2013" "Doxygen" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+prophetstatistic.cc \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'prophetstatistic.h'\fP
+.br
+\fC#include 'prophetxmldoc.h'\fP
+.br
+\fC#include 'prophetlog.h'\fP
+.br
+\fC#include 'prophet_vmips.h'\fP
+.br
+\fC#include 'options.h'\fP
+.br
+\fC#include 'speculativelogic.h'\fP
+.br
+\fC#include <string>\fP
+.br
+\fC#include <cstring>\fP
+.br
+\fC#include <fstream>\fP
+.br
+\fC#include <iostream>\fP
+.br
+\fC#include <time.h>\fP
+.br
+\fC#include <stdio.h>\fP
+.br
+\fC#include <assert.h>\fP
+.br
+\fC#include <stdlib.h>\fP
+.br
+\fC#include 'prophetcpustat.h'\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBProphetStat::Statistic\fP"
+.br
+.RI "\fI\fBStatistic\fP maintains all the statistic record for the cpus. \fP"
+.ti -1c
+.RI "struct \fBProphetStat::tstat\fP"
+.br
+.in -1c
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBProphetStat\fP"
+.br
+.in -1c
+.SS "Defines"
+
+.in +1c
+.ti -1c
+.RI "#define \fBKEYMING_PLUS\fP"
+.br
+.ti -1c
+.RI "#define \fBKEYMING_STATICS\fP"
+.br
+.ti -1c
+.RI "#define \fBKEYMING_STATICS\fP"
+.br
+.ti -1c
+.RI "#define \fBKEYMING_STATICS\fP"
+.br
+.ti -1c
+.RI "#define \fBKEYMING_STATICS\fP"
+.br
+.ti -1c
+.RI "#define \fBKEYMING_STATICS\fP"
+.br
+.ti -1c
+.RI "#define \fBKEYMING_STATICS\fP"
+.br
+.ti -1c
+.RI "#define \fBKEYMING_STATICS\fP"
+.br
+.ti -1c
+.RI "#define \fBKEYMING_STATICS\fP"
+.br
+.ti -1c
+.RI "#define \fBKEYMING_STATICS\fP"
+.br
+.ti -1c
+.RI "#define \fBKEYMING_STATICS\fP"
+.br
+.ti -1c
+.RI "#define \fBKEYMING_PLUS\fP"
+.br
+.ti -1c
+.RI "#define \fBKEYMING_STATICS\fP"
+.br
+.ti -1c
+.RI "#define \fBDEBUG_KEYMING\fP"
+.br
+.ti -1c
+.RI "#define \fBKEYMING_STATICS\fP"
+.br
+.ti -1c
+.RI "#define \fBKEYMING_STATICS\fP"
+.br
+.ti -1c
+.RI "#define \fBKEYMING_STATICS\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef StatMap::value_type \fBProphetStat::StatMapValue\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBProphetStat::tstat\fP \fBProphetStat::tstats\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBProphetStat::DefaultStatAction\fP (StatRecord *rec, \fBStatCondition\fP condition, int cost, void *clientdata=NULL)"
+.br
+.RI "\fIif a \fBStatItem\fP with a NULL statistic action, the default one will be invoked \fP"
+.ti -1c
+.RI "static void \fBProphetStat::CpzeroAction\fP (StatRecord *rec, \fBStatCondition\fP condition, int cost, void *clientdata=NULL)"
+.br
+.RI "\fIuser defined action for specified instruction \fP"
+.ti -1c
+.RI "static void \fBProphetStat::CponeAction\fP (StatRecord *rec, \fBStatCondition\fP condition, int cost, void *clientdata=NULL)"
+.br
+.ti -1c
+.RI "static void \fBProphetStat::SpawnAction\fP (StatRecord *rec, \fBStatCondition\fP condition, int cost, void *clientdata=NULL)"
+.br
+.RI "\fIuser defined actions for specified event \fP"
+.ti -1c
+.RI "static void \fBProphetStat::BeginAction\fP (StatRecord *rec, \fBStatCondition\fP condition, int cost, void *clientdata=NULL)"
+.br
+.ti -1c
+.RI "static void \fBProphetStat::PsliceEntryAction\fP (StatRecord *rec, \fBStatCondition\fP condition, int cost, void *clientdata=NULL)"
+.br
+.ti -1c
+.RI "static void \fBProphetStat::PsliceExitAction\fP (StatRecord *rec, \fBStatCondition\fP condition, int cost, void *clientdata=NULL)"
+.br
+.ti -1c
+.RI "static void \fBProphetStat::StableTokenAction\fP (StatRecord *rec, \fBStatCondition\fP condition, int cost, void *clientdata=NULL)"
+.br
+.ti -1c
+.RI "static void \fBProphetStat::CqipHoldAction\fP (StatRecord *rec, \fBStatCondition\fP condition, int cost, void *clientdata=NULL)"
+.br
+.ti -1c
+.RI "static void \fBProphetStat::CqipCommitAction\fP (StatRecord *rec, \fBStatCondition\fP condition, int cost, void *clientdata=NULL)"
+.br
+.ti -1c
+.RI "static void \fBProphetStat::VerifyAction\fP (StatRecord *rec, \fBStatCondition\fP condition, int cost, void *clientdata=NULL)"
+.br
+.ti -1c
+.RI "static void \fBProphetStat::CommitAction\fP (StatRecord *rec, \fBStatCondition\fP condition, int cost, void *clientdata=NULL)"
+.br
+.ti -1c
+.RI "static void \fBProphetStat::SquashAction\fP (StatRecord *rec, \fBStatCondition\fP condition, int cost, void *data=NULL)"
+.br
+.ti -1c
+.RI "static void \fBProphetStat::RestartAction\fP (StatRecord *rec, \fBStatCondition\fP condition, int cost, void *clientdata=NULL)"
+.br
+.ti -1c
+.RI "void \fBProphetStat::RegisterActions\fP ()"
+.br
+.RI "\fIthis is a hook function, the user can register its own actions here \fP"
+.ti -1c
+.RI "void \fBProphetStat::InitStat\fP (const char *prgname)"
+.br
+.RI "\fIinitialize the \fBStatistic\fP module \fP"
+.ti -1c
+.RI "void \fBProphetStat::ReportStat\fP ()"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "FILE * \fBmystderrlog\fP"
+.br
+.ti -1c
+.RI "bool \fBProphetStat::gStatInited\fP = false"
+.br
+.RI "\fIindicating whether the statistic module is initialized or not \fP"
+.ti -1c
+.RI "StatMap \fBProphetStat::gStatMap\fP"
+.br
+.RI "\fIglobal variable to store the statistic settings \fP"
+.ti -1c
+.RI "static char * \fBProphetStat::file\fP = STAT_PATH"
+.br
+.RI "\fIsetting file \fP"
+.ti -1c
+.RI "static char \fBProphetStat::program\fP [100]"
+.br
+.ti -1c
+.RI "std::string \fBProphetStat::SettingVersion\fP"
+.br
+.in -1c
+.SH "Define Documentation"
+.PP 
+.SS "#define DEBUG_KEYMING"
+.SS "#define KEYMING_PLUS"
+.SS "#define KEYMING_PLUS"
+.SS "#define KEYMING_STATICS"
+.SS "#define KEYMING_STATICS"
+.SS "#define KEYMING_STATICS"
+.SS "#define KEYMING_STATICS"
+.SS "#define KEYMING_STATICS"
+.SS "#define KEYMING_STATICS"
+.SS "#define KEYMING_STATICS"
+.SS "#define KEYMING_STATICS"
+.SS "#define KEYMING_STATICS"
+.SS "#define KEYMING_STATICS"
+.SS "#define KEYMING_STATICS"
+.SS "#define KEYMING_STATICS"
+.SS "#define KEYMING_STATICS"
+.SS "#define KEYMING_STATICS"
+.SH "Variable Documentation"
+.PP 
+.SS "FILE* \fBmystderrlog\fP"
+.SH "Author"
+.PP 
+Generated automatically by Doxygen from the source code.

@@ -1,0 +1,164 @@
+.TH "TerminalController" 3 "18 Dec 2013" "Doxygen" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+TerminalController \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <terminalcontroller.h>\fP
+.PP
+Inherited by \fBDECSerialDevice\fP, and \fBSpimConsoleDevice\fP.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBDisplayDelay\fP"
+.br
+.ti -1c
+.RI "class \fBKeyboardPoll\fP"
+.br
+.ti -1c
+.RI "class \fBKeyboardRepoll\fP"
+.br
+.ti -1c
+.RI "struct \fBLineState\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTerminalController\fP (\fBClock\fP *\fBclock\fP, long \fBkeyboard_poll_ns\fP, long \fBkeyboard_repoll_ns\fP, long \fBdisplay_ready_delay_ns\fP)  throw ( std::bad_alloc )"
+.br
+.ti -1c
+.RI "virtual \fB~TerminalController\fP ()  throw ()"
+.br
+.ti -1c
+.RI "virtual bool \fBconnect_terminal\fP (int tty_fd, int line)  throw ()"
+.br
+.ti -1c
+.RI "virtual void \fBremove_terminal\fP (int line)  throw ()"
+.br
+.ti -1c
+.RI "bool \fBline_connected\fP (const int line) const "
+.br
+.ti -1c
+.RI "virtual void \fBreinitialize_terminals\fP ()  throw ()"
+.br
+.ti -1c
+.RI "virtual void \fBpoll_keyboards\fP ()  throw ( std::bad_alloc )"
+.br
+.ti -1c
+.RI "virtual void \fBrepoll_keyboard\fP (int line)  throw ( std::bad_alloc )"
+.br
+.ti -1c
+.RI "virtual void \fBunready_display\fP (int line, char data)  throw ( std::bad_alloc )"
+.br
+.ti -1c
+.RI "virtual void \fBready_display\fP (int line)  throw ()"
+.br
+.ti -1c
+.RI "virtual void \fBunready_keyboard\fP (int line)  throw ()"
+.br
+.in -1c
+.SS "Protected Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBState\fP { \fBUNREADY\fP =  0, \fBREADY\fP =  CTL_RDY }"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBready_keyboard\fP (int line)  throw ()"
+.br
+.ti -1c
+.RI "virtual bool \fBprepare_tty\fP (int line)  throw ()"
+.br
+.ti -1c
+.RI "void \fBcopy_unready_keyboards\fP (fd_set *set)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "const long \fBkeyboard_poll_ns\fP"
+.br
+.ti -1c
+.RI "const long \fBkeyboard_repoll_ns\fP"
+.br
+.ti -1c
+.RI "const long \fBdisplay_ready_delay_ns\fP"
+.br
+.ti -1c
+.RI "\fBKeyboardPoll\fP * \fBkeyboard_poll\fP"
+.br
+.ti -1c
+.RI "\fBClock\fP * \fBclock\fP"
+.br
+.ti -1c
+.RI "int \fBmax_fd\fP"
+.br
+.ti -1c
+.RI "fd_set \fBunready_keyboards\fP"
+.br
+.ti -1c
+.RI "\fBLineState\fP \fBlines\fP [MAX_TERMINALS]"
+.br
+.in -1c
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum \fBTerminalController::State\fP\fC [protected]\fP"
+.PP
+\fBEnumerator: \fP
+.in +1c
+.TP
+\fB\fIUNREADY \fP\fP
+.TP
+\fB\fIREADY \fP\fP
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "TerminalController::TerminalController (\fBClock\fP * clock, long keyboard_poll_ns, long keyboard_repoll_ns, long display_ready_delay_ns)  throw ( std::bad_alloc )"
+.SS "TerminalController::~TerminalController ()  throw ()\fC [virtual]\fP"
+.SH "Member Function Documentation"
+.PP 
+.SS "bool TerminalController::connect_terminal (int tty_fd, int line)  throw ()\fC [virtual]\fP"
+.SS "void TerminalController::copy_unready_keyboards (fd_set * set)\fC [inline, protected]\fP"
+.SS "bool TerminalController::line_connected (const int line) const\fC [inline]\fP"
+.SS "void TerminalController::poll_keyboards ()  throw ( std::bad_alloc )\fC [virtual]\fP"
+.SS "bool TerminalController::prepare_tty (int line)  throw ()\fC [protected, virtual]\fP"
+.SS "void TerminalController::ready_display (int line)  throw ()\fC [virtual]\fP"
+.PP
+Reimplemented in \fBDECSerialDevice\fP, and \fBSpimConsoleDevice\fP.
+.SS "void TerminalController::ready_keyboard (int line)  throw ()\fC [protected, virtual]\fP"
+.PP
+Reimplemented in \fBDECSerialDevice\fP, and \fBSpimConsoleDevice\fP.
+.SS "void TerminalController::reinitialize_terminals ()  throw ()\fC [virtual]\fP"
+.SS "void TerminalController::remove_terminal (int line)  throw ()\fC [virtual]\fP"
+.SS "void TerminalController::repoll_keyboard (int line)  throw ( std::bad_alloc )\fC [virtual]\fP"
+.SS "void TerminalController::unready_display (int line, char data)  throw ( std::bad_alloc )\fC [virtual]\fP"
+.PP
+Reimplemented in \fBDECSerialDevice\fP, and \fBSpimConsoleDevice\fP.
+.SS "void TerminalController::unready_keyboard (int line)  throw ()\fC [virtual]\fP"
+.PP
+Reimplemented in \fBDECSerialDevice\fP, and \fBSpimConsoleDevice\fP.
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBClock\fP* \fBTerminalController::clock\fP\fC [protected]\fP"
+.SS "const long \fBTerminalController::display_ready_delay_ns\fP\fC [protected]\fP"
+.SS "\fBKeyboardPoll\fP* \fBTerminalController::keyboard_poll\fP\fC [protected]\fP"
+.SS "const long \fBTerminalController::keyboard_poll_ns\fP\fC [protected]\fP"
+.SS "const long \fBTerminalController::keyboard_repoll_ns\fP\fC [protected]\fP"
+.SS "\fBLineState\fP \fBTerminalController::lines\fP[MAX_TERMINALS]\fC [protected]\fP"
+.SS "int \fBTerminalController::max_fd\fP\fC [protected]\fP"
+.SS "fd_set \fBTerminalController::unready_keyboards\fP\fC [protected]\fP"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen from the source code.

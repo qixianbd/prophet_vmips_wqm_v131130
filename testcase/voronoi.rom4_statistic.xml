@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding='ISO-8859-1' standalone='yes' ?>
+<statistic_report report_time="2014-06-11 13:53:24 ">
+  <settings>
+    <setting_file>/home/qmwx/workspace/prophet_vmips_final_keyming_131130/inst_cost.ini</setting_file>
+    <version>1.0</version>
+    <program>testcase/voronoi.rom</program>
+  </settings>
+  <statistic cpu_id="0">
+    <total_inst>765429</total_inst>
+    <total_clock>681772</total_clock>
+    <spawned_thread>29362</spawned_thread>
+    <commited_thread>26363</commited_thread>
+    <failed_thread total="5343">
+      <OnDDV>20</OnDDV>
+      <OnInstruction>0</OnInstruction>
+      <OnRegisterVerification>4814</OnRegisterVerification>
+      <OnMemoryVerification>0</OnMemoryVerification>
+      <OnLowPriority>456</OnLowPriority>
+      <OnControlVoilate>53</OnControlVoilate>
+      <OnReset>0</OnReset>
+      <OnHalt>0</OnHalt>
+      <OnQuit>0</OnQuit>
+      <OnException>0</OnException>
+      <OnUnknown>0</OnUnknown>
+      <FailCount>
+        <Failed_CPU failed_ListId="0">0</Failed_CPU>
+        <Failed_CPU failed_ListId="1">1984</Failed_CPU>
+        <Failed_CPU failed_ListId="2">1832</Failed_CPU>
+        <Failed_CPU failed_ListId="3">1527</Failed_CPU>
+      </FailCount>
+    </failed_thread>
+    <TimeStat>
+      <FreeTime>715017</FreeTime>
+      <SquashTime>52566</SquashTime>
+      <WaitTime>12</WaitTime>
+      <SpTime>121354</SpTime>
+      <NoSpTime>374475</NoSpTime>
+      <PsliceTime>161310</PsliceTime>
+    </TimeStat>
+  </statistic>
+  <statistic cpu_id="1">
+    <total_inst>762442</total_inst>
+    <total_clock>678656</total_clock>
+    <spawned_thread>29445</spawned_thread>
+    <commited_thread>26337</commited_thread>
+    <failed_thread total="5396">
+      <OnDDV>22</OnDDV>
+      <OnInstruction>0</OnInstruction>
+      <OnRegisterVerification>4864</OnRegisterVerification>
+      <OnMemoryVerification>0</OnMemoryVerification>
+      <OnLowPriority>457</OnLowPriority>
+      <OnControlVoilate>53</OnControlVoilate>
+      <OnReset>0</OnReset>
+      <OnHalt>0</OnHalt>
+      <OnQuit>0</OnQuit>
+      <OnException>0</OnException>
+      <OnUnknown>0</OnUnknown>
+      <FailCount>
+        <Failed_CPU failed_ListId="0">0</Failed_CPU>
+        <Failed_CPU failed_ListId="1">2003</Failed_CPU>
+        <Failed_CPU failed_ListId="2">1856</Failed_CPU>
+        <Failed_CPU failed_ListId="3">1537</Failed_CPU>
+      </FailCount>
+    </failed_thread>
+    <TimeStat>
+      <FreeTime>719141</FreeTime>
+      <SquashTime>53210</SquashTime>
+      <WaitTime>91</WaitTime>
+      <SpTime>121561</SpTime>
+      <NoSpTime>369974</NoSpTime>
+      <PsliceTime>161915</PsliceTime>
+    </TimeStat>
+  </statistic>
+  <statistic cpu_id="2">
+    <total_inst>759301</total_inst>
+    <total_clock>675140</total_clock>
+    <spawned_thread>30072</spawned_thread>
+    <commited_thread>25677</commited_thread>
+    <failed_thread total="5993">
+      <OnDDV>8</OnDDV>
+      <OnInstruction>0</OnInstruction>
+      <OnRegisterVerification>5441</OnRegisterVerification>
+      <OnMemoryVerification>0</OnMemoryVerification>
+      <OnLowPriority>504</OnLowPriority>
+      <OnControlVoilate>40</OnControlVoilate>
+      <OnReset>0</OnReset>
+      <OnHalt>0</OnHalt>
+      <OnQuit>0</OnQuit>
+      <OnException>0</OnException>
+      <OnUnknown>0</OnUnknown>
+      <FailCount>
+        <Failed_CPU failed_ListId="0">0</Failed_CPU>
+        <Failed_CPU failed_ListId="1">2285</Failed_CPU>
+        <Failed_CPU failed_ListId="2">1899</Failed_CPU>
+        <Failed_CPU failed_ListId="3">1809</Failed_CPU>
+      </FailCount>
+    </failed_thread>
+    <TimeStat>
+      <FreeTime>722590</FreeTime>
+      <SquashTime>59065</SquashTime>
+      <WaitTime>90</WaitTime>
+      <SpTime>121517</SpTime>
+      <NoSpTime>356676</NoSpTime>
+      <PsliceTime>166256</PsliceTime>
+    </TimeStat>
+  </statistic>
+  <statistic cpu_id="3">
+    <total_inst>761987</total_inst>
+    <total_clock>678102</total_clock>
+    <spawned_thread>29608</spawned_thread>
+    <commited_thread>26171</commited_thread>
+    <failed_thread total="5551">
+      <OnDDV>16</OnDDV>
+      <OnInstruction>0</OnInstruction>
+      <OnRegisterVerification>5007</OnRegisterVerification>
+      <OnMemoryVerification>0</OnMemoryVerification>
+      <OnLowPriority>477</OnLowPriority>
+      <OnControlVoilate>49</OnControlVoilate>
+      <OnReset>0</OnReset>
+      <OnHalt>0</OnHalt>
+      <OnQuit>1</OnQuit>
+      <OnException>1</OnException>
+      <OnUnknown>0</OnUnknown>
+      <FailCount>
+        <Failed_CPU failed_ListId="0">1</Failed_CPU>
+        <Failed_CPU failed_ListId="1">2079</Failed_CPU>
+        <Failed_CPU failed_ListId="2">1856</Failed_CPU>
+        <Failed_CPU failed_ListId="3">1615</Failed_CPU>
+      </FailCount>
+    </failed_thread>
+    <TimeStat>
+      <FreeTime>719989</FreeTime>
+      <SquashTime>54578</SquashTime>
+      <WaitTime>12</WaitTime>
+      <SpTime>121518</SpTime>
+      <NoSpTime>367111</NoSpTime>
+      <PsliceTime>162975</PsliceTime>
+    </TimeStat>
+  </statistic>
+  <analysis>
+    <total_instruction_num>3049159</total_instruction_num>
+    <sequential_time>2353720</sequential_time>
+    <parallel_time>1372048</parallel_time>
+    <speed_up>1.715479</speed_up>
+    <total_spawned>118487</total_spawned>
+    <success_ratio>0.811937</success_ratio>
+    <fail_stat total_failed="22283">
+      <TOnDDV total="66">0.002962</TOnDDV>
+      <TOnInstruction total="0">0.000000</TOnInstruction>
+      <TOnRegV total="20126">0.903200</TOnRegV>
+      <TOnMMV total="0">0.000000</TOnMMV>
+      <TOnLowPriority total="1894">0.084998</TOnLowPriority>
+      <TOnControl total="195">0.008751</TOnControl>
+      <TOnReset total="0">0.000000</TOnReset>
+      <TOnHalt total="0">0.000000</TOnHalt>
+      <TOnQuit total="1">0.000045</TOnQuit>
+      <TOnException total="1">0.000045</TOnException>
+      <TOnUnknown total="0">0.000000</TOnUnknown>
+    </fail_stat>
+    <FailDistantStat MaxDistance="4">
+      <SquashDistance distance_len="0">1</SquashDistance>
+      <SquashDistance distance_len="1">8351</SquashDistance>
+      <SquashDistance distance_len="2">7443</SquashDistance>
+      <SquashDistance distance_len="3">6488</SquashDistance>
+    </FailDistantStat>
+    <CPUTimeBreakdown>
+      <FreeTime FreeTime="2876737">0.504425</FreeTime>
+      <PsliceTime PsliceTime="652456">0.114406</PsliceTime>
+      <SquashTime SquashTime="219419">0.038474</SquashTime>
+      <WaitTime WaitTime="205">0.000036</WaitTime>
+      <SpTime SpTime="485950">0.085209</SpTime>
+      <NoSpTime NoSpTime="1468236">0.257450</NoSpTime>
+    </CPUTimeBreakdown>
+    <CPUStat averageCoreNumber="2">
+      <CoreNum corenum="1">58145/0.243706</CoreNum>
+      <CoreNum corenum="2">96570/0.404758</CoreNum>
+      <CoreNum corenum="3">60342/0.252914</CoreNum>
+      <CoreNum corenum="4">23530/0.098622</CoreNum>
+    averageCoreNumber: 2.206453
+    </CPUStat>
+  </analysis>
+  <ProStatData>
+    <SquashLenStat>
+      <SquashLen SquashLen ="0">0(0.000000)</SquashLen>
+      <SquashLen SquashLen ="1">2416(0.264130)</SquashLen>
+      <SquashLen SquashLen ="2">327(0.035749)</SquashLen>
+      <SquashLen SquashLen ="3">6404(0.700120)</SquashLen>
+    </SquashLenStat>
+    <SquashOnSpListStat>
+      <OnSpList OnSpList ="0">1/0(inf)</OnSpList>
+      <OnSpList OnSpList ="1">7186/60504(0.11877)</OnSpList>
+      <OnSpList OnSpList ="2">6797/51423(0.13218)</OnSpList>
+      <OnSpList OnSpList ="3">8299/6559(1.26528)</OnSpList>
+    </SquashOnSpListStat>
+  </ProStatData>
+</statistic_report>

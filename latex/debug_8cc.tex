@@ -1,0 +1,66 @@
+\hypertarget{debug_8cc}{
+\section{debug.cc File Reference}
+\label{debug_8cc}\index{debug.cc@{debug.cc}}
+}
+{\ttfamily \#include \char`\"{}debug.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}remotegdb.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}cpu.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}mapper.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}excnames.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}cpzeroreg.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}vmips.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}options.h\char`\"{}}\par
+{\ttfamily \#include $<$csignal$>$}\par
+{\ttfamily \#include $<$unistd.h$>$}\par
+{\ttfamily \#include $<$sys/socket.h$>$}\par
+{\ttfamily \#include $<$netinet/in.h$>$}\par
+{\ttfamily \#include $<$arpa/inet.h$>$}\par
+{\ttfamily \#include $<$fcntl.h$>$}\par
+{\ttfamily \#include $<$string.h$>$}\par
+{\ttfamily \#include $<$stdlib.h$>$}\par
+Include dependency graph for debug.cc:\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{debug_8cc_a2dc4afaf32417887969725e410dc3db4}{BIG\_\-BREAKPOINT}~\{0, 0x5, 0, 0xd\}
+\item 
+\#define \hyperlink{debug_8cc_a48ea44caa7352e2d67256e9ccee2293b}{LITTLE\_\-BREAKPOINT}~\{0xd, 0, 0x5, 0\}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{debug_8cc_a253efcfa8a3f68a6503c0a231ed00398}{debugger\_\-interrupt} (int sig)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{debug_8cc_a2d39aa8806e170cd0e52bb8d58f367fb}{remotegdb\_\-backend\_\-error}
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{debug_8cc_a2dc4afaf32417887969725e410dc3db4}{
+\index{debug.cc@{debug.cc}!BIG\_\-BREAKPOINT@{BIG\_\-BREAKPOINT}}
+\index{BIG\_\-BREAKPOINT@{BIG\_\-BREAKPOINT}!debug.cc@{debug.cc}}
+\subsubsection[{BIG\_\-BREAKPOINT}]{\setlength{\rightskip}{0pt plus 5cm}\#define BIG\_\-BREAKPOINT~\{0, 0x5, 0, 0xd\}}}
+\label{debug_8cc_a2dc4afaf32417887969725e410dc3db4}
+\hypertarget{debug_8cc_a48ea44caa7352e2d67256e9ccee2293b}{
+\index{debug.cc@{debug.cc}!LITTLE\_\-BREAKPOINT@{LITTLE\_\-BREAKPOINT}}
+\index{LITTLE\_\-BREAKPOINT@{LITTLE\_\-BREAKPOINT}!debug.cc@{debug.cc}}
+\subsubsection[{LITTLE\_\-BREAKPOINT}]{\setlength{\rightskip}{0pt plus 5cm}\#define LITTLE\_\-BREAKPOINT~\{0xd, 0, 0x5, 0\}}}
+\label{debug_8cc_a48ea44caa7352e2d67256e9ccee2293b}
+
+
+\subsection{Function Documentation}
+\hypertarget{debug_8cc_a253efcfa8a3f68a6503c0a231ed00398}{
+\index{debug.cc@{debug.cc}!debugger\_\-interrupt@{debugger\_\-interrupt}}
+\index{debugger\_\-interrupt@{debugger\_\-interrupt}!debug.cc@{debug.cc}}
+\subsubsection[{debugger\_\-interrupt}]{\setlength{\rightskip}{0pt plus 5cm}void debugger\_\-interrupt (int {\em sig})}}
+\label{debug_8cc_a253efcfa8a3f68a6503c0a231ed00398}
+
+
+\subsection{Variable Documentation}
+\hypertarget{debug_8cc_a2d39aa8806e170cd0e52bb8d58f367fb}{
+\index{debug.cc@{debug.cc}!remotegdb\_\-backend\_\-error@{remotegdb\_\-backend\_\-error}}
+\index{remotegdb\_\-backend\_\-error@{remotegdb\_\-backend\_\-error}!debug.cc@{debug.cc}}
+\subsubsection[{remotegdb\_\-backend\_\-error}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf remotegdb\_\-backend\_\-error}}}
+\label{debug_8cc_a2d39aa8806e170cd0e52bb8d58f367fb}

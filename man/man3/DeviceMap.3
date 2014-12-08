@@ -1,0 +1,90 @@
+.TH "DeviceMap" 3 "18 Dec 2013" "Doxygen" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+DeviceMap \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <devicemap.h>\fP
+.PP
+Inherits \fBRange\fP.
+.PP
+Inherited by \fBClockDevice\fP, \fBDECCSRDevice\fP, \fBDECRTCDevice\fP, \fBDECSerialDevice\fP, \fBDECStatDevice\fP, \fBHaltDevice\fP, and \fBSpimConsoleDevice\fP.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual uint32 \fBfetch_word\fP (uint32 offset, int mode, \fBDeviceExc\fP *client)=0"
+.br
+.ti -1c
+.RI "virtual uint16 \fBfetch_halfword\fP (uint32 offset, \fBDeviceExc\fP *client)"
+.br
+.ti -1c
+.RI "virtual uint8 \fBfetch_byte\fP (uint32 offset, \fBDeviceExc\fP *client)"
+.br
+.ti -1c
+.RI "virtual void \fBstore_word\fP (uint32 offset, uint32 data, \fBDeviceExc\fP *client)=0"
+.br
+.ti -1c
+.RI "virtual void \fBstore_halfword\fP (uint32 offset, uint16 data, \fBDeviceExc\fP *client)"
+.br
+.ti -1c
+.RI "virtual void \fBstore_byte\fP (uint32 offset, uint8 data, \fBDeviceExc\fP *client)"
+.br
+.ti -1c
+.RI "virtual bool \fBcanRead\fP (uint32 offset)  throw ()"
+.br
+.ti -1c
+.RI "virtual bool \fBcanWrite\fP (uint32 offset)  throw ()"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDeviceMap\fP ()  throw ()"
+.br
+.ti -1c
+.RI "\fBDeviceMap\fP (uint32 _extent)  throw ()"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "DeviceMap::DeviceMap ()  throw ()\fC [inline, protected]\fP"
+.SS "DeviceMap::DeviceMap (uint32 _extent)  throw ()\fC [inline, protected]\fP"
+.SH "Member Function Documentation"
+.PP 
+.SS "bool DeviceMap::canRead (uint32 offset)  throw ()\fC [virtual]\fP"
+.PP
+Reimplemented from \fBRange\fP.
+.SS "bool DeviceMap::canWrite (uint32 offset)  throw ()\fC [virtual]\fP"
+.PP
+Reimplemented from \fBRange\fP.
+.SS "uint8 DeviceMap::fetch_byte (uint32 offset, \fBDeviceExc\fP * client)\fC [virtual]\fP"
+.PP
+Reimplemented from \fBRange\fP.
+.SS "uint16 DeviceMap::fetch_halfword (uint32 offset, \fBDeviceExc\fP * client)\fC [virtual]\fP"
+.PP
+Reimplemented from \fBRange\fP.
+.SS "virtual uint32 DeviceMap::fetch_word (uint32 offset, int mode, \fBDeviceExc\fP * client)\fC [pure virtual]\fP"
+.PP
+Reimplemented from \fBRange\fP.
+.PP
+Implemented in \fBClockDevice\fP, \fBDECCSRDevice\fP, \fBDECRTCDevice\fP, \fBDECSerialDevice\fP, \fBDECStatDevice\fP, \fBHaltDevice\fP, and \fBSpimConsoleDevice\fP.
+.SS "void DeviceMap::store_byte (uint32 offset, uint8 data, \fBDeviceExc\fP * client)\fC [virtual]\fP"
+.PP
+Reimplemented from \fBRange\fP.
+.SS "void DeviceMap::store_halfword (uint32 offset, uint16 data, \fBDeviceExc\fP * client)\fC [virtual]\fP"
+.PP
+Reimplemented from \fBRange\fP.
+.SS "virtual void DeviceMap::store_word (uint32 offset, uint32 data, \fBDeviceExc\fP * client)\fC [pure virtual]\fP"
+.PP
+Reimplemented from \fBRange\fP.
+.PP
+Implemented in \fBClockDevice\fP, \fBDECCSRDevice\fP, \fBDECRTCDevice\fP, \fBDECSerialDevice\fP, \fBDECStatDevice\fP, \fBHaltDevice\fP, and \fBSpimConsoleDevice\fP.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen from the source code.

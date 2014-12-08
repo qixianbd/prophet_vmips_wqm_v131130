@@ -1,0 +1,102 @@
+\hypertarget{prophet__vmips_8cc}{
+\section{prophet\_\-vmips.cc File Reference}
+\label{prophet__vmips_8cc}\index{prophet\_\-vmips.cc@{prophet\_\-vmips.cc}}
+}
+{\ttfamily \#include \char`\"{}prophet\_\-vmips.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}vmips.h\char`\"{}}\par
+{\ttfamily \#include $<$sstream$>$}\par
+{\ttfamily \#include $<$iostream$>$}\par
+{\ttfamily \#include $<$typeinfo$>$}\par
+{\ttfamily \#include \char`\"{}types.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}cpu.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}obstack.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}predefine.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}prophetlog.h\char`\"{}}\par
+{\ttfamily \#include $<$deque$>$}\par
+{\ttfamily \#include $<$string$>$}\par
+{\ttfamily \#include $<$list$>$}\par
+{\ttfamily \#include $<$map$>$}\par
+{\ttfamily \#include $<$cstdio$>$}\par
+{\ttfamily \#include \char`\"{}speculativecpu.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}prophetstatistic.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}options.h\char`\"{}}\par
+{\ttfamily \#include $<$signal.h$>$}\par
+{\ttfamily \#include $<$sys/time.h$>$}\par
+{\ttfamily \#include $<$stdio.h$>$}\par
+{\ttfamily \#include $<$assert.h$>$}\par
+{\ttfamily \#include $<$exception$>$}\par
+Include dependency graph for prophet\_\-vmips.cc:This graph shows which files directly or indirectly include this file:\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{prophet__vmips_8cc_af48973cfc838e313e15a7eb9a26e625f}{DEBUG\_\-KEYMING}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{prophet__vmips_8cc_a9eb871a15fd8627166af713563d48b0e}{OnQuit} (int s)
+\item 
+static void \hyperlink{prophet__vmips_8cc_ae49001f7bd19783ea51717933abc7779}{prophet\_\-unexpected} ()
+\item 
+static void \hyperlink{prophet__vmips_8cc_aebd53ffb43ba6fbc32992b65f13b1d67}{prophet\_\-terminate} ()
+\item 
+int \hyperlink{prophet__vmips_8cc_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{prophet__vmips_8cc_addde4e07a71d2fdac22673ac5fc2069c}{restart\_\-counts} = 0
+\item 
+FILE $\ast$ \hyperlink{prophet__vmips_8cc_a9ce017ff2a6711908a496f054b082fca}{mystderrlog} = NULL
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{prophet__vmips_8cc_af48973cfc838e313e15a7eb9a26e625f}{
+\index{prophet\_\-vmips.cc@{prophet\_\-vmips.cc}!DEBUG\_\-KEYMING@{DEBUG\_\-KEYMING}}
+\index{DEBUG\_\-KEYMING@{DEBUG\_\-KEYMING}!prophet_vmips.cc@{prophet\_\-vmips.cc}}
+\subsubsection[{DEBUG\_\-KEYMING}]{\setlength{\rightskip}{0pt plus 5cm}\#define DEBUG\_\-KEYMING}}
+\label{prophet__vmips_8cc_af48973cfc838e313e15a7eb9a26e625f}
+
+
+\subsection{Function Documentation}
+\hypertarget{prophet__vmips_8cc_a3c04138a5bfe5d72780bb7e82a18e627}{
+\index{prophet\_\-vmips.cc@{prophet\_\-vmips.cc}!main@{main}}
+\index{main@{main}!prophet_vmips.cc@{prophet\_\-vmips.cc}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (int {\em argc}, \/  char $\ast$$\ast$ {\em argv})}}
+\label{prophet__vmips_8cc_a3c04138a5bfe5d72780bb7e82a18e627}
+
+
+Here is the call graph for this function:
+
+\hypertarget{prophet__vmips_8cc_a9eb871a15fd8627166af713563d48b0e}{
+\index{prophet\_\-vmips.cc@{prophet\_\-vmips.cc}!OnQuit@{OnQuit}}
+\index{OnQuit@{OnQuit}!prophet_vmips.cc@{prophet\_\-vmips.cc}}
+\subsubsection[{OnQuit}]{\setlength{\rightskip}{0pt plus 5cm}static void OnQuit (int {\em s})\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{prophet__vmips_8cc_a9eb871a15fd8627166af713563d48b0e}
+
+
+Here is the call graph for this function:
+
+\hypertarget{prophet__vmips_8cc_aebd53ffb43ba6fbc32992b65f13b1d67}{
+\index{prophet\_\-vmips.cc@{prophet\_\-vmips.cc}!prophet\_\-terminate@{prophet\_\-terminate}}
+\index{prophet\_\-terminate@{prophet\_\-terminate}!prophet_vmips.cc@{prophet\_\-vmips.cc}}
+\subsubsection[{prophet\_\-terminate}]{\setlength{\rightskip}{0pt plus 5cm}static void prophet\_\-terminate ()\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{prophet__vmips_8cc_aebd53ffb43ba6fbc32992b65f13b1d67}
+\hypertarget{prophet__vmips_8cc_ae49001f7bd19783ea51717933abc7779}{
+\index{prophet\_\-vmips.cc@{prophet\_\-vmips.cc}!prophet\_\-unexpected@{prophet\_\-unexpected}}
+\index{prophet\_\-unexpected@{prophet\_\-unexpected}!prophet_vmips.cc@{prophet\_\-vmips.cc}}
+\subsubsection[{prophet\_\-unexpected}]{\setlength{\rightskip}{0pt plus 5cm}static void prophet\_\-unexpected ()\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{prophet__vmips_8cc_ae49001f7bd19783ea51717933abc7779}
+
+
+\subsection{Variable Documentation}
+\hypertarget{prophet__vmips_8cc_a9ce017ff2a6711908a496f054b082fca}{
+\index{prophet\_\-vmips.cc@{prophet\_\-vmips.cc}!mystderrlog@{mystderrlog}}
+\index{mystderrlog@{mystderrlog}!prophet_vmips.cc@{prophet\_\-vmips.cc}}
+\subsubsection[{mystderrlog}]{\setlength{\rightskip}{0pt plus 5cm}FILE$\ast$ {\bf mystderrlog} = NULL}}
+\label{prophet__vmips_8cc_a9ce017ff2a6711908a496f054b082fca}
+\hypertarget{prophet__vmips_8cc_addde4e07a71d2fdac22673ac5fc2069c}{
+\index{prophet\_\-vmips.cc@{prophet\_\-vmips.cc}!restart\_\-counts@{restart\_\-counts}}
+\index{restart\_\-counts@{restart\_\-counts}!prophet_vmips.cc@{prophet\_\-vmips.cc}}
+\subsubsection[{restart\_\-counts}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf restart\_\-counts} = 0}}
+\label{prophet__vmips_8cc_addde4e07a71d2fdac22673ac5fc2069c}

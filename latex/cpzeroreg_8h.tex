@@ -1,0 +1,759 @@
+\hypertarget{cpzeroreg_8h}{
+\section{cpzeroreg.h File Reference}
+\label{cpzeroreg_8h}\index{cpzeroreg.h@{cpzeroreg.h}}
+}
+This graph shows which files directly or indirectly include this file:\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{cpzeroreg_8h_ab36e9be8261b95ead991d6a464d4cf22}{KSEG\_\-SELECT\_\-MASK}~0xe0000000
+\item 
+\#define \hyperlink{cpzeroreg_8h_a1928d55b813d04a63fe8cb3056b6a926}{KUSEG}~0
+\item 
+\#define \hyperlink{cpzeroreg_8h_a270ea1e72cdac6ce2fa9bb878b416ff1}{KERNEL\_\-SPACE\_\-MASK}~0x80000000
+\item 
+\#define \hyperlink{cpzeroreg_8h_afadb7188ecacd9b8a57ced31f2fc6b6c}{KSEG0}~0x80000000
+\item 
+\#define \hyperlink{cpzeroreg_8h_a92db4d693e870187112527230b99af0d}{KSEG0\_\-CONST\_\-TRANSLATION}~0x80000000
+\item 
+\#define \hyperlink{cpzeroreg_8h_a72012be4af1015b6def4debcd412d306}{KSEG1}~0xa0000000
+\item 
+\#define \hyperlink{cpzeroreg_8h_a420b849a7bf9e66d83d9c4ac29606c5c}{KSEG1\_\-CONST\_\-TRANSLATION}~0xa0000000
+\item 
+\#define \hyperlink{cpzeroreg_8h_a2e2911c59935c4701d690b333de62379}{KSEG2}~0xc0000000
+\item 
+\#define \hyperlink{cpzeroreg_8h_a3267a9b4f79b046baf2b5813edd034b2}{KSEG2\_\-top}~0xe0000000
+\item 
+\#define \hyperlink{cpzeroreg_8h_a2c726f8f32697958e9d6c2afecda531d}{Index}~0
+\item 
+\#define \hyperlink{cpzeroreg_8h_acf2ee9df1dbd332a7a7eee7f74686fd7}{Random}~1
+\item 
+\#define \hyperlink{cpzeroreg_8h_a0f147c27c56ad0acdcbf4f2167134014}{EntryLo}~2
+\item 
+\#define \hyperlink{cpzeroreg_8h_adb2934a2bf3cf13974bd99a17631454f}{EntryLo0}~2
+\item 
+\#define \hyperlink{cpzeroreg_8h_a1c5a634ac5b8f6848a53a6c419939e87}{EntryLo1}~3
+\item 
+\#define \hyperlink{cpzeroreg_8h_a567791162b3a54ea2648ebfd8185312f}{Context}~4
+\item 
+\#define \hyperlink{cpzeroreg_8h_ac62a5535527f44b8decf7c6be44e4e82}{PageMask}~5
+\item 
+\#define \hyperlink{cpzeroreg_8h_a4a57b45c45ff352fc65054a6bdde1788}{Wired}~6
+\item 
+\#define \hyperlink{cpzeroreg_8h_a0f20a163dec609fb464cba845e043be8}{Error}~7
+\item 
+\#define \hyperlink{cpzeroreg_8h_acbe492dc1224cdd0f8675777dac7b679}{BadVAddr}~8
+\item 
+\#define \hyperlink{cpzeroreg_8h_aff0c37336151add1b3521b66c452b71d}{Count}~9
+\item 
+\#define \hyperlink{cpzeroreg_8h_a197b1cf689b449982ff11d6a6f46d374}{EntryHi}~10
+\item 
+\#define \hyperlink{cpzeroreg_8h_a6c3265a09b0b64b6c36c71733ba64db3}{ASID}~10
+\item 
+\#define \hyperlink{cpzeroreg_8h_a47429097b31bd853fe906ca782b926b4}{Compare}~11
+\item 
+\#define \hyperlink{cpzeroreg_8h_a7f5d97e77e23c44ac5c59e6729f49075}{Status}~12
+\item 
+\#define \hyperlink{cpzeroreg_8h_ac13b15629fc4e999ad8cce07b17d606d}{Cause}~13
+\item 
+\#define \hyperlink{cpzeroreg_8h_afe68139ddfe1947b7ac82e98eef61777}{EPC}~14
+\item 
+\#define \hyperlink{cpzeroreg_8h_a57257e391b1d40cfbf2857837497bc8b}{PRId}~15
+\item 
+\#define \hyperlink{cpzeroreg_8h_a64fd089a76d6dd351736020f1c7793ee}{Config}~16
+\item 
+\#define \hyperlink{cpzeroreg_8h_a446eb553042e3492288a60d2832aa793}{LLAdr}~17
+\item 
+\#define \hyperlink{cpzeroreg_8h_abfba15217ffef362ff13b1b830a7f3c5}{LLAddr}~17
+\item 
+\#define \hyperlink{cpzeroreg_8h_a4f7940ce7ba199a445da8a9dc7505784}{WatchLo}~18
+\item 
+\#define \hyperlink{cpzeroreg_8h_a1fec1f94a1e5ebb6232151aaab450ba9}{WatchHi}~19
+\item 
+\#define \hyperlink{cpzeroreg_8h_ab3a208d95994c5d4abe4f978af8be821}{ECC}~26
+\item 
+\#define \hyperlink{cpzeroreg_8h_a0a1ce562ea1d882ebfe23668daa061f3}{CacheErr}~27
+\item 
+\#define \hyperlink{cpzeroreg_8h_a738d01ad4f7258521d734cfd32973c43}{TagLo}~28
+\item 
+\#define \hyperlink{cpzeroreg_8h_a6b8a4201db97dd1de17d47d3a23ed0ef}{TagHi}~29
+\item 
+\#define \hyperlink{cpzeroreg_8h_a108f6ac6c4c95ae5c73222bf97221a00}{ErrorEPC}~30
+\item 
+\#define \hyperlink{cpzeroreg_8h_a8a4180b7c3e281e73938b27accc7f757}{Index\_\-P\_\-MASK}~0x80000000
+\item 
+\#define \hyperlink{cpzeroreg_8h_a5a1e5c8e291307f2a26ac8e339c1b391}{Index\_\-Index\_\-MASK}~0x00003f00
+\item 
+\#define \hyperlink{cpzeroreg_8h_ae29fae292951ed9b9784c35a499358f5}{Index\_\-MASK}~0x80003f00
+\item 
+\#define \hyperlink{cpzeroreg_8h_a9251d3cc5b8c1acf46e7736c21f90338}{Random\_\-Random\_\-MASK}~0x00003f00
+\item 
+\#define \hyperlink{cpzeroreg_8h_a4e8b4b046c79abb3d91e6228856bd17b}{Random\_\-MASK}~0x00003f00
+\item 
+\#define \hyperlink{cpzeroreg_8h_a9cb70985c05a9622ecd50c351fdbafd1}{Random\_\-UPPER\_\-BOUND}~63
+\item 
+\#define \hyperlink{cpzeroreg_8h_a948f89e6eccf46620ff2a4bfb189e498}{Random\_\-LOWER\_\-BOUND}~8
+\item 
+\#define \hyperlink{cpzeroreg_8h_a9f8b8d73f9be4462a786c34827f2f233}{EntryLo\_\-PFN\_\-MASK}~0xfffff000
+\item 
+\#define \hyperlink{cpzeroreg_8h_ab18fc8bce9d78d174c0323a6a12229aa}{EntryLo\_\-N\_\-MASK}~0x00000800
+\item 
+\#define \hyperlink{cpzeroreg_8h_a05f919d323e33bccb633d0f29f8ec15d}{EntryLo\_\-D\_\-MASK}~0x00000400
+\item 
+\#define \hyperlink{cpzeroreg_8h_a44ed9b2f87229e41f2e7db8687903a70}{EntryLo\_\-V\_\-MASK}~0x00000200
+\item 
+\#define \hyperlink{cpzeroreg_8h_af014c4a7bee72b264ba5fe0fab2ccb2d}{EntryLo\_\-G\_\-MASK}~0x00000100
+\item 
+\#define \hyperlink{cpzeroreg_8h_a89771cf3bedcce7941e4d953c32e3116}{EntryLo\_\-MASK}~0xffffff00
+\item 
+\#define \hyperlink{cpzeroreg_8h_a201f6a939eaaef65416c495864669fc5}{Context\_\-PTEBase\_\-MASK}~0xffe00000
+\item 
+\#define \hyperlink{cpzeroreg_8h_a08ffbdbee115ca57372715c370f7c49e}{Context\_\-BadVPN\_\-MASK}~0x001ffffc
+\item 
+\#define \hyperlink{cpzeroreg_8h_a72797f1dbf6cd5472fffb025acea350e}{Context\_\-MASK}~0xfffffffc
+\item 
+\#define \hyperlink{cpzeroreg_8h_a1165ac14edb22e1aed663f1d2cdeb074}{PageMask\_\-MASK}~0x00000000
+\item 
+\#define \hyperlink{cpzeroreg_8h_ab017f8dd9e4b4a1731896d561a3e48cd}{Wired\_\-MASK}~0x00000000
+\item 
+\#define \hyperlink{cpzeroreg_8h_a9115b9b3c7400c8e7906b6bee25bfd85}{Error\_\-MASK}~0x00000000
+\item 
+\#define \hyperlink{cpzeroreg_8h_a3506698d40b5d076093e939883aa4741}{BadVAddr\_\-MASK}~0xffffffff
+\item 
+\#define \hyperlink{cpzeroreg_8h_a7d225e87061a922a831dade38528d315}{Count\_\-MASK}~0x00000000
+\item 
+\#define \hyperlink{cpzeroreg_8h_a13ca9f03df298dc8a23c013a3d65b1de}{EntryHi\_\-VPN\_\-MASK}~0xfffff000
+\item 
+\#define \hyperlink{cpzeroreg_8h_aadc786918590dac9cbca3967065b0936}{EntryHi\_\-ASID\_\-MASK}~0x00000fc0
+\item 
+\#define \hyperlink{cpzeroreg_8h_a5371c99d4dd36411b0b2c1c3190b228b}{EntryHi\_\-MASK}~0xffffffc0
+\item 
+\#define \hyperlink{cpzeroreg_8h_aaedf44dd6007c5a0b543c162839d9407}{Compare\_\-MASK}~0x00000000
+\item 
+\#define \hyperlink{cpzeroreg_8h_ab1b610a6485d5a07431ae14fa22cd61e}{Status\_\-CU\_\-MASK}~0xf0000000
+\item 
+\#define \hyperlink{cpzeroreg_8h_ae4a5a2c2715168954f1c87d2fa8d7c9d}{Status\_\-CU3\_\-MASK}~0x80000000
+\item 
+\#define \hyperlink{cpzeroreg_8h_a2ae150cd8c3bba2c1357bf252b077cd5}{Status\_\-CU2\_\-MASK}~0x40000000
+\item 
+\#define \hyperlink{cpzeroreg_8h_a37bbf749a544c63808cd1fd9f2aa66e0}{Status\_\-CU1\_\-MASK}~0x20000000
+\item 
+\#define \hyperlink{cpzeroreg_8h_a2ba10dbc87006bdc56d1cf7d8d51cd29}{Status\_\-CU0\_\-MASK}~0x10000000
+\item 
+\#define \hyperlink{cpzeroreg_8h_afd004cab93ca17190b49aef0913c64cd}{Status\_\-RE\_\-MASK}~0x02000000
+\item 
+\#define \hyperlink{cpzeroreg_8h_ac9764821ce6ca1546b7f4c5362869c4f}{Status\_\-DS\_\-MASK}~0x01ff0000
+\item 
+\#define \hyperlink{cpzeroreg_8h_a59a8c5348a777cd90e4c53506fdfc4ce}{Status\_\-DS\_\-BEV\_\-MASK}~0x00400000
+\item 
+\#define \hyperlink{cpzeroreg_8h_a9feac6b68d29c419a14e9cf2d3e97734}{Status\_\-DS\_\-TS\_\-MASK}~0x00200000
+\item 
+\#define \hyperlink{cpzeroreg_8h_a3de90741a1ae36cdc90dd2aa1ab17244}{Status\_\-DS\_\-PE\_\-MASK}~0x00100000
+\item 
+\#define \hyperlink{cpzeroreg_8h_a56cd32f22453019bceed8d753180cdaa}{Status\_\-DS\_\-CM\_\-MASK}~0x00080000
+\item 
+\#define \hyperlink{cpzeroreg_8h_a576f43cbad976167a4eaa1876ef43083}{Status\_\-DS\_\-PZ\_\-MASK}~0x00040000
+\item 
+\#define \hyperlink{cpzeroreg_8h_a4beb4e29d452c7a5061d0eb3581dda53}{Status\_\-DS\_\-SwC\_\-MASK}~0x00020000
+\item 
+\#define \hyperlink{cpzeroreg_8h_a3582e25ab44b5437affa454a758bbc41}{Status\_\-DS\_\-IsC\_\-MASK}~0x00010000
+\item 
+\#define \hyperlink{cpzeroreg_8h_a0c1f7e09cb058095ee4029ac766d3891}{Status\_\-IM\_\-MASK}~0x0000ff00
+\item 
+\#define \hyperlink{cpzeroreg_8h_a8bcc7e32db4d617c38e699d7c6ef84b6}{Status\_\-IM\_\-Ext\_\-MASK}~0x0000fc00
+\item 
+\#define \hyperlink{cpzeroreg_8h_a51f03656986bdbfb2453405059350197}{Status\_\-IM\_\-SW\_\-MASK}~0x00000300
+\item 
+\#define \hyperlink{cpzeroreg_8h_ab486592ed9723145b9cc21b858b5683c}{Status\_\-KU\_\-IE\_\-MASK}~0x0000003f
+\item 
+\#define \hyperlink{cpzeroreg_8h_ad59dba5c5b454689eccbcdae3f9f0a25}{Status\_\-KUo\_\-MASK}~0x00000020
+\item 
+\#define \hyperlink{cpzeroreg_8h_abc2a4fa2d5829caed8d935c4c1196d76}{Status\_\-IEo\_\-MASK}~0x00000010
+\item 
+\#define \hyperlink{cpzeroreg_8h_a80fdd13b9a5018ce3e5efb24366f3779}{Status\_\-KUp\_\-MASK}~0x00000008
+\item 
+\#define \hyperlink{cpzeroreg_8h_a4d8d89827b67179259a93a8a4f326c37}{Status\_\-IEp\_\-MASK}~0x00000004
+\item 
+\#define \hyperlink{cpzeroreg_8h_a62ff928ecaeff8082bd66dfd2b504bfa}{Status\_\-KUc\_\-MASK}~0x00000002
+\item 
+\#define \hyperlink{cpzeroreg_8h_ab870f84b5d56d9ddb4091a6e83c4e435}{Status\_\-IEc\_\-MASK}~0x00000001
+\item 
+\#define \hyperlink{cpzeroreg_8h_a673a3421327e8e33941dad991af6a0ea}{Status\_\-MASK}~0xf27fff3f
+\item 
+\#define \hyperlink{cpzeroreg_8h_af98b2def506d3a34137bd832273189d9}{Cause\_\-BD\_\-MASK}~0x80000000
+\item 
+\#define \hyperlink{cpzeroreg_8h_a0a0875911120592a756cafba3a74491a}{Cause\_\-CE\_\-MASK}~0x30000000
+\item 
+\#define \hyperlink{cpzeroreg_8h_a7d7d483ddc98e03a047544082e1dca79}{Cause\_\-IP\_\-MASK}~0x0000ff00
+\item 
+\#define \hyperlink{cpzeroreg_8h_ab55bb7f2fda20258e6d6075b36f08476}{Cause\_\-IP\_\-Ext\_\-MASK}~0x0000fc00
+\item 
+\#define \hyperlink{cpzeroreg_8h_a2dc257e0726756b771d05273dcc1b206}{Cause\_\-IP\_\-SW\_\-MASK}~0x00000300
+\item 
+\#define \hyperlink{cpzeroreg_8h_a7cc017857dcaa55060e468798588c21b}{Cause\_\-ExcCode\_\-MASK}~0x0000007c
+\item 
+\#define \hyperlink{cpzeroreg_8h_ab006b91c7e737289087324aa2b716cfe}{Cause\_\-MASK}~0xb000ff7c
+\item 
+\#define \hyperlink{cpzeroreg_8h_afd029a2b1bcdb0910249d7bda9ff722e}{EPC\_\-MASK}~0xffffffff
+\item 
+\#define \hyperlink{cpzeroreg_8h_afffd2e1cdab29b502588045c3b6f0cd0}{PRId\_\-Imp\_\-MASK}~0x0000ff00
+\item 
+\#define \hyperlink{cpzeroreg_8h_ac1773cee2d2796eedca8ade34fa5ba00}{PRId\_\-Rev\_\-MASK}~0x000000ff
+\item 
+\#define \hyperlink{cpzeroreg_8h_abd2dd2f71f953bfd3cf30872d0b8ea7b}{PRId\_\-MASK}~0x0000ffff
+\item 
+\#define \hyperlink{cpzeroreg_8h_a83830cfab8a132ae1150cbff3716964d}{Config\_\-MASK}~0x00000000
+\item 
+\#define \hyperlink{cpzeroreg_8h_a277332ed0a89ca7eb669f3bfa1e37dcb}{LLAddr\_\-MASK}~0x00000000
+\item 
+\#define \hyperlink{cpzeroreg_8h_a6ce85aae02a7b49291beb6407a92dff2}{WatchLo\_\-MASK}~0x00000000
+\item 
+\#define \hyperlink{cpzeroreg_8h_ab506d4d3970212653508c9d62bfe3692}{WatchHi\_\-MASK}~0x00000000
+\item 
+\#define \hyperlink{cpzeroreg_8h_a5f9d29ee67fa8842d3e47730725e549e}{ECC\_\-MASK}~0x00000000
+\item 
+\#define \hyperlink{cpzeroreg_8h_aca57c18e023b7f9cfe1e0b43a34b08ed}{CacheErr\_\-MASK}~0x00000000
+\item 
+\#define \hyperlink{cpzeroreg_8h_a09bf6bcece6a1952ccba6549051afd87}{TagLo\_\-MASK}~0x00000000
+\item 
+\#define \hyperlink{cpzeroreg_8h_a9974c69e99dc00907c512666b9e327cd}{TagHi\_\-MASK}~0x00000000
+\item 
+\#define \hyperlink{cpzeroreg_8h_a66795adcb6d96fecd164af56349db19e}{ErrorEPC\_\-MASK}~0x00000000
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{cpzeroreg_8h_a6c3265a09b0b64b6c36c71733ba64db3}{
+\index{cpzeroreg.h@{cpzeroreg.h}!ASID@{ASID}}
+\index{ASID@{ASID}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{ASID}]{\setlength{\rightskip}{0pt plus 5cm}\#define ASID~10}}
+\label{cpzeroreg_8h_a6c3265a09b0b64b6c36c71733ba64db3}
+\hypertarget{cpzeroreg_8h_acbe492dc1224cdd0f8675777dac7b679}{
+\index{cpzeroreg.h@{cpzeroreg.h}!BadVAddr@{BadVAddr}}
+\index{BadVAddr@{BadVAddr}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{BadVAddr}]{\setlength{\rightskip}{0pt plus 5cm}\#define BadVAddr~8}}
+\label{cpzeroreg_8h_acbe492dc1224cdd0f8675777dac7b679}
+\hypertarget{cpzeroreg_8h_a3506698d40b5d076093e939883aa4741}{
+\index{cpzeroreg.h@{cpzeroreg.h}!BadVAddr\_\-MASK@{BadVAddr\_\-MASK}}
+\index{BadVAddr\_\-MASK@{BadVAddr\_\-MASK}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{BadVAddr\_\-MASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define BadVAddr\_\-MASK~0xffffffff}}
+\label{cpzeroreg_8h_a3506698d40b5d076093e939883aa4741}
+\hypertarget{cpzeroreg_8h_a0a1ce562ea1d882ebfe23668daa061f3}{
+\index{cpzeroreg.h@{cpzeroreg.h}!CacheErr@{CacheErr}}
+\index{CacheErr@{CacheErr}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{CacheErr}]{\setlength{\rightskip}{0pt plus 5cm}\#define CacheErr~27}}
+\label{cpzeroreg_8h_a0a1ce562ea1d882ebfe23668daa061f3}
+\hypertarget{cpzeroreg_8h_aca57c18e023b7f9cfe1e0b43a34b08ed}{
+\index{cpzeroreg.h@{cpzeroreg.h}!CacheErr\_\-MASK@{CacheErr\_\-MASK}}
+\index{CacheErr\_\-MASK@{CacheErr\_\-MASK}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{CacheErr\_\-MASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define CacheErr\_\-MASK~0x00000000}}
+\label{cpzeroreg_8h_aca57c18e023b7f9cfe1e0b43a34b08ed}
+\hypertarget{cpzeroreg_8h_ac13b15629fc4e999ad8cce07b17d606d}{
+\index{cpzeroreg.h@{cpzeroreg.h}!Cause@{Cause}}
+\index{Cause@{Cause}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{Cause}]{\setlength{\rightskip}{0pt plus 5cm}\#define Cause~13}}
+\label{cpzeroreg_8h_ac13b15629fc4e999ad8cce07b17d606d}
+\hypertarget{cpzeroreg_8h_af98b2def506d3a34137bd832273189d9}{
+\index{cpzeroreg.h@{cpzeroreg.h}!Cause\_\-BD\_\-MASK@{Cause\_\-BD\_\-MASK}}
+\index{Cause\_\-BD\_\-MASK@{Cause\_\-BD\_\-MASK}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{Cause\_\-BD\_\-MASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define Cause\_\-BD\_\-MASK~0x80000000}}
+\label{cpzeroreg_8h_af98b2def506d3a34137bd832273189d9}
+\hypertarget{cpzeroreg_8h_a0a0875911120592a756cafba3a74491a}{
+\index{cpzeroreg.h@{cpzeroreg.h}!Cause\_\-CE\_\-MASK@{Cause\_\-CE\_\-MASK}}
+\index{Cause\_\-CE\_\-MASK@{Cause\_\-CE\_\-MASK}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{Cause\_\-CE\_\-MASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define Cause\_\-CE\_\-MASK~0x30000000}}
+\label{cpzeroreg_8h_a0a0875911120592a756cafba3a74491a}
+\hypertarget{cpzeroreg_8h_a7cc017857dcaa55060e468798588c21b}{
+\index{cpzeroreg.h@{cpzeroreg.h}!Cause\_\-ExcCode\_\-MASK@{Cause\_\-ExcCode\_\-MASK}}
+\index{Cause\_\-ExcCode\_\-MASK@{Cause\_\-ExcCode\_\-MASK}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{Cause\_\-ExcCode\_\-MASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define Cause\_\-ExcCode\_\-MASK~0x0000007c}}
+\label{cpzeroreg_8h_a7cc017857dcaa55060e468798588c21b}
+\hypertarget{cpzeroreg_8h_ab55bb7f2fda20258e6d6075b36f08476}{
+\index{cpzeroreg.h@{cpzeroreg.h}!Cause\_\-IP\_\-Ext\_\-MASK@{Cause\_\-IP\_\-Ext\_\-MASK}}
+\index{Cause\_\-IP\_\-Ext\_\-MASK@{Cause\_\-IP\_\-Ext\_\-MASK}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{Cause\_\-IP\_\-Ext\_\-MASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define Cause\_\-IP\_\-Ext\_\-MASK~0x0000fc00}}
+\label{cpzeroreg_8h_ab55bb7f2fda20258e6d6075b36f08476}
+\hypertarget{cpzeroreg_8h_a7d7d483ddc98e03a047544082e1dca79}{
+\index{cpzeroreg.h@{cpzeroreg.h}!Cause\_\-IP\_\-MASK@{Cause\_\-IP\_\-MASK}}
+\index{Cause\_\-IP\_\-MASK@{Cause\_\-IP\_\-MASK}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{Cause\_\-IP\_\-MASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define Cause\_\-IP\_\-MASK~0x0000ff00}}
+\label{cpzeroreg_8h_a7d7d483ddc98e03a047544082e1dca79}
+\hypertarget{cpzeroreg_8h_a2dc257e0726756b771d05273dcc1b206}{
+\index{cpzeroreg.h@{cpzeroreg.h}!Cause\_\-IP\_\-SW\_\-MASK@{Cause\_\-IP\_\-SW\_\-MASK}}
+\index{Cause\_\-IP\_\-SW\_\-MASK@{Cause\_\-IP\_\-SW\_\-MASK}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{Cause\_\-IP\_\-SW\_\-MASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define Cause\_\-IP\_\-SW\_\-MASK~0x00000300}}
+\label{cpzeroreg_8h_a2dc257e0726756b771d05273dcc1b206}
+\hypertarget{cpzeroreg_8h_ab006b91c7e737289087324aa2b716cfe}{
+\index{cpzeroreg.h@{cpzeroreg.h}!Cause\_\-MASK@{Cause\_\-MASK}}
+\index{Cause\_\-MASK@{Cause\_\-MASK}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{Cause\_\-MASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define Cause\_\-MASK~0xb000ff7c}}
+\label{cpzeroreg_8h_ab006b91c7e737289087324aa2b716cfe}
+\hypertarget{cpzeroreg_8h_a47429097b31bd853fe906ca782b926b4}{
+\index{cpzeroreg.h@{cpzeroreg.h}!Compare@{Compare}}
+\index{Compare@{Compare}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{Compare}]{\setlength{\rightskip}{0pt plus 5cm}\#define Compare~11}}
+\label{cpzeroreg_8h_a47429097b31bd853fe906ca782b926b4}
+\hypertarget{cpzeroreg_8h_aaedf44dd6007c5a0b543c162839d9407}{
+\index{cpzeroreg.h@{cpzeroreg.h}!Compare\_\-MASK@{Compare\_\-MASK}}
+\index{Compare\_\-MASK@{Compare\_\-MASK}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{Compare\_\-MASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define Compare\_\-MASK~0x00000000}}
+\label{cpzeroreg_8h_aaedf44dd6007c5a0b543c162839d9407}
+\hypertarget{cpzeroreg_8h_a64fd089a76d6dd351736020f1c7793ee}{
+\index{cpzeroreg.h@{cpzeroreg.h}!Config@{Config}}
+\index{Config@{Config}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{Config}]{\setlength{\rightskip}{0pt plus 5cm}\#define Config~16}}
+\label{cpzeroreg_8h_a64fd089a76d6dd351736020f1c7793ee}
+\hypertarget{cpzeroreg_8h_a83830cfab8a132ae1150cbff3716964d}{
+\index{cpzeroreg.h@{cpzeroreg.h}!Config\_\-MASK@{Config\_\-MASK}}
+\index{Config\_\-MASK@{Config\_\-MASK}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{Config\_\-MASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define Config\_\-MASK~0x00000000}}
+\label{cpzeroreg_8h_a83830cfab8a132ae1150cbff3716964d}
+\hypertarget{cpzeroreg_8h_a567791162b3a54ea2648ebfd8185312f}{
+\index{cpzeroreg.h@{cpzeroreg.h}!Context@{Context}}
+\index{Context@{Context}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{Context}]{\setlength{\rightskip}{0pt plus 5cm}\#define Context~4}}
+\label{cpzeroreg_8h_a567791162b3a54ea2648ebfd8185312f}
+\hypertarget{cpzeroreg_8h_a08ffbdbee115ca57372715c370f7c49e}{
+\index{cpzeroreg.h@{cpzeroreg.h}!Context\_\-BadVPN\_\-MASK@{Context\_\-BadVPN\_\-MASK}}
+\index{Context\_\-BadVPN\_\-MASK@{Context\_\-BadVPN\_\-MASK}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{Context\_\-BadVPN\_\-MASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define Context\_\-BadVPN\_\-MASK~0x001ffffc}}
+\label{cpzeroreg_8h_a08ffbdbee115ca57372715c370f7c49e}
+\hypertarget{cpzeroreg_8h_a72797f1dbf6cd5472fffb025acea350e}{
+\index{cpzeroreg.h@{cpzeroreg.h}!Context\_\-MASK@{Context\_\-MASK}}
+\index{Context\_\-MASK@{Context\_\-MASK}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{Context\_\-MASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define Context\_\-MASK~0xfffffffc}}
+\label{cpzeroreg_8h_a72797f1dbf6cd5472fffb025acea350e}
+\hypertarget{cpzeroreg_8h_a201f6a939eaaef65416c495864669fc5}{
+\index{cpzeroreg.h@{cpzeroreg.h}!Context\_\-PTEBase\_\-MASK@{Context\_\-PTEBase\_\-MASK}}
+\index{Context\_\-PTEBase\_\-MASK@{Context\_\-PTEBase\_\-MASK}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{Context\_\-PTEBase\_\-MASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define Context\_\-PTEBase\_\-MASK~0xffe00000}}
+\label{cpzeroreg_8h_a201f6a939eaaef65416c495864669fc5}
+\hypertarget{cpzeroreg_8h_aff0c37336151add1b3521b66c452b71d}{
+\index{cpzeroreg.h@{cpzeroreg.h}!Count@{Count}}
+\index{Count@{Count}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{Count}]{\setlength{\rightskip}{0pt plus 5cm}\#define Count~9}}
+\label{cpzeroreg_8h_aff0c37336151add1b3521b66c452b71d}
+\hypertarget{cpzeroreg_8h_a7d225e87061a922a831dade38528d315}{
+\index{cpzeroreg.h@{cpzeroreg.h}!Count\_\-MASK@{Count\_\-MASK}}
+\index{Count\_\-MASK@{Count\_\-MASK}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{Count\_\-MASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define Count\_\-MASK~0x00000000}}
+\label{cpzeroreg_8h_a7d225e87061a922a831dade38528d315}
+\hypertarget{cpzeroreg_8h_ab3a208d95994c5d4abe4f978af8be821}{
+\index{cpzeroreg.h@{cpzeroreg.h}!ECC@{ECC}}
+\index{ECC@{ECC}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{ECC}]{\setlength{\rightskip}{0pt plus 5cm}\#define ECC~26}}
+\label{cpzeroreg_8h_ab3a208d95994c5d4abe4f978af8be821}
+\hypertarget{cpzeroreg_8h_a5f9d29ee67fa8842d3e47730725e549e}{
+\index{cpzeroreg.h@{cpzeroreg.h}!ECC\_\-MASK@{ECC\_\-MASK}}
+\index{ECC\_\-MASK@{ECC\_\-MASK}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{ECC\_\-MASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define ECC\_\-MASK~0x00000000}}
+\label{cpzeroreg_8h_a5f9d29ee67fa8842d3e47730725e549e}
+\hypertarget{cpzeroreg_8h_a197b1cf689b449982ff11d6a6f46d374}{
+\index{cpzeroreg.h@{cpzeroreg.h}!EntryHi@{EntryHi}}
+\index{EntryHi@{EntryHi}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{EntryHi}]{\setlength{\rightskip}{0pt plus 5cm}\#define EntryHi~10}}
+\label{cpzeroreg_8h_a197b1cf689b449982ff11d6a6f46d374}
+\hypertarget{cpzeroreg_8h_aadc786918590dac9cbca3967065b0936}{
+\index{cpzeroreg.h@{cpzeroreg.h}!EntryHi\_\-ASID\_\-MASK@{EntryHi\_\-ASID\_\-MASK}}
+\index{EntryHi\_\-ASID\_\-MASK@{EntryHi\_\-ASID\_\-MASK}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{EntryHi\_\-ASID\_\-MASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define EntryHi\_\-ASID\_\-MASK~0x00000fc0}}
+\label{cpzeroreg_8h_aadc786918590dac9cbca3967065b0936}
+\hypertarget{cpzeroreg_8h_a5371c99d4dd36411b0b2c1c3190b228b}{
+\index{cpzeroreg.h@{cpzeroreg.h}!EntryHi\_\-MASK@{EntryHi\_\-MASK}}
+\index{EntryHi\_\-MASK@{EntryHi\_\-MASK}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{EntryHi\_\-MASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define EntryHi\_\-MASK~0xffffffc0}}
+\label{cpzeroreg_8h_a5371c99d4dd36411b0b2c1c3190b228b}
+\hypertarget{cpzeroreg_8h_a13ca9f03df298dc8a23c013a3d65b1de}{
+\index{cpzeroreg.h@{cpzeroreg.h}!EntryHi\_\-VPN\_\-MASK@{EntryHi\_\-VPN\_\-MASK}}
+\index{EntryHi\_\-VPN\_\-MASK@{EntryHi\_\-VPN\_\-MASK}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{EntryHi\_\-VPN\_\-MASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define EntryHi\_\-VPN\_\-MASK~0xfffff000}}
+\label{cpzeroreg_8h_a13ca9f03df298dc8a23c013a3d65b1de}
+\hypertarget{cpzeroreg_8h_a0f147c27c56ad0acdcbf4f2167134014}{
+\index{cpzeroreg.h@{cpzeroreg.h}!EntryLo@{EntryLo}}
+\index{EntryLo@{EntryLo}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{EntryLo}]{\setlength{\rightskip}{0pt plus 5cm}\#define EntryLo~2}}
+\label{cpzeroreg_8h_a0f147c27c56ad0acdcbf4f2167134014}
+\hypertarget{cpzeroreg_8h_adb2934a2bf3cf13974bd99a17631454f}{
+\index{cpzeroreg.h@{cpzeroreg.h}!EntryLo0@{EntryLo0}}
+\index{EntryLo0@{EntryLo0}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{EntryLo0}]{\setlength{\rightskip}{0pt plus 5cm}\#define EntryLo0~2}}
+\label{cpzeroreg_8h_adb2934a2bf3cf13974bd99a17631454f}
+\hypertarget{cpzeroreg_8h_a1c5a634ac5b8f6848a53a6c419939e87}{
+\index{cpzeroreg.h@{cpzeroreg.h}!EntryLo1@{EntryLo1}}
+\index{EntryLo1@{EntryLo1}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{EntryLo1}]{\setlength{\rightskip}{0pt plus 5cm}\#define EntryLo1~3}}
+\label{cpzeroreg_8h_a1c5a634ac5b8f6848a53a6c419939e87}
+\hypertarget{cpzeroreg_8h_a05f919d323e33bccb633d0f29f8ec15d}{
+\index{cpzeroreg.h@{cpzeroreg.h}!EntryLo\_\-D\_\-MASK@{EntryLo\_\-D\_\-MASK}}
+\index{EntryLo\_\-D\_\-MASK@{EntryLo\_\-D\_\-MASK}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{EntryLo\_\-D\_\-MASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define EntryLo\_\-D\_\-MASK~0x00000400}}
+\label{cpzeroreg_8h_a05f919d323e33bccb633d0f29f8ec15d}
+\hypertarget{cpzeroreg_8h_af014c4a7bee72b264ba5fe0fab2ccb2d}{
+\index{cpzeroreg.h@{cpzeroreg.h}!EntryLo\_\-G\_\-MASK@{EntryLo\_\-G\_\-MASK}}
+\index{EntryLo\_\-G\_\-MASK@{EntryLo\_\-G\_\-MASK}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{EntryLo\_\-G\_\-MASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define EntryLo\_\-G\_\-MASK~0x00000100}}
+\label{cpzeroreg_8h_af014c4a7bee72b264ba5fe0fab2ccb2d}
+\hypertarget{cpzeroreg_8h_a89771cf3bedcce7941e4d953c32e3116}{
+\index{cpzeroreg.h@{cpzeroreg.h}!EntryLo\_\-MASK@{EntryLo\_\-MASK}}
+\index{EntryLo\_\-MASK@{EntryLo\_\-MASK}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{EntryLo\_\-MASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define EntryLo\_\-MASK~0xffffff00}}
+\label{cpzeroreg_8h_a89771cf3bedcce7941e4d953c32e3116}
+\hypertarget{cpzeroreg_8h_ab18fc8bce9d78d174c0323a6a12229aa}{
+\index{cpzeroreg.h@{cpzeroreg.h}!EntryLo\_\-N\_\-MASK@{EntryLo\_\-N\_\-MASK}}
+\index{EntryLo\_\-N\_\-MASK@{EntryLo\_\-N\_\-MASK}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{EntryLo\_\-N\_\-MASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define EntryLo\_\-N\_\-MASK~0x00000800}}
+\label{cpzeroreg_8h_ab18fc8bce9d78d174c0323a6a12229aa}
+\hypertarget{cpzeroreg_8h_a9f8b8d73f9be4462a786c34827f2f233}{
+\index{cpzeroreg.h@{cpzeroreg.h}!EntryLo\_\-PFN\_\-MASK@{EntryLo\_\-PFN\_\-MASK}}
+\index{EntryLo\_\-PFN\_\-MASK@{EntryLo\_\-PFN\_\-MASK}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{EntryLo\_\-PFN\_\-MASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define EntryLo\_\-PFN\_\-MASK~0xfffff000}}
+\label{cpzeroreg_8h_a9f8b8d73f9be4462a786c34827f2f233}
+\hypertarget{cpzeroreg_8h_a44ed9b2f87229e41f2e7db8687903a70}{
+\index{cpzeroreg.h@{cpzeroreg.h}!EntryLo\_\-V\_\-MASK@{EntryLo\_\-V\_\-MASK}}
+\index{EntryLo\_\-V\_\-MASK@{EntryLo\_\-V\_\-MASK}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{EntryLo\_\-V\_\-MASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define EntryLo\_\-V\_\-MASK~0x00000200}}
+\label{cpzeroreg_8h_a44ed9b2f87229e41f2e7db8687903a70}
+\hypertarget{cpzeroreg_8h_afe68139ddfe1947b7ac82e98eef61777}{
+\index{cpzeroreg.h@{cpzeroreg.h}!EPC@{EPC}}
+\index{EPC@{EPC}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{EPC}]{\setlength{\rightskip}{0pt plus 5cm}\#define EPC~14}}
+\label{cpzeroreg_8h_afe68139ddfe1947b7ac82e98eef61777}
+\hypertarget{cpzeroreg_8h_afd029a2b1bcdb0910249d7bda9ff722e}{
+\index{cpzeroreg.h@{cpzeroreg.h}!EPC\_\-MASK@{EPC\_\-MASK}}
+\index{EPC\_\-MASK@{EPC\_\-MASK}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{EPC\_\-MASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define EPC\_\-MASK~0xffffffff}}
+\label{cpzeroreg_8h_afd029a2b1bcdb0910249d7bda9ff722e}
+\hypertarget{cpzeroreg_8h_a0f20a163dec609fb464cba845e043be8}{
+\index{cpzeroreg.h@{cpzeroreg.h}!Error@{Error}}
+\index{Error@{Error}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{Error}]{\setlength{\rightskip}{0pt plus 5cm}\#define Error~7}}
+\label{cpzeroreg_8h_a0f20a163dec609fb464cba845e043be8}
+\hypertarget{cpzeroreg_8h_a9115b9b3c7400c8e7906b6bee25bfd85}{
+\index{cpzeroreg.h@{cpzeroreg.h}!Error\_\-MASK@{Error\_\-MASK}}
+\index{Error\_\-MASK@{Error\_\-MASK}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{Error\_\-MASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define Error\_\-MASK~0x00000000}}
+\label{cpzeroreg_8h_a9115b9b3c7400c8e7906b6bee25bfd85}
+\hypertarget{cpzeroreg_8h_a108f6ac6c4c95ae5c73222bf97221a00}{
+\index{cpzeroreg.h@{cpzeroreg.h}!ErrorEPC@{ErrorEPC}}
+\index{ErrorEPC@{ErrorEPC}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{ErrorEPC}]{\setlength{\rightskip}{0pt plus 5cm}\#define ErrorEPC~30}}
+\label{cpzeroreg_8h_a108f6ac6c4c95ae5c73222bf97221a00}
+\hypertarget{cpzeroreg_8h_a66795adcb6d96fecd164af56349db19e}{
+\index{cpzeroreg.h@{cpzeroreg.h}!ErrorEPC\_\-MASK@{ErrorEPC\_\-MASK}}
+\index{ErrorEPC\_\-MASK@{ErrorEPC\_\-MASK}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{ErrorEPC\_\-MASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define ErrorEPC\_\-MASK~0x00000000}}
+\label{cpzeroreg_8h_a66795adcb6d96fecd164af56349db19e}
+\hypertarget{cpzeroreg_8h_a2c726f8f32697958e9d6c2afecda531d}{
+\index{cpzeroreg.h@{cpzeroreg.h}!Index@{Index}}
+\index{Index@{Index}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{Index}]{\setlength{\rightskip}{0pt plus 5cm}\#define Index~0}}
+\label{cpzeroreg_8h_a2c726f8f32697958e9d6c2afecda531d}
+\hypertarget{cpzeroreg_8h_a5a1e5c8e291307f2a26ac8e339c1b391}{
+\index{cpzeroreg.h@{cpzeroreg.h}!Index\_\-Index\_\-MASK@{Index\_\-Index\_\-MASK}}
+\index{Index\_\-Index\_\-MASK@{Index\_\-Index\_\-MASK}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{Index\_\-Index\_\-MASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define Index\_\-Index\_\-MASK~0x00003f00}}
+\label{cpzeroreg_8h_a5a1e5c8e291307f2a26ac8e339c1b391}
+\hypertarget{cpzeroreg_8h_ae29fae292951ed9b9784c35a499358f5}{
+\index{cpzeroreg.h@{cpzeroreg.h}!Index\_\-MASK@{Index\_\-MASK}}
+\index{Index\_\-MASK@{Index\_\-MASK}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{Index\_\-MASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define Index\_\-MASK~0x80003f00}}
+\label{cpzeroreg_8h_ae29fae292951ed9b9784c35a499358f5}
+\hypertarget{cpzeroreg_8h_a8a4180b7c3e281e73938b27accc7f757}{
+\index{cpzeroreg.h@{cpzeroreg.h}!Index\_\-P\_\-MASK@{Index\_\-P\_\-MASK}}
+\index{Index\_\-P\_\-MASK@{Index\_\-P\_\-MASK}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{Index\_\-P\_\-MASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define Index\_\-P\_\-MASK~0x80000000}}
+\label{cpzeroreg_8h_a8a4180b7c3e281e73938b27accc7f757}
+\hypertarget{cpzeroreg_8h_a270ea1e72cdac6ce2fa9bb878b416ff1}{
+\index{cpzeroreg.h@{cpzeroreg.h}!KERNEL\_\-SPACE\_\-MASK@{KERNEL\_\-SPACE\_\-MASK}}
+\index{KERNEL\_\-SPACE\_\-MASK@{KERNEL\_\-SPACE\_\-MASK}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{KERNEL\_\-SPACE\_\-MASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define KERNEL\_\-SPACE\_\-MASK~0x80000000}}
+\label{cpzeroreg_8h_a270ea1e72cdac6ce2fa9bb878b416ff1}
+\hypertarget{cpzeroreg_8h_afadb7188ecacd9b8a57ced31f2fc6b6c}{
+\index{cpzeroreg.h@{cpzeroreg.h}!KSEG0@{KSEG0}}
+\index{KSEG0@{KSEG0}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{KSEG0}]{\setlength{\rightskip}{0pt plus 5cm}\#define KSEG0~0x80000000}}
+\label{cpzeroreg_8h_afadb7188ecacd9b8a57ced31f2fc6b6c}
+\hypertarget{cpzeroreg_8h_a92db4d693e870187112527230b99af0d}{
+\index{cpzeroreg.h@{cpzeroreg.h}!KSEG0\_\-CONST\_\-TRANSLATION@{KSEG0\_\-CONST\_\-TRANSLATION}}
+\index{KSEG0\_\-CONST\_\-TRANSLATION@{KSEG0\_\-CONST\_\-TRANSLATION}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{KSEG0\_\-CONST\_\-TRANSLATION}]{\setlength{\rightskip}{0pt plus 5cm}\#define KSEG0\_\-CONST\_\-TRANSLATION~0x80000000}}
+\label{cpzeroreg_8h_a92db4d693e870187112527230b99af0d}
+\hypertarget{cpzeroreg_8h_a72012be4af1015b6def4debcd412d306}{
+\index{cpzeroreg.h@{cpzeroreg.h}!KSEG1@{KSEG1}}
+\index{KSEG1@{KSEG1}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{KSEG1}]{\setlength{\rightskip}{0pt plus 5cm}\#define KSEG1~0xa0000000}}
+\label{cpzeroreg_8h_a72012be4af1015b6def4debcd412d306}
+\hypertarget{cpzeroreg_8h_a420b849a7bf9e66d83d9c4ac29606c5c}{
+\index{cpzeroreg.h@{cpzeroreg.h}!KSEG1\_\-CONST\_\-TRANSLATION@{KSEG1\_\-CONST\_\-TRANSLATION}}
+\index{KSEG1\_\-CONST\_\-TRANSLATION@{KSEG1\_\-CONST\_\-TRANSLATION}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{KSEG1\_\-CONST\_\-TRANSLATION}]{\setlength{\rightskip}{0pt plus 5cm}\#define KSEG1\_\-CONST\_\-TRANSLATION~0xa0000000}}
+\label{cpzeroreg_8h_a420b849a7bf9e66d83d9c4ac29606c5c}
+\hypertarget{cpzeroreg_8h_a2e2911c59935c4701d690b333de62379}{
+\index{cpzeroreg.h@{cpzeroreg.h}!KSEG2@{KSEG2}}
+\index{KSEG2@{KSEG2}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{KSEG2}]{\setlength{\rightskip}{0pt plus 5cm}\#define KSEG2~0xc0000000}}
+\label{cpzeroreg_8h_a2e2911c59935c4701d690b333de62379}
+\hypertarget{cpzeroreg_8h_a3267a9b4f79b046baf2b5813edd034b2}{
+\index{cpzeroreg.h@{cpzeroreg.h}!KSEG2\_\-top@{KSEG2\_\-top}}
+\index{KSEG2\_\-top@{KSEG2\_\-top}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{KSEG2\_\-top}]{\setlength{\rightskip}{0pt plus 5cm}\#define KSEG2\_\-top~0xe0000000}}
+\label{cpzeroreg_8h_a3267a9b4f79b046baf2b5813edd034b2}
+\hypertarget{cpzeroreg_8h_ab36e9be8261b95ead991d6a464d4cf22}{
+\index{cpzeroreg.h@{cpzeroreg.h}!KSEG\_\-SELECT\_\-MASK@{KSEG\_\-SELECT\_\-MASK}}
+\index{KSEG\_\-SELECT\_\-MASK@{KSEG\_\-SELECT\_\-MASK}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{KSEG\_\-SELECT\_\-MASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define KSEG\_\-SELECT\_\-MASK~0xe0000000}}
+\label{cpzeroreg_8h_ab36e9be8261b95ead991d6a464d4cf22}
+\hypertarget{cpzeroreg_8h_a1928d55b813d04a63fe8cb3056b6a926}{
+\index{cpzeroreg.h@{cpzeroreg.h}!KUSEG@{KUSEG}}
+\index{KUSEG@{KUSEG}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{KUSEG}]{\setlength{\rightskip}{0pt plus 5cm}\#define KUSEG~0}}
+\label{cpzeroreg_8h_a1928d55b813d04a63fe8cb3056b6a926}
+\hypertarget{cpzeroreg_8h_abfba15217ffef362ff13b1b830a7f3c5}{
+\index{cpzeroreg.h@{cpzeroreg.h}!LLAddr@{LLAddr}}
+\index{LLAddr@{LLAddr}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{LLAddr}]{\setlength{\rightskip}{0pt plus 5cm}\#define LLAddr~17}}
+\label{cpzeroreg_8h_abfba15217ffef362ff13b1b830a7f3c5}
+\hypertarget{cpzeroreg_8h_a277332ed0a89ca7eb669f3bfa1e37dcb}{
+\index{cpzeroreg.h@{cpzeroreg.h}!LLAddr\_\-MASK@{LLAddr\_\-MASK}}
+\index{LLAddr\_\-MASK@{LLAddr\_\-MASK}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{LLAddr\_\-MASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define LLAddr\_\-MASK~0x00000000}}
+\label{cpzeroreg_8h_a277332ed0a89ca7eb669f3bfa1e37dcb}
+\hypertarget{cpzeroreg_8h_a446eb553042e3492288a60d2832aa793}{
+\index{cpzeroreg.h@{cpzeroreg.h}!LLAdr@{LLAdr}}
+\index{LLAdr@{LLAdr}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{LLAdr}]{\setlength{\rightskip}{0pt plus 5cm}\#define LLAdr~17}}
+\label{cpzeroreg_8h_a446eb553042e3492288a60d2832aa793}
+\hypertarget{cpzeroreg_8h_ac62a5535527f44b8decf7c6be44e4e82}{
+\index{cpzeroreg.h@{cpzeroreg.h}!PageMask@{PageMask}}
+\index{PageMask@{PageMask}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{PageMask}]{\setlength{\rightskip}{0pt plus 5cm}\#define PageMask~5}}
+\label{cpzeroreg_8h_ac62a5535527f44b8decf7c6be44e4e82}
+\hypertarget{cpzeroreg_8h_a1165ac14edb22e1aed663f1d2cdeb074}{
+\index{cpzeroreg.h@{cpzeroreg.h}!PageMask\_\-MASK@{PageMask\_\-MASK}}
+\index{PageMask\_\-MASK@{PageMask\_\-MASK}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{PageMask\_\-MASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define PageMask\_\-MASK~0x00000000}}
+\label{cpzeroreg_8h_a1165ac14edb22e1aed663f1d2cdeb074}
+\hypertarget{cpzeroreg_8h_a57257e391b1d40cfbf2857837497bc8b}{
+\index{cpzeroreg.h@{cpzeroreg.h}!PRId@{PRId}}
+\index{PRId@{PRId}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{PRId}]{\setlength{\rightskip}{0pt plus 5cm}\#define PRId~15}}
+\label{cpzeroreg_8h_a57257e391b1d40cfbf2857837497bc8b}
+\hypertarget{cpzeroreg_8h_afffd2e1cdab29b502588045c3b6f0cd0}{
+\index{cpzeroreg.h@{cpzeroreg.h}!PRId\_\-Imp\_\-MASK@{PRId\_\-Imp\_\-MASK}}
+\index{PRId\_\-Imp\_\-MASK@{PRId\_\-Imp\_\-MASK}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{PRId\_\-Imp\_\-MASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define PRId\_\-Imp\_\-MASK~0x0000ff00}}
+\label{cpzeroreg_8h_afffd2e1cdab29b502588045c3b6f0cd0}
+\hypertarget{cpzeroreg_8h_abd2dd2f71f953bfd3cf30872d0b8ea7b}{
+\index{cpzeroreg.h@{cpzeroreg.h}!PRId\_\-MASK@{PRId\_\-MASK}}
+\index{PRId\_\-MASK@{PRId\_\-MASK}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{PRId\_\-MASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define PRId\_\-MASK~0x0000ffff}}
+\label{cpzeroreg_8h_abd2dd2f71f953bfd3cf30872d0b8ea7b}
+\hypertarget{cpzeroreg_8h_ac1773cee2d2796eedca8ade34fa5ba00}{
+\index{cpzeroreg.h@{cpzeroreg.h}!PRId\_\-Rev\_\-MASK@{PRId\_\-Rev\_\-MASK}}
+\index{PRId\_\-Rev\_\-MASK@{PRId\_\-Rev\_\-MASK}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{PRId\_\-Rev\_\-MASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define PRId\_\-Rev\_\-MASK~0x000000ff}}
+\label{cpzeroreg_8h_ac1773cee2d2796eedca8ade34fa5ba00}
+\hypertarget{cpzeroreg_8h_acf2ee9df1dbd332a7a7eee7f74686fd7}{
+\index{cpzeroreg.h@{cpzeroreg.h}!Random@{Random}}
+\index{Random@{Random}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{Random}]{\setlength{\rightskip}{0pt plus 5cm}\#define Random~1}}
+\label{cpzeroreg_8h_acf2ee9df1dbd332a7a7eee7f74686fd7}
+\hypertarget{cpzeroreg_8h_a948f89e6eccf46620ff2a4bfb189e498}{
+\index{cpzeroreg.h@{cpzeroreg.h}!Random\_\-LOWER\_\-BOUND@{Random\_\-LOWER\_\-BOUND}}
+\index{Random\_\-LOWER\_\-BOUND@{Random\_\-LOWER\_\-BOUND}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{Random\_\-LOWER\_\-BOUND}]{\setlength{\rightskip}{0pt plus 5cm}\#define Random\_\-LOWER\_\-BOUND~8}}
+\label{cpzeroreg_8h_a948f89e6eccf46620ff2a4bfb189e498}
+\hypertarget{cpzeroreg_8h_a4e8b4b046c79abb3d91e6228856bd17b}{
+\index{cpzeroreg.h@{cpzeroreg.h}!Random\_\-MASK@{Random\_\-MASK}}
+\index{Random\_\-MASK@{Random\_\-MASK}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{Random\_\-MASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define Random\_\-MASK~0x00003f00}}
+\label{cpzeroreg_8h_a4e8b4b046c79abb3d91e6228856bd17b}
+\hypertarget{cpzeroreg_8h_a9251d3cc5b8c1acf46e7736c21f90338}{
+\index{cpzeroreg.h@{cpzeroreg.h}!Random\_\-Random\_\-MASK@{Random\_\-Random\_\-MASK}}
+\index{Random\_\-Random\_\-MASK@{Random\_\-Random\_\-MASK}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{Random\_\-Random\_\-MASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define Random\_\-Random\_\-MASK~0x00003f00}}
+\label{cpzeroreg_8h_a9251d3cc5b8c1acf46e7736c21f90338}
+\hypertarget{cpzeroreg_8h_a9cb70985c05a9622ecd50c351fdbafd1}{
+\index{cpzeroreg.h@{cpzeroreg.h}!Random\_\-UPPER\_\-BOUND@{Random\_\-UPPER\_\-BOUND}}
+\index{Random\_\-UPPER\_\-BOUND@{Random\_\-UPPER\_\-BOUND}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{Random\_\-UPPER\_\-BOUND}]{\setlength{\rightskip}{0pt plus 5cm}\#define Random\_\-UPPER\_\-BOUND~63}}
+\label{cpzeroreg_8h_a9cb70985c05a9622ecd50c351fdbafd1}
+\hypertarget{cpzeroreg_8h_a7f5d97e77e23c44ac5c59e6729f49075}{
+\index{cpzeroreg.h@{cpzeroreg.h}!Status@{Status}}
+\index{Status@{Status}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{Status}]{\setlength{\rightskip}{0pt plus 5cm}\#define Status~12}}
+\label{cpzeroreg_8h_a7f5d97e77e23c44ac5c59e6729f49075}
+\hypertarget{cpzeroreg_8h_a2ba10dbc87006bdc56d1cf7d8d51cd29}{
+\index{cpzeroreg.h@{cpzeroreg.h}!Status\_\-CU0\_\-MASK@{Status\_\-CU0\_\-MASK}}
+\index{Status\_\-CU0\_\-MASK@{Status\_\-CU0\_\-MASK}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{Status\_\-CU0\_\-MASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define Status\_\-CU0\_\-MASK~0x10000000}}
+\label{cpzeroreg_8h_a2ba10dbc87006bdc56d1cf7d8d51cd29}
+\hypertarget{cpzeroreg_8h_a37bbf749a544c63808cd1fd9f2aa66e0}{
+\index{cpzeroreg.h@{cpzeroreg.h}!Status\_\-CU1\_\-MASK@{Status\_\-CU1\_\-MASK}}
+\index{Status\_\-CU1\_\-MASK@{Status\_\-CU1\_\-MASK}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{Status\_\-CU1\_\-MASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define Status\_\-CU1\_\-MASK~0x20000000}}
+\label{cpzeroreg_8h_a37bbf749a544c63808cd1fd9f2aa66e0}
+\hypertarget{cpzeroreg_8h_a2ae150cd8c3bba2c1357bf252b077cd5}{
+\index{cpzeroreg.h@{cpzeroreg.h}!Status\_\-CU2\_\-MASK@{Status\_\-CU2\_\-MASK}}
+\index{Status\_\-CU2\_\-MASK@{Status\_\-CU2\_\-MASK}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{Status\_\-CU2\_\-MASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define Status\_\-CU2\_\-MASK~0x40000000}}
+\label{cpzeroreg_8h_a2ae150cd8c3bba2c1357bf252b077cd5}
+\hypertarget{cpzeroreg_8h_ae4a5a2c2715168954f1c87d2fa8d7c9d}{
+\index{cpzeroreg.h@{cpzeroreg.h}!Status\_\-CU3\_\-MASK@{Status\_\-CU3\_\-MASK}}
+\index{Status\_\-CU3\_\-MASK@{Status\_\-CU3\_\-MASK}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{Status\_\-CU3\_\-MASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define Status\_\-CU3\_\-MASK~0x80000000}}
+\label{cpzeroreg_8h_ae4a5a2c2715168954f1c87d2fa8d7c9d}
+\hypertarget{cpzeroreg_8h_ab1b610a6485d5a07431ae14fa22cd61e}{
+\index{cpzeroreg.h@{cpzeroreg.h}!Status\_\-CU\_\-MASK@{Status\_\-CU\_\-MASK}}
+\index{Status\_\-CU\_\-MASK@{Status\_\-CU\_\-MASK}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{Status\_\-CU\_\-MASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define Status\_\-CU\_\-MASK~0xf0000000}}
+\label{cpzeroreg_8h_ab1b610a6485d5a07431ae14fa22cd61e}
+\hypertarget{cpzeroreg_8h_a59a8c5348a777cd90e4c53506fdfc4ce}{
+\index{cpzeroreg.h@{cpzeroreg.h}!Status\_\-DS\_\-BEV\_\-MASK@{Status\_\-DS\_\-BEV\_\-MASK}}
+\index{Status\_\-DS\_\-BEV\_\-MASK@{Status\_\-DS\_\-BEV\_\-MASK}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{Status\_\-DS\_\-BEV\_\-MASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define Status\_\-DS\_\-BEV\_\-MASK~0x00400000}}
+\label{cpzeroreg_8h_a59a8c5348a777cd90e4c53506fdfc4ce}
+\hypertarget{cpzeroreg_8h_a56cd32f22453019bceed8d753180cdaa}{
+\index{cpzeroreg.h@{cpzeroreg.h}!Status\_\-DS\_\-CM\_\-MASK@{Status\_\-DS\_\-CM\_\-MASK}}
+\index{Status\_\-DS\_\-CM\_\-MASK@{Status\_\-DS\_\-CM\_\-MASK}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{Status\_\-DS\_\-CM\_\-MASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define Status\_\-DS\_\-CM\_\-MASK~0x00080000}}
+\label{cpzeroreg_8h_a56cd32f22453019bceed8d753180cdaa}
+\hypertarget{cpzeroreg_8h_a3582e25ab44b5437affa454a758bbc41}{
+\index{cpzeroreg.h@{cpzeroreg.h}!Status\_\-DS\_\-IsC\_\-MASK@{Status\_\-DS\_\-IsC\_\-MASK}}
+\index{Status\_\-DS\_\-IsC\_\-MASK@{Status\_\-DS\_\-IsC\_\-MASK}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{Status\_\-DS\_\-IsC\_\-MASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define Status\_\-DS\_\-IsC\_\-MASK~0x00010000}}
+\label{cpzeroreg_8h_a3582e25ab44b5437affa454a758bbc41}
+\hypertarget{cpzeroreg_8h_ac9764821ce6ca1546b7f4c5362869c4f}{
+\index{cpzeroreg.h@{cpzeroreg.h}!Status\_\-DS\_\-MASK@{Status\_\-DS\_\-MASK}}
+\index{Status\_\-DS\_\-MASK@{Status\_\-DS\_\-MASK}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{Status\_\-DS\_\-MASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define Status\_\-DS\_\-MASK~0x01ff0000}}
+\label{cpzeroreg_8h_ac9764821ce6ca1546b7f4c5362869c4f}
+\hypertarget{cpzeroreg_8h_a3de90741a1ae36cdc90dd2aa1ab17244}{
+\index{cpzeroreg.h@{cpzeroreg.h}!Status\_\-DS\_\-PE\_\-MASK@{Status\_\-DS\_\-PE\_\-MASK}}
+\index{Status\_\-DS\_\-PE\_\-MASK@{Status\_\-DS\_\-PE\_\-MASK}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{Status\_\-DS\_\-PE\_\-MASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define Status\_\-DS\_\-PE\_\-MASK~0x00100000}}
+\label{cpzeroreg_8h_a3de90741a1ae36cdc90dd2aa1ab17244}
+\hypertarget{cpzeroreg_8h_a576f43cbad976167a4eaa1876ef43083}{
+\index{cpzeroreg.h@{cpzeroreg.h}!Status\_\-DS\_\-PZ\_\-MASK@{Status\_\-DS\_\-PZ\_\-MASK}}
+\index{Status\_\-DS\_\-PZ\_\-MASK@{Status\_\-DS\_\-PZ\_\-MASK}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{Status\_\-DS\_\-PZ\_\-MASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define Status\_\-DS\_\-PZ\_\-MASK~0x00040000}}
+\label{cpzeroreg_8h_a576f43cbad976167a4eaa1876ef43083}
+\hypertarget{cpzeroreg_8h_a4beb4e29d452c7a5061d0eb3581dda53}{
+\index{cpzeroreg.h@{cpzeroreg.h}!Status\_\-DS\_\-SwC\_\-MASK@{Status\_\-DS\_\-SwC\_\-MASK}}
+\index{Status\_\-DS\_\-SwC\_\-MASK@{Status\_\-DS\_\-SwC\_\-MASK}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{Status\_\-DS\_\-SwC\_\-MASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define Status\_\-DS\_\-SwC\_\-MASK~0x00020000}}
+\label{cpzeroreg_8h_a4beb4e29d452c7a5061d0eb3581dda53}
+\hypertarget{cpzeroreg_8h_a9feac6b68d29c419a14e9cf2d3e97734}{
+\index{cpzeroreg.h@{cpzeroreg.h}!Status\_\-DS\_\-TS\_\-MASK@{Status\_\-DS\_\-TS\_\-MASK}}
+\index{Status\_\-DS\_\-TS\_\-MASK@{Status\_\-DS\_\-TS\_\-MASK}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{Status\_\-DS\_\-TS\_\-MASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define Status\_\-DS\_\-TS\_\-MASK~0x00200000}}
+\label{cpzeroreg_8h_a9feac6b68d29c419a14e9cf2d3e97734}
+\hypertarget{cpzeroreg_8h_ab870f84b5d56d9ddb4091a6e83c4e435}{
+\index{cpzeroreg.h@{cpzeroreg.h}!Status\_\-IEc\_\-MASK@{Status\_\-IEc\_\-MASK}}
+\index{Status\_\-IEc\_\-MASK@{Status\_\-IEc\_\-MASK}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{Status\_\-IEc\_\-MASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define Status\_\-IEc\_\-MASK~0x00000001}}
+\label{cpzeroreg_8h_ab870f84b5d56d9ddb4091a6e83c4e435}
+\hypertarget{cpzeroreg_8h_abc2a4fa2d5829caed8d935c4c1196d76}{
+\index{cpzeroreg.h@{cpzeroreg.h}!Status\_\-IEo\_\-MASK@{Status\_\-IEo\_\-MASK}}
+\index{Status\_\-IEo\_\-MASK@{Status\_\-IEo\_\-MASK}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{Status\_\-IEo\_\-MASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define Status\_\-IEo\_\-MASK~0x00000010}}
+\label{cpzeroreg_8h_abc2a4fa2d5829caed8d935c4c1196d76}
+\hypertarget{cpzeroreg_8h_a4d8d89827b67179259a93a8a4f326c37}{
+\index{cpzeroreg.h@{cpzeroreg.h}!Status\_\-IEp\_\-MASK@{Status\_\-IEp\_\-MASK}}
+\index{Status\_\-IEp\_\-MASK@{Status\_\-IEp\_\-MASK}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{Status\_\-IEp\_\-MASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define Status\_\-IEp\_\-MASK~0x00000004}}
+\label{cpzeroreg_8h_a4d8d89827b67179259a93a8a4f326c37}
+\hypertarget{cpzeroreg_8h_a8bcc7e32db4d617c38e699d7c6ef84b6}{
+\index{cpzeroreg.h@{cpzeroreg.h}!Status\_\-IM\_\-Ext\_\-MASK@{Status\_\-IM\_\-Ext\_\-MASK}}
+\index{Status\_\-IM\_\-Ext\_\-MASK@{Status\_\-IM\_\-Ext\_\-MASK}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{Status\_\-IM\_\-Ext\_\-MASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define Status\_\-IM\_\-Ext\_\-MASK~0x0000fc00}}
+\label{cpzeroreg_8h_a8bcc7e32db4d617c38e699d7c6ef84b6}
+\hypertarget{cpzeroreg_8h_a0c1f7e09cb058095ee4029ac766d3891}{
+\index{cpzeroreg.h@{cpzeroreg.h}!Status\_\-IM\_\-MASK@{Status\_\-IM\_\-MASK}}
+\index{Status\_\-IM\_\-MASK@{Status\_\-IM\_\-MASK}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{Status\_\-IM\_\-MASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define Status\_\-IM\_\-MASK~0x0000ff00}}
+\label{cpzeroreg_8h_a0c1f7e09cb058095ee4029ac766d3891}
+\hypertarget{cpzeroreg_8h_a51f03656986bdbfb2453405059350197}{
+\index{cpzeroreg.h@{cpzeroreg.h}!Status\_\-IM\_\-SW\_\-MASK@{Status\_\-IM\_\-SW\_\-MASK}}
+\index{Status\_\-IM\_\-SW\_\-MASK@{Status\_\-IM\_\-SW\_\-MASK}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{Status\_\-IM\_\-SW\_\-MASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define Status\_\-IM\_\-SW\_\-MASK~0x00000300}}
+\label{cpzeroreg_8h_a51f03656986bdbfb2453405059350197}
+\hypertarget{cpzeroreg_8h_ab486592ed9723145b9cc21b858b5683c}{
+\index{cpzeroreg.h@{cpzeroreg.h}!Status\_\-KU\_\-IE\_\-MASK@{Status\_\-KU\_\-IE\_\-MASK}}
+\index{Status\_\-KU\_\-IE\_\-MASK@{Status\_\-KU\_\-IE\_\-MASK}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{Status\_\-KU\_\-IE\_\-MASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define Status\_\-KU\_\-IE\_\-MASK~0x0000003f}}
+\label{cpzeroreg_8h_ab486592ed9723145b9cc21b858b5683c}
+\hypertarget{cpzeroreg_8h_a62ff928ecaeff8082bd66dfd2b504bfa}{
+\index{cpzeroreg.h@{cpzeroreg.h}!Status\_\-KUc\_\-MASK@{Status\_\-KUc\_\-MASK}}
+\index{Status\_\-KUc\_\-MASK@{Status\_\-KUc\_\-MASK}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{Status\_\-KUc\_\-MASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define Status\_\-KUc\_\-MASK~0x00000002}}
+\label{cpzeroreg_8h_a62ff928ecaeff8082bd66dfd2b504bfa}
+\hypertarget{cpzeroreg_8h_ad59dba5c5b454689eccbcdae3f9f0a25}{
+\index{cpzeroreg.h@{cpzeroreg.h}!Status\_\-KUo\_\-MASK@{Status\_\-KUo\_\-MASK}}
+\index{Status\_\-KUo\_\-MASK@{Status\_\-KUo\_\-MASK}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{Status\_\-KUo\_\-MASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define Status\_\-KUo\_\-MASK~0x00000020}}
+\label{cpzeroreg_8h_ad59dba5c5b454689eccbcdae3f9f0a25}
+\hypertarget{cpzeroreg_8h_a80fdd13b9a5018ce3e5efb24366f3779}{
+\index{cpzeroreg.h@{cpzeroreg.h}!Status\_\-KUp\_\-MASK@{Status\_\-KUp\_\-MASK}}
+\index{Status\_\-KUp\_\-MASK@{Status\_\-KUp\_\-MASK}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{Status\_\-KUp\_\-MASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define Status\_\-KUp\_\-MASK~0x00000008}}
+\label{cpzeroreg_8h_a80fdd13b9a5018ce3e5efb24366f3779}
+\hypertarget{cpzeroreg_8h_a673a3421327e8e33941dad991af6a0ea}{
+\index{cpzeroreg.h@{cpzeroreg.h}!Status\_\-MASK@{Status\_\-MASK}}
+\index{Status\_\-MASK@{Status\_\-MASK}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{Status\_\-MASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define Status\_\-MASK~0xf27fff3f}}
+\label{cpzeroreg_8h_a673a3421327e8e33941dad991af6a0ea}
+\hypertarget{cpzeroreg_8h_afd004cab93ca17190b49aef0913c64cd}{
+\index{cpzeroreg.h@{cpzeroreg.h}!Status\_\-RE\_\-MASK@{Status\_\-RE\_\-MASK}}
+\index{Status\_\-RE\_\-MASK@{Status\_\-RE\_\-MASK}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{Status\_\-RE\_\-MASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define Status\_\-RE\_\-MASK~0x02000000}}
+\label{cpzeroreg_8h_afd004cab93ca17190b49aef0913c64cd}
+\hypertarget{cpzeroreg_8h_a6b8a4201db97dd1de17d47d3a23ed0ef}{
+\index{cpzeroreg.h@{cpzeroreg.h}!TagHi@{TagHi}}
+\index{TagHi@{TagHi}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{TagHi}]{\setlength{\rightskip}{0pt plus 5cm}\#define TagHi~29}}
+\label{cpzeroreg_8h_a6b8a4201db97dd1de17d47d3a23ed0ef}
+\hypertarget{cpzeroreg_8h_a9974c69e99dc00907c512666b9e327cd}{
+\index{cpzeroreg.h@{cpzeroreg.h}!TagHi\_\-MASK@{TagHi\_\-MASK}}
+\index{TagHi\_\-MASK@{TagHi\_\-MASK}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{TagHi\_\-MASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define TagHi\_\-MASK~0x00000000}}
+\label{cpzeroreg_8h_a9974c69e99dc00907c512666b9e327cd}
+\hypertarget{cpzeroreg_8h_a738d01ad4f7258521d734cfd32973c43}{
+\index{cpzeroreg.h@{cpzeroreg.h}!TagLo@{TagLo}}
+\index{TagLo@{TagLo}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{TagLo}]{\setlength{\rightskip}{0pt plus 5cm}\#define TagLo~28}}
+\label{cpzeroreg_8h_a738d01ad4f7258521d734cfd32973c43}
+\hypertarget{cpzeroreg_8h_a09bf6bcece6a1952ccba6549051afd87}{
+\index{cpzeroreg.h@{cpzeroreg.h}!TagLo\_\-MASK@{TagLo\_\-MASK}}
+\index{TagLo\_\-MASK@{TagLo\_\-MASK}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{TagLo\_\-MASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define TagLo\_\-MASK~0x00000000}}
+\label{cpzeroreg_8h_a09bf6bcece6a1952ccba6549051afd87}
+\hypertarget{cpzeroreg_8h_a1fec1f94a1e5ebb6232151aaab450ba9}{
+\index{cpzeroreg.h@{cpzeroreg.h}!WatchHi@{WatchHi}}
+\index{WatchHi@{WatchHi}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{WatchHi}]{\setlength{\rightskip}{0pt plus 5cm}\#define WatchHi~19}}
+\label{cpzeroreg_8h_a1fec1f94a1e5ebb6232151aaab450ba9}
+\hypertarget{cpzeroreg_8h_ab506d4d3970212653508c9d62bfe3692}{
+\index{cpzeroreg.h@{cpzeroreg.h}!WatchHi\_\-MASK@{WatchHi\_\-MASK}}
+\index{WatchHi\_\-MASK@{WatchHi\_\-MASK}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{WatchHi\_\-MASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define WatchHi\_\-MASK~0x00000000}}
+\label{cpzeroreg_8h_ab506d4d3970212653508c9d62bfe3692}
+\hypertarget{cpzeroreg_8h_a4f7940ce7ba199a445da8a9dc7505784}{
+\index{cpzeroreg.h@{cpzeroreg.h}!WatchLo@{WatchLo}}
+\index{WatchLo@{WatchLo}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{WatchLo}]{\setlength{\rightskip}{0pt plus 5cm}\#define WatchLo~18}}
+\label{cpzeroreg_8h_a4f7940ce7ba199a445da8a9dc7505784}
+\hypertarget{cpzeroreg_8h_a6ce85aae02a7b49291beb6407a92dff2}{
+\index{cpzeroreg.h@{cpzeroreg.h}!WatchLo\_\-MASK@{WatchLo\_\-MASK}}
+\index{WatchLo\_\-MASK@{WatchLo\_\-MASK}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{WatchLo\_\-MASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define WatchLo\_\-MASK~0x00000000}}
+\label{cpzeroreg_8h_a6ce85aae02a7b49291beb6407a92dff2}
+\hypertarget{cpzeroreg_8h_a4a57b45c45ff352fc65054a6bdde1788}{
+\index{cpzeroreg.h@{cpzeroreg.h}!Wired@{Wired}}
+\index{Wired@{Wired}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{Wired}]{\setlength{\rightskip}{0pt plus 5cm}\#define Wired~6}}
+\label{cpzeroreg_8h_a4a57b45c45ff352fc65054a6bdde1788}
+\hypertarget{cpzeroreg_8h_ab017f8dd9e4b4a1731896d561a3e48cd}{
+\index{cpzeroreg.h@{cpzeroreg.h}!Wired\_\-MASK@{Wired\_\-MASK}}
+\index{Wired\_\-MASK@{Wired\_\-MASK}!cpzeroreg.h@{cpzeroreg.h}}
+\subsubsection[{Wired\_\-MASK}]{\setlength{\rightskip}{0pt plus 5cm}\#define Wired\_\-MASK~0x00000000}}
+\label{cpzeroreg_8h_ab017f8dd9e4b4a1731896d561a3e48cd}

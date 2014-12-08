@@ -1,0 +1,98 @@
+\hypertarget{clock_8h}{
+\section{clock.h File Reference}
+\label{clock_8h}\index{clock.h@{clock.h}}
+}
+{\ttfamily \#include \char`\"{}task.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}types.h\char`\"{}}\par
+{\ttfamily \#include $<$list$>$}\par
+{\ttfamily \#include $<$sys/time.h$>$}\par
+Include dependency graph for clock.h:This graph shows which files directly or indirectly include this file:\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classClock}{Clock}
+\item 
+class \hyperlink{classClock_1_1DeferredTasks}{Clock::DeferredTasks}
+\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{clock_8h_a22bb57ee2311580af998bad329a7a914}{timespecclear}(tvp)~((tvp)-\/$>$tv\_\-sec = (tvp)-\/$>$tv\_\-nsec = 0)
+\item 
+\#define \hyperlink{clock_8h_a51ac4b0f81c859d848603902aa4589cb}{timespecisset}(tvp)~((tvp)-\/$>$tv\_\-sec $|$$|$ (tvp)-\/$>$tv\_\-nsec)
+\item 
+\#define \hyperlink{clock_8h_a66823f6889a3fb63c2c42ba90bfe3eb1}{timespeccmp}(tvp, uvp, cmp)
+\item 
+\#define \hyperlink{clock_8h_af78e5481c84b115ab75e1c54d6ae855a}{timespecadd}(vvp, uvp)
+\item 
+\#define \hyperlink{clock_8h_ab9f42aa35c5cd45fce9b198eeac4206f}{timespecsub}(vvp, uvp)
+\item 
+\#define \hyperlink{clock_8h_a584277e2b3df9a5db0e93000b09df811}{TIMEVAL\_\-TO\_\-TIMESPEC}(tv, ts)
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{clock_8h_af78e5481c84b115ab75e1c54d6ae855a}{
+\index{clock.h@{clock.h}!timespecadd@{timespecadd}}
+\index{timespecadd@{timespecadd}!clock.h@{clock.h}}
+\subsubsection[{timespecadd}]{\setlength{\rightskip}{0pt plus 5cm}\#define timespecadd(vvp, \/  uvp)}}
+\label{clock_8h_af78e5481c84b115ab75e1c54d6ae855a}
+{\bfseries Value:}
+\begin{DoxyCode}
+do {                                                            \
+                (vvp)->tv_sec += (uvp)->tv_sec;                         \
+                (vvp)->tv_nsec += (uvp)->tv_nsec;                       \
+                if ((vvp)->tv_nsec >= 1000000000) {                     \
+                        (vvp)->tv_sec++;                                \
+                        (vvp)->tv_nsec -= 1000000000;                   \
+                }                                                       \
+        } while (0)
+\end{DoxyCode}
+\hypertarget{clock_8h_a22bb57ee2311580af998bad329a7a914}{
+\index{clock.h@{clock.h}!timespecclear@{timespecclear}}
+\index{timespecclear@{timespecclear}!clock.h@{clock.h}}
+\subsubsection[{timespecclear}]{\setlength{\rightskip}{0pt plus 5cm}\#define timespecclear(tvp)~((tvp)-\/$>$tv\_\-sec = (tvp)-\/$>$tv\_\-nsec = 0)}}
+\label{clock_8h_a22bb57ee2311580af998bad329a7a914}
+\hypertarget{clock_8h_a66823f6889a3fb63c2c42ba90bfe3eb1}{
+\index{clock.h@{clock.h}!timespeccmp@{timespeccmp}}
+\index{timespeccmp@{timespeccmp}!clock.h@{clock.h}}
+\subsubsection[{timespeccmp}]{\setlength{\rightskip}{0pt plus 5cm}\#define timespeccmp(tvp, \/  uvp, \/  cmp)}}
+\label{clock_8h_a66823f6889a3fb63c2c42ba90bfe3eb1}
+{\bfseries Value:}
+\begin{DoxyCode}
+(((tvp)->tv_sec == (uvp)->tv_sec) ?                             \
+                ((tvp)->tv_nsec cmp (uvp)->tv_nsec) :                   \
+                ((tvp)->tv_sec cmp (uvp)->tv_sec))
+\end{DoxyCode}
+\hypertarget{clock_8h_a51ac4b0f81c859d848603902aa4589cb}{
+\index{clock.h@{clock.h}!timespecisset@{timespecisset}}
+\index{timespecisset@{timespecisset}!clock.h@{clock.h}}
+\subsubsection[{timespecisset}]{\setlength{\rightskip}{0pt plus 5cm}\#define timespecisset(tvp)~((tvp)-\/$>$tv\_\-sec $|$$|$ (tvp)-\/$>$tv\_\-nsec)}}
+\label{clock_8h_a51ac4b0f81c859d848603902aa4589cb}
+\hypertarget{clock_8h_ab9f42aa35c5cd45fce9b198eeac4206f}{
+\index{clock.h@{clock.h}!timespecsub@{timespecsub}}
+\index{timespecsub@{timespecsub}!clock.h@{clock.h}}
+\subsubsection[{timespecsub}]{\setlength{\rightskip}{0pt plus 5cm}\#define timespecsub(vvp, \/  uvp)}}
+\label{clock_8h_ab9f42aa35c5cd45fce9b198eeac4206f}
+{\bfseries Value:}
+\begin{DoxyCode}
+do {                                                            \
+                (vvp)->tv_sec -= (uvp)->tv_sec;                         \
+                (vvp)->tv_nsec -= (uvp)->tv_nsec;                       \
+                if ((vvp)->tv_nsec < 0) {                               \
+                        (vvp)->tv_sec--;                                \
+                        (vvp)->tv_nsec += 1000000000;                   \
+                }                                                       \
+        } while (0)
+\end{DoxyCode}
+\hypertarget{clock_8h_a584277e2b3df9a5db0e93000b09df811}{
+\index{clock.h@{clock.h}!TIMEVAL\_\-TO\_\-TIMESPEC@{TIMEVAL\_\-TO\_\-TIMESPEC}}
+\index{TIMEVAL\_\-TO\_\-TIMESPEC@{TIMEVAL\_\-TO\_\-TIMESPEC}!clock.h@{clock.h}}
+\subsubsection[{TIMEVAL\_\-TO\_\-TIMESPEC}]{\setlength{\rightskip}{0pt plus 5cm}\#define TIMEVAL\_\-TO\_\-TIMESPEC(tv, \/  ts)}}
+\label{clock_8h_a584277e2b3df9a5db0e93000b09df811}
+{\bfseries Value:}
+\begin{DoxyCode}
+do {                                            \
+        (ts)->tv_sec = (tv)->tv_sec;            \
+        (ts)->tv_nsec = (tv)->tv_usec * 1000;   \
+} while(0)
+\end{DoxyCode}

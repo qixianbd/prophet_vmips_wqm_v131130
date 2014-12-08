@@ -1,0 +1,73 @@
+\hypertarget{structTrace_1_1Record}{
+\section{Trace::Record Struct Reference}
+\label{structTrace_1_1Record}\index{Trace::Record@{Trace::Record}}
+}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{structTrace_1_1Record_a180a49f2bfb22355b363e219c964841c}{
+typedef std::vector$<$ \hyperlink{structTrace_1_1Operand}{Operand} $>$ {\bfseries OperandListType}}
+\label{structTrace_1_1Record_a180a49f2bfb22355b363e219c964841c}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{structTrace_1_1Record_ac8273cd7c6aca64757a6dfe5b37d7236}{
+void {\bfseries inputs\_\-push\_\-back\_\-op} (const char $\ast$tag, int regno, uint32 val)}
+\label{structTrace_1_1Record_ac8273cd7c6aca64757a6dfe5b37d7236}
+
+\item 
+\hypertarget{structTrace_1_1Record_a0d4f30b820a0523ab8829a268a0d04ad}{
+void {\bfseries inputs\_\-push\_\-back\_\-op} (const char $\ast$tag, uint32 val)}
+\label{structTrace_1_1Record_a0d4f30b820a0523ab8829a268a0d04ad}
+
+\item 
+\hypertarget{structTrace_1_1Record_a61484ad788baaa57462ebfb23637942d}{
+void {\bfseries outputs\_\-push\_\-back\_\-op} (const char $\ast$tag, int regno, uint32 val)}
+\label{structTrace_1_1Record_a61484ad788baaa57462ebfb23637942d}
+
+\item 
+\hypertarget{structTrace_1_1Record_ac1f177689ea6d50c3bd273b4f930b47f}{
+void {\bfseries outputs\_\-push\_\-back\_\-op} (const char $\ast$tag, uint32 val)}
+\label{structTrace_1_1Record_ac1f177689ea6d50c3bd273b4f930b47f}
+
+\item 
+\hypertarget{structTrace_1_1Record_a795423079fc1202660c2146bd662ebe0}{
+void {\bfseries clear} ()}
+\label{structTrace_1_1Record_a795423079fc1202660c2146bd662ebe0}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{structTrace_1_1Record_aba28a18d28949eacc7f9053b6ef85c81}{
+OperandListType {\bfseries inputs}}
+\label{structTrace_1_1Record_aba28a18d28949eacc7f9053b6ef85c81}
+
+\item 
+\hypertarget{structTrace_1_1Record_ae5f156de424fc9289773bca8ecfaff33}{
+OperandListType {\bfseries outputs}}
+\label{structTrace_1_1Record_ae5f156de424fc9289773bca8ecfaff33}
+
+\item 
+\hypertarget{structTrace_1_1Record_a7ef5267ef3122f653c675efd32dbce70}{
+uint32 {\bfseries pc}}
+\label{structTrace_1_1Record_a7ef5267ef3122f653c675efd32dbce70}
+
+\item 
+\hypertarget{structTrace_1_1Record_a78b942443619b45c7484fd22c2274480}{
+uint32 {\bfseries instr}}
+\label{structTrace_1_1Record_a78b942443619b45c7484fd22c2274480}
+
+\item 
+\hypertarget{structTrace_1_1Record_a2412276632ed5e14e36fc75d44fa8bcf}{
+uint32 {\bfseries saved\_\-reg} \mbox{[}CPU\_\-REG\_\-NUMBER\mbox{]}}
+\label{structTrace_1_1Record_a2412276632ed5e14e36fc75d44fa8bcf}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+cpu.h\end{DoxyCompactItemize}

@@ -1,0 +1,36 @@
+.TH "error.h" 3 "18 Dec 2013" "Doxygen" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+error.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'gccattr.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBerror\fP (const char *msg,...)  throw ()"
+.br
+.ti -1c
+.RI "__ATTRIBUTE_NORETURN__ void \fBerror_exit\fP (const char *msg,...)  throw ()"
+.br
+.ti -1c
+.RI "__ATTRIBUTE_NORETURN__ void \fBfatal_error\fP (const char *msg,...)  throw ()"
+.br
+.ti -1c
+.RI "void \fBwarning\fP (const char *msg,...)  throw ()"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "void error (const char * msg,  ...)  throw ()"
+.SS "__ATTRIBUTE_NORETURN__ void error_exit (const char * msg,  ...)  throw ()"
+.SS "__ATTRIBUTE_NORETURN__ void fatal_error (const char * msg,  ...)  throw ()"
+.SS "void warning (const char * msg,  ...)  throw ()"
+.SH "Author"
+.PP 
+Generated automatically by Doxygen from the source code.

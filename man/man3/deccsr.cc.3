@@ -1,0 +1,34 @@
+.TH "deccsr.cc" 3 "18 Dec 2013" "Doxygen" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+deccsr.cc \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'deccsrreg.h'\fP
+.br
+\fC#include 'devicemap.h'\fP
+.br
+\fC#include 'deviceint.h'\fP
+.br
+\fC#include <cstdio>\fP
+.br
+
+.SS "Defines"
+
+.in +1c
+.ti -1c
+.RI "#define \fBCSR_INTERRUPT_PENDING\fP()   ((((rwbits & CSR_IOINTEN) >> 16) & (ioint)) != 0)"
+.br
+.ti -1c
+.RI "#define \fBCSR_INTERRUPT_CHECK\fP()   do { if (CSR_INTERRUPT_PENDING()) { DeviceInt::assertInt(irq); } else { DeviceInt::deassertInt(irq); } } while (0)"
+.br
+.in -1c
+.SH "Define Documentation"
+.PP 
+.SS "#define CSR_INTERRUPT_CHECK()   do { if (CSR_INTERRUPT_PENDING()) { DeviceInt::assertInt(irq); } else { DeviceInt::deassertInt(irq); } } while (0)"
+.SS "#define CSR_INTERRUPT_PENDING()   ((((rwbits & CSR_IOINTEN) >> 16) & (ioint)) != 0)"
+.SH "Author"
+.PP 
+Generated automatically by Doxygen from the source code.

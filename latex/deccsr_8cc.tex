@@ -1,0 +1,28 @@
+\hypertarget{deccsr_8cc}{
+\section{deccsr.cc File Reference}
+\label{deccsr_8cc}\index{deccsr.cc@{deccsr.cc}}
+}
+{\ttfamily \#include \char`\"{}deccsrreg.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}devicemap.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}deviceint.h\char`\"{}}\par
+{\ttfamily \#include $<$cstdio$>$}\par
+Include dependency graph for deccsr.cc:This graph shows which files directly or indirectly include this file:\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{deccsr_8cc_a1222adaeac08c43e40b7e099da6ca217}{CSR\_\-INTERRUPT\_\-PENDING}()~((((rwbits \& CSR\_\-IOINTEN) $>$$>$ 16) \& (ioint)) != 0)
+\item 
+\#define \hyperlink{deccsr_8cc_a0bda47ee4c2f34c35c92a9fb6463cb16}{CSR\_\-INTERRUPT\_\-CHECK}()~do \{ if (CSR\_\-INTERRUPT\_\-PENDING()) \{ DeviceInt::assertInt(irq); \} else \{ DeviceInt::deassertInt(irq); \} \} while (0)
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{deccsr_8cc_a0bda47ee4c2f34c35c92a9fb6463cb16}{
+\index{deccsr.cc@{deccsr.cc}!CSR\_\-INTERRUPT\_\-CHECK@{CSR\_\-INTERRUPT\_\-CHECK}}
+\index{CSR\_\-INTERRUPT\_\-CHECK@{CSR\_\-INTERRUPT\_\-CHECK}!deccsr.cc@{deccsr.cc}}
+\subsubsection[{CSR\_\-INTERRUPT\_\-CHECK}]{\setlength{\rightskip}{0pt plus 5cm}\#define CSR\_\-INTERRUPT\_\-CHECK()~do \{ if (CSR\_\-INTERRUPT\_\-PENDING()) \{ DeviceInt::assertInt(irq); \} else \{ DeviceInt::deassertInt(irq); \} \} while (0)}}
+\label{deccsr_8cc_a0bda47ee4c2f34c35c92a9fb6463cb16}
+\hypertarget{deccsr_8cc_a1222adaeac08c43e40b7e099da6ca217}{
+\index{deccsr.cc@{deccsr.cc}!CSR\_\-INTERRUPT\_\-PENDING@{CSR\_\-INTERRUPT\_\-PENDING}}
+\index{CSR\_\-INTERRUPT\_\-PENDING@{CSR\_\-INTERRUPT\_\-PENDING}!deccsr.cc@{deccsr.cc}}
+\subsubsection[{CSR\_\-INTERRUPT\_\-PENDING}]{\setlength{\rightskip}{0pt plus 5cm}\#define CSR\_\-INTERRUPT\_\-PENDING()~((((rwbits \& CSR\_\-IOINTEN) $>$$>$ 16) \& (ioint)) != 0)}}
+\label{deccsr_8cc_a1222adaeac08c43e40b7e099da6ca217}

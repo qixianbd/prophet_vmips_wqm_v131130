@@ -1,0 +1,40 @@
+digraph G
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir=LR;
+  Node1 [label="putpkt",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="gdb_flush",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$remotegdb_8cc.html#ab7615aba8571a90b0f419ca326db6720"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="getpkt",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$remotegdb_8cc.html#a757631555908fd06213bb61cf6fd1cbd"];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="error",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$error_8cc.html#a158a1af99275c1555bf5fcc74709aa5a"];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="format_help",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$error_8cc.html#aa182c84a77010100b5b8a15b1ff22e70"];
+  Node3 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="fprintf_unfiltered",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$remotegdb_8cc.html#afab46da8d7b164a99a90566adff8e9fd"];
+  Node3 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="printf_unfiltered",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$remotegdb_8cc.html#a6aef864b575e1ddd1a75b575512df684"];
+  Node3 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="puts_filtered",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$remotegdb_8cc.html#a8ff699775b27c3a360306817af74dbef"];
+  Node3 -> Node9 [color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="read_frame",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$remotegdb_8cc.html#a7d3b3911ce43672f39850bb99f8f82cb"];
+  Node9 -> Node10 [color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="fromhex",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$remotegdb_8cc.html#abaf2da36c14363e87d968d2da3c6bcad"];
+  Node10 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node9 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
+  Node9 -> Node11 [color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="readchar",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$remotegdb_8cc.html#a8e189f02ddb32d3d2efe6e5688a26c10"];
+  Node11 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node11 -> Node12 [color="midnightblue",fontsize="10",style="solid"];
+  Node12 [label="perror_with_name",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$remotegdb_8cc.html#ab2991d7c0f1c8ca8197510fb12f0bc2a"];
+  Node3 -> Node11 [color="midnightblue",fontsize="10",style="solid"];
+  Node1 -> Node12 [color="midnightblue",fontsize="10",style="solid"];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node1 -> Node13 [color="midnightblue",fontsize="10",style="solid"];
+  Node13 [label="putchar_unfiltered",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$remotegdb_8cc.html#a0b70a303db17a51515b316d363eedb2a"];
+  Node1 -> Node11 [color="midnightblue",fontsize="10",style="solid"];
+  Node1 -> Node14 [color="midnightblue",fontsize="10",style="solid"];
+  Node14 [label="tohex",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$remotegdb_8cc.html#af6e832cbb512d747c35b9002a3c43927"];
+}

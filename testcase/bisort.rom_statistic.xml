@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding='ISO-8859-1' standalone='yes' ?>
+<statistic_report report_time="2013-11-26 17:31:34 ">
+  <settings>
+    <setting_file>/home/qmwx/project/prophet_vmips_final_5_19/inst_cost.ini</setting_file>
+    <version>1.0</version>
+    <program>testcase/bisort.rom</program>
+  </settings>
+  <statistic cpu_id="0">
+    <total_inst>705502</total_inst>
+    <total_clock>705502</total_clock>
+    <spawned_thread>18821</spawned_thread>
+    <commited_thread>12046</commited_thread>
+    <failed_thread total="9330">
+      <OnDDV>324</OnDDV>
+      <OnInstruction>0</OnInstruction>
+      <OnRegisterVerification>6823</OnRegisterVerification>
+      <OnMemoryVerification>0</OnMemoryVerification>
+      <OnLowPriority>2183</OnLowPriority>
+      <OnControlVoilate>0</OnControlVoilate>
+      <OnReset>0</OnReset>
+      <OnHalt>0</OnHalt>
+      <OnQuit>0</OnQuit>
+      <OnException>0</OnException>
+      <OnUnknown>0</OnUnknown>
+      <FailCount>
+        <Failed_CPU failed_ListId="-1">9330</Failed_CPU>
+        <Failed_CPU failed_ListId="-2">0</Failed_CPU>
+        <Failed_CPU failed_ListId="-3">0</Failed_CPU>
+        <Failed_CPU failed_ListId="-4">0</Failed_CPU>
+      </FailCount>
+    </failed_thread>
+  </statistic>
+  <statistic cpu_id="1">
+    <total_inst>724093</total_inst>
+    <total_clock>724093</total_clock>
+    <spawned_thread>20177</spawned_thread>
+    <commited_thread>12629</commited_thread>
+    <failed_thread total="9959">
+      <OnDDV>340</OnDDV>
+      <OnInstruction>0</OnInstruction>
+      <OnRegisterVerification>7192</OnRegisterVerification>
+      <OnMemoryVerification>0</OnMemoryVerification>
+      <OnLowPriority>2427</OnLowPriority>
+      <OnControlVoilate>0</OnControlVoilate>
+      <OnReset>0</OnReset>
+      <OnHalt>0</OnHalt>
+      <OnQuit>0</OnQuit>
+      <OnException>0</OnException>
+      <OnUnknown>0</OnUnknown>
+      <FailCount>
+        <Failed_CPU failed_ListId="-1">9959</Failed_CPU>
+        <Failed_CPU failed_ListId="-2">0</Failed_CPU>
+        <Failed_CPU failed_ListId="-3">0</Failed_CPU>
+        <Failed_CPU failed_ListId="-4">0</Failed_CPU>
+      </FailCount>
+    </failed_thread>
+  </statistic>
+  <statistic cpu_id="2">
+    <total_inst>771927</total_inst>
+    <total_clock>771927</total_clock>
+    <spawned_thread>18119</spawned_thread>
+    <commited_thread>13828</commited_thread>
+    <failed_thread total="8604">
+      <OnDDV>335</OnDDV>
+      <OnInstruction>0</OnInstruction>
+      <OnRegisterVerification>6045</OnRegisterVerification>
+      <OnMemoryVerification>0</OnMemoryVerification>
+      <OnLowPriority>2224</OnLowPriority>
+      <OnControlVoilate>0</OnControlVoilate>
+      <OnReset>0</OnReset>
+      <OnHalt>0</OnHalt>
+      <OnQuit>0</OnQuit>
+      <OnException>0</OnException>
+      <OnUnknown>0</OnUnknown>
+      <FailCount>
+        <Failed_CPU failed_ListId="-1">8604</Failed_CPU>
+        <Failed_CPU failed_ListId="-2">0</Failed_CPU>
+        <Failed_CPU failed_ListId="-3">0</Failed_CPU>
+        <Failed_CPU failed_ListId="-4">0</Failed_CPU>
+      </FailCount>
+    </failed_thread>
+  </statistic>
+  <statistic cpu_id="3">
+    <total_inst>724003</total_inst>
+    <total_clock>724003</total_clock>
+    <spawned_thread>20327</spawned_thread>
+    <commited_thread>12620</commited_thread>
+    <failed_thread total="10051">
+      <OnDDV>349</OnDDV>
+      <OnInstruction>0</OnInstruction>
+      <OnRegisterVerification>7259</OnRegisterVerification>
+      <OnMemoryVerification>0</OnMemoryVerification>
+      <OnLowPriority>2443</OnLowPriority>
+      <OnControlVoilate>0</OnControlVoilate>
+      <OnReset>0</OnReset>
+      <OnHalt>0</OnHalt>
+      <OnQuit>0</OnQuit>
+      <OnException>0</OnException>
+      <OnUnknown>0</OnUnknown>
+      <FailCount>
+        <Failed_CPU failed_ListId="-1">10051</Failed_CPU>
+        <Failed_CPU failed_ListId="-2">0</Failed_CPU>
+        <Failed_CPU failed_ListId="-3">0</Failed_CPU>
+        <Failed_CPU failed_ListId="-4">0</Failed_CPU>
+      </FailCount>
+    </failed_thread>
+  </statistic>
+  <analysis>
+    <sequential_time>1905827</sequential_time>
+    <parallel_time>1442085</parallel_time>
+    <speed_up>1.321577</speed_up>
+    <total_spawned>77444</total_spawned>
+    <success_ratio>0.510046</success_ratio>
+    <fail_stat total_failed="37944">
+      <TOnDDV total="1348">0.035526</TOnDDV>
+      <TOnInstruction total="0">0.000000</TOnInstruction>
+      <TOnRegV total="27319">0.719982</TOnRegV>
+      <TOnMMV total="0">0.000000</TOnMMV>
+      <TOnLowPriority total="9277">0.244492</TOnLowPriority>
+      <TOnControl total="0">0.000000</TOnControl>
+      <TOnReset total="0">0.000000</TOnReset>
+      <TOnHalt total="0">0.000000</TOnHalt>
+      <TOnQuit total="0">0.000000</TOnQuit>
+      <TOnException total="0">0.000000</TOnException>
+      <TOnUnknown total="0">0.000000</TOnUnknown>
+    </fail_stat>
+  </analysis>
+</statistic_report>

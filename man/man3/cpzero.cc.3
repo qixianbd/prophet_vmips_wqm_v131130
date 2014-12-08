@@ -1,0 +1,74 @@
+.TH "cpzero.cc" 3 "18 Dec 2013" "Doxygen" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+cpzero.cc \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'cpzero.h'\fP
+.br
+\fC#include 'mapper.h'\fP
+.br
+\fC#include 'excnames.h'\fP
+.br
+\fC#include 'cpu.h'\fP
+.br
+\fC#include 'cpzeroreg.h'\fP
+.br
+\fC#include 'intctrl.h'\fP
+.br
+\fC#include 'deviceexc.h'\fP
+.br
+\fC#include 'error.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBdump_tlb_entry\fP (FILE *f, int index, const \fBTLBEntry\fP &e)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "static uint32 \fBread_masks\fP []"
+.br
+.ti -1c
+.RI "static uint32 \fBwrite_masks\fP []"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "static void dump_tlb_entry (FILE * f, int index, const \fBTLBEntry\fP & e)\fC [static]\fP"
+.SH "Variable Documentation"
+.PP 
+.SS "uint32 \fBread_masks\fP[]\fC [static]\fP"\fBInitial value:\fP
+.PP
+.nf
+ {
+        Index_MASK, Random_MASK, EntryLo_MASK, 0, Context_MASK,
+        PageMask_MASK, Wired_MASK, Error_MASK, BadVAddr_MASK, Count_MASK,
+        EntryHi_MASK, Compare_MASK, Status_MASK, Cause_MASK, EPC_MASK,
+        PRId_MASK, Config_MASK, LLAddr_MASK, WatchLo_MASK, WatchHi_MASK,
+        0, 0, 0, 0, 0, 0, ECC_MASK, CacheErr_MASK, TagLo_MASK, TagHi_MASK,
+        ErrorEPC_MASK, 0
+}
+.fi
+.SS "uint32 \fBwrite_masks\fP[]\fC [static]\fP"\fBInitial value:\fP
+.PP
+.nf
+ {
+        Index_MASK, 0, EntryLo_MASK, 0, Context_MASK & ~Context_BadVPN_MASK,
+        PageMask_MASK, Wired_MASK, Error_MASK, 0, Count_MASK,
+        EntryHi_MASK, Compare_MASK, Status_MASK,
+        Cause_MASK & ~Cause_IP_Ext_MASK, 0, 0, Config_MASK, LLAddr_MASK,
+        WatchLo_MASK, WatchHi_MASK, 0, 0, 0, 0, 0, 0, ECC_MASK,
+        CacheErr_MASK, TagLo_MASK, TagHi_MASK, ErrorEPC_MASK, 0
+}
+.fi
+.SH "Author"
+.PP 
+Generated automatically by Doxygen from the source code.

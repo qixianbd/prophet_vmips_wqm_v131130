@@ -1,0 +1,47 @@
+.TH "optiontbl.h" 3 "18 Dec 2013" "Doxygen" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+optiontbl.h \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "static \fBOption\fP \fBnametable\fP []"
+.br
+.ti -1c
+.RI "static char * \fBdefaults_table\fP []"
+.br
+.in -1c
+.SH "Variable Documentation"
+.PP 
+.SS "char* \fBdefaults_table\fP[]\fC [static]\fP"\fBInitial value:\fP
+.PP
+.nf
+ {
+    'nohaltdumpcpu', 'nohaltdumpcp0', 'noexcpriomsg',
+    'noexcmsg', 'bootmsg', 'noinstdump', 'nodumpcpu', 'nodumpcp0',
+    'haltibe', 'haltbreak', 'haltdevice', 'romfile=romfile.rom',
+    'loadaddr=0xbfc00000', 'noinstcounts',
+    'memsize=0x100000', 'nomemdump', 'memdumpfile=memdump.bin',
+    'noreportirq', 'ttydev=/dev/tty', 'ttydev2=off',
+    'nodebug', 'norealtime', 'timeratio=1', 'clockspeed=250000',
+    'clockintr=200000000', 'clockdeviceirq=7', 'clockdevice',
+    'nodbemsg', 'nodecrtc', 'nodeccsr', 'nodecstat', 'nodecserial',
+    'spimconsole', 'notracing', 'tracesize=100000', 'nobigendian',
+    'tracestartpc=0', 'traceendpc=0',
+    'mipstoolprefix=/nonexistent/mips/bin/mipsel-ecoff-',
+    'execname=none',
+    'corenum=4',
+    'nofilelog',
+    'noconsolelog',
+    NULL
+}
+.fi
+.SS "\fBOption\fP \fBnametable\fP[]\fC [static]\fP"
+.SH "Author"
+.PP 
+Generated automatically by Doxygen from the source code.

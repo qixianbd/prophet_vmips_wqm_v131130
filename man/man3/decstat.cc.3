@@ -1,0 +1,54 @@
+.TH "decstat.cc" 3 "18 Dec 2013" "Doxygen" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+decstat.cc \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'deviceexc.h'\fP
+.br
+\fC#include 'cpu.h'\fP
+.br
+\fC#include 'decstat.h'\fP
+.br
+\fC#include 'devicemap.h'\fP
+.br
+\fC#include 'mapper.h'\fP
+.br
+\fC#include 'vmips.h'\fP
+.br
+
+.SS "Defines"
+
+.in +1c
+.ti -1c
+.RI "#define \fBERRADR_VALID\fP   0x80000000"
+.br
+.ti -1c
+.RI "#define \fBERRADR_CPU\fP   0x40000000"
+.br
+.ti -1c
+.RI "#define \fBERRADR_WRITE\fP   0x20000000"
+.br
+.ti -1c
+.RI "#define \fBERRADR_ECCERR\fP   0x10000000"
+.br
+.ti -1c
+.RI "#define \fBERRADR_RSRVD\fP   0x08000000"
+.br
+.ti -1c
+.RI "#define \fBERRADR_ADDRESS\fP   0x07FFFFFF"
+.br
+.in -1c
+.SH "Define Documentation"
+.PP 
+.SS "#define ERRADR_ADDRESS   0x07FFFFFF"
+.SS "#define ERRADR_CPU   0x40000000"
+.SS "#define ERRADR_ECCERR   0x10000000"
+.SS "#define ERRADR_RSRVD   0x08000000"
+.SS "#define ERRADR_VALID   0x80000000"
+.SS "#define ERRADR_WRITE   0x20000000"
+.SH "Author"
+.PP 
+Generated automatically by Doxygen from the source code.

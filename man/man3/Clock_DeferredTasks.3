@@ -1,0 +1,56 @@
+.TH "Clock::DeferredTasks" 3 "18 Dec 2013" "Doxygen" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Clock::DeferredTasks \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <clock.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDeferredTasks\fP (long \fBnanoseconds_left\fP, \fBTask\fP *task)  throw ()"
+.br
+.ti -1c
+.RI "virtual \fB~DeferredTasks\fP ()  throw ()"
+.br
+.ti -1c
+.RI "virtual void \fBadd_task\fP (\fBTask\fP *task)  throw ()"
+.br
+.ti -1c
+.RI "virtual long \fBpass_time\fP (long nanoseconds)"
+.br
+.ti -1c
+.RI "virtual long \fBget_nanoseconds_left\fP ()  throw ()"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "long \fBnanoseconds_left\fP"
+.br
+.ti -1c
+.RI "std::list< \fBTask\fP * > \fBtasks\fP"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Clock::DeferredTasks::DeferredTasks (long nanoseconds_left, \fBTask\fP * task)  throw ()"
+.SS "Clock::DeferredTasks::~DeferredTasks ()  throw ()\fC [virtual]\fP"
+.SH "Member Function Documentation"
+.PP 
+.SS "void Clock::DeferredTasks::add_task (\fBTask\fP * task)  throw ()\fC [virtual]\fP"
+.SS "long Clock::DeferredTasks::get_nanoseconds_left ()  throw ()\fC [inline, virtual]\fP"
+.SS "long Clock::DeferredTasks::pass_time (long nanoseconds)\fC [virtual]\fP"
+.SH "Member Data Documentation"
+.PP 
+.SS "long \fBClock::DeferredTasks::nanoseconds_left\fP\fC [protected]\fP"
+.SS "std::list< \fBTask\fP* > \fBClock::DeferredTasks::tasks\fP\fC [protected]\fP"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen from the source code.

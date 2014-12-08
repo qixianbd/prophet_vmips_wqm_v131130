@@ -1,0 +1,62 @@
+\hypertarget{classDECSerialDevice}{
+\section{DECSerialDevice Class Reference}
+\label{classDECSerialDevice}\index{DECSerialDevice@{DECSerialDevice}}
+}
+Inheritance diagram for DECSerialDevice:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{classDECSerialDevice}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classDECSerialDevice_a5352f1903bcbb940a9585d6fdf455e70}{
+{\bfseries DECSerialDevice} (\hyperlink{classClock}{Clock} $\ast$clock, uint8 deccsr\_\-irq\_\-)  throw ()}
+\label{classDECSerialDevice_a5352f1903bcbb940a9585d6fdf455e70}
+
+\item 
+\hypertarget{classDECSerialDevice_a7e7121d53a61efb3b7c6a213b68cbe1f}{
+uint32 {\bfseries fetch\_\-word} (uint32 offset, int mode, \hyperlink{classDeviceExc}{DeviceExc} $\ast$client)}
+\label{classDECSerialDevice_a7e7121d53a61efb3b7c6a213b68cbe1f}
+
+\item 
+\hypertarget{classDECSerialDevice_a703cb7f5757a9076f1074d188291617a}{
+void {\bfseries store\_\-word} (uint32 offset, uint32 data, \hyperlink{classDeviceExc}{DeviceExc} $\ast$client)}
+\label{classDECSerialDevice_a703cb7f5757a9076f1074d188291617a}
+
+\item 
+\hypertarget{classDECSerialDevice_a4bafbd9752125c521627528e8b1c5a2b}{
+const char $\ast$ {\bfseries descriptor\_\-str} () const }
+\label{classDECSerialDevice_a4bafbd9752125c521627528e8b1c5a2b}
+
+\item 
+\hypertarget{classDECSerialDevice_a162892d99421099bcc484975eaa52967}{
+virtual void {\bfseries ready\_\-display} (int line)  throw ()}
+\label{classDECSerialDevice_a162892d99421099bcc484975eaa52967}
+
+\item 
+\hypertarget{classDECSerialDevice_a90c514eea4287882eed3e31f2792964b}{
+virtual void {\bfseries unready\_\-display} (int line, char data)  throw (std::bad\_\-alloc)}
+\label{classDECSerialDevice_a90c514eea4287882eed3e31f2792964b}
+
+\item 
+\hypertarget{classDECSerialDevice_a018c7b26ebc09ce1529549f49a5eb4d4}{
+virtual void {\bfseries unready\_\-keyboard} (int line)  throw ()}
+\label{classDECSerialDevice_a018c7b26ebc09ce1529549f49a5eb4d4}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classDECSerialDevice_ac2ab83e7f32d9f70f615eaf3c3121e21}{
+virtual void {\bfseries ready\_\-keyboard} (int line)  throw ()}
+\label{classDECSerialDevice_ac2ab83e7f32d9f70f615eaf3c3121e21}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+decserial.h\item 
+decserial.cc\end{DoxyCompactItemize}

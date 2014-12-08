@@ -1,0 +1,44 @@
+.TH "DeviceExc" 3 "18 Dec 2013" "Doxygen" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+DeviceExc \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <deviceexc.h>\fP
+.PP
+Inherited by \fBCPU\fP, and \fBDebug\fP.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBexception\fP (uint16 excCode, int mode=ANY, int coprocno=-1)=0"
+.br
+.ti -1c
+.RI "virtual \fB~DeviceExc\fP ()"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "bool \fBexception_pending\fP"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "virtual DeviceExc::~DeviceExc ()\fC [inline, virtual]\fP"
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual void DeviceExc::exception (uint16 excCode, int mode = \fCANY\fP, int coprocno = \fC-1\fP)\fC [pure virtual]\fP"
+.PP
+Implemented in \fBCPU\fP, and \fBDebug\fP.
+.SH "Member Data Documentation"
+.PP 
+.SS "bool \fBDeviceExc::exception_pending\fP"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen from the source code.

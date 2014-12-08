@@ -1,0 +1,146 @@
+.TH "remotegdb.cc" 3 "18 Dec 2013" "Doxygen" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+remotegdb.cc \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <cstdarg>\fP
+.br
+\fC#include <cstdio>\fP
+.br
+\fC#include <cerrno>\fP
+.br
+\fC#include <cstring>\fP
+.br
+\fC#include <cstdlib>\fP
+.br
+\fC#include <unistd.h>\fP
+.br
+\fC#include <sys/time.h>\fP
+.br
+\fC#include 'remotegdb.h'\fP
+.br
+
+.SS "Defines"
+
+.in +1c
+.ti -1c
+.RI "#define \fBprintf_filtered\fP   printf_unfiltered"
+.br
+.ti -1c
+.RI "#define \fBMAX_TRIES\fP   3"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBserial_readchar\fP (int fd, int timeout)"
+.br
+.ti -1c
+.RI "int \fBserial_write\fP (int fd, const char *buf, int len)"
+.br
+.ti -1c
+.RI "static int \fBgdb_flush\fP (FILE *f)"
+.br
+.ti -1c
+.RI "static int \fBmax\fP (int i, int j)"
+.br
+.ti -1c
+.RI "static void \fBperror_with_name\fP (char *str)"
+.br
+.ti -1c
+.RI "static void \fBputs_filtered\fP (char *str)"
+.br
+.ti -1c
+.RI "static int \fBputchar_unfiltered\fP (int c)"
+.br
+.ti -1c
+.RI "static int \fBfprintf_unfiltered\fP (FILE *f, char *fmt,...)"
+.br
+.ti -1c
+.RI "static int \fBprintf_unfiltered\fP (char *fmt,...)"
+.br
+.ti -1c
+.RI "static void \fBerror\fP (char *fmt,...)"
+.br
+.ti -1c
+.RI "int \fBfromhex\fP (int a)"
+.br
+.ti -1c
+.RI "int \fBtohex\fP (int nib)"
+.br
+.ti -1c
+.RI "int \fBhexnumlen\fP (ULONGEST num)"
+.br
+.ti -1c
+.RI "int \fBreadchar\fP (int timeout)"
+.br
+.ti -1c
+.RI "void \fBremote_send\fP (char *buf)"
+.br
+.ti -1c
+.RI "int \fBputpkt\fP (char *buf)"
+.br
+.ti -1c
+.RI "int \fBread_frame\fP (char *buf)"
+.br
+.ti -1c
+.RI "void \fBgetpkt\fP (char *buf, int forever)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "int \fBremote_debug\fP = 0"
+.br
+.ti -1c
+.RI "int \fBremote_desc\fP"
+.br
+.ti -1c
+.RI "int \fBremote_timeout\fP = 2"
+.br
+.ti -1c
+.RI "static FILE * \fBgdb_stdout\fP = stderr"
+.br
+.ti -1c
+.RI "int \fBremotegdb_backend_error\fP = 0"
+.br
+.in -1c
+.SH "Define Documentation"
+.PP 
+.SS "#define MAX_TRIES   3"
+.SS "#define printf_filtered   printf_unfiltered"
+.SH "Function Documentation"
+.PP 
+.SS "static void error (char * fmt,  ...)\fC [inline, static]\fP"
+.SS "static int fprintf_unfiltered (FILE * f, char * fmt,  ...)\fC [inline, static]\fP"
+.SS "int fromhex (int a)"
+.SS "static int gdb_flush (FILE * f)\fC [inline, static]\fP"
+.SS "void getpkt (char * buf, int forever)"
+.SS "int hexnumlen (ULONGEST num)"
+.SS "static int max (int i, int j)\fC [inline, static]\fP"
+.SS "static void perror_with_name (char * str)\fC [inline, static]\fP"
+.SS "static int printf_unfiltered (char * fmt,  ...)\fC [inline, static]\fP"
+.SS "static int putchar_unfiltered (int c)\fC [inline, static]\fP"
+.SS "int putpkt (char * buf)"
+.SS "static void puts_filtered (char * str)\fC [inline, static]\fP"
+.SS "int read_frame (char * buf)"
+.SS "int readchar (int timeout)"
+.SS "void remote_send (char * buf)"
+.SS "int serial_readchar (int fd, int timeout)"
+.SS "int serial_write (int fd, const char * buf, int len)"
+.SS "int tohex (int nib)"
+.SH "Variable Documentation"
+.PP 
+.SS "FILE* \fBgdb_stdout\fP = stderr\fC [static]\fP"
+.SS "int \fBremote_debug\fP = 0"
+.SS "int \fBremote_desc\fP"
+.SS "int \fBremote_timeout\fP = 2"
+.SS "int \fBremotegdb_backend_error\fP = 0"
+.SH "Author"
+.PP 
+Generated automatically by Doxygen from the source code.

@@ -1,0 +1,47 @@
+.TH "predefine.h" 3 "18 Dec 2013" "Doxygen" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+predefine.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <string>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBProphetException\fP"
+.br
+.in -1c
+.SS "Defines"
+
+.in +1c
+.ti -1c
+.RI "#define \fBGET_ACCESSOR\fP(t, n)   t Get##n() const { return m_##n; }"
+.br
+.ti -1c
+.RI "#define \fBSET_ACCESSOR\fP(t, n, v)   void Set##n(t v) { m_##n = v; }"
+.br
+.ti -1c
+.RI "#define \fBSET_GET_ACCESSOR\fP(t, n, v)   GET_ACCESSOR(t, n) SET_ACCESSOR(t, n, v)"
+.br
+.ti -1c
+.RI "#define \fBGET_SET_ACCESSOR\fP(t, n, v)   SET_ACCESSOR(t, n) GET_ACCESSOR(t, n, v)"
+.br
+.ti -1c
+.RI "#define \fB__PROPHET\fP"
+.br
+.in -1c
+.SH "Define Documentation"
+.PP 
+.SS "#define __PROPHET"
+.SS "#define GET_ACCESSOR(t, n)   t Get##n() const { return m_##n; }"
+.SS "#define GET_SET_ACCESSOR(t, n, v)   SET_ACCESSOR(t, n) GET_ACCESSOR(t, n, v)"
+.SS "#define SET_ACCESSOR(t, n, v)   void Set##n(t v) { m_##n = v; }"
+.SS "#define SET_GET_ACCESSOR(t, n, v)   GET_ACCESSOR(t, n) SET_ACCESSOR(t, n, v)"
+.SH "Author"
+.PP 
+Generated automatically by Doxygen from the source code.

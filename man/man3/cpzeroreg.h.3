@@ -1,0 +1,445 @@
+.TH "cpzeroreg.h" 3 "18 Dec 2013" "Doxygen" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+cpzeroreg.h \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Defines"
+
+.in +1c
+.ti -1c
+.RI "#define \fBKSEG_SELECT_MASK\fP   0xe0000000"
+.br
+.ti -1c
+.RI "#define \fBKUSEG\fP   0"
+.br
+.ti -1c
+.RI "#define \fBKERNEL_SPACE_MASK\fP   0x80000000"
+.br
+.ti -1c
+.RI "#define \fBKSEG0\fP   0x80000000"
+.br
+.ti -1c
+.RI "#define \fBKSEG0_CONST_TRANSLATION\fP   0x80000000"
+.br
+.ti -1c
+.RI "#define \fBKSEG1\fP   0xa0000000"
+.br
+.ti -1c
+.RI "#define \fBKSEG1_CONST_TRANSLATION\fP   0xa0000000"
+.br
+.ti -1c
+.RI "#define \fBKSEG2\fP   0xc0000000"
+.br
+.ti -1c
+.RI "#define \fBKSEG2_top\fP   0xe0000000"
+.br
+.ti -1c
+.RI "#define \fBIndex\fP   0"
+.br
+.ti -1c
+.RI "#define \fBRandom\fP   1"
+.br
+.ti -1c
+.RI "#define \fBEntryLo\fP   2"
+.br
+.ti -1c
+.RI "#define \fBEntryLo0\fP   2"
+.br
+.ti -1c
+.RI "#define \fBEntryLo1\fP   3"
+.br
+.ti -1c
+.RI "#define \fBContext\fP   4"
+.br
+.ti -1c
+.RI "#define \fBPageMask\fP   5"
+.br
+.ti -1c
+.RI "#define \fBWired\fP   6"
+.br
+.ti -1c
+.RI "#define \fBError\fP   7"
+.br
+.ti -1c
+.RI "#define \fBBadVAddr\fP   8"
+.br
+.ti -1c
+.RI "#define \fBCount\fP   9"
+.br
+.ti -1c
+.RI "#define \fBEntryHi\fP   10"
+.br
+.ti -1c
+.RI "#define \fBASID\fP   10"
+.br
+.ti -1c
+.RI "#define \fBCompare\fP   11"
+.br
+.ti -1c
+.RI "#define \fBStatus\fP   12"
+.br
+.ti -1c
+.RI "#define \fBCause\fP   13"
+.br
+.ti -1c
+.RI "#define \fBEPC\fP   14"
+.br
+.ti -1c
+.RI "#define \fBPRId\fP   15"
+.br
+.ti -1c
+.RI "#define \fBConfig\fP   16"
+.br
+.ti -1c
+.RI "#define \fBLLAdr\fP   17"
+.br
+.ti -1c
+.RI "#define \fBLLAddr\fP   17"
+.br
+.ti -1c
+.RI "#define \fBWatchLo\fP   18"
+.br
+.ti -1c
+.RI "#define \fBWatchHi\fP   19"
+.br
+.ti -1c
+.RI "#define \fBECC\fP   26"
+.br
+.ti -1c
+.RI "#define \fBCacheErr\fP   27"
+.br
+.ti -1c
+.RI "#define \fBTagLo\fP   28"
+.br
+.ti -1c
+.RI "#define \fBTagHi\fP   29"
+.br
+.ti -1c
+.RI "#define \fBErrorEPC\fP   30"
+.br
+.ti -1c
+.RI "#define \fBIndex_P_MASK\fP   0x80000000"
+.br
+.ti -1c
+.RI "#define \fBIndex_Index_MASK\fP   0x00003f00"
+.br
+.ti -1c
+.RI "#define \fBIndex_MASK\fP   0x80003f00"
+.br
+.ti -1c
+.RI "#define \fBRandom_Random_MASK\fP   0x00003f00"
+.br
+.ti -1c
+.RI "#define \fBRandom_MASK\fP   0x00003f00"
+.br
+.ti -1c
+.RI "#define \fBRandom_UPPER_BOUND\fP   63"
+.br
+.ti -1c
+.RI "#define \fBRandom_LOWER_BOUND\fP   8"
+.br
+.ti -1c
+.RI "#define \fBEntryLo_PFN_MASK\fP   0xfffff000"
+.br
+.ti -1c
+.RI "#define \fBEntryLo_N_MASK\fP   0x00000800"
+.br
+.ti -1c
+.RI "#define \fBEntryLo_D_MASK\fP   0x00000400"
+.br
+.ti -1c
+.RI "#define \fBEntryLo_V_MASK\fP   0x00000200"
+.br
+.ti -1c
+.RI "#define \fBEntryLo_G_MASK\fP   0x00000100"
+.br
+.ti -1c
+.RI "#define \fBEntryLo_MASK\fP   0xffffff00"
+.br
+.ti -1c
+.RI "#define \fBContext_PTEBase_MASK\fP   0xffe00000"
+.br
+.ti -1c
+.RI "#define \fBContext_BadVPN_MASK\fP   0x001ffffc"
+.br
+.ti -1c
+.RI "#define \fBContext_MASK\fP   0xfffffffc"
+.br
+.ti -1c
+.RI "#define \fBPageMask_MASK\fP   0x00000000"
+.br
+.ti -1c
+.RI "#define \fBWired_MASK\fP   0x00000000"
+.br
+.ti -1c
+.RI "#define \fBError_MASK\fP   0x00000000"
+.br
+.ti -1c
+.RI "#define \fBBadVAddr_MASK\fP   0xffffffff"
+.br
+.ti -1c
+.RI "#define \fBCount_MASK\fP   0x00000000"
+.br
+.ti -1c
+.RI "#define \fBEntryHi_VPN_MASK\fP   0xfffff000"
+.br
+.ti -1c
+.RI "#define \fBEntryHi_ASID_MASK\fP   0x00000fc0"
+.br
+.ti -1c
+.RI "#define \fBEntryHi_MASK\fP   0xffffffc0"
+.br
+.ti -1c
+.RI "#define \fBCompare_MASK\fP   0x00000000"
+.br
+.ti -1c
+.RI "#define \fBStatus_CU_MASK\fP   0xf0000000"
+.br
+.ti -1c
+.RI "#define \fBStatus_CU3_MASK\fP   0x80000000"
+.br
+.ti -1c
+.RI "#define \fBStatus_CU2_MASK\fP   0x40000000"
+.br
+.ti -1c
+.RI "#define \fBStatus_CU1_MASK\fP   0x20000000"
+.br
+.ti -1c
+.RI "#define \fBStatus_CU0_MASK\fP   0x10000000"
+.br
+.ti -1c
+.RI "#define \fBStatus_RE_MASK\fP   0x02000000"
+.br
+.ti -1c
+.RI "#define \fBStatus_DS_MASK\fP   0x01ff0000"
+.br
+.ti -1c
+.RI "#define \fBStatus_DS_BEV_MASK\fP   0x00400000"
+.br
+.ti -1c
+.RI "#define \fBStatus_DS_TS_MASK\fP   0x00200000"
+.br
+.ti -1c
+.RI "#define \fBStatus_DS_PE_MASK\fP   0x00100000"
+.br
+.ti -1c
+.RI "#define \fBStatus_DS_CM_MASK\fP   0x00080000"
+.br
+.ti -1c
+.RI "#define \fBStatus_DS_PZ_MASK\fP   0x00040000"
+.br
+.ti -1c
+.RI "#define \fBStatus_DS_SwC_MASK\fP   0x00020000"
+.br
+.ti -1c
+.RI "#define \fBStatus_DS_IsC_MASK\fP   0x00010000"
+.br
+.ti -1c
+.RI "#define \fBStatus_IM_MASK\fP   0x0000ff00"
+.br
+.ti -1c
+.RI "#define \fBStatus_IM_Ext_MASK\fP   0x0000fc00"
+.br
+.ti -1c
+.RI "#define \fBStatus_IM_SW_MASK\fP   0x00000300"
+.br
+.ti -1c
+.RI "#define \fBStatus_KU_IE_MASK\fP   0x0000003f"
+.br
+.ti -1c
+.RI "#define \fBStatus_KUo_MASK\fP   0x00000020"
+.br
+.ti -1c
+.RI "#define \fBStatus_IEo_MASK\fP   0x00000010"
+.br
+.ti -1c
+.RI "#define \fBStatus_KUp_MASK\fP   0x00000008"
+.br
+.ti -1c
+.RI "#define \fBStatus_IEp_MASK\fP   0x00000004"
+.br
+.ti -1c
+.RI "#define \fBStatus_KUc_MASK\fP   0x00000002"
+.br
+.ti -1c
+.RI "#define \fBStatus_IEc_MASK\fP   0x00000001"
+.br
+.ti -1c
+.RI "#define \fBStatus_MASK\fP   0xf27fff3f"
+.br
+.ti -1c
+.RI "#define \fBCause_BD_MASK\fP   0x80000000"
+.br
+.ti -1c
+.RI "#define \fBCause_CE_MASK\fP   0x30000000"
+.br
+.ti -1c
+.RI "#define \fBCause_IP_MASK\fP   0x0000ff00"
+.br
+.ti -1c
+.RI "#define \fBCause_IP_Ext_MASK\fP   0x0000fc00"
+.br
+.ti -1c
+.RI "#define \fBCause_IP_SW_MASK\fP   0x00000300"
+.br
+.ti -1c
+.RI "#define \fBCause_ExcCode_MASK\fP   0x0000007c"
+.br
+.ti -1c
+.RI "#define \fBCause_MASK\fP   0xb000ff7c"
+.br
+.ti -1c
+.RI "#define \fBEPC_MASK\fP   0xffffffff"
+.br
+.ti -1c
+.RI "#define \fBPRId_Imp_MASK\fP   0x0000ff00"
+.br
+.ti -1c
+.RI "#define \fBPRId_Rev_MASK\fP   0x000000ff"
+.br
+.ti -1c
+.RI "#define \fBPRId_MASK\fP   0x0000ffff"
+.br
+.ti -1c
+.RI "#define \fBConfig_MASK\fP   0x00000000"
+.br
+.ti -1c
+.RI "#define \fBLLAddr_MASK\fP   0x00000000"
+.br
+.ti -1c
+.RI "#define \fBWatchLo_MASK\fP   0x00000000"
+.br
+.ti -1c
+.RI "#define \fBWatchHi_MASK\fP   0x00000000"
+.br
+.ti -1c
+.RI "#define \fBECC_MASK\fP   0x00000000"
+.br
+.ti -1c
+.RI "#define \fBCacheErr_MASK\fP   0x00000000"
+.br
+.ti -1c
+.RI "#define \fBTagLo_MASK\fP   0x00000000"
+.br
+.ti -1c
+.RI "#define \fBTagHi_MASK\fP   0x00000000"
+.br
+.ti -1c
+.RI "#define \fBErrorEPC_MASK\fP   0x00000000"
+.br
+.in -1c
+.SH "Define Documentation"
+.PP 
+.SS "#define ASID   10"
+.SS "#define BadVAddr   8"
+.SS "#define BadVAddr_MASK   0xffffffff"
+.SS "#define CacheErr   27"
+.SS "#define CacheErr_MASK   0x00000000"
+.SS "#define Cause   13"
+.SS "#define Cause_BD_MASK   0x80000000"
+.SS "#define Cause_CE_MASK   0x30000000"
+.SS "#define Cause_ExcCode_MASK   0x0000007c"
+.SS "#define Cause_IP_Ext_MASK   0x0000fc00"
+.SS "#define Cause_IP_MASK   0x0000ff00"
+.SS "#define Cause_IP_SW_MASK   0x00000300"
+.SS "#define Cause_MASK   0xb000ff7c"
+.SS "#define Compare   11"
+.SS "#define Compare_MASK   0x00000000"
+.SS "#define Config   16"
+.SS "#define Config_MASK   0x00000000"
+.SS "#define Context   4"
+.SS "#define Context_BadVPN_MASK   0x001ffffc"
+.SS "#define Context_MASK   0xfffffffc"
+.SS "#define Context_PTEBase_MASK   0xffe00000"
+.SS "#define Count   9"
+.SS "#define Count_MASK   0x00000000"
+.SS "#define ECC   26"
+.SS "#define ECC_MASK   0x00000000"
+.SS "#define EntryHi   10"
+.SS "#define EntryHi_ASID_MASK   0x00000fc0"
+.SS "#define EntryHi_MASK   0xffffffc0"
+.SS "#define EntryHi_VPN_MASK   0xfffff000"
+.SS "#define EntryLo   2"
+.SS "#define EntryLo0   2"
+.SS "#define EntryLo1   3"
+.SS "#define EntryLo_D_MASK   0x00000400"
+.SS "#define EntryLo_G_MASK   0x00000100"
+.SS "#define EntryLo_MASK   0xffffff00"
+.SS "#define EntryLo_N_MASK   0x00000800"
+.SS "#define EntryLo_PFN_MASK   0xfffff000"
+.SS "#define EntryLo_V_MASK   0x00000200"
+.SS "#define EPC   14"
+.SS "#define EPC_MASK   0xffffffff"
+.SS "#define Error   7"
+.SS "#define Error_MASK   0x00000000"
+.SS "#define ErrorEPC   30"
+.SS "#define ErrorEPC_MASK   0x00000000"
+.SS "#define Index   0"
+.SS "#define Index_Index_MASK   0x00003f00"
+.SS "#define Index_MASK   0x80003f00"
+.SS "#define Index_P_MASK   0x80000000"
+.SS "#define KERNEL_SPACE_MASK   0x80000000"
+.SS "#define KSEG0   0x80000000"
+.SS "#define KSEG0_CONST_TRANSLATION   0x80000000"
+.SS "#define KSEG1   0xa0000000"
+.SS "#define KSEG1_CONST_TRANSLATION   0xa0000000"
+.SS "#define KSEG2   0xc0000000"
+.SS "#define KSEG2_top   0xe0000000"
+.SS "#define KSEG_SELECT_MASK   0xe0000000"
+.SS "#define KUSEG   0"
+.SS "#define LLAddr   17"
+.SS "#define LLAddr_MASK   0x00000000"
+.SS "#define LLAdr   17"
+.SS "#define PageMask   5"
+.SS "#define PageMask_MASK   0x00000000"
+.SS "#define PRId   15"
+.SS "#define PRId_Imp_MASK   0x0000ff00"
+.SS "#define PRId_MASK   0x0000ffff"
+.SS "#define PRId_Rev_MASK   0x000000ff"
+.SS "#define Random   1"
+.SS "#define Random_LOWER_BOUND   8"
+.SS "#define Random_MASK   0x00003f00"
+.SS "#define Random_Random_MASK   0x00003f00"
+.SS "#define Random_UPPER_BOUND   63"
+.SS "#define Status   12"
+.SS "#define Status_CU0_MASK   0x10000000"
+.SS "#define Status_CU1_MASK   0x20000000"
+.SS "#define Status_CU2_MASK   0x40000000"
+.SS "#define Status_CU3_MASK   0x80000000"
+.SS "#define Status_CU_MASK   0xf0000000"
+.SS "#define Status_DS_BEV_MASK   0x00400000"
+.SS "#define Status_DS_CM_MASK   0x00080000"
+.SS "#define Status_DS_IsC_MASK   0x00010000"
+.SS "#define Status_DS_MASK   0x01ff0000"
+.SS "#define Status_DS_PE_MASK   0x00100000"
+.SS "#define Status_DS_PZ_MASK   0x00040000"
+.SS "#define Status_DS_SwC_MASK   0x00020000"
+.SS "#define Status_DS_TS_MASK   0x00200000"
+.SS "#define Status_IEc_MASK   0x00000001"
+.SS "#define Status_IEo_MASK   0x00000010"
+.SS "#define Status_IEp_MASK   0x00000004"
+.SS "#define Status_IM_Ext_MASK   0x0000fc00"
+.SS "#define Status_IM_MASK   0x0000ff00"
+.SS "#define Status_IM_SW_MASK   0x00000300"
+.SS "#define Status_KU_IE_MASK   0x0000003f"
+.SS "#define Status_KUc_MASK   0x00000002"
+.SS "#define Status_KUo_MASK   0x00000020"
+.SS "#define Status_KUp_MASK   0x00000008"
+.SS "#define Status_MASK   0xf27fff3f"
+.SS "#define Status_RE_MASK   0x02000000"
+.SS "#define TagHi   29"
+.SS "#define TagHi_MASK   0x00000000"
+.SS "#define TagLo   28"
+.SS "#define TagLo_MASK   0x00000000"
+.SS "#define WatchHi   19"
+.SS "#define WatchHi_MASK   0x00000000"
+.SS "#define WatchLo   18"
+.SS "#define WatchLo_MASK   0x00000000"
+.SS "#define Wired   6"
+.SS "#define Wired_MASK   0x00000000"
+.SH "Author"
+.PP 
+Generated automatically by Doxygen from the source code.

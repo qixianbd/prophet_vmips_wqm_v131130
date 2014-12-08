@@ -1,0 +1,37 @@
+digraph G
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node1 [label="SpimConsoleDevice::ClockTrigger",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node2 -> Node1 [dir=back,color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="CancelableTask",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classCancelableTask.html"];
+  Node3 -> Node2 [dir=back,color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="Task",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classTask.html"];
+  Node4 -> Node1 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="console"];
+  Node4 [label="SpimConsoleDevice",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classSpimConsoleDevice.html"];
+  Node5 -> Node4 [dir=back,color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="TerminalController",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classTerminalController.html"];
+  Node6 -> Node5 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="keyboard_poll"];
+  Node6 [label="TerminalController::KeyboardPoll",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classTerminalController_1_1KeyboardPoll.html"];
+  Node2 -> Node6 [dir=back,color="midnightblue",fontsize="10",style="solid"];
+  Node5 -> Node6 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="controller"];
+  Node7 -> Node5 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="lines"];
+  Node7 [label="TerminalController::LineState",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structTerminalController_1_1LineState.html"];
+  Node8 -> Node7 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="keyboard_repoll"];
+  Node8 [label="TerminalController::KeyboardRepoll",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classTerminalController_1_1KeyboardRepoll.html"];
+  Node2 -> Node8 [dir=back,color="midnightblue",fontsize="10",style="solid"];
+  Node5 -> Node8 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="controller"];
+  Node9 -> Node7 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="display_delay"];
+  Node9 [label="TerminalController::DisplayDelay",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classTerminalController_1_1DisplayDelay.html"];
+  Node2 -> Node9 [dir=back,color="midnightblue",fontsize="10",style="solid"];
+  Node5 -> Node9 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="controller"];
+  Node10 -> Node5 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="clock"];
+  Node10 [label="Clock",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classClock.html"];
+  Node11 -> Node4 [dir=back,color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="DeviceMap",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classDeviceMap.html"];
+  Node12 -> Node11 [dir=back,color="midnightblue",fontsize="10",style="solid"];
+  Node12 [label="Range",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classRange.html"];
+  Node13 -> Node4 [dir=back,color="midnightblue",fontsize="10",style="solid"];
+  Node13 [label="DeviceInt",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classDeviceInt.html"];
+  Node1 -> Node4 [dir=back,color="darkorchid3",fontsize="10",style="dashed",label="trigger"];
+}

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding='ISO-8859-1' standalone='yes' ?>
+<statistic_report report_time="2014-06-11 13:44:43 ">
+  <settings>
+    <setting_file>/home/qmwx/workspace/prophet_vmips_final_keyming_131130/inst_cost.ini</setting_file>
+    <version>1.0</version>
+    <program>testcase/health.rom</program>
+  </settings>
+  <statistic cpu_id="0">
+    <total_inst>100392</total_inst>
+    <total_clock>96342</total_clock>
+    <spawned_thread>1</spawned_thread>
+    <commited_thread>4050</commited_thread>
+    <failed_thread total="0">
+      <OnDDV>0</OnDDV>
+      <OnInstruction>0</OnInstruction>
+      <OnRegisterVerification>0</OnRegisterVerification>
+      <OnMemoryVerification>0</OnMemoryVerification>
+      <OnLowPriority>0</OnLowPriority>
+      <OnControlVoilate>0</OnControlVoilate>
+      <OnReset>0</OnReset>
+      <OnHalt>0</OnHalt>
+      <OnQuit>0</OnQuit>
+      <OnException>0</OnException>
+      <OnUnknown>0</OnUnknown>
+      <FailCount>
+        <Failed_CPU failed_ListId="0">0</Failed_CPU>
+      </FailCount>
+    </failed_thread>
+    <TimeStat>
+      <FreeTime>0</FreeTime>
+      <SquashTime>0</SquashTime>
+      <WaitTime>0</WaitTime>
+      <SpTime>0</SpTime>
+      <NoSpTime>96264</NoSpTime>
+      <PsliceTime>0</PsliceTime>
+    </TimeStat>
+  </statistic>
+  <analysis>
+    <total_instruction_num>100392</total_instruction_num>
+    <sequential_time>96264</sequential_time>
+    <parallel_time>96264</parallel_time>
+    <speed_up>1.000000</speed_up>
+    <total_spawned>1</total_spawned>
+    <success_ratio>1.000000</success_ratio>
+    <fail_stat total_failed="0">
+      <TOnDDV total="0">-nan</TOnDDV>
+      <TOnInstruction total="0">-nan</TOnInstruction>
+      <TOnRegV total="0">-nan</TOnRegV>
+      <TOnMMV total="0">-nan</TOnMMV>
+      <TOnLowPriority total="0">-nan</TOnLowPriority>
+      <TOnControl total="0">-nan</TOnControl>
+      <TOnReset total="0">-nan</TOnReset>
+      <TOnHalt total="0">-nan</TOnHalt>
+      <TOnQuit total="0">-nan</TOnQuit>
+      <TOnException total="0">-nan</TOnException>
+      <TOnUnknown total="0">-nan</TOnUnknown>
+    </fail_stat>
+    <FailDistantStat MaxDistance="1">
+      <SquashDistance distance_len="0">3212032</SquashDistance>
+    </FailDistantStat>
+    <CPUTimeBreakdown>
+      <FreeTime FreeTime="0">0.000000</FreeTime>
+      <PsliceTime PsliceTime="0">0.000000</PsliceTime>
+      <SquashTime SquashTime="0">0.000000</SquashTime>
+      <WaitTime WaitTime="0">0.000000</WaitTime>
+      <SpTime SpTime="0">0.000000</SpTime>
+      <NoSpTime NoSpTime="96264">1.000000</NoSpTime>
+    </CPUTimeBreakdown>
+    <CPUStat averageCoreNumber="1">
+      <CoreNum corenum="1">4056/1.000000</CoreNum>
+    averageCoreNumber: 1.000000
+    </CPUStat>
+  </analysis>
+  <ProStatData>
+    <SquashLenStat>
+      <SquashLen SquashLen ="0">0(-nan)</SquashLen>
+    </SquashLenStat>
+    <SquashOnSpListStat>
+      <OnSpList OnSpList ="0">0/0(-nan)</OnSpList>
+    </SquashOnSpListStat>
+  </ProStatData>
+</statistic_report>

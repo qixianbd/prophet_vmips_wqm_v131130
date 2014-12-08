@@ -1,0 +1,35 @@
+digraph G
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir=LR;
+  Node1 [label="CPU::addi_emulate",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="CPU::exception",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classCPU.html#a585862b2d962819486be215064fce20e"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="CPZero::enter_exception",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classCPZero.html#a578fcf97eaf38f17b7fbaf39ccb8c517"];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="CPZero::getIP",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classCPZero.html#a0559fd806b37245e515fef89ac44284d"];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="IntCtrl::calculateIP",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classIntCtrl.html#a62f4eae5fbfd7c96852003b02f95c69c"];
+  Node2 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="CPU::exception_priority",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classCPU.html#a3f626e9294073c7863592d0dc701556e"];
+  Node2 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="vmips::halt",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classvmips.html#a59555b31b9b80731838b73a9fb6d9166"];
+  Node2 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="CPZero::read_debug_info",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classCPZero.html#a57001ba4feae636ec47c8b6593e00e74"];
+  Node2 -> Node9 [color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="CPU::strdelaystate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classCPU.html#a7849dd448a89f9a7ca3f247ed2b9d757"];
+  Node2 -> Node10 [color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="CPU::strexccode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classCPU.html#acff6e2d8359b7ebea9153ea30b6c7596"];
+  Node2 -> Node11 [color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="CPU::strmemmode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classCPU.html#a5cc22e9cb5a61f8d0c2b226883974e15"];
+  Node2 -> Node12 [color="midnightblue",fontsize="10",style="solid"];
+  Node12 [label="CPZero::use_boot_excp_address",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classCPZero.html#a92925ab954e16699c7cf01b934487927"];
+  Node1 -> Node13 [color="midnightblue",fontsize="10",style="solid"];
+  Node13 [label="CPU::rs",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classCPU.html#a6a41d0dbc478e502ef7cb599e52a17cc"];
+  Node1 -> Node14 [color="midnightblue",fontsize="10",style="solid"];
+  Node14 [label="CPU::rt",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classCPU.html#a9697aa735fc4033872a5a6702e6fb60b"];
+  Node1 -> Node15 [color="midnightblue",fontsize="10",style="solid"];
+  Node15 [label="CPU::s_immed",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classCPU.html#a20fac2a174c994dc0e85e3896fab07f7"];
+}

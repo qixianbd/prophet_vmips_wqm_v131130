@@ -1,0 +1,121 @@
+.TH "prophetlog.h" 3 "18 Dec 2013" "Doxygen" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+prophetlog.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <sstream>\fP
+.br
+\fC#include <iostream>\fP
+.br
+\fC#include <typeinfo>\fP
+.br
+\fC#include 'types.h'\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBPlog::Log\fP"
+.br
+.ti -1c
+.RI "class \fBPlog::CallSite\fP"
+.br
+.ti -1c
+.RI "class \fBPlog::End\fP"
+.br
+.ti -1c
+.RI "class \fBPlog::NoClassInfo\fP"
+.br
+.in -1c
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBPlog\fP"
+.br
+.in -1c
+.SS "Defines"
+
+.in +1c
+.ti -1c
+.RI "#define \fBPLOG_CLASS\fP(c)   typedef c \fB_PROPHET_CLASS_TO_LOG\fP"
+.br
+.ti -1c
+.RI "#define \fBplog\fP(level)"
+.br
+.ti -1c
+.RI "#define \fBpendl\fP"
+.br
+.ti -1c
+.RI "#define \fBpdebug\fP   plog(Plog::PLOG_LEVEL_DEBUG)"
+.br
+.ti -1c
+.RI "#define \fBpinfo\fP   plog(Plog::PLOG_LEVEL_INFO)"
+.br
+.ti -1c
+.RI "#define \fBpwarn\fP   plog(Plog::PLOG_LEVEL_WARNING)"
+.br
+.ti -1c
+.RI "#define \fBperror\fP   plog(Plog::PLOG_LEVEL_ERROR)"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBPlog::NoClassInfo\fP \fB_PROPHET_CLASS_TO_LOG\fP"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBPlog::PLOG_LEVEL\fP { \fBPlog::PLOG_LEVEL_ALL\fP =  0, \fBPlog::PLOG_LEVEL_DEBUG\fP =  0, \fBPlog::PLOG_LEVEL_INFO\fP =  1, \fBPlog::PLOG_LEVEL_WARNING\fP =  2, \fBPlog::PLOG_LEVEL_ERROR\fP =  3, \fBPlog::PLOG_LEVEL_NON\fP =  4 }"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBPlog::InitPlog\fP (bool filelog, bool consolelog)"
+.br
+.ti -1c
+.RI "std::ostream & \fBPlog::operator<<\fP (std::ostream &out, const End &)"
+.br
+.in -1c
+.SH "Define Documentation"
+.PP 
+.SS "#define pdebug   plog(Plog::PLOG_LEVEL_DEBUG)"
+.SS "#define pendl"\fBValue:\fP
+.PP
+.nf
+Plog::End(); \
+                        Plog::Log::Flush(_out_stream, _log_site); \
+                } \
+        }while(0)
+.fi
+.SS "#define perror   plog(Plog::PLOG_LEVEL_ERROR)"
+.SS "#define pinfo   plog(Plog::PLOG_LEVEL_INFO)"
+.SS "#define plog(level)"\fBValue:\fP
+.PP
+.nf
+do{ \
+                static Plog::CallSite _log_site(level, __FILE__, __LINE__, \
+                typeid(_PROPHET_CLASS_TO_LOG), __FUNCTION__); \
+                if(_log_site.ShouldLog()) \
+                { \
+                        std::ostringstream *_out_stream = Plog::Log::Out(); \
+                        (*_out_stream)
+.fi
+.SS "#define PLOG_CLASS(c)   typedef c \fB_PROPHET_CLASS_TO_LOG\fP"
+.SS "#define pwarn   plog(Plog::PLOG_LEVEL_WARNING)"
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef \fBPlog::NoClassInfo\fP \fB_PROPHET_CLASS_TO_LOG\fP"
+.SH "Author"
+.PP 
+Generated automatically by Doxygen from the source code.

@@ -1,0 +1,114 @@
+.TH "vmips.cc" 3 "18 Dec 2013" "Doxygen" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+vmips.cc \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'clock.h'\fP
+.br
+\fC#include 'clockdev.h'\fP
+.br
+\fC#include 'clockreg.h'\fP
+.br
+\fC#include 'devreg.h'\fP
+.br
+\fC#include 'cpzeroreg.h'\fP
+.br
+\fC#include 'debug.h'\fP
+.br
+\fC#include 'error.h'\fP
+.br
+\fC#include 'types.h'\fP
+.br
+\fC#include <string>\fP
+.br
+\fC#include 'haltdev.h'\fP
+.br
+\fC#include 'intctrl.h'\fP
+.br
+\fC#include 'range.h'\fP
+.br
+\fC#include 'spimconsole.h'\fP
+.br
+\fC#include 'mapper.h'\fP
+.br
+\fC#include 'memorymodule.h'\fP
+.br
+\fC#include 'cpu.h'\fP
+.br
+\fC#include 'cpzero.h'\fP
+.br
+\fC#include 'spimconsreg.h'\fP
+.br
+\fC#include 'vmips.h'\fP
+.br
+\fC#include 'options.h'\fP
+.br
+\fC#include 'decrtc.h'\fP
+.br
+\fC#include 'decrtcreg.h'\fP
+.br
+\fC#include 'deccsr.h'\fP
+.br
+\fC#include 'deccsrreg.h'\fP
+.br
+\fC#include 'decstat.h'\fP
+.br
+\fC#include 'decserial.h'\fP
+.br
+\fC#include 'stub-dis.h'\fP
+.br
+\fC#include 'rommodule.h'\fP
+.br
+\fC#include <fcntl.h>\fP
+.br
+\fC#include <cerrno>\fP
+.br
+\fC#include <cassert>\fP
+.br
+\fC#include <csignal>\fP
+.br
+\fC#include <cstdarg>\fP
+.br
+\fC#include <exception>\fP
+.br
+\fC#include <string.h>\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "long \fBtimediff\fP (struct timeval *after, struct timeval *before)"
+.br
+.ti -1c
+.RI "static void \fBhalt_machine_by_signal\fP (int i)"
+.br
+.ti -1c
+.RI "static void \fBvmips_unexpected\fP ()"
+.br
+.ti -1c
+.RI "static void \fBvmips_terminate\fP ()"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fBvmips\fP * \fBmachine\fP"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "static void halt_machine_by_signal (int i)\fC [static]\fP"
+.SS "long timediff (struct timeval * after, struct timeval * before)"
+.SS "static void vmips_terminate ()\fC [static]\fP"
+.SS "static void vmips_unexpected ()\fC [static]\fP"
+.SH "Variable Documentation"
+.PP 
+.SS "\fBvmips\fP* \fBmachine\fP"
+.SH "Author"
+.PP 
+Generated automatically by Doxygen from the source code.

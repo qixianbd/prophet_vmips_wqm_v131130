@@ -1,0 +1,71 @@
+\hypertarget{classClock}{
+\section{Clock Class Reference}
+\label{classClock}\index{Clock@{Clock}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classClock_1_1DeferredTasks}{DeferredTasks}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classClock_a52d72e9e9e8acd243bd0692b222898e5}{
+{\bfseries Clock} (const timespec \&start\_\-time)  throw ()}
+\label{classClock_a52d72e9e9e8acd243bd0692b222898e5}
+
+\item 
+\hypertarget{classClock_a4007cf9c21326281382a1f1244616e9d}{
+virtual void {\bfseries increment\_\-time} (long nanoseconds)}
+\label{classClock_a4007cf9c21326281382a1f1244616e9d}
+
+\item 
+\hypertarget{classClock_a1e102973afde24e2b1fc4f897976ce86}{
+virtual void {\bfseries pass\_\-realtime} (uint32 timeratio)  throw ()}
+\label{classClock_a1e102973afde24e2b1fc4f897976ce86}
+
+\item 
+\hypertarget{classClock_a78c89e7b78e718b21f4374eb84559d6f}{
+virtual void {\bfseries add\_\-deferred\_\-task} (\hyperlink{classTask}{Task} $\ast$task, long nanoseconds)}
+\label{classClock_a78c89e7b78e718b21f4374eb84559d6f}
+
+\item 
+\hypertarget{classClock_a97be7b0e631ff16e23d257bdbfd46bca}{
+virtual timespec {\bfseries get\_\-time} ()  throw ()}
+\label{classClock_a97be7b0e631ff16e23d257bdbfd46bca}
+
+\item 
+\hypertarget{classClock_a0c2cf0c2c990fe3e243d2ff1da458fa1}{
+virtual void {\bfseries set\_\-time} (const timespec \&time)  throw ()}
+\label{classClock_a0c2cf0c2c990fe3e243d2ff1da458fa1}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classClock_a5bcbe67ab5e7401bb2aad2a404b9af73}{
+timespec {\bfseries time}}
+\label{classClock_a5bcbe67ab5e7401bb2aad2a404b9af73}
+
+\item 
+\hypertarget{classClock_a029c531061ff673036245dc49595929b}{
+timespec {\bfseries then}}
+\label{classClock_a029c531061ff673036245dc49595929b}
+
+\item 
+\hypertarget{classClock_a57d3bf1d0729b2595c55d9e3eb2df889}{
+long {\bfseries spill\_\-ns}}
+\label{classClock_a57d3bf1d0729b2595c55d9e3eb2df889}
+
+\item 
+\hypertarget{classClock_a6a93576eb5d034fc83fc631d2a436fd7}{
+std::list$<$ \hyperlink{classClock_1_1DeferredTasks}{DeferredTasks} $\ast$ $>$ {\bfseries deferred\_\-tasks}}
+\label{classClock_a6a93576eb5d034fc83fc631d2a436fd7}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+clock.h\item 
+clock.cc\end{DoxyCompactItemize}

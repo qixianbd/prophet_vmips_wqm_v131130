@@ -1,0 +1,230 @@
+.TH "Debug" 3 "18 Dec 2013" "Doxygen" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Debug \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <debug.h>\fP
+.PP
+Inherits \fBDeviceExc\fP.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDebug\fP (\fBCPU\fP &c_, \fBMapper\fP &m_)"
+.br
+.ti -1c
+.RI "virtual \fB~Debug\fP ()"
+.br
+.ti -1c
+.RI "uint32 \fBpacket_pop_word\fP (char **packet)"
+.br
+.ti -1c
+.RI "uint8 \fBpacket_pop_byte\fP (char **packet)"
+.br
+.ti -1c
+.RI "int \fBsetup\fP (uint32 baseaddr, uint32 nwords)"
+.br
+.ti -1c
+.RI "int \fBserverloop\fP (void)"
+.br
+.ti -1c
+.RI "void \fBexception\fP (uint16 excCode, int mode, int coprocno)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "bool \fBgot_interrupt\fP"
+.br
+.in -1c
+.SS "Private Types"
+
+.in +1c
+.ti -1c
+.RI "typedef std::set< uint32 > \fBwordset\fP"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBsetup_listener_socket\fP (void)"
+.br
+.ti -1c
+.RI "int \fBset_nonblocking\fP (int fd)"
+.br
+.ti -1c
+.RI "void \fBprint_local_name\fP (int s)"
+.br
+.ti -1c
+.RI "void \fBtargetloop\fP (void)"
+.br
+.ti -1c
+.RI "char * \fBrawpacket\fP (char *str)"
+.br
+.ti -1c
+.RI "char * \fBerror_packet\fP (int error_code)"
+.br
+.ti -1c
+.RI "char * \fBsignal_packet\fP (int signal)"
+.br
+.ti -1c
+.RI "char * \fBtarget_kill\fP (char *pkt)"
+.br
+.ti -1c
+.RI "char * \fBtarget_set_thread\fP (char *pkt)"
+.br
+.ti -1c
+.RI "char * \fBtarget_read_registers\fP (char *pkt)"
+.br
+.ti -1c
+.RI "char * \fBtarget_write_registers\fP (char *pkt)"
+.br
+.ti -1c
+.RI "char * \fBtarget_read_memory\fP (char *pkt)"
+.br
+.ti -1c
+.RI "char * \fBtarget_write_memory\fP (char *pkt)"
+.br
+.ti -1c
+.RI "uint8 \fBsingle_step\fP (void)"
+.br
+.ti -1c
+.RI "char * \fBtarget_continue\fP (char *pkt)"
+.br
+.ti -1c
+.RI "char * \fBtarget_step\fP (char *pkt)"
+.br
+.ti -1c
+.RI "char * \fBtarget_last_signal\fP (char *pkt)"
+.br
+.ti -1c
+.RI "char * \fBtarget_unimplemented\fP (char *pkt)"
+.br
+.ti -1c
+.RI "int \fBexccode_to_signal\fP (int exccode)"
+.br
+.ti -1c
+.RI "bool \fBbreakpoint_exists\fP (uint32 addr)"
+.br
+.ti -1c
+.RI "void \fBdeclare_breakpoint\fP (uint32 addr)"
+.br
+.ti -1c
+.RI "void \fBremove_breakpoint\fP (uint32 addr)"
+.br
+.ti -1c
+.RI "bool \fBaddress_in_rom\fP (uint32 addr)"
+.br
+.ti -1c
+.RI "void \fBget_breakpoint_bitmap_entry\fP (uint32 addr, uint8 *&entry, uint8 &bitno)"
+.br
+.ti -1c
+.RI "bool \fBis_breakpoint_insn\fP (char *packetptr)"
+.br
+.ti -1c
+.RI "char * \fBtarget_set_or_remove_breakpoint\fP (char *pkt, bool setting)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "bool \fBdebugger_shutdown\fP"
+.br
+.ti -1c
+.RI "\fBCPU\fP * \fBcpu\fP"
+.br
+.ti -1c
+.RI "\fBMapper\fP * \fBmem\fP"
+.br
+.ti -1c
+.RI "int \fBsigno\fP"
+.br
+.ti -1c
+.RI "int \fBlistener\fP"
+.br
+.ti -1c
+.RI "long \fBthreadno_step\fP"
+.br
+.ti -1c
+.RI "long \fBthreadno_gen\fP"
+.br
+.ti -1c
+.RI "uint32 \fBrom_baseaddr\fP"
+.br
+.ti -1c
+.RI "uint32 \fBrom_nwords\fP"
+.br
+.ti -1c
+.RI "\fBwordset\fP \fBbp_set\fP"
+.br
+.ti -1c
+.RI "bool \fBopt_bigendian\fP"
+.br
+.in -1c
+.SH "Member Typedef Documentation"
+.PP 
+.SS "typedef std::set<uint32> \fBDebug::wordset\fP\fC [private]\fP"
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Debug::Debug (\fBCPU\fP & c_, \fBMapper\fP & m_)"
+.SS "virtual Debug::~Debug ()\fC [inline, virtual]\fP"
+.SH "Member Function Documentation"
+.PP 
+.SS "bool Debug::address_in_rom (uint32 addr)\fC [private]\fP"
+.SS "bool Debug::breakpoint_exists (uint32 addr)\fC [private]\fP"
+.SS "void Debug::declare_breakpoint (uint32 addr)\fC [private]\fP"
+.SS "char * Debug::error_packet (int error_code)\fC [private]\fP"
+.SS "int Debug::exccode_to_signal (int exccode)\fC [private]\fP"
+.SS "void Debug::exception (uint16 excCode, int mode, int coprocno)\fC [virtual]\fP"
+.PP
+Implements \fBDeviceExc\fP.
+.SS "void Debug::get_breakpoint_bitmap_entry (uint32 addr, uint8 *& entry, uint8 & bitno)\fC [private]\fP"
+.SS "bool Debug::is_breakpoint_insn (char * packetptr)\fC [private]\fP"
+.SS "uint8 Debug::packet_pop_byte (char ** packet)"
+.SS "uint32 Debug::packet_pop_word (char ** packet)"
+.SS "void Debug::print_local_name (int s)\fC [private]\fP"
+.SS "char * Debug::rawpacket (char * str)\fC [private]\fP"
+.SS "void Debug::remove_breakpoint (uint32 addr)\fC [private]\fP"
+.SS "int Debug::serverloop (void)"
+.SS "int Debug::set_nonblocking (int fd)\fC [private]\fP"
+.SS "int Debug::setup (uint32 baseaddr, uint32 nwords)"
+.SS "int Debug::setup_listener_socket (void)\fC [private]\fP"
+.SS "char * Debug::signal_packet (int signal)\fC [private]\fP"
+.SS "uint8 Debug::single_step (void)\fC [private]\fP"
+.SS "char * Debug::target_continue (char * pkt)\fC [private]\fP"
+.SS "char * Debug::target_kill (char * pkt)\fC [private]\fP"
+.SS "char * Debug::target_last_signal (char * pkt)\fC [private]\fP"
+.SS "char * Debug::target_read_memory (char * pkt)\fC [private]\fP"
+.SS "char * Debug::target_read_registers (char * pkt)\fC [private]\fP"
+.SS "char * Debug::target_set_or_remove_breakpoint (char * pkt, bool setting)\fC [private]\fP"
+.SS "char * Debug::target_set_thread (char * pkt)\fC [private]\fP"
+.SS "char * Debug::target_step (char * pkt)\fC [private]\fP"
+.SS "char * Debug::target_unimplemented (char * pkt)\fC [private]\fP"
+.SS "char * Debug::target_write_memory (char * pkt)\fC [private]\fP"
+.SS "char * Debug::target_write_registers (char * pkt)\fC [private]\fP"
+.SS "void Debug::targetloop (void)\fC [private]\fP"
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBwordset\fP \fBDebug::bp_set\fP\fC [private]\fP"
+.SS "\fBCPU\fP* \fBDebug::cpu\fP\fC [private]\fP"
+.SS "bool \fBDebug::debugger_shutdown\fP\fC [private]\fP"
+.SS "bool \fBDebug::got_interrupt\fP"
+.SS "int \fBDebug::listener\fP\fC [private]\fP"
+.SS "\fBMapper\fP* \fBDebug::mem\fP\fC [private]\fP"
+.SS "bool \fBDebug::opt_bigendian\fP\fC [private]\fP"
+.SS "uint32 \fBDebug::rom_baseaddr\fP\fC [private]\fP"
+.SS "uint32 \fBDebug::rom_nwords\fP\fC [private]\fP"
+.SS "int \fBDebug::signo\fP\fC [private]\fP"
+.SS "long \fBDebug::threadno_gen\fP\fC [private]\fP"
+.SS "long \fBDebug::threadno_step\fP\fC [private]\fP"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen from the source code.

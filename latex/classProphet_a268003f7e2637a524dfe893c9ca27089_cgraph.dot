@@ -1,0 +1,13 @@
+digraph G
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir=LR;
+  Node1 [label="Prophet::step",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="SpeculativeLogic::GetInstance",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classSpeculativeLogic.html#af95e558b3c77884f73b10a0fcf480fe5"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="SpeculativeLogic::SpeculativeLogic",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classSpeculativeLogic.html#a11e6d258e73e5d34f8128bbbbd8f1ddb"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="SpeculativeLogic::Step",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classSpeculativeLogic.html#a3fd5927ddc4a29f415a016ab38bd6e93"];
+}

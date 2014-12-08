@@ -1,0 +1,395 @@
+.TH "speculativecpu.cc" 3 "18 Dec 2013" "Doxygen" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+speculativecpu.cc \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'cpu.h'\fP
+.br
+\fC#include 'speculativecpu.h'\fP
+.br
+\fC#include 'speculativelogic.h'\fP
+.br
+\fC#include <assert.h>\fP
+.br
+\fC#include <limits.h>\fP
+.br
+\fC#include 'prophetlog.h'\fP
+.br
+\fC#include 'predefine.h'\fP
+.br
+\fC#include 'excnames.h'\fP
+.br
+\fC#include 'cpzero.h'\fP
+.br
+\fC#include 'mapper.h'\fP
+.br
+\fC#include 'vmips.h'\fP
+.br
+\fC#include 'stub-dis.h'\fP
+.br
+\fC#include <stdio.h>\fP
+.br
+\fC#include <signal.h>\fP
+.br
+\fC#include <fstream>\fP
+.br
+\fC#include 'prophetconsole.h'\fP
+.br
+\fC#include 'prophetsyscall.h'\fP
+.br
+\fC#include <string>\fP
+.br
+\fC#include 'prophetcpustat.h'\fP
+.br
+
+.SS "Defines"
+
+.in +1c
+.ti -1c
+.RI "#define \fBMAX_INT\fP   (INT_MAX - 2)"
+.br
+.ti -1c
+.RI "#define \fBMY_MIN\fP(a, b)   ((a) < (b) ? (a) : (b))"
+.br
+.ti -1c
+.RI "#define \fBMAX_VERSION\fP   MAX_INT"
+.br
+.ti -1c
+.RI "#define \fBobstack_chunk_free\fP   free"
+.br
+.ti -1c
+.RI "#define \fBobstack_chunk_alloc\fP   malloc"
+.br
+.ti -1c
+.RI "#define \fBfaddr\fP(instr)   &SpeculativeCPU::instr##_emulate"
+.br
+.ti -1c
+.RI "#define \fBsp_fcaller\fP(fname, p1, p2)   (this->*fname)(p1, p2)"
+.br
+.ti -1c
+.RI "#define \fBCONSOLE_PATH\fP   '/home/qmwx/workspace/prophet_vmips_final_keyming_131130/prophet_console.txt'"
+.br
+.ti -1c
+.RI "#define \fBKEYMING_STATICS\fP"
+.br
+.ti -1c
+.RI "#define \fBSAVE_WORD\fP(e, a, v)"
+.br
+.ti -1c
+.RI "#define \fBSAVE_LOWHALFWORD\fP(e, a, v)"
+.br
+.ti -1c
+.RI "#define \fBSAVE_HIGHHALFWORD\fP(e, a, v)"
+.br
+.ti -1c
+.RI "#define \fBSAVE_BYTE\fP(e, a, v, offset)"
+.br
+.ti -1c
+.RI "#define \fBSTORE_WORD\fP(e, a, v)"
+.br
+.ti -1c
+.RI "#define \fBSTORE_LOWHALFWORD\fP(e, a, v)"
+.br
+.ti -1c
+.RI "#define \fBSTORE_HIGHHALFWORD\fP(e, a, v)"
+.br
+.ti -1c
+.RI "#define \fBSTORE_BYTE\fP(e, a, v, offset)"
+.br
+.ti -1c
+.RI "#define \fBLoadByte\fP(entry, offset, holder)"
+.br
+.RI "\fILoad a byte from a specific cache entry entry: a pointer to a specific cache entry holder: a UINT8 variable to contain the byte value byteoffset: a number indicating the offset of the byte in the entry. \fP"
+.ti -1c
+.RI "#define \fBSpLoadFunction\fP(valuetype)"
+.br
+.ti -1c
+.RI "#define \fBLocalLoadCaller32\fP(address, value, version...)"
+.br
+.ti -1c
+.RI "#define \fBLocalLoadCaller16\fP(address, value, version...)"
+.br
+.ti -1c
+.RI "#define \fBLocalLoadCaller8\fP(address, value, version...)"
+.br
+.ti -1c
+.RI "#define \fBLocalLoadFunction\fP(loadtype, valuetype)"
+.br
+.ti -1c
+.RI "#define \fBLocalLoadVFunction\fP(loadtype, valuetype)"
+.br
+.ti -1c
+.RI "#define \fBKEYMING_PLUS\fP"
+.br
+.ti -1c
+.RI "#define \fBKEYMING_STATICS\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef void(SpeculativeCPU::* \fBsp_fptr\fP )(uint32, uint32)"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSpLoadFunction\fP (uint32) SpLoadFunction(uint16) SpLoadFunction(uint8) LocalLoadFunction(32"
+.br
+.ti -1c
+.RI "uint32 \fBLocalLoadFunction\fP (16, uint16) LocalLoadFunction(8"
+.br
+.ti -1c
+.RI "uint32 uint8 \fBLocalLoadVFunction\fP (32, uint32) LocalLoadVFunction(16"
+.br
+.ti -1c
+.RI "uint32 uint8 uint16 \fBLocalLoadVFunction\fP (8, uint8) bool SpeculativeCPU"
+.br
+.ti -1c
+.RI "std::ostream & \fBoperator<<\fP (std::ostream &out, const SpeculativeCPU &cpu)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "static const int \fBSreg_zero\fP = 0"
+.br
+.ti -1c
+.RI "static const int \fBSreg_sp\fP = 29"
+.br
+.ti -1c
+.RI "static const int \fBSreg_ra\fP = 31"
+.br
+.ti -1c
+.RI "int \fBrestart_counts\fP"
+.br
+.ti -1c
+.RI "FILE * \fBmystderrlog\fP"
+.br
+.in -1c
+.SH "Define Documentation"
+.PP 
+.SS "#define CONSOLE_PATH   '/home/qmwx/workspace/prophet_vmips_final_keyming_131130/prophet_console.txt'"
+.SS "#define faddr(instr)   &SpeculativeCPU::instr##_emulate"
+.SS "#define KEYMING_PLUS"
+.SS "#define KEYMING_STATICS"
+.SS "#define KEYMING_STATICS"
+.SS "#define LoadByte(entry, offset, holder)"\fBValue:\fP
+.PP
+.nf
+do{ \
+                if(IsValide##offset(entry)) \
+                { \
+                        uint32 data = Value(entry); \
+                        holder = Byte##offset##OfWord(data); \
+                }else{ \
+                        SpLoad(Address(entry) + offset, holder, false, &entry); \
+                } \
+        }while(0)
+.fi
+.PP
+Load a byte from a specific cache entry entry: a pointer to a specific cache entry holder: a UINT8 variable to contain the byte value byteoffset: a number indicating the offset of the byte in the entry. 
+.SS "#define LocalLoadCaller16(address, value, version...)"\fBValue:\fP
+.PP
+.nf
+uint32 v; \
+        uint16 ret; \
+        if(LocalLoadCore(address, v, 16, ##version)) \
+        { \
+                ret = uint16(v); \
+                value = TrySwapHalfWord(ret); \
+                return true; \
+        } \
+        return false
+.fi
+.SS "#define LocalLoadCaller32(address, value, version...)"\fBValue:\fP
+.PP
+.nf
+uint32 ret; \
+        if(LocalLoadCore(address, ret, 32, ##version)) \
+        { \
+                value = TrySwapWord(ret); \
+                return true; \
+        } \
+        return false
+.fi
+.SS "#define LocalLoadCaller8(address, value, version...)"\fBValue:\fP
+.PP
+.nf
+uint32 v; \
+        if(LocalLoadCore(address, v, 8, ##version)) \
+        { \
+                value = uint8(v); \
+                return true; \
+        } \
+        return false
+.fi
+.SS "#define LocalLoadFunction(loadtype, valuetype)"\fBValue:\fP
+.PP
+.nf
+bool SpeculativeCPU::LocalLoad(uint32 address, valuetype &value) \
+        { \
+                LocalLoadCaller##loadtype(address, value); \
+        }
+.fi
+.SS "#define LocalLoadVFunction(loadtype, valuetype)"\fBValue:\fP
+.PP
+.nf
+bool SpeculativeCPU::LocalLoad(uint32 address, valuetype &value, int version) \
+        { \
+                LocalLoadCaller##loadtype(address, value, version); \
+        }
+.fi
+.SS "#define MAX_INT   (INT_MAX - 2)"
+.SS "#define MAX_VERSION   MAX_INT"
+.SS "#define MY_MIN(a, b)   ((a) < (b) ? (a) : (b))"
+.SS "#define obstack_chunk_alloc   malloc"
+.SS "#define obstack_chunk_free   free"
+.SS "#define SAVE_BYTE(e, a, v, offset)"\fBValue:\fP
+.PP
+.nf
+do{ \
+                Valide##offset(e) = true; \
+                RemoteLoaded##offset(e) = true; \
+                Modified##offset(e) = false; \
+                IsOld(e) = m_State == PRE_COMPUTATION; \
+                Version(e) = m_State == PRE_COMPUTATION ? 0 : m_ThreadVersion; \
+                Address(e) = a; \
+                Byte##offset##OfWord(Value(e)) = uint8(v); \
+        }while(0)
+.fi
+.SS "#define SAVE_HIGHHALFWORD(e, a, v)"\fBValue:\fP
+.PP
+.nf
+do{ \
+                Valide2(e) = Valide3(e) = true; \
+                RemoteLoaded2(e) = RemoteLoaded3(e) = true; \
+                Modified2(e) = Modified3(e) = false; \
+                IsOld(e) = m_State == PRE_COMPUTATION; \
+                Version(e) = m_State == PRE_COMPUTATION ? 0 : m_ThreadVersion; \
+                Address(e) = a; \
+                HighhalfOfWord(Value(e)) = uint16(v); \
+        }while(0)
+.fi
+.SS "#define SAVE_LOWHALFWORD(e, a, v)"\fBValue:\fP
+.PP
+.nf
+do{ \
+                Valide0(e) = Valide1(e) = true; \
+                RemoteLoaded0(e) = RemoteLoaded1(e) = true; \
+                Modified0(e) = Modified1(e) = false; \
+                IsOld(e) = m_State == PRE_COMPUTATION; \
+                Version(e) = m_State == PRE_COMPUTATION ? 0 : m_ThreadVersion; \
+                Address(e) = a; \
+                LowhalfOfWord(Value(e)) = uint16(v); \
+        }while(0)
+.fi
+.SS "#define SAVE_WORD(e, a, v)"\fBValue:\fP
+.PP
+.nf
+do{ \
+                Valide0(e) = Valide1(e) = Valide2(e) = Valide3(e) = true; \
+                RemoteLoaded0(e) = RemoteLoaded1(e) = RemoteLoaded2(e) =  RemoteLoaded3(e) = true; \
+                Modified0(e) = Modified1(e) = Modified2(e) = Modified3(e) = false; \
+                IsOld(e) = m_State == PRE_COMPUTATION;\
+                Version(e) = m_State == PRE_COMPUTATION ? 0 : m_ThreadVersion; \
+                Address(e) = a; \
+                Value(e) = v; \
+        }while(0)
+.fi
+.SS "#define sp_fcaller(fname, p1, p2)   (this->*fname)(p1, p2)"
+.SS "#define SpLoadFunction(valuetype)"\fBValue:\fP
+.PP
+.nf
+bool SpeculativeCPU::SpLoad(uint32 address, valuetype &value, bool checklocal, MemCacheEntry** pentry) \
+        { \
+                return SpLoadTemplate(address, value, checklocal, pentry); \
+        }
+.fi
+.SS "#define STORE_BYTE(e, a, v, offset)"\fBValue:\fP
+.PP
+.nf
+do{ \
+                Valide##offset(e) = true; \
+                Modified##offset(e) = true; \
+                IsOld(e) = m_State == PRE_COMPUTATION; \
+                Version(e) = m_State == PRE_COMPUTATION ? 0 : m_ThreadVersion; \
+                Address(e) = a; \
+                Byte##offset##OfWord(Value(e)) = uint8(v); \
+        }while(0)
+.fi
+.SS "#define STORE_HIGHHALFWORD(e, a, v)"\fBValue:\fP
+.PP
+.nf
+do{ \
+                Valide2(e) = Valide3(e) = true; \
+                Modified2(e) = Modified3(e) = true; \
+                IsOld(e) = m_State == PRE_COMPUTATION; \
+                Version(e) = m_State == PRE_COMPUTATION ? 0 : m_ThreadVersion; \
+                Address(e) = a; \
+                HighhalfOfWord(Value(e)) = uint16(v); \
+        }while(0)
+.fi
+.SS "#define STORE_LOWHALFWORD(e, a, v)"\fBValue:\fP
+.PP
+.nf
+do{ \
+                Valide0(e) = Valide1(e) = true; \
+                Modified0(e) = Modified1(e) = true; \
+                IsOld(e) = m_State == PRE_COMPUTATION; \
+                Version(e) = m_State == PRE_COMPUTATION ? 0 : m_ThreadVersion; \
+                Address(e) = a; \
+                LowhalfOfWord(Value(e)) = uint16(v); \
+        }while(0)
+.fi
+.SS "#define STORE_WORD(e, a, v)"\fBValue:\fP
+.PP
+.nf
+do{ \
+                Valide0(e) = Valide1(e) = Valide2(e) = Valide3(e) = true; \
+                Modified0(e) = Modified1(e) = Modified2(e) = Modified3(e) = true; \
+                IsOld(e) = m_State == PRE_COMPUTATION; \
+                Version(e) = m_State == PRE_COMPUTATION ? 0 : m_ThreadVersion; \
+                Address(e) = a; \
+                Value(e) = v; \
+        }while(0)
+.fi
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef void(SpeculativeCPU::* \fBsp_fptr\fP)(uint32, uint32)"
+.SH "Function Documentation"
+.PP 
+.SS "uint32 LocalLoadFunction (16, uint16)"
+.SS "uint32 uint8 uint16 LocalLoadVFunction (8, uint8)"32位读 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIaddress\fP 
+.br
+\fIvalue\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+.RE
+.PP
+
+.SS "uint32 uint8 LocalLoadVFunction (32, uint32)"
+.SS "std::ostream& operator<< (std::ostream & out, const SpeculativeCPU & cpu)"
+.SS "SpLoadFunction (uint32)"
+.SH "Variable Documentation"
+.PP 
+.SS "FILE* \fBmystderrlog\fP"
+.SS "int \fBrestart_counts\fP"
+.SS "const int \fBSreg_ra\fP = 31\fC [static]\fP"
+.SS "const int \fBSreg_sp\fP = 29\fC [static]\fP"
+.SS "const int \fBSreg_zero\fP = 0\fC [static]\fP"
+.SH "Author"
+.PP 
+Generated automatically by Doxygen from the source code.

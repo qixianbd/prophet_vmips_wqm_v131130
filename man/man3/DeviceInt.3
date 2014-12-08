@@ -1,0 +1,110 @@
+.TH "DeviceInt" 3 "18 Dec 2013" "Doxygen" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+DeviceInt \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <deviceint.h>\fP
+.PP
+Inherited by \fBClockDevice\fP, \fBDECCSRDevice\fP, \fBDECRTCDevice\fP, \fBDECSerialDevice\fP, and \fBSpimConsoleDevice\fP.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual \fB~DeviceInt\fP ()"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static char * \fBstrlineno\fP (uint32 line)"
+.br
+.ti -1c
+.RI "static uint32 \fBnum2irq\fP (uint32 num)  throw ()"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBassertInt\fP (uint32 line)"
+.br
+.ti -1c
+.RI "void \fBdeassertInt\fP (uint32 line)"
+.br
+.ti -1c
+.RI "virtual const char * \fBdescriptor_str\fP (void) const =0"
+.br
+.ti -1c
+.RI "\fBDeviceInt\fP ()  throw ()"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBreportAssert\fP (uint32 line)"
+.br
+.ti -1c
+.RI "void \fBreportAssertDisconnected\fP (uint32 line)"
+.br
+.ti -1c
+.RI "void \fBreportDeassert\fP (uint32 line)"
+.br
+.ti -1c
+.RI "void \fBreportDeassertDisconnected\fP (uint32 line)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "uint32 \fBlines_connected\fP"
+.br
+.ti -1c
+.RI "uint32 \fBlines_asserted\fP"
+.br
+.ti -1c
+.RI "bool \fBopt_reportirq\fP"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fBIntCtrl\fP"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "virtual DeviceInt::~DeviceInt ()\fC [inline, virtual]\fP"
+.SS "DeviceInt::DeviceInt ()  throw ()\fC [protected]\fP"
+.SH "Member Function Documentation"
+.PP 
+.SS "void DeviceInt::assertInt (uint32 line)\fC [protected]\fP"
+.SS "void DeviceInt::deassertInt (uint32 line)\fC [protected]\fP"
+.SS "virtual const char* DeviceInt::descriptor_str (void) const\fC [protected, pure virtual]\fP"
+.PP
+Implemented in \fBClockDevice\fP, \fBDECCSRDevice\fP, \fBDECRTCDevice\fP, \fBDECSerialDevice\fP, and \fBSpimConsoleDevice\fP.
+.SS "uint32 DeviceInt::num2irq (uint32 num)  throw ()\fC [static]\fP"
+.SS "void DeviceInt::reportAssert (uint32 line)\fC [private]\fP"
+.SS "void DeviceInt::reportAssertDisconnected (uint32 line)\fC [private]\fP"
+.SS "void DeviceInt::reportDeassert (uint32 line)\fC [private]\fP"
+.SS "void DeviceInt::reportDeassertDisconnected (uint32 line)\fC [private]\fP"
+.SS "char * DeviceInt::strlineno (uint32 line)\fC [static]\fP"
+.SH "Friends And Related Function Documentation"
+.PP 
+.SS "friend class \fBIntCtrl\fP\fC [friend]\fP"
+.SH "Member Data Documentation"
+.PP 
+.SS "uint32 \fBDeviceInt::lines_asserted\fP\fC [private]\fP"
+.SS "uint32 \fBDeviceInt::lines_connected\fP\fC [private]\fP"
+.SS "bool \fBDeviceInt::opt_reportirq\fP\fC [private]\fP"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen from the source code.

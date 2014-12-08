@@ -1,0 +1,128 @@
+\hypertarget{classSpimConsoleDevice}{
+\section{SpimConsoleDevice Class Reference}
+\label{classSpimConsoleDevice}\index{SpimConsoleDevice@{SpimConsoleDevice}}
+}
+Inheritance diagram for SpimConsoleDevice:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{classSpimConsoleDevice}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classSpimConsoleDevice_1_1ClockTrigger}{ClockTrigger}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classSpimConsoleDevice_a5f551a1fb38ddc2fa858e3ba6a7f4d8d}{
+{\bfseries SpimConsoleDevice} (\hyperlink{classClock}{Clock} $\ast$clock)  throw ( std::bad\_\-alloc )}
+\label{classSpimConsoleDevice_a5f551a1fb38ddc2fa858e3ba6a7f4d8d}
+
+\item 
+\hypertarget{classSpimConsoleDevice_a08bf5b3c9651f945ef46fac6f5ab0a8a}{
+virtual void {\bfseries ready\_\-display} (int line)  throw ()}
+\label{classSpimConsoleDevice_a08bf5b3c9651f945ef46fac6f5ab0a8a}
+
+\item 
+\hypertarget{classSpimConsoleDevice_a05eaad591781ef58baad9905c2f3dbde}{
+virtual void {\bfseries unready\_\-display} (int line, char data)  throw ( std::bad\_\-alloc )}
+\label{classSpimConsoleDevice_a05eaad591781ef58baad9905c2f3dbde}
+
+\item 
+\hypertarget{classSpimConsoleDevice_a69b27e3320892b3190c94bc0124c3705}{
+virtual void {\bfseries unready\_\-keyboard} (int line)  throw ()}
+\label{classSpimConsoleDevice_a69b27e3320892b3190c94bc0124c3705}
+
+\item 
+\hypertarget{classSpimConsoleDevice_a4a6473276fdd22bb253b0275d3aaf622}{
+virtual void {\bfseries ready\_\-clock} ()  throw ( std::bad\_\-alloc )}
+\label{classSpimConsoleDevice_a4a6473276fdd22bb253b0275d3aaf622}
+
+\item 
+\hypertarget{classSpimConsoleDevice_a3feff73864a3fc39e88924c2ae29b358}{
+virtual void {\bfseries unready\_\-clock} ()  throw ()}
+\label{classSpimConsoleDevice_a3feff73864a3fc39e88924c2ae29b358}
+
+\item 
+\hypertarget{classSpimConsoleDevice_a10a8f062fcee183b49c1cfaab2d729cb}{
+virtual uint32 {\bfseries fetch\_\-word} (uint32 offset, int mode, \hyperlink{classDeviceExc}{DeviceExc} $\ast$client)}
+\label{classSpimConsoleDevice_a10a8f062fcee183b49c1cfaab2d729cb}
+
+\item 
+\hypertarget{classSpimConsoleDevice_a171e1c405553688ac6d7a344579c4762}{
+virtual void {\bfseries store\_\-word} (uint32 offset, uint32 data, \hyperlink{classDeviceExc}{DeviceExc} $\ast$client)}
+\label{classSpimConsoleDevice_a171e1c405553688ac6d7a344579c4762}
+
+\item 
+\hypertarget{classSpimConsoleDevice_ade305bc5e335fc57fde48661b2fac932}{
+virtual const char $\ast$ {\bfseries descriptor\_\-str} () const }
+\label{classSpimConsoleDevice_ade305bc5e335fc57fde48661b2fac932}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classSpimConsoleDevice_a1d4e7b7cf74058b78b97c1b38989fb32}{
+virtual void {\bfseries ready\_\-keyboard} (int line)  throw ()}
+\label{classSpimConsoleDevice_a1d4e7b7cf74058b78b97c1b38989fb32}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classSpimConsoleDevice_a9d198eda9fea1f785d1e1a5b6dee989f}{
+\hyperlink{classSpimConsoleDevice_1_1ClockTrigger}{ClockTrigger} $\ast$ {\bfseries trigger}}
+\label{classSpimConsoleDevice_a9d198eda9fea1f785d1e1a5b6dee989f}
+
+\item 
+\hypertarget{classSpimConsoleDevice_a4f18e808134f6316b56414af76ef5166}{
+bool {\bfseries display\_\-interrupt\_\-enable} \mbox{[}2\mbox{]}}
+\label{classSpimConsoleDevice_a4f18e808134f6316b56414af76ef5166}
+
+\item 
+\hypertarget{classSpimConsoleDevice_ac630afbba920b08a99d58abac7ee8db0}{
+bool {\bfseries keyboard\_\-interrupt\_\-enable} \mbox{[}2\mbox{]}}
+\label{classSpimConsoleDevice_ac630afbba920b08a99d58abac7ee8db0}
+
+\item 
+\hypertarget{classSpimConsoleDevice_ad7800f8b1f3f8901eb442ec9b43e4d44}{
+bool {\bfseries clock\_\-interrupt}}
+\label{classSpimConsoleDevice_ad7800f8b1f3f8901eb442ec9b43e4d44}
+
+\item 
+\hypertarget{classSpimConsoleDevice_a1151ad9401979e409f63d3ce3cb2747f}{
+State {\bfseries clock\_\-state}}
+\label{classSpimConsoleDevice_a1151ad9401979e409f63d3ce3cb2747f}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classSpimConsoleDevice_a4f5c6639fafcb0e60141c55d42e74c80}{
+static const long {\bfseries KEYBOARD\_\-POLL\_\-NS} = 400 $\ast$ 1000}
+\label{classSpimConsoleDevice_a4f5c6639fafcb0e60141c55d42e74c80}
+
+\item 
+\hypertarget{classSpimConsoleDevice_a42c7c6cd43f403cbfaf11e4e688145e3}{
+static const long {\bfseries KEYBOARD\_\-REPOLL\_\-NS} = 40 $\ast$ 1000 $\ast$ 1000}
+\label{classSpimConsoleDevice_a42c7c6cd43f403cbfaf11e4e688145e3}
+
+\item 
+\hypertarget{classSpimConsoleDevice_a63a0316380e0fec7d91e01fb41e962af}{
+static const long {\bfseries DISPLAY\_\-READY\_\-DELAY\_\-NS} = 40 $\ast$ 1000 $\ast$ 1000}
+\label{classSpimConsoleDevice_a63a0316380e0fec7d91e01fb41e962af}
+
+\item 
+\hypertarget{classSpimConsoleDevice_a6ee877243858bff6624f76b87db50320}{
+static const long {\bfseries CLOCK\_\-TRIGGER\_\-NS} = 1000 $\ast$ 1000 $\ast$1000}
+\label{classSpimConsoleDevice_a6ee877243858bff6624f76b87db50320}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+spimconsole.h\item 
+spimconsole.cc\end{DoxyCompactItemize}

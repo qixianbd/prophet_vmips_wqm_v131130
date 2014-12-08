@@ -1,0 +1,139 @@
+.TH "XmlDocument" 3 "18 Dec 2013" "Doxygen" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+XmlDocument \- 
+.PP
+A XML Document.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <prophetxmldoc.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBXmlDocument\fP (const std::string &encoding='', const std::string &styleSheet='')"
+.br
+.RI "\fIConstructs a \fBXmlDocument\fP object. \fP"
+.ti -1c
+.RI "virtual \fB~XmlDocument\fP ()"
+.br
+.RI "\fIDestructor. \fP"
+.ti -1c
+.RI "std::string \fBencoding\fP () const "
+.br
+.ti -1c
+.RI "void \fBsetEncoding\fP (const std::string &encoding='')"
+.br
+.ti -1c
+.RI "std::string \fBstyleSheet\fP () const "
+.br
+.ti -1c
+.RI "void \fBsetStyleSheet\fP (const std::string &styleSheet='')"
+.br
+.ti -1c
+.RI "bool \fBstandalone\fP () const "
+.br
+.ti -1c
+.RI "void \fBsetStandalone\fP (bool standalone)"
+.br
+.RI "\fIset the output document as standalone or not. \fP"
+.ti -1c
+.RI "void \fBsetRootElement\fP (\fBXmlElement\fP *rootElement)"
+.br
+.ti -1c
+.RI "\fBXmlElement\fP & \fBrootElement\fP () const "
+.br
+.ti -1c
+.RI "std::string \fBtoString\fP () const "
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "std::string \fBm_encoding\fP"
+.br
+.ti -1c
+.RI "std::string \fBm_styleSheet\fP"
+.br
+.ti -1c
+.RI "\fBXmlElement\fP * \fBm_rootElement\fP"
+.br
+.ti -1c
+.RI "bool \fBm_standalone\fP"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBXmlDocument\fP (const \fBXmlDocument\fP &copy)"
+.br
+.RI "\fIPrevents the use of the copy constructor. \fP"
+.ti -1c
+.RI "void \fBoperator=\fP (const \fBXmlDocument\fP &copy)"
+.br
+.RI "\fIPrevents the use of the copy operator. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+A XML Document. 
+
+A \fBXmlDocument\fP represents a XML file. It holds a pointer on the root \fBXmlElement\fP of the document. It also holds the encoding and style sheet used.
+.PP
+By default, the XML document is stand-alone and tagged with enconding 'ISO-8859-1'. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "XmlDocument::XmlDocument (const std::string & encoding = \fC''\fP, const std::string & styleSheet = \fC''\fP)"
+.PP
+Constructs a \fBXmlDocument\fP object. \fBParameters:\fP
+.RS 4
+\fIencoding\fP Encoding used in the XML file (default is Latin-1, ISO-8859-1 ). 
+.br
+\fIstyleSheet\fP Name of the XSL style sheet file used. If empty then no style sheet will be specified in the output. 
+.RE
+.PP
+
+.SS "XmlDocument::~XmlDocument ()\fC [virtual]\fP"
+.PP
+Destructor. 
+.SS "XmlDocument::XmlDocument (const \fBXmlDocument\fP & copy)\fC [private]\fP"
+.PP
+Prevents the use of the copy constructor. 
+.SH "Member Function Documentation"
+.PP 
+.SS "std::string XmlDocument::encoding () const"
+.SS "void XmlDocument::operator= (const \fBXmlDocument\fP & copy)\fC [private]\fP"
+.PP
+Prevents the use of the copy operator. 
+.SS "\fBXmlElement\fP & XmlDocument::rootElement () const"
+.SS "void XmlDocument::setEncoding (const std::string & encoding = \fC''\fP)"
+.SS "void XmlDocument::setRootElement (\fBXmlElement\fP * rootElement)"
+.SS "void XmlDocument::setStandalone (bool standalone)"
+.PP
+set the output document as standalone or not. For the output document, specify wether it's a standalone XML document, or not.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIstandalone\fP if true, the output will be specified as standalone. if false, it will be not. 
+.RE
+.PP
+
+.SS "void XmlDocument::setStyleSheet (const std::string & styleSheet = \fC''\fP)"
+.SS "bool XmlDocument::standalone () const"
+.SS "std::string XmlDocument::styleSheet () const"
+.SS "std::string XmlDocument::toString () const"
+.SH "Member Data Documentation"
+.PP 
+.SS "std::string \fBXmlDocument::m_encoding\fP\fC [protected]\fP"
+.SS "\fBXmlElement\fP* \fBXmlDocument::m_rootElement\fP\fC [protected]\fP"
+.SS "bool \fBXmlDocument::m_standalone\fP\fC [protected]\fP"
+.SS "std::string \fBXmlDocument::m_styleSheet\fP\fC [protected]\fP"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen from the source code.

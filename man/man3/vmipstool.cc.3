@@ -1,0 +1,219 @@
+.TH "vmipstool.cc" 3 "18 Dec 2013" "Doxygen" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+vmipstool.cc \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'endiantest.h'\fP
+.br
+\fC#include 'fileutils.h'\fP
+.br
+\fC#include 'stub-dis.h'\fP
+.br
+\fC#include 'error.h'\fP
+.br
+\fC#include 'options.h'\fP
+.br
+\fC#include <cerrno>\fP
+.br
+\fC#include <cstdarg>\fP
+.br
+\fC#include <cstdio>\fP
+.br
+\fC#include <iostream>\fP
+.br
+\fC#include <sys/stat.h>\fP
+.br
+\fC#include <sys/wait.h>\fP
+.br
+\fC#include <unistd.h>\fP
+.br
+\fC#include <vector>\fP
+.br
+\fC#include <string.h>\fP
+.br
+\fC#include <stdlib.h>\fP
+.br
+\fC#include <limits.h>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBVmipstoolOptions\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBprogram_available\fP (const char *execname)"
+.br
+.ti -1c
+.RI "int \fBconfig_error\fP (const char *programname, const char *execname)"
+.br
+.ti -1c
+.RI "void \fBsetup_paths\fP (bool bigendian, const char *mipstoolprefix)"
+.br
+.ti -1c
+.RI "void \fBusage\fP (void)"
+.br
+.ti -1c
+.RI "void \fBmaybe_echo\fP (char **newargv)"
+.br
+.ti -1c
+.RI "int \fBmaybe_run\fP (char **newargv)"
+.br
+.ti -1c
+.RI "int \fBecho_and_run_l\fP (char *c,...)"
+.br
+.ti -1c
+.RI "int \fBecho_and_run_lv\fP (char *c,...)"
+.br
+.ti -1c
+.RI "bool \fBsearch_path\fP (char *result, char *path, const char *target)"
+.br
+.ti -1c
+.RI "int \fBcan_read_default_ldscript\fP ()"
+.br
+.ti -1c
+.RI "int \fBdo_link\fP (int argc, char **argv)"
+.br
+.ti -1c
+.RI "int \fBcopy_with_padded_blocks\fP (char *in, char *out, long size)"
+.br
+.ti -1c
+.RI "int \fBmake_rom\fP (int argc, char **argv)"
+.br
+.ti -1c
+.RI "int \fBswap_words\fP (int argc, char **argv)"
+.br
+.ti -1c
+.RI "int \fBcompile\fP (int argc, char **argv)"
+.br
+.ti -1c
+.RI "int \fBassemble\fP (int argc, char **argv)"
+.br
+.ti -1c
+.RI "int \fBpreprocess\fP (int argc, char **argv)"
+.br
+.ti -1c
+.RI "int \fBdisassemble\fP (int argc, char **argv)"
+.br
+.ti -1c
+.RI "int \fBdisassemble_rom\fP (int argc, char **argv)"
+.br
+.ti -1c
+.RI "int \fBdisassemble_word\fP (int argc, char **argv)"
+.br
+.ti -1c
+.RI "int \fBversion\fP (int argc, char **argv)"
+.br
+.ti -1c
+.RI "int \fBhelp\fP (int argc, char **argv)"
+.br
+.ti -1c
+.RI "int \fBmain\fP (int argc, char **argv)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "const unsigned int \fBMAXARGV\fP = 500"
+.br
+.ti -1c
+.RI "const unsigned int \fBTMPFNAMESIZE\fP = 26"
+.br
+.ti -1c
+.RI "int \fBverbose\fP = 0"
+.br
+.ti -1c
+.RI "int \fBdryrun\fP = 0"
+.br
+.ti -1c
+.RI "char \fBpkgdatadir\fP [PATH_MAX]"
+.br
+.ti -1c
+.RI "char \fBccname\fP [PATH_MAX]"
+.br
+.ti -1c
+.RI "char \fBldname\fP [PATH_MAX]"
+.br
+.ti -1c
+.RI "char \fBobjcopyname\fP [PATH_MAX]"
+.br
+.ti -1c
+.RI "char \fBobjdumpname\fP [PATH_MAX]"
+.br
+.ti -1c
+.RI "char \fBendianflag\fP [4]"
+.br
+.ti -1c
+.RI "long \fBpagesz\fP = 4096"
+.br
+.ti -1c
+.RI "char \fBldscript_full_path\fP [PATH_MAX]"
+.br
+.ti -1c
+.RI "bool \fBldscript_error\fP = false"
+.br
+.ti -1c
+.RI "int(* \fBhandler\fP )(int argc, char **argv)"
+.br
+.ti -1c
+.RI "char ** \fBhandler_argv\fP = 0"
+.br
+.ti -1c
+.RI "int \fBhandler_argc\fP = -1"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "int assemble (int argc, char ** argv)"
+.SS "int can_read_default_ldscript ()"
+.SS "int compile (int argc, char ** argv)"
+.SS "int config_error (const char * programname, const char * execname)"
+.SS "int copy_with_padded_blocks (char * in, char * out, long size)"
+.SS "int disassemble (int argc, char ** argv)"
+.SS "int disassemble_rom (int argc, char ** argv)"
+.SS "int disassemble_word (int argc, char ** argv)"
+.SS "int do_link (int argc, char ** argv)"
+.SS "int echo_and_run_l (char * c,  ...)"
+.SS "int echo_and_run_lv (char * c,  ...)"
+.SS "int help (int argc, char ** argv)"
+.SS "int main (int argc, char ** argv)"
+.SS "int make_rom (int argc, char ** argv)"
+.SS "void maybe_echo (char ** newargv)"
+.SS "int maybe_run (char ** newargv)"
+.SS "int preprocess (int argc, char ** argv)"
+.SS "bool program_available (const char * execname)"
+.SS "bool search_path (char * result, char * path, const char * target)"
+.SS "void setup_paths (bool bigendian, const char * mipstoolprefix)"
+.SS "int swap_words (int argc, char ** argv)"
+.SS "void usage (void)"
+.SS "int version (int argc, char ** argv)"
+.SH "Variable Documentation"
+.PP 
+.SS "char \fBccname\fP[PATH_MAX]"
+.SS "int \fBdryrun\fP = 0"
+.SS "char \fBendianflag\fP[4]"
+.SS "int(* \fBhandler\fP)(int argc, char **argv)"
+.SS "int \fBhandler_argc\fP = -1"
+.SS "char** \fBhandler_argv\fP = 0"
+.SS "char \fBldname\fP[PATH_MAX]"
+.SS "bool \fBldscript_error\fP = false"
+.SS "char \fBldscript_full_path\fP[PATH_MAX]"
+.SS "const unsigned int \fBMAXARGV\fP = 500"
+.SS "char \fBobjcopyname\fP[PATH_MAX]"
+.SS "char \fBobjdumpname\fP[PATH_MAX]"
+.SS "long \fBpagesz\fP = 4096"
+.SS "char \fBpkgdatadir\fP[PATH_MAX]"
+.SS "const unsigned int \fBTMPFNAMESIZE\fP = 26"
+.SS "int \fBverbose\fP = 0"
+.SH "Author"
+.PP 
+Generated automatically by Doxygen from the source code.

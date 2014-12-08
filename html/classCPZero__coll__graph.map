@@ -1,0 +1,11 @@
+<map id="G" name="G">
+<area shape="rect" href="$classCPU.html" title="CPU" alt="" coords="228,293,276,323"/>
+<area shape="rect" href="$classIntCtrl.html" title="IntCtrl" alt="" coords="384,101,440,131"/>
+<area shape="rect" href="$classDeviceExc.html" title="DeviceExc" alt="" coords="5,5,88,35"/>
+<area shape="rect" href="$structMapper_1_1BusErrorInfo.html" title="Mapper::BusErrorInfo" alt="" coords="47,101,191,131"/>
+<area shape="rect" href="$classTrace.html" title="Trace" alt="" coords="175,197,228,227"/>
+<area shape="rect" href="$classMapper.html" title="Mapper" alt="" coords="87,197,151,227"/>
+<area shape="rect" href="$classRange.html" title="Range" alt="" coords="215,101,273,131"/>
+<area shape="rect" href="$structTrace_1_1Record.html" title="Trace::Record" alt="" coords="255,197,356,227"/>
+<area shape="rect" href="$classTLBEntry.html" title="TLBEntry" alt="" coords="464,101,539,131"/>
+</map>

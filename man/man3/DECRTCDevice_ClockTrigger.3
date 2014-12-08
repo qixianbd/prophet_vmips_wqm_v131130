@@ -1,0 +1,52 @@
+.TH "DECRTCDevice::ClockTrigger" 3 "18 Dec 2013" "Doxygen" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+DECRTCDevice::ClockTrigger \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <decrtc.h>\fP
+.PP
+Inherits \fBCancelableTask\fP.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBClockTrigger\fP (\fBDECRTCDevice\fP *\fBrtc\fP)  throw ()"
+.br
+.ti -1c
+.RI "virtual \fB~ClockTrigger\fP ()  throw ()"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBreal_task\fP ()"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBDECRTCDevice\fP * \fBrtc\fP"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "DECRTCDevice::ClockTrigger::ClockTrigger (\fBDECRTCDevice\fP * rtc)  throw ()"
+.SS "DECRTCDevice::ClockTrigger::~ClockTrigger ()  throw ()\fC [virtual]\fP"
+.SH "Member Function Documentation"
+.PP 
+.SS "void DECRTCDevice::ClockTrigger::real_task ()\fC [protected, virtual]\fP"
+.PP
+Implements \fBCancelableTask\fP.
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBDECRTCDevice\fP* \fBDECRTCDevice::ClockTrigger::rtc\fP\fC [protected]\fP"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen from the source code.

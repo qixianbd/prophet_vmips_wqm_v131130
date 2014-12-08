@@ -1,0 +1,118 @@
+\hypertarget{classOptions}{
+\section{Options Class Reference}
+\label{classOptions}\index{Options@{Options}}
+}
+Inheritance diagram for Options:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classOptions}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classOptions_a3bcfc6315059cdfc80086ac4e8ebb8fb}{
+virtual void {\bfseries process\_\-options} (int argc, char $\ast$$\ast$argv)}
+\label{classOptions_a3bcfc6315059cdfc80086ac4e8ebb8fb}
+
+\item 
+\hypertarget{classOptions_a3a535c4c76588d00f62c9817bc0ff63b}{
+union \hyperlink{unionOptionValue}{OptionValue} $\ast$ {\bfseries option} (char $\ast$name)}
+\label{classOptions_a3a535c4c76588d00f62c9817bc0ff63b}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classOptions_af9c17aca9b06a52a376735f3985613a2}{
+typedef std::map$<$ std::string, \hyperlink{structOption}{Option} $>$ {\bfseries OptionMap}}
+\label{classOptions_af9c17aca9b06a52a376735f3985613a2}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classOptions_a5b2d7759ab32fe3a5c638a18862a0e54}{
+void {\bfseries process\_\-defaults} (void)}
+\label{classOptions_a5b2d7759ab32fe3a5c638a18862a0e54}
+
+\item 
+\hypertarget{classOptions_ad8ec1474331ba97df748a9ceaf1f48a6}{
+void {\bfseries process\_\-one\_\-option} (const char $\ast$const option)}
+\label{classOptions_ad8ec1474331ba97df748a9ceaf1f48a6}
+
+\item 
+\hypertarget{classOptions_a76a5fec3abf24dd992b76e6056392604}{
+int {\bfseries process\_\-first\_\-option} (char $\ast$$\ast$bufptr, int lineno=0, char $\ast$fn=NULL)}
+\label{classOptions_a76a5fec3abf24dd992b76e6056392604}
+
+\item 
+\hypertarget{classOptions_a06b815b611cffcd3ee17fdaeb1787854}{
+int {\bfseries process\_\-options\_\-from\_\-file} (char $\ast$filename)}
+\label{classOptions_a06b815b611cffcd3ee17fdaeb1787854}
+
+\item 
+\hypertarget{classOptions_af82c0bbc02cb2c8f6a115dd1fdd43579}{
+int {\bfseries tilde\_\-expand} (char $\ast$filename)}
+\label{classOptions_af82c0bbc02cb2c8f6a115dd1fdd43579}
+
+\item 
+\hypertarget{classOptions_a50a9e19f3ff310d8d483dc74d4442a87}{
+virtual void {\bfseries usage} (char $\ast$argv0)}
+\label{classOptions_a50a9e19f3ff310d8d483dc74d4442a87}
+
+\item 
+\hypertarget{classOptions_a6e6c73b2ed51467f7f076638e0726629}{
+void {\bfseries set\_\-str\_\-option} (char $\ast$key, char $\ast$value)}
+\label{classOptions_a6e6c73b2ed51467f7f076638e0726629}
+
+\item 
+\hypertarget{classOptions_ab7f5346ac22e0c72eafb3324fd84236e}{
+void {\bfseries set\_\-num\_\-option} (char $\ast$key, uint32 value)}
+\label{classOptions_ab7f5346ac22e0c72eafb3324fd84236e}
+
+\item 
+\hypertarget{classOptions_a89174e246a138fd030eed58a2ca2f358}{
+void {\bfseries set\_\-flag\_\-option} (char $\ast$key, bool value)}
+\label{classOptions_a89174e246a138fd030eed58a2ca2f358}
+
+\item 
+\hypertarget{classOptions_a1273ec7b1f585443952d3d43feec0010}{
+char $\ast$ {\bfseries strprefix} (char $\ast$crack\_\-smoker, char $\ast$crack)}
+\label{classOptions_a1273ec7b1f585443952d3d43feec0010}
+
+\item 
+\hypertarget{classOptions_a43c1b070c853edd7d3b227e300f6db80}{
+int {\bfseries find\_\-option\_\-type} (char $\ast$option)}
+\label{classOptions_a43c1b070c853edd7d3b227e300f6db80}
+
+\item 
+\hypertarget{classOptions_a4a9be4a96d5b12a8abb469fef02af7ee}{
+\hyperlink{structOption}{Option} $\ast$ {\bfseries optstruct} (char $\ast$name, bool install=false)}
+\label{classOptions_a4a9be4a96d5b12a8abb469fef02af7ee}
+
+\item 
+\hypertarget{classOptions_a11e86765e4e309f8eb0abef4f235d106}{
+void {\bfseries print\_\-package\_\-version} (char $\ast$toolname, char $\ast$version)}
+\label{classOptions_a11e86765e4e309f8eb0abef4f235d106}
+
+\item 
+\hypertarget{classOptions_ac6c9b11dab112ef2647386e45da45bb0}{
+void {\bfseries print\_\-config\_\-info} (void)}
+\label{classOptions_ac6c9b11dab112ef2647386e45da45bb0}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classOptions_a9c57c93eb164dd69a2c63c8d86f90ab2}{
+OptionMap {\bfseries table}}
+\label{classOptions_a9c57c93eb164dd69a2c63c8d86f90ab2}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+options.h\item 
+options.cc\end{DoxyCompactItemize}

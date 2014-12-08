@@ -1,0 +1,50 @@
+\hypertarget{prophetlog_8cc}{
+\section{prophetlog.cc File Reference}
+\label{prophetlog_8cc}\index{prophetlog.cc@{prophetlog.cc}}
+}
+{\ttfamily \#include \char`\"{}prophetlog.h\char`\"{}}\par
+{\ttfamily \#include $<$string$>$}\par
+{\ttfamily \#include $<$time.h$>$}\par
+{\ttfamily \#include $<$iostream$>$}\par
+{\ttfamily \#include $<$vector$>$}\par
+{\ttfamily \#include $<$cxxabi.h$>$}\par
+{\ttfamily \#include $<$stdlib.h$>$}\par
+{\ttfamily \#include $<$fstream$>$}\par
+Include dependency graph for prophetlog.cc:\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classPlog_1_1Recorder}{Plog::Recorder}
+\item 
+class \hyperlink{classPlog_1_1FileRecorder}{Plog::FileRecorder}
+\item 
+class \hyperlink{classPlog_1_1ConsoleRecorder}{Plog::ConsoleRecorder}
+\item 
+class \hyperlink{classPlog_1_1Setting}{Plog::Setting}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \hyperlink{namespacePlog}{Plog}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef std::vector$<$ Recorder $\ast$ $>$ \hyperlink{namespacePlog_adbc082456768f95ad3f9f11ffee5aeb0}{Plog::Recorders\_\-t}
+\item 
+typedef void($\ast$ \hyperlink{namespacePlog_a99f7e0d22d6fd05143f96df9bc223ab8}{Plog::FatalFunction} )(const std::string \&)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{namespacePlog_ab98dd82a3a7854ad52dff7fae45d0e25}{Plog::DefaultActionOnError} (const std::string \&message)
+\item 
+std::string \hyperlink{namespacePlog_a9c40966af6d000524726d783e3ef9c5b}{Plog::GetTime} ()
+\item 
+std::string \hyperlink{namespacePlog_aff63faf2a8736a0fb3f9fdfcc689f056}{Plog::ClassName} (const std::type\_\-info \&ti)
+\item 
+std::string \hyperlink{namespacePlog_a18810387de23d5c073424527545ced01}{Plog::RemovePrefix} (std::string \&s, const std::string \&p)
+\item 
+void \hyperlink{namespacePlog_ae7d6b95095fb9ee8ee1036164416e4b6}{Plog::WriteLog} (PLOG\_\-LEVEL level, const std::string \&message)
+\item 
+void \hyperlink{namespacePlog_ae5f46def759dfc94d36d871b68087cbf}{Plog::InitPlog} (bool filelog, bool consolelog)
+\end{DoxyCompactItemize}

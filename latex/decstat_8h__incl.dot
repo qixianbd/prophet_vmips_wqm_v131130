@@ -1,0 +1,18 @@
+digraph G
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node1 [label="decstat.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="devicemap.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$devicemap_8h.html"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="range.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$range_8h.html"];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="accesstypes.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$accesstypes_8h.html"];
+  Node3 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="types.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$types_8h.html"];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="config.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$config_8h.html"];
+  Node3 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="sys/types.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+}

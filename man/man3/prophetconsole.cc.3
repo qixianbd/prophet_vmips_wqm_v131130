@@ -1,0 +1,150 @@
+.TH "prophetconsole.cc" 3 "18 Dec 2013" "Doxygen" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+prophetconsole.cc \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'prophetconsole.h'\fP
+.br
+\fC#include <X11/Intrinsic.h>\fP
+.br
+\fC#include <X11/StringDefs.h>\fP
+.br
+\fC#include <X11/Shell.h>\fP
+.br
+\fC#include <X11/Xlib.h>\fP
+.br
+\fC#include <X11/Xaw/Cardinals.h>\fP
+.br
+\fC#include <X11/Xaw/Paned.h>\fP
+.br
+\fC#include <X11/Xaw/AsciiText.h>\fP
+.br
+\fC#include <X11/Xaw/Text.h>\fP
+.br
+\fC#include <X11/keysym.h>\fP
+.br
+\fC#include <cstring>\fP
+.br
+\fC#include <iostream>\fP
+.br
+\fC#include <assert.h>\fP
+.br
+\fC#include <stdarg.h>\fP
+.br
+\fC#include <stdio.h>\fP
+.br
+\fC#include <stdlib.h>\fP
+.br
+\fC#include <signal.h>\fP
+.br
+
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBProphetConsole\fP"
+.br
+.in -1c
+.SS "Defines"
+
+.in +1c
+.ti -1c
+.RI "#define \fBTEXTHEIGHT\fP   20"
+.br
+.ti -1c
+.RI "#define \fBTEXTWIDTH\fP   10"
+.br
+.ti -1c
+.RI "#define \fBIO_BUFFER\fP   1024"
+.br
+.ti -1c
+.RI "#define \fBPROPHET_CONSOLE\fP   'Prophet Console'"
+.br
+.ti -1c
+.RI "#define \fBCONSOLE_INPUT\fP   SIGUSR1"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBProphetConsole::output\fP (char *buf, int start, int len)"
+.br
+.ti -1c
+.RI "int \fBProphetConsole::input\fP (char *buf, int len)"
+.br
+.ti -1c
+.RI "static void \fBProphetConsole::ReadCallBack\fP (XtPointer clientdata, XtSignalId *psignalid)"
+.br
+.ti -1c
+.RI "static void \fBProphetConsole::SignalCallBack\fP (int sig)"
+.br
+.ti -1c
+.RI "static void \fBProphetConsole::InputCallBack\fP (XtPointer clientdata, int *psource, XtInputId *pinputid)"
+.br
+.ti -1c
+.RI "int \fBProphetConsole::Init\fP (int argc, char *argv[])"
+.br
+.ti -1c
+.RI "void \fBProphetConsole::Write\fP (const char *format,...)"
+.br
+.ti -1c
+.RI "void \fBProphetConsole::Read\fP (char *buffer, int buflen)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "Widget \fBProphetConsole::toplevel\fP"
+.br
+.ti -1c
+.RI "Widget \fBProphetConsole::shell\fP"
+.br
+.ti -1c
+.RI "Widget \fBProphetConsole::pane\fP"
+.br
+.ti -1c
+.RI "Widget \fBProphetConsole::console\fP"
+.br
+.ti -1c
+.RI "XtAppContext \fBProphetConsole::appcontext\fP"
+.br
+.ti -1c
+.RI "Arg \fBProphetConsole::args\fP [10]"
+.br
+.ti -1c
+.RI "Cardinal \fBProphetConsole::n\fP"
+.br
+.ti -1c
+.RI "XtInputId \fBProphetConsole::inputid\fP"
+.br
+.ti -1c
+.RI "XtSignalId \fBProphetConsole::signalid\fP"
+.br
+.ti -1c
+.RI "pid_t \fBProphetConsole::pid\fP"
+.br
+.ti -1c
+.RI "int \fBProphetConsole::fd\fP [2]"
+.br
+.ti -1c
+.RI "int \fBProphetConsole::fd_in\fP [2]"
+.br
+.ti -1c
+.RI "bool \fBProphetConsole::inited\fP = false"
+.br
+.in -1c
+.SH "Define Documentation"
+.PP 
+.SS "#define CONSOLE_INPUT   SIGUSR1"
+.SS "#define IO_BUFFER   1024"
+.SS "#define PROPHET_CONSOLE   'Prophet Console'"
+.SS "#define TEXTHEIGHT   20"
+.SS "#define TEXTWIDTH   10"
+.SH "Author"
+.PP 
+Generated automatically by Doxygen from the source code.

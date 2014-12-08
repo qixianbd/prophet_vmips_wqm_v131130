@@ -1,0 +1,760 @@
+<?xml version="1.0" encoding='ISO-8859-1' standalone='yes' ?>
+<statistic_report report_time="2013-12-04 20:51:07 ">
+  <settings>
+    <setting_file>/home/qmwx/workspace/prophet_vmips_final_keyming_131130/inst_cost.ini</setting_file>
+    <version>1.0</version>
+    <program>testcase/mst.rom</program>
+  </settings>
+  <statistic cpu_id="0">
+    <total_inst>5308</total_inst>
+    <total_clock>5263</total_clock>
+    <spawned_thread>87</spawned_thread>
+    <commited_thread>45</commited_thread>
+    <failed_thread total="49">
+      <OnDDV>12</OnDDV>
+      <OnInstruction>0</OnInstruction>
+      <OnRegisterVerification>11</OnRegisterVerification>
+      <OnMemoryVerification>0</OnMemoryVerification>
+      <OnLowPriority>26</OnLowPriority>
+      <OnControlVoilate>0</OnControlVoilate>
+      <OnReset>0</OnReset>
+      <OnHalt>0</OnHalt>
+      <OnQuit>0</OnQuit>
+      <OnException>0</OnException>
+      <OnUnknown>0</OnUnknown>
+      <FailCount>
+        <Failed_CPU failed_ListId="0">0</Failed_CPU>
+        <Failed_CPU failed_ListId="1">4</Failed_CPU>
+        <Failed_CPU failed_ListId="2">9</Failed_CPU>
+        <Failed_CPU failed_ListId="3">2</Failed_CPU>
+        <Failed_CPU failed_ListId="4">3</Failed_CPU>
+        <Failed_CPU failed_ListId="5">4</Failed_CPU>
+        <Failed_CPU failed_ListId="6">5</Failed_CPU>
+        <Failed_CPU failed_ListId="7">4</Failed_CPU>
+        <Failed_CPU failed_ListId="8">2</Failed_CPU>
+        <Failed_CPU failed_ListId="9">3</Failed_CPU>
+        <Failed_CPU failed_ListId="10">2</Failed_CPU>
+        <Failed_CPU failed_ListId="11">0</Failed_CPU>
+        <Failed_CPU failed_ListId="12">0</Failed_CPU>
+        <Failed_CPU failed_ListId="13">1</Failed_CPU>
+        <Failed_CPU failed_ListId="14">3</Failed_CPU>
+        <Failed_CPU failed_ListId="15">7</Failed_CPU>
+      </FailCount>
+    </failed_thread>
+    <TimeStat>
+      <FreeTime>6647</FreeTime>
+      <SquashTime>779</SquashTime>
+      <WaitTime>1212</WaitTime>
+      <SpTime>3912</SpTime>
+    </TimeStat>
+  </statistic>
+  <statistic cpu_id="1">
+    <total_inst>2847</total_inst>
+    <total_clock>2800</total_clock>
+    <spawned_thread>90</spawned_thread>
+    <commited_thread>47</commited_thread>
+    <failed_thread total="49">
+      <OnDDV>8</OnDDV>
+      <OnInstruction>0</OnInstruction>
+      <OnRegisterVerification>11</OnRegisterVerification>
+      <OnMemoryVerification>0</OnMemoryVerification>
+      <OnLowPriority>30</OnLowPriority>
+      <OnControlVoilate>0</OnControlVoilate>
+      <OnReset>0</OnReset>
+      <OnHalt>0</OnHalt>
+      <OnQuit>0</OnQuit>
+      <OnException>0</OnException>
+      <OnUnknown>0</OnUnknown>
+      <FailCount>
+        <Failed_CPU failed_ListId="0">0</Failed_CPU>
+        <Failed_CPU failed_ListId="1">6</Failed_CPU>
+        <Failed_CPU failed_ListId="2">7</Failed_CPU>
+        <Failed_CPU failed_ListId="3">3</Failed_CPU>
+        <Failed_CPU failed_ListId="4">3</Failed_CPU>
+        <Failed_CPU failed_ListId="5">5</Failed_CPU>
+        <Failed_CPU failed_ListId="6">1</Failed_CPU>
+        <Failed_CPU failed_ListId="7">1</Failed_CPU>
+        <Failed_CPU failed_ListId="8">3</Failed_CPU>
+        <Failed_CPU failed_ListId="9">2</Failed_CPU>
+        <Failed_CPU failed_ListId="10">5</Failed_CPU>
+        <Failed_CPU failed_ListId="11">3</Failed_CPU>
+        <Failed_CPU failed_ListId="12">1</Failed_CPU>
+        <Failed_CPU failed_ListId="13">1</Failed_CPU>
+        <Failed_CPU failed_ListId="14">2</Failed_CPU>
+        <Failed_CPU failed_ListId="15">6</Failed_CPU>
+      </FailCount>
+    </failed_thread>
+    <TimeStat>
+      <FreeTime>9064</FreeTime>
+      <SquashTime>861</SquashTime>
+      <WaitTime>1192</WaitTime>
+      <SpTime>1440</SpTime>
+    </TimeStat>
+  </statistic>
+  <statistic cpu_id="2">
+    <total_inst>2662</total_inst>
+    <total_clock>2626</total_clock>
+    <spawned_thread>78</spawned_thread>
+    <commited_thread>36</commited_thread>
+    <failed_thread total="42">
+      <OnDDV>7</OnDDV>
+      <OnInstruction>0</OnInstruction>
+      <OnRegisterVerification>14</OnRegisterVerification>
+      <OnMemoryVerification>0</OnMemoryVerification>
+      <OnLowPriority>21</OnLowPriority>
+      <OnControlVoilate>0</OnControlVoilate>
+      <OnReset>0</OnReset>
+      <OnHalt>0</OnHalt>
+      <OnQuit>0</OnQuit>
+      <OnException>0</OnException>
+      <OnUnknown>0</OnUnknown>
+      <FailCount>
+        <Failed_CPU failed_ListId="0">0</Failed_CPU>
+        <Failed_CPU failed_ListId="1">3</Failed_CPU>
+        <Failed_CPU failed_ListId="2">2</Failed_CPU>
+        <Failed_CPU failed_ListId="3">7</Failed_CPU>
+        <Failed_CPU failed_ListId="4">2</Failed_CPU>
+        <Failed_CPU failed_ListId="5">5</Failed_CPU>
+        <Failed_CPU failed_ListId="6">4</Failed_CPU>
+        <Failed_CPU failed_ListId="7">1</Failed_CPU>
+        <Failed_CPU failed_ListId="8">3</Failed_CPU>
+        <Failed_CPU failed_ListId="9">0</Failed_CPU>
+        <Failed_CPU failed_ListId="10">4</Failed_CPU>
+        <Failed_CPU failed_ListId="11">1</Failed_CPU>
+        <Failed_CPU failed_ListId="12">1</Failed_CPU>
+        <Failed_CPU failed_ListId="13">2</Failed_CPU>
+        <Failed_CPU failed_ListId="14">3</Failed_CPU>
+        <Failed_CPU failed_ListId="15">4</Failed_CPU>
+      </FailCount>
+    </failed_thread>
+    <TimeStat>
+      <FreeTime>9425</FreeTime>
+      <SquashTime>873</SquashTime>
+      <WaitTime>1154</WaitTime>
+      <SpTime>1309</SpTime>
+    </TimeStat>
+  </statistic>
+  <statistic cpu_id="3">
+    <total_inst>2806</total_inst>
+    <total_clock>2762</total_clock>
+    <spawned_thread>80</spawned_thread>
+    <commited_thread>44</commited_thread>
+    <failed_thread total="41">
+      <OnDDV>7</OnDDV>
+      <OnInstruction>0</OnInstruction>
+      <OnRegisterVerification>11</OnRegisterVerification>
+      <OnMemoryVerification>0</OnMemoryVerification>
+      <OnLowPriority>23</OnLowPriority>
+      <OnControlVoilate>0</OnControlVoilate>
+      <OnReset>0</OnReset>
+      <OnHalt>0</OnHalt>
+      <OnQuit>0</OnQuit>
+      <OnException>0</OnException>
+      <OnUnknown>0</OnUnknown>
+      <FailCount>
+        <Failed_CPU failed_ListId="0">0</Failed_CPU>
+        <Failed_CPU failed_ListId="1">3</Failed_CPU>
+        <Failed_CPU failed_ListId="2">3</Failed_CPU>
+        <Failed_CPU failed_ListId="3">7</Failed_CPU>
+        <Failed_CPU failed_ListId="4">2</Failed_CPU>
+        <Failed_CPU failed_ListId="5">5</Failed_CPU>
+        <Failed_CPU failed_ListId="6">1</Failed_CPU>
+        <Failed_CPU failed_ListId="7">2</Failed_CPU>
+        <Failed_CPU failed_ListId="8">1</Failed_CPU>
+        <Failed_CPU failed_ListId="9">0</Failed_CPU>
+        <Failed_CPU failed_ListId="10">4</Failed_CPU>
+        <Failed_CPU failed_ListId="11">2</Failed_CPU>
+        <Failed_CPU failed_ListId="12">1</Failed_CPU>
+        <Failed_CPU failed_ListId="13">1</Failed_CPU>
+        <Failed_CPU failed_ListId="14">6</Failed_CPU>
+        <Failed_CPU failed_ListId="15">3</Failed_CPU>
+      </FailCount>
+    </failed_thread>
+    <TimeStat>
+      <FreeTime>8563</FreeTime>
+      <SquashTime>745</SquashTime>
+      <WaitTime>1768</WaitTime>
+      <SpTime>1579</SpTime>
+    </TimeStat>
+  </statistic>
+  <statistic cpu_id="4">
+    <total_inst>2655</total_inst>
+    <total_clock>2612</total_clock>
+    <spawned_thread>80</spawned_thread>
+    <commited_thread>43</commited_thread>
+    <failed_thread total="44">
+      <OnDDV>10</OnDDV>
+      <OnInstruction>0</OnInstruction>
+      <OnRegisterVerification>11</OnRegisterVerification>
+      <OnMemoryVerification>0</OnMemoryVerification>
+      <OnLowPriority>23</OnLowPriority>
+      <OnControlVoilate>0</OnControlVoilate>
+      <OnReset>0</OnReset>
+      <OnHalt>0</OnHalt>
+      <OnQuit>0</OnQuit>
+      <OnException>0</OnException>
+      <OnUnknown>0</OnUnknown>
+      <FailCount>
+        <Failed_CPU failed_ListId="0">0</Failed_CPU>
+        <Failed_CPU failed_ListId="1">5</Failed_CPU>
+        <Failed_CPU failed_ListId="2">2</Failed_CPU>
+        <Failed_CPU failed_ListId="3">2</Failed_CPU>
+        <Failed_CPU failed_ListId="4">5</Failed_CPU>
+        <Failed_CPU failed_ListId="5">7</Failed_CPU>
+        <Failed_CPU failed_ListId="6">4</Failed_CPU>
+        <Failed_CPU failed_ListId="7">2</Failed_CPU>
+        <Failed_CPU failed_ListId="8">4</Failed_CPU>
+        <Failed_CPU failed_ListId="9">0</Failed_CPU>
+        <Failed_CPU failed_ListId="10">3</Failed_CPU>
+        <Failed_CPU failed_ListId="11">0</Failed_CPU>
+        <Failed_CPU failed_ListId="12">2</Failed_CPU>
+        <Failed_CPU failed_ListId="13">0</Failed_CPU>
+        <Failed_CPU failed_ListId="14">2</Failed_CPU>
+        <Failed_CPU failed_ListId="15">6</Failed_CPU>
+      </FailCount>
+    </failed_thread>
+    <TimeStat>
+      <FreeTime>8562</FreeTime>
+      <SquashTime>967</SquashTime>
+      <WaitTime>1893</WaitTime>
+      <SpTime>1197</SpTime>
+    </TimeStat>
+  </statistic>
+  <statistic cpu_id="5">
+    <total_inst>2778</total_inst>
+    <total_clock>2739</total_clock>
+    <spawned_thread>85</spawned_thread>
+    <commited_thread>39</commited_thread>
+    <failed_thread total="53">
+      <OnDDV>12</OnDDV>
+      <OnInstruction>0</OnInstruction>
+      <OnRegisterVerification>13</OnRegisterVerification>
+      <OnMemoryVerification>0</OnMemoryVerification>
+      <OnLowPriority>28</OnLowPriority>
+      <OnControlVoilate>0</OnControlVoilate>
+      <OnReset>0</OnReset>
+      <OnHalt>0</OnHalt>
+      <OnQuit>0</OnQuit>
+      <OnException>0</OnException>
+      <OnUnknown>0</OnUnknown>
+      <FailCount>
+        <Failed_CPU failed_ListId="0">0</Failed_CPU>
+        <Failed_CPU failed_ListId="1">8</Failed_CPU>
+        <Failed_CPU failed_ListId="2">10</Failed_CPU>
+        <Failed_CPU failed_ListId="3">4</Failed_CPU>
+        <Failed_CPU failed_ListId="4">4</Failed_CPU>
+        <Failed_CPU failed_ListId="5">6</Failed_CPU>
+        <Failed_CPU failed_ListId="6">1</Failed_CPU>
+        <Failed_CPU failed_ListId="7">2</Failed_CPU>
+        <Failed_CPU failed_ListId="8">3</Failed_CPU>
+        <Failed_CPU failed_ListId="9">1</Failed_CPU>
+        <Failed_CPU failed_ListId="10">2</Failed_CPU>
+        <Failed_CPU failed_ListId="11">1</Failed_CPU>
+        <Failed_CPU failed_ListId="12">2</Failed_CPU>
+        <Failed_CPU failed_ListId="13">1</Failed_CPU>
+        <Failed_CPU failed_ListId="14">4</Failed_CPU>
+        <Failed_CPU failed_ListId="15">4</Failed_CPU>
+      </FailCount>
+    </failed_thread>
+    <TimeStat>
+      <FreeTime>8884</FreeTime>
+      <SquashTime>1119</SquashTime>
+      <WaitTime>1447</WaitTime>
+      <SpTime>1152</SpTime>
+    </TimeStat>
+  </statistic>
+  <statistic cpu_id="6">
+    <total_inst>2793</total_inst>
+    <total_clock>2751</total_clock>
+    <spawned_thread>83</spawned_thread>
+    <commited_thread>42</commited_thread>
+    <failed_thread total="52">
+      <OnDDV>9</OnDDV>
+      <OnInstruction>0</OnInstruction>
+      <OnRegisterVerification>16</OnRegisterVerification>
+      <OnMemoryVerification>0</OnMemoryVerification>
+      <OnLowPriority>27</OnLowPriority>
+      <OnControlVoilate>0</OnControlVoilate>
+      <OnReset>0</OnReset>
+      <OnHalt>0</OnHalt>
+      <OnQuit>0</OnQuit>
+      <OnException>0</OnException>
+      <OnUnknown>0</OnUnknown>
+      <FailCount>
+        <Failed_CPU failed_ListId="0">0</Failed_CPU>
+        <Failed_CPU failed_ListId="1">6</Failed_CPU>
+        <Failed_CPU failed_ListId="2">8</Failed_CPU>
+        <Failed_CPU failed_ListId="3">5</Failed_CPU>
+        <Failed_CPU failed_ListId="4">3</Failed_CPU>
+        <Failed_CPU failed_ListId="5">2</Failed_CPU>
+        <Failed_CPU failed_ListId="6">3</Failed_CPU>
+        <Failed_CPU failed_ListId="7">0</Failed_CPU>
+        <Failed_CPU failed_ListId="8">6</Failed_CPU>
+        <Failed_CPU failed_ListId="9">3</Failed_CPU>
+        <Failed_CPU failed_ListId="10">5</Failed_CPU>
+        <Failed_CPU failed_ListId="11">1</Failed_CPU>
+        <Failed_CPU failed_ListId="12">0</Failed_CPU>
+        <Failed_CPU failed_ListId="13">2</Failed_CPU>
+        <Failed_CPU failed_ListId="14">3</Failed_CPU>
+        <Failed_CPU failed_ListId="15">5</Failed_CPU>
+      </FailCount>
+    </failed_thread>
+    <TimeStat>
+      <FreeTime>9208</FreeTime>
+      <SquashTime>872</SquashTime>
+      <WaitTime>934</WaitTime>
+      <SpTime>1421</SpTime>
+    </TimeStat>
+  </statistic>
+  <statistic cpu_id="7">
+    <total_inst>2180</total_inst>
+    <total_clock>2144</total_clock>
+    <spawned_thread>80</spawned_thread>
+    <commited_thread>36</commited_thread>
+    <failed_thread total="49">
+      <OnDDV>10</OnDDV>
+      <OnInstruction>0</OnInstruction>
+      <OnRegisterVerification>12</OnRegisterVerification>
+      <OnMemoryVerification>0</OnMemoryVerification>
+      <OnLowPriority>27</OnLowPriority>
+      <OnControlVoilate>0</OnControlVoilate>
+      <OnReset>0</OnReset>
+      <OnHalt>0</OnHalt>
+      <OnQuit>0</OnQuit>
+      <OnException>0</OnException>
+      <OnUnknown>0</OnUnknown>
+      <FailCount>
+        <Failed_CPU failed_ListId="0">0</Failed_CPU>
+        <Failed_CPU failed_ListId="1">3</Failed_CPU>
+        <Failed_CPU failed_ListId="2">5</Failed_CPU>
+        <Failed_CPU failed_ListId="3">8</Failed_CPU>
+        <Failed_CPU failed_ListId="4">2</Failed_CPU>
+        <Failed_CPU failed_ListId="5">7</Failed_CPU>
+        <Failed_CPU failed_ListId="6">3</Failed_CPU>
+        <Failed_CPU failed_ListId="7">3</Failed_CPU>
+        <Failed_CPU failed_ListId="8">3</Failed_CPU>
+        <Failed_CPU failed_ListId="9">0</Failed_CPU>
+        <Failed_CPU failed_ListId="10">4</Failed_CPU>
+        <Failed_CPU failed_ListId="11">2</Failed_CPU>
+        <Failed_CPU failed_ListId="12">1</Failed_CPU>
+        <Failed_CPU failed_ListId="13">0</Failed_CPU>
+        <Failed_CPU failed_ListId="14">3</Failed_CPU>
+        <Failed_CPU failed_ListId="15">5</Failed_CPU>
+      </FailCount>
+    </failed_thread>
+    <TimeStat>
+      <FreeTime>9500</FreeTime>
+      <SquashTime>974</SquashTime>
+      <WaitTime>1515</WaitTime>
+      <SpTime>708</SpTime>
+    </TimeStat>
+  </statistic>
+  <statistic cpu_id="8">
+    <total_inst>2732</total_inst>
+    <total_clock>2687</total_clock>
+    <spawned_thread>80</spawned_thread>
+    <commited_thread>45</commited_thread>
+    <failed_thread total="47">
+      <OnDDV>13</OnDDV>
+      <OnInstruction>0</OnInstruction>
+      <OnRegisterVerification>13</OnRegisterVerification>
+      <OnMemoryVerification>0</OnMemoryVerification>
+      <OnLowPriority>21</OnLowPriority>
+      <OnControlVoilate>0</OnControlVoilate>
+      <OnReset>0</OnReset>
+      <OnHalt>0</OnHalt>
+      <OnQuit>0</OnQuit>
+      <OnException>0</OnException>
+      <OnUnknown>0</OnUnknown>
+      <FailCount>
+        <Failed_CPU failed_ListId="0">0</Failed_CPU>
+        <Failed_CPU failed_ListId="1">4</Failed_CPU>
+        <Failed_CPU failed_ListId="2">9</Failed_CPU>
+        <Failed_CPU failed_ListId="3">6</Failed_CPU>
+        <Failed_CPU failed_ListId="4">9</Failed_CPU>
+        <Failed_CPU failed_ListId="5">1</Failed_CPU>
+        <Failed_CPU failed_ListId="6">4</Failed_CPU>
+        <Failed_CPU failed_ListId="7">2</Failed_CPU>
+        <Failed_CPU failed_ListId="8">2</Failed_CPU>
+        <Failed_CPU failed_ListId="9">2</Failed_CPU>
+        <Failed_CPU failed_ListId="10">4</Failed_CPU>
+        <Failed_CPU failed_ListId="11">2</Failed_CPU>
+        <Failed_CPU failed_ListId="12">0</Failed_CPU>
+        <Failed_CPU failed_ListId="13">1</Failed_CPU>
+        <Failed_CPU failed_ListId="14">0</Failed_CPU>
+        <Failed_CPU failed_ListId="15">1</Failed_CPU>
+      </FailCount>
+    </failed_thread>
+    <TimeStat>
+      <FreeTime>9136</FreeTime>
+      <SquashTime>1122</SquashTime>
+      <WaitTime>1255</WaitTime>
+      <SpTime>1158</SpTime>
+    </TimeStat>
+  </statistic>
+  <statistic cpu_id="9">
+    <total_inst>2343</total_inst>
+    <total_clock>2303</total_clock>
+    <spawned_thread>76</spawned_thread>
+    <commited_thread>40</commited_thread>
+    <failed_thread total="44">
+      <OnDDV>11</OnDDV>
+      <OnInstruction>0</OnInstruction>
+      <OnRegisterVerification>14</OnRegisterVerification>
+      <OnMemoryVerification>0</OnMemoryVerification>
+      <OnLowPriority>19</OnLowPriority>
+      <OnControlVoilate>0</OnControlVoilate>
+      <OnReset>0</OnReset>
+      <OnHalt>0</OnHalt>
+      <OnQuit>0</OnQuit>
+      <OnException>0</OnException>
+      <OnUnknown>0</OnUnknown>
+      <FailCount>
+        <Failed_CPU failed_ListId="0">0</Failed_CPU>
+        <Failed_CPU failed_ListId="1">5</Failed_CPU>
+        <Failed_CPU failed_ListId="2">4</Failed_CPU>
+        <Failed_CPU failed_ListId="3">2</Failed_CPU>
+        <Failed_CPU failed_ListId="4">4</Failed_CPU>
+        <Failed_CPU failed_ListId="5">7</Failed_CPU>
+        <Failed_CPU failed_ListId="6">4</Failed_CPU>
+        <Failed_CPU failed_ListId="7">5</Failed_CPU>
+        <Failed_CPU failed_ListId="8">3</Failed_CPU>
+        <Failed_CPU failed_ListId="9">1</Failed_CPU>
+        <Failed_CPU failed_ListId="10">3</Failed_CPU>
+        <Failed_CPU failed_ListId="11">0</Failed_CPU>
+        <Failed_CPU failed_ListId="12">1</Failed_CPU>
+        <Failed_CPU failed_ListId="13">0</Failed_CPU>
+        <Failed_CPU failed_ListId="14">1</Failed_CPU>
+        <Failed_CPU failed_ListId="15">4</Failed_CPU>
+      </FailCount>
+    </failed_thread>
+    <TimeStat>
+      <FreeTime>9025</FreeTime>
+      <SquashTime>881</SquashTime>
+      <WaitTime>1877</WaitTime>
+      <SpTime>964</SpTime>
+    </TimeStat>
+  </statistic>
+  <statistic cpu_id="10">
+    <total_inst>2425</total_inst>
+    <total_clock>2380</total_clock>
+    <spawned_thread>83</spawned_thread>
+    <commited_thread>45</commited_thread>
+    <failed_thread total="49">
+      <OnDDV>9</OnDDV>
+      <OnInstruction>0</OnInstruction>
+      <OnRegisterVerification>12</OnRegisterVerification>
+      <OnMemoryVerification>0</OnMemoryVerification>
+      <OnLowPriority>28</OnLowPriority>
+      <OnControlVoilate>0</OnControlVoilate>
+      <OnReset>0</OnReset>
+      <OnHalt>0</OnHalt>
+      <OnQuit>0</OnQuit>
+      <OnException>0</OnException>
+      <OnUnknown>0</OnUnknown>
+      <FailCount>
+        <Failed_CPU failed_ListId="0">0</Failed_CPU>
+        <Failed_CPU failed_ListId="1">1</Failed_CPU>
+        <Failed_CPU failed_ListId="2">10</Failed_CPU>
+        <Failed_CPU failed_ListId="3">2</Failed_CPU>
+        <Failed_CPU failed_ListId="4">5</Failed_CPU>
+        <Failed_CPU failed_ListId="5">4</Failed_CPU>
+        <Failed_CPU failed_ListId="6">1</Failed_CPU>
+        <Failed_CPU failed_ListId="7">4</Failed_CPU>
+        <Failed_CPU failed_ListId="8">6</Failed_CPU>
+        <Failed_CPU failed_ListId="9">7</Failed_CPU>
+        <Failed_CPU failed_ListId="10">3</Failed_CPU>
+        <Failed_CPU failed_ListId="11">1</Failed_CPU>
+        <Failed_CPU failed_ListId="12">0</Failed_CPU>
+        <Failed_CPU failed_ListId="13">0</Failed_CPU>
+        <Failed_CPU failed_ListId="14">0</Failed_CPU>
+        <Failed_CPU failed_ListId="15">5</Failed_CPU>
+      </FailCount>
+    </failed_thread>
+    <TimeStat>
+      <FreeTime>9248</FreeTime>
+      <SquashTime>1001</SquashTime>
+      <WaitTime>1504</WaitTime>
+      <SpTime>958</SpTime>
+    </TimeStat>
+  </statistic>
+  <statistic cpu_id="11">
+    <total_inst>2805</total_inst>
+    <total_clock>2769</total_clock>
+    <spawned_thread>90</spawned_thread>
+    <commited_thread>36</commited_thread>
+    <failed_thread total="58">
+      <OnDDV>10</OnDDV>
+      <OnInstruction>0</OnInstruction>
+      <OnRegisterVerification>14</OnRegisterVerification>
+      <OnMemoryVerification>0</OnMemoryVerification>
+      <OnLowPriority>34</OnLowPriority>
+      <OnControlVoilate>0</OnControlVoilate>
+      <OnReset>0</OnReset>
+      <OnHalt>0</OnHalt>
+      <OnQuit>0</OnQuit>
+      <OnException>0</OnException>
+      <OnUnknown>0</OnUnknown>
+      <FailCount>
+        <Failed_CPU failed_ListId="0">0</Failed_CPU>
+        <Failed_CPU failed_ListId="1">7</Failed_CPU>
+        <Failed_CPU failed_ListId="2">10</Failed_CPU>
+        <Failed_CPU failed_ListId="3">7</Failed_CPU>
+        <Failed_CPU failed_ListId="4">5</Failed_CPU>
+        <Failed_CPU failed_ListId="5">2</Failed_CPU>
+        <Failed_CPU failed_ListId="6">6</Failed_CPU>
+        <Failed_CPU failed_ListId="7">4</Failed_CPU>
+        <Failed_CPU failed_ListId="8">4</Failed_CPU>
+        <Failed_CPU failed_ListId="9">1</Failed_CPU>
+        <Failed_CPU failed_ListId="10">4</Failed_CPU>
+        <Failed_CPU failed_ListId="11">1</Failed_CPU>
+        <Failed_CPU failed_ListId="12">0</Failed_CPU>
+        <Failed_CPU failed_ListId="13">2</Failed_CPU>
+        <Failed_CPU failed_ListId="14">2</Failed_CPU>
+        <Failed_CPU failed_ListId="15">3</Failed_CPU>
+      </FailCount>
+    </failed_thread>
+    <TimeStat>
+      <FreeTime>8745</FreeTime>
+      <SquashTime>1066</SquashTime>
+      <WaitTime>1490</WaitTime>
+      <SpTime>1241</SpTime>
+    </TimeStat>
+  </statistic>
+  <statistic cpu_id="12">
+    <total_inst>2740</total_inst>
+    <total_clock>2688</total_clock>
+    <spawned_thread>83</spawned_thread>
+    <commited_thread>52</commited_thread>
+    <failed_thread total="49">
+      <OnDDV>8</OnDDV>
+      <OnInstruction>0</OnInstruction>
+      <OnRegisterVerification>15</OnRegisterVerification>
+      <OnMemoryVerification>0</OnMemoryVerification>
+      <OnLowPriority>26</OnLowPriority>
+      <OnControlVoilate>0</OnControlVoilate>
+      <OnReset>0</OnReset>
+      <OnHalt>0</OnHalt>
+      <OnQuit>0</OnQuit>
+      <OnException>0</OnException>
+      <OnUnknown>0</OnUnknown>
+      <FailCount>
+        <Failed_CPU failed_ListId="0">0</Failed_CPU>
+        <Failed_CPU failed_ListId="1">7</Failed_CPU>
+        <Failed_CPU failed_ListId="2">5</Failed_CPU>
+        <Failed_CPU failed_ListId="3">3</Failed_CPU>
+        <Failed_CPU failed_ListId="4">1</Failed_CPU>
+        <Failed_CPU failed_ListId="5">7</Failed_CPU>
+        <Failed_CPU failed_ListId="6">4</Failed_CPU>
+        <Failed_CPU failed_ListId="7">2</Failed_CPU>
+        <Failed_CPU failed_ListId="8">4</Failed_CPU>
+        <Failed_CPU failed_ListId="9">2</Failed_CPU>
+        <Failed_CPU failed_ListId="10">4</Failed_CPU>
+        <Failed_CPU failed_ListId="11">1</Failed_CPU>
+        <Failed_CPU failed_ListId="12">1</Failed_CPU>
+        <Failed_CPU failed_ListId="13">1</Failed_CPU>
+        <Failed_CPU failed_ListId="14">4</Failed_CPU>
+        <Failed_CPU failed_ListId="15">3</Failed_CPU>
+      </FailCount>
+    </failed_thread>
+    <TimeStat>
+      <FreeTime>9489</FreeTime>
+      <SquashTime>1092</SquashTime>
+      <WaitTime>1053</WaitTime>
+      <SpTime>1158</SpTime>
+    </TimeStat>
+  </statistic>
+  <statistic cpu_id="13">
+    <total_inst>2841</total_inst>
+    <total_clock>2792</total_clock>
+    <spawned_thread>83</spawned_thread>
+    <commited_thread>49</commited_thread>
+    <failed_thread total="43">
+      <OnDDV>8</OnDDV>
+      <OnInstruction>0</OnInstruction>
+      <OnRegisterVerification>14</OnRegisterVerification>
+      <OnMemoryVerification>0</OnMemoryVerification>
+      <OnLowPriority>21</OnLowPriority>
+      <OnControlVoilate>0</OnControlVoilate>
+      <OnReset>0</OnReset>
+      <OnHalt>0</OnHalt>
+      <OnQuit>0</OnQuit>
+      <OnException>0</OnException>
+      <OnUnknown>0</OnUnknown>
+      <FailCount>
+        <Failed_CPU failed_ListId="0">0</Failed_CPU>
+        <Failed_CPU failed_ListId="1">2</Failed_CPU>
+        <Failed_CPU failed_ListId="2">3</Failed_CPU>
+        <Failed_CPU failed_ListId="3">4</Failed_CPU>
+        <Failed_CPU failed_ListId="4">4</Failed_CPU>
+        <Failed_CPU failed_ListId="5">5</Failed_CPU>
+        <Failed_CPU failed_ListId="6">4</Failed_CPU>
+        <Failed_CPU failed_ListId="7">1</Failed_CPU>
+        <Failed_CPU failed_ListId="8">4</Failed_CPU>
+        <Failed_CPU failed_ListId="9">2</Failed_CPU>
+        <Failed_CPU failed_ListId="10">4</Failed_CPU>
+        <Failed_CPU failed_ListId="11">3</Failed_CPU>
+        <Failed_CPU failed_ListId="12">1</Failed_CPU>
+        <Failed_CPU failed_ListId="13">1</Failed_CPU>
+        <Failed_CPU failed_ListId="14">1</Failed_CPU>
+        <Failed_CPU failed_ListId="15">4</Failed_CPU>
+      </FailCount>
+    </failed_thread>
+    <TimeStat>
+      <FreeTime>8675</FreeTime>
+      <SquashTime>969</SquashTime>
+      <WaitTime>1716</WaitTime>
+      <SpTime>1360</SpTime>
+    </TimeStat>
+  </statistic>
+  <statistic cpu_id="14">
+    <total_inst>2752</total_inst>
+    <total_clock>2711</total_clock>
+    <spawned_thread>84</spawned_thread>
+    <commited_thread>42</commited_thread>
+    <failed_thread total="46">
+      <OnDDV>12</OnDDV>
+      <OnInstruction>0</OnInstruction>
+      <OnRegisterVerification>13</OnRegisterVerification>
+      <OnMemoryVerification>0</OnMemoryVerification>
+      <OnLowPriority>21</OnLowPriority>
+      <OnControlVoilate>0</OnControlVoilate>
+      <OnReset>0</OnReset>
+      <OnHalt>0</OnHalt>
+      <OnQuit>0</OnQuit>
+      <OnException>0</OnException>
+      <OnUnknown>0</OnUnknown>
+      <FailCount>
+        <Failed_CPU failed_ListId="0">0</Failed_CPU>
+        <Failed_CPU failed_ListId="1">3</Failed_CPU>
+        <Failed_CPU failed_ListId="2">6</Failed_CPU>
+        <Failed_CPU failed_ListId="3">5</Failed_CPU>
+        <Failed_CPU failed_ListId="4">5</Failed_CPU>
+        <Failed_CPU failed_ListId="5">3</Failed_CPU>
+        <Failed_CPU failed_ListId="6">3</Failed_CPU>
+        <Failed_CPU failed_ListId="7">4</Failed_CPU>
+        <Failed_CPU failed_ListId="8">0</Failed_CPU>
+        <Failed_CPU failed_ListId="9">4</Failed_CPU>
+        <Failed_CPU failed_ListId="10">1</Failed_CPU>
+        <Failed_CPU failed_ListId="11">1</Failed_CPU>
+        <Failed_CPU failed_ListId="12">3</Failed_CPU>
+        <Failed_CPU failed_ListId="13">1</Failed_CPU>
+        <Failed_CPU failed_ListId="14">3</Failed_CPU>
+        <Failed_CPU failed_ListId="15">4</Failed_CPU>
+      </FailCount>
+    </failed_thread>
+    <TimeStat>
+      <FreeTime>9362</FreeTime>
+      <SquashTime>860</SquashTime>
+      <WaitTime>1168</WaitTime>
+      <SpTime>1369</SpTime>
+    </TimeStat>
+  </statistic>
+  <statistic cpu_id="15">
+    <total_inst>3064</total_inst>
+    <total_clock>3022</total_clock>
+    <spawned_thread>81</spawned_thread>
+    <commited_thread>42</commited_thread>
+    <failed_thread total="44">
+      <OnDDV>8</OnDDV>
+      <OnInstruction>0</OnInstruction>
+      <OnRegisterVerification>15</OnRegisterVerification>
+      <OnMemoryVerification>0</OnMemoryVerification>
+      <OnLowPriority>21</OnLowPriority>
+      <OnControlVoilate>0</OnControlVoilate>
+      <OnReset>0</OnReset>
+      <OnHalt>0</OnHalt>
+      <OnQuit>0</OnQuit>
+      <OnException>0</OnException>
+      <OnUnknown>0</OnUnknown>
+      <FailCount>
+        <Failed_CPU failed_ListId="0">0</Failed_CPU>
+        <Failed_CPU failed_ListId="1">2</Failed_CPU>
+        <Failed_CPU failed_ListId="2">3</Failed_CPU>
+        <Failed_CPU failed_ListId="3">5</Failed_CPU>
+        <Failed_CPU failed_ListId="4">9</Failed_CPU>
+        <Failed_CPU failed_ListId="5">2</Failed_CPU>
+        <Failed_CPU failed_ListId="6">5</Failed_CPU>
+        <Failed_CPU failed_ListId="7">1</Failed_CPU>
+        <Failed_CPU failed_ListId="8">3</Failed_CPU>
+        <Failed_CPU failed_ListId="9">4</Failed_CPU>
+        <Failed_CPU failed_ListId="10">3</Failed_CPU>
+        <Failed_CPU failed_ListId="11">0</Failed_CPU>
+        <Failed_CPU failed_ListId="12">2</Failed_CPU>
+        <Failed_CPU failed_ListId="13">1</Failed_CPU>
+        <Failed_CPU failed_ListId="14">1</Failed_CPU>
+        <Failed_CPU failed_ListId="15">3</Failed_CPU>
+      </FailCount>
+    </failed_thread>
+    <TimeStat>
+      <FreeTime>8824</FreeTime>
+      <SquashTime>1277</SquashTime>
+      <WaitTime>1325</WaitTime>
+      <SpTime>1310</SpTime>
+    </TimeStat>
+  </statistic>
+  <analysis>
+    <sequential_time>24926</sequential_time>
+    <parallel_time>13241</parallel_time>
+    <speed_up>1.882486</speed_up>
+    <total_spawned>1323</total_spawned>
+    <success_ratio>0.426304</success_ratio>
+    <fail_stat total_failed="759">
+      <TOnDDV total="154">0.202899</TOnDDV>
+      <TOnInstruction total="0">0.000000</TOnInstruction>
+      <TOnRegV total="209">0.275362</TOnRegV>
+      <TOnMMV total="0">0.000000</TOnMMV>
+      <TOnLowPriority total="396">0.521739</TOnLowPriority>
+      <TOnControl total="0">0.000000</TOnControl>
+      <TOnReset total="0">0.000000</TOnReset>
+      <TOnHalt total="0">0.000000</TOnHalt>
+      <TOnQuit total="0">0.000000</TOnQuit>
+      <TOnException total="0">0.000000</TOnException>
+      <TOnUnknown total="0">0.000000</TOnUnknown>
+    </fail_stat>
+    <FailDistantStat MaxDistance="16">
+      <SquashDistance distance_len="0">0</SquashDistance>
+      <SquashDistance distance_len="1">69</SquashDistance>
+      <SquashDistance distance_len="2">96</SquashDistance>
+      <SquashDistance distance_len="3">72</SquashDistance>
+      <SquashDistance distance_len="4">66</SquashDistance>
+      <SquashDistance distance_len="5">72</SquashDistance>
+      <SquashDistance distance_len="6">53</SquashDistance>
+      <SquashDistance distance_len="7">38</SquashDistance>
+      <SquashDistance distance_len="8">51</SquashDistance>
+      <SquashDistance distance_len="9">32</SquashDistance>
+      <SquashDistance distance_len="10">55</SquashDistance>
+      <SquashDistance distance_len="11">19</SquashDistance>
+      <SquashDistance distance_len="12">16</SquashDistance>
+      <SquashDistance distance_len="13">15</SquashDistance>
+      <SquashDistance distance_len="14">38</SquashDistance>
+      <SquashDistance distance_len="15">67</SquashDistance>
+    </FailDistantStat>
+    <CPUTimeBreakdown>
+      <FreeTime FreeTime="142357">0.675468</FreeTime>
+      <PsliceTime PsliceTime="8199">0.038903</PsliceTime>
+      <SquashTime SquashTime="15458">0.073347</SquashTime>
+      <WaitTime WaitTime="22503">0.106774</WaitTime>
+      <SpTime SpTime="22236">0.105507</SpTime>
+    </CPUTimeBreakdown>
+    <CPUStat averageCoreNumber="11">
+      <CoreNum corenum="1">29/0.013731</CoreNum>
+      <CoreNum corenum="2">101/0.047822</CoreNum>
+      <CoreNum corenum="3">94/0.044508</CoreNum>
+      <CoreNum corenum="4">98/0.046402</CoreNum>
+      <CoreNum corenum="5">93/0.044034</CoreNum>
+      <CoreNum corenum="6">93/0.044034</CoreNum>
+      <CoreNum corenum="7">81/0.038352</CoreNum>
+      <CoreNum corenum="8">88/0.041667</CoreNum>
+      <CoreNum corenum="9">77/0.036458</CoreNum>
+      <CoreNum corenum="10">81/0.038352</CoreNum>
+      <CoreNum corenum="11">83/0.039299</CoreNum>
+      <CoreNum corenum="12">65/0.030777</CoreNum>
+      <CoreNum corenum="13">72/0.034091</CoreNum>
+      <CoreNum corenum="14">75/0.035511</CoreNum>
+      <CoreNum corenum="15">451/0.213542</CoreNum>
+      <CoreNum corenum="16">531/0.251420</CoreNum>
+    averageCoreNumber: 11.194129
+    </CPUStat>
+  </analysis>
+</statistic_report>

@@ -1,0 +1,83 @@
+.TH "prophetlog.cc" 3 "18 Dec 2013" "Doxygen" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+prophetlog.cc \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'prophetlog.h'\fP
+.br
+\fC#include <string>\fP
+.br
+\fC#include <time.h>\fP
+.br
+\fC#include <iostream>\fP
+.br
+\fC#include <vector>\fP
+.br
+\fC#include <cxxabi.h>\fP
+.br
+\fC#include <stdlib.h>\fP
+.br
+\fC#include <fstream>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBPlog::Recorder\fP"
+.br
+.ti -1c
+.RI "class \fBPlog::FileRecorder\fP"
+.br
+.ti -1c
+.RI "class \fBPlog::ConsoleRecorder\fP"
+.br
+.ti -1c
+.RI "class \fBPlog::Setting\fP"
+.br
+.in -1c
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBPlog\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef std::vector< Recorder * > \fBPlog::Recorders_t\fP"
+.br
+.ti -1c
+.RI "typedef void(* \fBPlog::FatalFunction\fP )(const std::string &)"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBPlog::DefaultActionOnError\fP (const std::string &message)"
+.br
+.ti -1c
+.RI "std::string \fBPlog::GetTime\fP ()"
+.br
+.ti -1c
+.RI "std::string \fBPlog::ClassName\fP (const std::type_info &ti)"
+.br
+.ti -1c
+.RI "std::string \fBPlog::RemovePrefix\fP (std::string &s, const std::string &p)"
+.br
+.ti -1c
+.RI "void \fBPlog::WriteLog\fP (PLOG_LEVEL level, const std::string &message)"
+.br
+.ti -1c
+.RI "void \fBPlog::InitPlog\fP (bool filelog, bool consolelog)"
+.br
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen from the source code.

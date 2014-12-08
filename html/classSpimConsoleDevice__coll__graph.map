@@ -1,0 +1,14 @@
+<map id="G" name="G">
+<area shape="rect" href="$classSpimConsoleDevice_1_1ClockTrigger.html" title="SpimConsoleDevice::ClockTrigger" alt="" coords="1197,328,1416,357"/>
+<area shape="rect" href="$classTerminalController.html" title="TerminalController" alt="" coords="608,143,733,172"/>
+<area shape="rect" href="$classTerminalController_1_1KeyboardPoll.html" title="TerminalController::KeyboardPoll" alt="" coords="272,187,480,216"/>
+<area shape="rect" href="$classTerminalController_1_1KeyboardRepoll.html" title="TerminalController::KeyboardRepoll" alt="" coords="835,185,1059,215"/>
+<area shape="rect" href="$classTerminalController_1_1DisplayDelay.html" title="TerminalController::DisplayDelay" alt="" coords="843,65,1051,95"/>
+<area shape="rect" href="$classCancelableTask.html" title="CancelableTask" alt="" coords="108,217,220,247"/>
+<area shape="rect" href="$classTask.html" title="Task" alt="" coords="7,217,55,247"/>
+<area shape="rect" href="$structTerminalController_1_1LineState.html" title="TerminalController::LineState" alt="" coords="1213,123,1400,152"/>
+<area shape="rect" href="$classClock.html" title="Clock" alt="" coords="349,93,403,123"/>
+<area shape="rect" href="$classDeviceMap.html" title="DeviceMap" alt="" coords="628,395,713,424"/>
+<area shape="rect" href="$classRange.html" title="Range" alt="" coords="347,395,405,424"/>
+<area shape="rect" href="$classDeviceInt.html" title="DeviceInt" alt="" coords="633,341,708,371"/>
+</map>

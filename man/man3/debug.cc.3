@@ -1,0 +1,78 @@
+.TH "debug.cc" 3 "18 Dec 2013" "Doxygen" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+debug.cc \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'debug.h'\fP
+.br
+\fC#include 'remotegdb.h'\fP
+.br
+\fC#include 'cpu.h'\fP
+.br
+\fC#include 'mapper.h'\fP
+.br
+\fC#include 'excnames.h'\fP
+.br
+\fC#include 'cpzeroreg.h'\fP
+.br
+\fC#include 'vmips.h'\fP
+.br
+\fC#include 'options.h'\fP
+.br
+\fC#include <csignal>\fP
+.br
+\fC#include <unistd.h>\fP
+.br
+\fC#include <sys/socket.h>\fP
+.br
+\fC#include <netinet/in.h>\fP
+.br
+\fC#include <arpa/inet.h>\fP
+.br
+\fC#include <fcntl.h>\fP
+.br
+\fC#include <string.h>\fP
+.br
+\fC#include <stdlib.h>\fP
+.br
+
+.SS "Defines"
+
+.in +1c
+.ti -1c
+.RI "#define \fBBIG_BREAKPOINT\fP   {0, 0x5, 0, 0xd}"
+.br
+.ti -1c
+.RI "#define \fBLITTLE_BREAKPOINT\fP   {0xd, 0, 0x5, 0}"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBdebugger_interrupt\fP (int sig)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "int \fBremotegdb_backend_error\fP"
+.br
+.in -1c
+.SH "Define Documentation"
+.PP 
+.SS "#define BIG_BREAKPOINT   {0, 0x5, 0, 0xd}"
+.SS "#define LITTLE_BREAKPOINT   {0xd, 0, 0x5, 0}"
+.SH "Function Documentation"
+.PP 
+.SS "void debugger_interrupt (int sig)"
+.SH "Variable Documentation"
+.PP 
+.SS "int \fBremotegdb_backend_error\fP"
+.SH "Author"
+.PP 
+Generated automatically by Doxygen from the source code.

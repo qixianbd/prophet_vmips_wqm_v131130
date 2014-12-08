@@ -1,0 +1,131 @@
+\hypertarget{classXmlDocument}{
+\section{XmlDocument Class Reference}
+\label{classXmlDocument}\index{XmlDocument@{XmlDocument}}
+}
+
+
+A XML Document.  
+
+
+
+
+{\ttfamily \#include $<$prophetxmldoc.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classXmlDocument_a3bc4c5ea5f22b4ff8776422125b31d42}{XmlDocument} (const std::string \&encoding=\char`\"{}\char`\"{}, const std::string \&styleSheet=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Constructs a \hyperlink{classXmlDocument}{XmlDocument} object. \item\end{DoxyCompactList}\item 
+\hypertarget{classXmlDocument_ab18742228f580a5e4ec87e4b39c8a68c}{
+virtual \hyperlink{classXmlDocument_ab18742228f580a5e4ec87e4b39c8a68c}{$\sim$XmlDocument} ()}
+\label{classXmlDocument_ab18742228f580a5e4ec87e4b39c8a68c}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \item\end{DoxyCompactList}\item 
+\hypertarget{classXmlDocument_a5063b9dc310ed5ed7a38b77f8584a50c}{
+std::string {\bfseries encoding} () const }
+\label{classXmlDocument_a5063b9dc310ed5ed7a38b77f8584a50c}
+
+\item 
+\hypertarget{classXmlDocument_afb4401e77f67626533ba7409a011c508}{
+void {\bfseries setEncoding} (const std::string \&encoding=\char`\"{}\char`\"{})}
+\label{classXmlDocument_afb4401e77f67626533ba7409a011c508}
+
+\item 
+\hypertarget{classXmlDocument_ae0a7e5e1f28b179c31bee66481b18c03}{
+std::string {\bfseries styleSheet} () const }
+\label{classXmlDocument_ae0a7e5e1f28b179c31bee66481b18c03}
+
+\item 
+\hypertarget{classXmlDocument_a63cfdd276a9812900cd7739758effd78}{
+void {\bfseries setStyleSheet} (const std::string \&styleSheet=\char`\"{}\char`\"{})}
+\label{classXmlDocument_a63cfdd276a9812900cd7739758effd78}
+
+\item 
+\hypertarget{classXmlDocument_ab3ff5eb5c5df20453b4fc6f5b9bcff6e}{
+bool {\bfseries standalone} () const }
+\label{classXmlDocument_ab3ff5eb5c5df20453b4fc6f5b9bcff6e}
+
+\item 
+void \hyperlink{classXmlDocument_a3cc9d3452daba0bda758ee7add075827}{setStandalone} (bool standalone)
+\begin{DoxyCompactList}\small\item\em set the output document as standalone or not. \item\end{DoxyCompactList}\item 
+\hypertarget{classXmlDocument_a2b419770905e48914ed6dba3990061cd}{
+void {\bfseries setRootElement} (\hyperlink{classXmlElement}{XmlElement} $\ast$rootElement)}
+\label{classXmlDocument_a2b419770905e48914ed6dba3990061cd}
+
+\item 
+\hypertarget{classXmlDocument_a23a48b334d0ab31d4d68a489d0c60acc}{
+\hyperlink{classXmlElement}{XmlElement} \& {\bfseries rootElement} () const }
+\label{classXmlDocument_a23a48b334d0ab31d4d68a489d0c60acc}
+
+\item 
+\hypertarget{classXmlDocument_aa75e20c19ee0719af2e5b573db02f5a4}{
+std::string {\bfseries toString} () const }
+\label{classXmlDocument_aa75e20c19ee0719af2e5b573db02f5a4}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classXmlDocument_a3a5338a6b02b176a3d50e6665ce1b41d}{
+std::string {\bfseries m\_\-encoding}}
+\label{classXmlDocument_a3a5338a6b02b176a3d50e6665ce1b41d}
+
+\item 
+\hypertarget{classXmlDocument_a8564bf7c7d4856e6aecc2d7b7be6782b}{
+std::string {\bfseries m\_\-styleSheet}}
+\label{classXmlDocument_a8564bf7c7d4856e6aecc2d7b7be6782b}
+
+\item 
+\hypertarget{classXmlDocument_a83e49d668c247017d1681a9989958280}{
+\hyperlink{classXmlElement}{XmlElement} $\ast$ {\bfseries m\_\-rootElement}}
+\label{classXmlDocument_a83e49d668c247017d1681a9989958280}
+
+\item 
+\hypertarget{classXmlDocument_a0c2dd2a48772ad62209a268156af3baa}{
+bool {\bfseries m\_\-standalone}}
+\label{classXmlDocument_a0c2dd2a48772ad62209a268156af3baa}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A XML Document. A \hyperlink{classXmlDocument}{XmlDocument} represents a XML file. It holds a pointer on the root \hyperlink{classXmlElement}{XmlElement} of the document. It also holds the encoding and style sheet used.
+
+By default, the XML document is stand-\/alone and tagged with enconding \char`\"{}ISO-\/8859-\/1\char`\"{}. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classXmlDocument_a3bc4c5ea5f22b4ff8776422125b31d42}{
+\index{XmlDocument@{XmlDocument}!XmlDocument@{XmlDocument}}
+\index{XmlDocument@{XmlDocument}!XmlDocument@{XmlDocument}}
+\subsubsection[{XmlDocument}]{\setlength{\rightskip}{0pt plus 5cm}XmlDocument::XmlDocument (const std::string \& {\em encoding} = {\ttfamily \char`\"{}\char`\"{}}, \/  const std::string \& {\em styleSheet} = {\ttfamily \char`\"{}\char`\"{}})}}
+\label{classXmlDocument_a3bc4c5ea5f22b4ff8776422125b31d42}
+
+
+Constructs a \hyperlink{classXmlDocument}{XmlDocument} object. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em encoding}]Encoding used in the XML file (default is Latin-\/1, ISO-\/8859-\/1 ). \item[{\em styleSheet}]Name of the XSL style sheet file used. If empty then no style sheet will be specified in the output. \end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classXmlDocument_a3cc9d3452daba0bda758ee7add075827}{
+\index{XmlDocument@{XmlDocument}!setStandalone@{setStandalone}}
+\index{setStandalone@{setStandalone}!XmlDocument@{XmlDocument}}
+\subsubsection[{setStandalone}]{\setlength{\rightskip}{0pt plus 5cm}void XmlDocument::setStandalone (bool {\em standalone})}}
+\label{classXmlDocument_a3cc9d3452daba0bda758ee7add075827}
+
+
+set the output document as standalone or not. 
+
+For the output document, specify wether it's a standalone XML document, or not.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em standalone}]if true, the output will be specified as standalone. if false, it will be not. \end{DoxyParams}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+prophetxmldoc.h\item 
+prophetxmldoc.cc\end{DoxyCompactItemize}

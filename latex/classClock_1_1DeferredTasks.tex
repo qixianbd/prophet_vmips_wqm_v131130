@@ -1,0 +1,46 @@
+\hypertarget{classClock_1_1DeferredTasks}{
+\section{Clock::DeferredTasks Class Reference}
+\label{classClock_1_1DeferredTasks}\index{Clock::DeferredTasks@{Clock::DeferredTasks}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classClock_1_1DeferredTasks_a926f31c0c8b373d47f2ec84d6ecb8456}{
+{\bfseries DeferredTasks} (long nanoseconds\_\-left, \hyperlink{classTask}{Task} $\ast$task)  throw ()}
+\label{classClock_1_1DeferredTasks_a926f31c0c8b373d47f2ec84d6ecb8456}
+
+\item 
+\hypertarget{classClock_1_1DeferredTasks_a9f15b2b4d25c7d5234b1b4bc59bdac44}{
+virtual void {\bfseries add\_\-task} (\hyperlink{classTask}{Task} $\ast$task)  throw ()}
+\label{classClock_1_1DeferredTasks_a9f15b2b4d25c7d5234b1b4bc59bdac44}
+
+\item 
+\hypertarget{classClock_1_1DeferredTasks_a83c3a88b111e960cdcba261f3ab1c969}{
+virtual long {\bfseries pass\_\-time} (long nanoseconds)}
+\label{classClock_1_1DeferredTasks_a83c3a88b111e960cdcba261f3ab1c969}
+
+\item 
+\hypertarget{classClock_1_1DeferredTasks_ab5ebba44377bd518949bd6f93599c0c1}{
+virtual long {\bfseries get\_\-nanoseconds\_\-left} ()  throw ()}
+\label{classClock_1_1DeferredTasks_ab5ebba44377bd518949bd6f93599c0c1}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classClock_1_1DeferredTasks_a6db5d7ddd158bef346c20a9792b57f3f}{
+long {\bfseries nanoseconds\_\-left}}
+\label{classClock_1_1DeferredTasks_a6db5d7ddd158bef346c20a9792b57f3f}
+
+\item 
+\hypertarget{classClock_1_1DeferredTasks_a17581b0d310a9d7ca041d50698edaeff}{
+std::list$<$ \hyperlink{classTask}{Task} $\ast$ $>$ {\bfseries tasks}}
+\label{classClock_1_1DeferredTasks_a17581b0d310a9d7ca041d50698edaeff}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+clock.h\item 
+clock.cc\end{DoxyCompactItemize}

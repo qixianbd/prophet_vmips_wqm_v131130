@@ -1,0 +1,12 @@
+digraph G
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir=LR;
+  Node1 [label="main",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="ProphetStat::ProphetCpuStat::getTotalSquashLen",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classProphetStat_1_1ProphetCpuStat.html#ad9e5aad82ee6015568bdfa6f3417458e"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="ProphetStat::ProphetCpuStat::printSquashLen",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classProphetStat_1_1ProphetCpuStat.html#a515c271e82770fa4155b9aa30e6e6bf6"];
+  Node3 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+}

@@ -1,0 +1,98 @@
+\hypertarget{vmips_8cc}{
+\section{vmips.cc File Reference}
+\label{vmips_8cc}\index{vmips.cc@{vmips.cc}}
+}
+{\ttfamily \#include \char`\"{}clock.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}clockdev.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}clockreg.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}devreg.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}cpzeroreg.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}debug.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}error.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}types.h\char`\"{}}\par
+{\ttfamily \#include $<$string$>$}\par
+{\ttfamily \#include \char`\"{}haltdev.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}intctrl.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}range.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}spimconsole.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}mapper.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}memorymodule.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}cpu.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}cpzero.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}spimconsreg.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}vmips.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}options.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}decrtc.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}decrtcreg.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}deccsr.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}deccsrreg.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}decstat.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}decserial.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}stub-\/dis.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}rommodule.h\char`\"{}}\par
+{\ttfamily \#include $<$fcntl.h$>$}\par
+{\ttfamily \#include $<$cerrno$>$}\par
+{\ttfamily \#include $<$cassert$>$}\par
+{\ttfamily \#include $<$csignal$>$}\par
+{\ttfamily \#include $<$cstdarg$>$}\par
+{\ttfamily \#include $<$exception$>$}\par
+{\ttfamily \#include $<$string.h$>$}\par
+Include dependency graph for vmips.cc:This graph shows which files directly or indirectly include this file:\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+long \hyperlink{vmips_8cc_aaddbeb918d583649944f57e5e6e6eed1}{timediff} (struct timeval $\ast$after, struct timeval $\ast$before)
+\item 
+static void \hyperlink{vmips_8cc_a93a6a59d6ee8c591998ad5894a26cf12}{halt\_\-machine\_\-by\_\-signal} (int i)
+\item 
+static void \hyperlink{vmips_8cc_ad67a266bbdb4654093d807d44f351725}{vmips\_\-unexpected} ()
+\item 
+static void \hyperlink{vmips_8cc_af0fb8fe58367a0df74858b8f730fde74}{vmips\_\-terminate} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classvmips}{vmips} $\ast$ \hyperlink{vmips_8cc_a5297ee6895b55afe70e7df0b70197741}{machine}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{vmips_8cc_a93a6a59d6ee8c591998ad5894a26cf12}{
+\index{vmips.cc@{vmips.cc}!halt\_\-machine\_\-by\_\-signal@{halt\_\-machine\_\-by\_\-signal}}
+\index{halt\_\-machine\_\-by\_\-signal@{halt\_\-machine\_\-by\_\-signal}!vmips.cc@{vmips.cc}}
+\subsubsection[{halt\_\-machine\_\-by\_\-signal}]{\setlength{\rightskip}{0pt plus 5cm}static void halt\_\-machine\_\-by\_\-signal (int {\em i})\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{vmips_8cc_a93a6a59d6ee8c591998ad5894a26cf12}
+
+
+Here is the call graph for this function:
+
+\hypertarget{vmips_8cc_aaddbeb918d583649944f57e5e6e6eed1}{
+\index{vmips.cc@{vmips.cc}!timediff@{timediff}}
+\index{timediff@{timediff}!vmips.cc@{vmips.cc}}
+\subsubsection[{timediff}]{\setlength{\rightskip}{0pt plus 5cm}long timediff (struct timeval $\ast$ {\em after}, \/  struct timeval $\ast$ {\em before})}}
+\label{vmips_8cc_aaddbeb918d583649944f57e5e6e6eed1}
+\hypertarget{vmips_8cc_af0fb8fe58367a0df74858b8f730fde74}{
+\index{vmips.cc@{vmips.cc}!vmips\_\-terminate@{vmips\_\-terminate}}
+\index{vmips\_\-terminate@{vmips\_\-terminate}!vmips.cc@{vmips.cc}}
+\subsubsection[{vmips\_\-terminate}]{\setlength{\rightskip}{0pt plus 5cm}static void vmips\_\-terminate ()\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{vmips_8cc_af0fb8fe58367a0df74858b8f730fde74}
+
+
+Here is the call graph for this function:
+
+\hypertarget{vmips_8cc_ad67a266bbdb4654093d807d44f351725}{
+\index{vmips.cc@{vmips.cc}!vmips\_\-unexpected@{vmips\_\-unexpected}}
+\index{vmips\_\-unexpected@{vmips\_\-unexpected}!vmips.cc@{vmips.cc}}
+\subsubsection[{vmips\_\-unexpected}]{\setlength{\rightskip}{0pt plus 5cm}static void vmips\_\-unexpected ()\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{vmips_8cc_ad67a266bbdb4654093d807d44f351725}
+
+
+Here is the call graph for this function:
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{vmips_8cc_a5297ee6895b55afe70e7df0b70197741}{
+\index{vmips.cc@{vmips.cc}!machine@{machine}}
+\index{machine@{machine}!vmips.cc@{vmips.cc}}
+\subsubsection[{machine}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vmips}$\ast$ {\bf machine}}}
+\label{vmips_8cc_a5297ee6895b55afe70e7df0b70197741}

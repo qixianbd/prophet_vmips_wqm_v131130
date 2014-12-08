@@ -1,0 +1,10 @@
+<map id="G" name="G">
+<area shape="rect" href="$classTask.html" title="Task" alt="" coords="7,139,55,168"/>
+<area shape="rect" href="$classCancelableTask.html" title="CancelableTask" alt="" coords="105,139,217,168"/>
+<area shape="rect" href="$classClockDevice_1_1ClockTrigger.html" title="ClockDevice::ClockTrigger" alt="" coords="292,5,465,35"/>
+<area shape="rect" href="$classDECRTCDevice_1_1ClockTrigger.html" title="DECRTCDevice::ClockTrigger" alt="" coords="283,59,475,88"/>
+<area shape="rect" href="$classSpimConsoleDevice_1_1ClockTrigger.html" title="SpimConsoleDevice::ClockTrigger" alt="" coords="269,112,488,141"/>
+<area shape="rect" href="$classTerminalController_1_1DisplayDelay.html" title="TerminalController::DisplayDelay" alt="" coords="275,165,483,195"/>
+<area shape="rect" href="$classTerminalController_1_1KeyboardPoll.html" title="TerminalController::KeyboardPoll" alt="" coords="275,219,483,248"/>
+<area shape="rect" href="$classTerminalController_1_1KeyboardRepoll.html" title="TerminalController::KeyboardRepoll" alt="" coords="267,272,491,301"/>
+</map>

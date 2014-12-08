@@ -1,0 +1,397 @@
+\hypertarget{speculativecpu_8h}{
+\section{speculativecpu.h File Reference}
+\label{speculativecpu_8h}\index{speculativecpu.h@{speculativecpu.h}}
+}
+{\ttfamily \#include \char`\"{}cpu.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}obstack.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}predefine.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}prophetlog.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}prophetstatistic.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}prophetfpu.h\char`\"{}}\par
+{\ttfamily \#include $<$iostream$>$}\par
+Include dependency graph for speculativecpu.h:This graph shows which files directly or indirectly include this file:\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{speculativecpu_8h_aa0a4426f869a28c252d326f8bec2b095}{BYTE\_\-PER\_\-WORD}~4
+\item 
+\#define \hyperlink{speculativecpu_8h_abcd90e3b1bbefbec9e71c915f009853b}{CACHE\_\-STATISTIC}
+\item 
+\#define \hyperlink{speculativecpu_8h_ad5cf68dc7ebb2e213e6487b5ac1ccdb6}{STABLE\_\-VERSION}~1
+\item 
+\#define \hyperlink{speculativecpu_8h_af9edac23066e5fec83f9da7ece6311aa}{Valide0}(p)~((p)-\/$>$m\_\-Entry.m\_\-IsValide\mbox{[}0\mbox{]})
+\item 
+\#define \hyperlink{speculativecpu_8h_aae9441aacd4c807eceeb483cf7440eee}{Valide1}(p)~((p)-\/$>$m\_\-Entry.m\_\-IsValide\mbox{[}1\mbox{]})
+\item 
+\#define \hyperlink{speculativecpu_8h_a64ffc28b06a9a5fd891efebcda2653b4}{Valide2}(p)~((p)-\/$>$m\_\-Entry.m\_\-IsValide\mbox{[}2\mbox{]})
+\item 
+\#define \hyperlink{speculativecpu_8h_a930c90ed2260e70e7041933188262182}{Valide3}(p)~((p)-\/$>$m\_\-Entry.m\_\-IsValide\mbox{[}3\mbox{]})
+\item 
+\#define \hyperlink{speculativecpu_8h_a36abe0af315869abe752224b9347f8c8}{IsValide0}(p)~((p) \&\& Valide0(p))
+\item 
+\#define \hyperlink{speculativecpu_8h_a5c7b0e72d46a10182da3f6df95e7134e}{IsValide1}(p)~((p) \&\& Valide1(p))
+\item 
+\#define \hyperlink{speculativecpu_8h_aba37a4ec40b9f4431a41af94f40650a7}{IsValide2}(p)~((p) \&\& Valide2(p))
+\item 
+\#define \hyperlink{speculativecpu_8h_aedf0d5d4535266bc7cbd2bb956235c6c}{IsValide3}(p)~((p) \&\& Valide3(p))
+\item 
+\#define \hyperlink{speculativecpu_8h_a65a7aaa30154e420919db7c74ba78efd}{IsValideLowhalfWord}(p)~(IsValide0(p) \&\& IsValide1(p))
+\item 
+\#define \hyperlink{speculativecpu_8h_aa79b9f3eba2882f46e912ed8838ff708}{IsValideHighhalfWord}(p)~(IsValide2(p) \&\& IsValide3(p))
+\item 
+\#define \hyperlink{speculativecpu_8h_a76cc3041da593faae43cbe7e28959de2}{IsValideWord}(p)~(IsValideLowhalfWord(p) \&\& IsValideHighhalfWord(p))
+\item 
+\#define \hyperlink{speculativecpu_8h_acf53972045c1926b7fa23a2a73f8b433}{IsValideSomeLowhalf}(p)~(IsValide0(p) $|$$|$ IsValide1(p))
+\item 
+\#define \hyperlink{speculativecpu_8h_adbdf9afc401a1302399e2eb2a7539907}{IsValideSomeHighhalf}(p)~(IsValide2(p) $|$$|$ IsValide3(p))
+\item 
+\#define \hyperlink{speculativecpu_8h_a9deceb43114e6b00fc94797d00e2d747}{IsValideSome}(p)~(IsValideSomeLowhalf(p) $|$$|$ IsValideSomeHighhalf(p))
+\item 
+\#define \hyperlink{speculativecpu_8h_abb44a0c13874db6bb5210821b642ebd4}{RemoteLoaded0}(p)~((p)-\/$>$m\_\-Entry.m\_\-IsRemoteLoaded\mbox{[}0\mbox{]})
+\item 
+\#define \hyperlink{speculativecpu_8h_ad006c8f70a9ec7ea91e03705c5ee2b23}{RemoteLoaded1}(p)~((p)-\/$>$m\_\-Entry.m\_\-IsRemoteLoaded\mbox{[}1\mbox{]})
+\item 
+\#define \hyperlink{speculativecpu_8h_ab1273d47c2d5d3b9ccdbe6383e3ba405}{RemoteLoaded2}(p)~((p)-\/$>$m\_\-Entry.m\_\-IsRemoteLoaded\mbox{[}2\mbox{]})
+\item 
+\#define \hyperlink{speculativecpu_8h_a02c77d4fcefcbf53ef2f23785684a858}{RemoteLoaded3}(p)~((p)-\/$>$m\_\-Entry.m\_\-IsRemoteLoaded\mbox{[}3\mbox{]})
+\item 
+\#define \hyperlink{speculativecpu_8h_a3a25f7014797a0fa82827f6761fe2a7a}{IsRemoteLoadedSomeHighhalf}(p)~(RemoteLoaded2(p) $|$$|$ RemoteLoaded3(p))
+\item 
+\#define \hyperlink{speculativecpu_8h_a16261daae6465a363634cf161833288b}{IsRemoteLoadedSomeLowhalf}(p)~(RemoteLoaded0(p) $|$$|$ RemoteLoaded1(p))
+\item 
+\#define \hyperlink{speculativecpu_8h_ae535bcecb6fc9646c7522d9d13afa153}{IsRemoteLoadedSome}(p)~(IsRemoteLoadedSomeLowhalf(p) $|$$|$ IsRemoteLoadedSomeHighhalf(p))
+\item 
+\#define \hyperlink{speculativecpu_8h_a9b7af9f1655a9304feb768109c9d2dbd}{Modified0}(p)~((p)-\/$>$m\_\-Entry.m\_\-IsModified\mbox{[}0\mbox{]})
+\item 
+\#define \hyperlink{speculativecpu_8h_aa642c224dd44d1214391d0e95fa7a8a1}{Modified1}(p)~((p)-\/$>$m\_\-Entry.m\_\-IsModified\mbox{[}1\mbox{]})
+\item 
+\#define \hyperlink{speculativecpu_8h_aad2066d26cca928a3c57401548d2705c}{Modified2}(p)~((p)-\/$>$m\_\-Entry.m\_\-IsModified\mbox{[}2\mbox{]})
+\item 
+\#define \hyperlink{speculativecpu_8h_a76bf98b7b97631df8aa753589788ba30}{Modified3}(p)~((p)-\/$>$m\_\-Entry.m\_\-IsModified\mbox{[}3\mbox{]})
+\item 
+\#define \hyperlink{speculativecpu_8h_a6bb06095e32edccc49aa45e35adb19dd}{IsModified0}(p)~((p) \&\& Modified0(p))
+\item 
+\#define \hyperlink{speculativecpu_8h_af6971330db265987cbd240897e05589e}{IsModified1}(p)~((p) \&\& Modified1(p))
+\item 
+\#define \hyperlink{speculativecpu_8h_aa7c16811c9296a0d062a5123b5443da0}{IsModified2}(p)~((p) \&\& Modified2(p))
+\item 
+\#define \hyperlink{speculativecpu_8h_a02ade5df7f21a46b41599a798592bc32}{IsModified3}(p)~((p) \&\& Modified3(p))
+\item 
+\#define \hyperlink{speculativecpu_8h_a1fbc53780c7b51dc1ec186c3fe6cbcd0}{IsModifiedHighhalfWord}(p)~(IsModified2(p) \&\& IsModified3(p))
+\item 
+\#define \hyperlink{speculativecpu_8h_af30913c33f5d4826bc06520f5012dab0}{IsModifiedLowhalfWord}(p)~(IsModified0(p) \&\& IsModified1(p))
+\item 
+\#define \hyperlink{speculativecpu_8h_a8f0fe67d4386b94fd971c083fcc9cd6a}{IsModifiedWord}(p)~(IsModifiedLowhalfWord(p) \&\& IsModifiedHighhalfWord(p))
+\item 
+\#define \hyperlink{speculativecpu_8h_af894beb5001a14520a4d6fa6dec4c182}{IsModifiedSome}(p)~(IsModified0(p) $|$$|$ IsModified1(p) $|$$|$ IsModified2(p) $|$$|$ IsModified3(p))
+\item 
+\#define \hyperlink{speculativecpu_8h_a4447bcf3d84f106c190d21e04b2c238c}{IsOld}(p)~((p)-\/$>$m\_\-Entry.m\_\-IsOld)
+\item 
+\#define \hyperlink{speculativecpu_8h_a3c62dfca2caf23f1d9df9555421d47f7}{Version}(p)~((p)-\/$>$m\_\-Entry.m\_\-Version)
+\item 
+\#define \hyperlink{speculativecpu_8h_aeabd93a4746f6b05f32f09bc1bc291fa}{Address}(p)~((p)-\/$>$m\_\-Entry.m\_\-Address)
+\item 
+\#define \hyperlink{speculativecpu_8h_a3a21012412df55046a3c9dd20763d55f}{Value}(p)~((p)-\/$>$m\_\-Entry.m\_\-Value)
+\item 
+\#define \hyperlink{speculativecpu_8h_a4d01608345b8abd0d8d45b5ec889dbb7}{Round4}(a)~((a) / 4 $\ast$ 4)
+\item 
+\#define \hyperlink{speculativecpu_8h_a9f1fc8d5f2328c7a4e9537cb02a3761c}{LowhalfOfWord}(value)~($\ast$((uint16$\ast$)((void$\ast$)(\&(value)))))
+\item 
+\#define \hyperlink{speculativecpu_8h_a41b543a445507b22af76146e90284bae}{HighhalfOfWord}(value)~($\ast$((uint16$\ast$)((char$\ast$)(\&(value)) + 2)))
+\item 
+\#define \hyperlink{speculativecpu_8h_adb2113fed6ba53b6c3982c3c76a65d7e}{Byte0OfWord}(value)~($\ast$((uint8$\ast$)((char$\ast$)(\&(value)))))
+\item 
+\#define \hyperlink{speculativecpu_8h_ade4c3e02b74998a10e377c01a31c8995}{Byte1OfWord}(value)~($\ast$((uint8$\ast$)((char$\ast$)(\&(value)) + 1)))
+\item 
+\#define \hyperlink{speculativecpu_8h_a4ea0fc92ea860fcab0cd7b60989a7101}{Byte2OfWord}(value)~($\ast$((uint8$\ast$)((char$\ast$)(\&(value)) + 2)))
+\item 
+\#define \hyperlink{speculativecpu_8h_aa8a4928f018ffb3559af234b8af665db}{Byte3OfWord}(value)~($\ast$((uint8$\ast$)((char$\ast$)(\&(value)) + 3)))
+\item 
+\#define \hyperlink{speculativecpu_8h_aae0fbefb16b93d6e8a2a32c10461a7f7}{Word}(startbyte)~($\ast$((uint32$\ast$)(\&(startbyte))))
+\item 
+\#define \hyperlink{speculativecpu_8h_a3062fba289e99a403600c016724e8f98}{HalfWord}(startbyte)~LowhalfOfWord(startbyte)
+\item 
+\#define \hyperlink{speculativecpu_8h_a630b6bfc3bddc88bbdfda9ed5b999ca6}{SwapHalfWord}(value)~(((((value) \& 0x00ff) $<$$<$ 8)) $|$ (((value) $>$$>$ 8) \& 0x00ff))
+\item 
+\#define \hyperlink{speculativecpu_8h_a3f4ce376ca44101f68913d23a56d7cb8}{SwapWord}(value)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{speculativecpu_8h_a2e9c193b6418879f716a9af9304d0fc4}{PROPHET\_\-STAT\_\-CLASS} (SpeculativeCPU) WITH\_\-PUBLIC\_\-ROOT(\hyperlink{classCPU}{CPU})
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{speculativecpu_8h_aeabd93a4746f6b05f32f09bc1bc291fa}{
+\index{speculativecpu.h@{speculativecpu.h}!Address@{Address}}
+\index{Address@{Address}!speculativecpu.h@{speculativecpu.h}}
+\subsubsection[{Address}]{\setlength{\rightskip}{0pt plus 5cm}\#define Address(p)~((p)-\/$>$m\_\-Entry.m\_\-Address)}}
+\label{speculativecpu_8h_aeabd93a4746f6b05f32f09bc1bc291fa}
+\hypertarget{speculativecpu_8h_adb2113fed6ba53b6c3982c3c76a65d7e}{
+\index{speculativecpu.h@{speculativecpu.h}!Byte0OfWord@{Byte0OfWord}}
+\index{Byte0OfWord@{Byte0OfWord}!speculativecpu.h@{speculativecpu.h}}
+\subsubsection[{Byte0OfWord}]{\setlength{\rightskip}{0pt plus 5cm}\#define Byte0OfWord(value)~($\ast$((uint8$\ast$)((char$\ast$)(\&(value)))))}}
+\label{speculativecpu_8h_adb2113fed6ba53b6c3982c3c76a65d7e}
+\hypertarget{speculativecpu_8h_ade4c3e02b74998a10e377c01a31c8995}{
+\index{speculativecpu.h@{speculativecpu.h}!Byte1OfWord@{Byte1OfWord}}
+\index{Byte1OfWord@{Byte1OfWord}!speculativecpu.h@{speculativecpu.h}}
+\subsubsection[{Byte1OfWord}]{\setlength{\rightskip}{0pt plus 5cm}\#define Byte1OfWord(value)~($\ast$((uint8$\ast$)((char$\ast$)(\&(value)) + 1)))}}
+\label{speculativecpu_8h_ade4c3e02b74998a10e377c01a31c8995}
+\hypertarget{speculativecpu_8h_a4ea0fc92ea860fcab0cd7b60989a7101}{
+\index{speculativecpu.h@{speculativecpu.h}!Byte2OfWord@{Byte2OfWord}}
+\index{Byte2OfWord@{Byte2OfWord}!speculativecpu.h@{speculativecpu.h}}
+\subsubsection[{Byte2OfWord}]{\setlength{\rightskip}{0pt plus 5cm}\#define Byte2OfWord(value)~($\ast$((uint8$\ast$)((char$\ast$)(\&(value)) + 2)))}}
+\label{speculativecpu_8h_a4ea0fc92ea860fcab0cd7b60989a7101}
+\hypertarget{speculativecpu_8h_aa8a4928f018ffb3559af234b8af665db}{
+\index{speculativecpu.h@{speculativecpu.h}!Byte3OfWord@{Byte3OfWord}}
+\index{Byte3OfWord@{Byte3OfWord}!speculativecpu.h@{speculativecpu.h}}
+\subsubsection[{Byte3OfWord}]{\setlength{\rightskip}{0pt plus 5cm}\#define Byte3OfWord(value)~($\ast$((uint8$\ast$)((char$\ast$)(\&(value)) + 3)))}}
+\label{speculativecpu_8h_aa8a4928f018ffb3559af234b8af665db}
+\hypertarget{speculativecpu_8h_aa0a4426f869a28c252d326f8bec2b095}{
+\index{speculativecpu.h@{speculativecpu.h}!BYTE\_\-PER\_\-WORD@{BYTE\_\-PER\_\-WORD}}
+\index{BYTE\_\-PER\_\-WORD@{BYTE\_\-PER\_\-WORD}!speculativecpu.h@{speculativecpu.h}}
+\subsubsection[{BYTE\_\-PER\_\-WORD}]{\setlength{\rightskip}{0pt plus 5cm}\#define BYTE\_\-PER\_\-WORD~4}}
+\label{speculativecpu_8h_aa0a4426f869a28c252d326f8bec2b095}
+\hypertarget{speculativecpu_8h_abcd90e3b1bbefbec9e71c915f009853b}{
+\index{speculativecpu.h@{speculativecpu.h}!CACHE\_\-STATISTIC@{CACHE\_\-STATISTIC}}
+\index{CACHE\_\-STATISTIC@{CACHE\_\-STATISTIC}!speculativecpu.h@{speculativecpu.h}}
+\subsubsection[{CACHE\_\-STATISTIC}]{\setlength{\rightskip}{0pt plus 5cm}\#define CACHE\_\-STATISTIC}}
+\label{speculativecpu_8h_abcd90e3b1bbefbec9e71c915f009853b}
+\hypertarget{speculativecpu_8h_a3062fba289e99a403600c016724e8f98}{
+\index{speculativecpu.h@{speculativecpu.h}!HalfWord@{HalfWord}}
+\index{HalfWord@{HalfWord}!speculativecpu.h@{speculativecpu.h}}
+\subsubsection[{HalfWord}]{\setlength{\rightskip}{0pt plus 5cm}\#define HalfWord(startbyte)~LowhalfOfWord(startbyte)}}
+\label{speculativecpu_8h_a3062fba289e99a403600c016724e8f98}
+\hypertarget{speculativecpu_8h_a41b543a445507b22af76146e90284bae}{
+\index{speculativecpu.h@{speculativecpu.h}!HighhalfOfWord@{HighhalfOfWord}}
+\index{HighhalfOfWord@{HighhalfOfWord}!speculativecpu.h@{speculativecpu.h}}
+\subsubsection[{HighhalfOfWord}]{\setlength{\rightskip}{0pt plus 5cm}\#define HighhalfOfWord(value)~($\ast$((uint16$\ast$)((char$\ast$)(\&(value)) + 2)))}}
+\label{speculativecpu_8h_a41b543a445507b22af76146e90284bae}
+\hypertarget{speculativecpu_8h_a6bb06095e32edccc49aa45e35adb19dd}{
+\index{speculativecpu.h@{speculativecpu.h}!IsModified0@{IsModified0}}
+\index{IsModified0@{IsModified0}!speculativecpu.h@{speculativecpu.h}}
+\subsubsection[{IsModified0}]{\setlength{\rightskip}{0pt plus 5cm}\#define IsModified0(p)~((p) \&\& Modified0(p))}}
+\label{speculativecpu_8h_a6bb06095e32edccc49aa45e35adb19dd}
+\hypertarget{speculativecpu_8h_af6971330db265987cbd240897e05589e}{
+\index{speculativecpu.h@{speculativecpu.h}!IsModified1@{IsModified1}}
+\index{IsModified1@{IsModified1}!speculativecpu.h@{speculativecpu.h}}
+\subsubsection[{IsModified1}]{\setlength{\rightskip}{0pt plus 5cm}\#define IsModified1(p)~((p) \&\& Modified1(p))}}
+\label{speculativecpu_8h_af6971330db265987cbd240897e05589e}
+\hypertarget{speculativecpu_8h_aa7c16811c9296a0d062a5123b5443da0}{
+\index{speculativecpu.h@{speculativecpu.h}!IsModified2@{IsModified2}}
+\index{IsModified2@{IsModified2}!speculativecpu.h@{speculativecpu.h}}
+\subsubsection[{IsModified2}]{\setlength{\rightskip}{0pt plus 5cm}\#define IsModified2(p)~((p) \&\& Modified2(p))}}
+\label{speculativecpu_8h_aa7c16811c9296a0d062a5123b5443da0}
+\hypertarget{speculativecpu_8h_a02ade5df7f21a46b41599a798592bc32}{
+\index{speculativecpu.h@{speculativecpu.h}!IsModified3@{IsModified3}}
+\index{IsModified3@{IsModified3}!speculativecpu.h@{speculativecpu.h}}
+\subsubsection[{IsModified3}]{\setlength{\rightskip}{0pt plus 5cm}\#define IsModified3(p)~((p) \&\& Modified3(p))}}
+\label{speculativecpu_8h_a02ade5df7f21a46b41599a798592bc32}
+\hypertarget{speculativecpu_8h_a1fbc53780c7b51dc1ec186c3fe6cbcd0}{
+\index{speculativecpu.h@{speculativecpu.h}!IsModifiedHighhalfWord@{IsModifiedHighhalfWord}}
+\index{IsModifiedHighhalfWord@{IsModifiedHighhalfWord}!speculativecpu.h@{speculativecpu.h}}
+\subsubsection[{IsModifiedHighhalfWord}]{\setlength{\rightskip}{0pt plus 5cm}\#define IsModifiedHighhalfWord(p)~(IsModified2(p) \&\& IsModified3(p))}}
+\label{speculativecpu_8h_a1fbc53780c7b51dc1ec186c3fe6cbcd0}
+\hypertarget{speculativecpu_8h_af30913c33f5d4826bc06520f5012dab0}{
+\index{speculativecpu.h@{speculativecpu.h}!IsModifiedLowhalfWord@{IsModifiedLowhalfWord}}
+\index{IsModifiedLowhalfWord@{IsModifiedLowhalfWord}!speculativecpu.h@{speculativecpu.h}}
+\subsubsection[{IsModifiedLowhalfWord}]{\setlength{\rightskip}{0pt plus 5cm}\#define IsModifiedLowhalfWord(p)~(IsModified0(p) \&\& IsModified1(p))}}
+\label{speculativecpu_8h_af30913c33f5d4826bc06520f5012dab0}
+\hypertarget{speculativecpu_8h_af894beb5001a14520a4d6fa6dec4c182}{
+\index{speculativecpu.h@{speculativecpu.h}!IsModifiedSome@{IsModifiedSome}}
+\index{IsModifiedSome@{IsModifiedSome}!speculativecpu.h@{speculativecpu.h}}
+\subsubsection[{IsModifiedSome}]{\setlength{\rightskip}{0pt plus 5cm}\#define IsModifiedSome(p)~(IsModified0(p) $|$$|$ IsModified1(p) $|$$|$ IsModified2(p) $|$$|$ IsModified3(p))}}
+\label{speculativecpu_8h_af894beb5001a14520a4d6fa6dec4c182}
+\hypertarget{speculativecpu_8h_a8f0fe67d4386b94fd971c083fcc9cd6a}{
+\index{speculativecpu.h@{speculativecpu.h}!IsModifiedWord@{IsModifiedWord}}
+\index{IsModifiedWord@{IsModifiedWord}!speculativecpu.h@{speculativecpu.h}}
+\subsubsection[{IsModifiedWord}]{\setlength{\rightskip}{0pt plus 5cm}\#define IsModifiedWord(p)~(IsModifiedLowhalfWord(p) \&\& IsModifiedHighhalfWord(p))}}
+\label{speculativecpu_8h_a8f0fe67d4386b94fd971c083fcc9cd6a}
+\hypertarget{speculativecpu_8h_a4447bcf3d84f106c190d21e04b2c238c}{
+\index{speculativecpu.h@{speculativecpu.h}!IsOld@{IsOld}}
+\index{IsOld@{IsOld}!speculativecpu.h@{speculativecpu.h}}
+\subsubsection[{IsOld}]{\setlength{\rightskip}{0pt plus 5cm}\#define IsOld(p)~((p)-\/$>$m\_\-Entry.m\_\-IsOld)}}
+\label{speculativecpu_8h_a4447bcf3d84f106c190d21e04b2c238c}
+\hypertarget{speculativecpu_8h_ae535bcecb6fc9646c7522d9d13afa153}{
+\index{speculativecpu.h@{speculativecpu.h}!IsRemoteLoadedSome@{IsRemoteLoadedSome}}
+\index{IsRemoteLoadedSome@{IsRemoteLoadedSome}!speculativecpu.h@{speculativecpu.h}}
+\subsubsection[{IsRemoteLoadedSome}]{\setlength{\rightskip}{0pt plus 5cm}\#define IsRemoteLoadedSome(p)~(IsRemoteLoadedSomeLowhalf(p) $|$$|$ IsRemoteLoadedSomeHighhalf(p))}}
+\label{speculativecpu_8h_ae535bcecb6fc9646c7522d9d13afa153}
+\hypertarget{speculativecpu_8h_a3a25f7014797a0fa82827f6761fe2a7a}{
+\index{speculativecpu.h@{speculativecpu.h}!IsRemoteLoadedSomeHighhalf@{IsRemoteLoadedSomeHighhalf}}
+\index{IsRemoteLoadedSomeHighhalf@{IsRemoteLoadedSomeHighhalf}!speculativecpu.h@{speculativecpu.h}}
+\subsubsection[{IsRemoteLoadedSomeHighhalf}]{\setlength{\rightskip}{0pt plus 5cm}\#define IsRemoteLoadedSomeHighhalf(p)~(RemoteLoaded2(p) $|$$|$ RemoteLoaded3(p))}}
+\label{speculativecpu_8h_a3a25f7014797a0fa82827f6761fe2a7a}
+\hypertarget{speculativecpu_8h_a16261daae6465a363634cf161833288b}{
+\index{speculativecpu.h@{speculativecpu.h}!IsRemoteLoadedSomeLowhalf@{IsRemoteLoadedSomeLowhalf}}
+\index{IsRemoteLoadedSomeLowhalf@{IsRemoteLoadedSomeLowhalf}!speculativecpu.h@{speculativecpu.h}}
+\subsubsection[{IsRemoteLoadedSomeLowhalf}]{\setlength{\rightskip}{0pt plus 5cm}\#define IsRemoteLoadedSomeLowhalf(p)~(RemoteLoaded0(p) $|$$|$ RemoteLoaded1(p))}}
+\label{speculativecpu_8h_a16261daae6465a363634cf161833288b}
+\hypertarget{speculativecpu_8h_a36abe0af315869abe752224b9347f8c8}{
+\index{speculativecpu.h@{speculativecpu.h}!IsValide0@{IsValide0}}
+\index{IsValide0@{IsValide0}!speculativecpu.h@{speculativecpu.h}}
+\subsubsection[{IsValide0}]{\setlength{\rightskip}{0pt plus 5cm}\#define IsValide0(p)~((p) \&\& Valide0(p))}}
+\label{speculativecpu_8h_a36abe0af315869abe752224b9347f8c8}
+\hypertarget{speculativecpu_8h_a5c7b0e72d46a10182da3f6df95e7134e}{
+\index{speculativecpu.h@{speculativecpu.h}!IsValide1@{IsValide1}}
+\index{IsValide1@{IsValide1}!speculativecpu.h@{speculativecpu.h}}
+\subsubsection[{IsValide1}]{\setlength{\rightskip}{0pt plus 5cm}\#define IsValide1(p)~((p) \&\& Valide1(p))}}
+\label{speculativecpu_8h_a5c7b0e72d46a10182da3f6df95e7134e}
+\hypertarget{speculativecpu_8h_aba37a4ec40b9f4431a41af94f40650a7}{
+\index{speculativecpu.h@{speculativecpu.h}!IsValide2@{IsValide2}}
+\index{IsValide2@{IsValide2}!speculativecpu.h@{speculativecpu.h}}
+\subsubsection[{IsValide2}]{\setlength{\rightskip}{0pt plus 5cm}\#define IsValide2(p)~((p) \&\& Valide2(p))}}
+\label{speculativecpu_8h_aba37a4ec40b9f4431a41af94f40650a7}
+\hypertarget{speculativecpu_8h_aedf0d5d4535266bc7cbd2bb956235c6c}{
+\index{speculativecpu.h@{speculativecpu.h}!IsValide3@{IsValide3}}
+\index{IsValide3@{IsValide3}!speculativecpu.h@{speculativecpu.h}}
+\subsubsection[{IsValide3}]{\setlength{\rightskip}{0pt plus 5cm}\#define IsValide3(p)~((p) \&\& Valide3(p))}}
+\label{speculativecpu_8h_aedf0d5d4535266bc7cbd2bb956235c6c}
+\hypertarget{speculativecpu_8h_aa79b9f3eba2882f46e912ed8838ff708}{
+\index{speculativecpu.h@{speculativecpu.h}!IsValideHighhalfWord@{IsValideHighhalfWord}}
+\index{IsValideHighhalfWord@{IsValideHighhalfWord}!speculativecpu.h@{speculativecpu.h}}
+\subsubsection[{IsValideHighhalfWord}]{\setlength{\rightskip}{0pt plus 5cm}\#define IsValideHighhalfWord(p)~(IsValide2(p) \&\& IsValide3(p))}}
+\label{speculativecpu_8h_aa79b9f3eba2882f46e912ed8838ff708}
+\hypertarget{speculativecpu_8h_a65a7aaa30154e420919db7c74ba78efd}{
+\index{speculativecpu.h@{speculativecpu.h}!IsValideLowhalfWord@{IsValideLowhalfWord}}
+\index{IsValideLowhalfWord@{IsValideLowhalfWord}!speculativecpu.h@{speculativecpu.h}}
+\subsubsection[{IsValideLowhalfWord}]{\setlength{\rightskip}{0pt plus 5cm}\#define IsValideLowhalfWord(p)~(IsValide0(p) \&\& IsValide1(p))}}
+\label{speculativecpu_8h_a65a7aaa30154e420919db7c74ba78efd}
+\hypertarget{speculativecpu_8h_a9deceb43114e6b00fc94797d00e2d747}{
+\index{speculativecpu.h@{speculativecpu.h}!IsValideSome@{IsValideSome}}
+\index{IsValideSome@{IsValideSome}!speculativecpu.h@{speculativecpu.h}}
+\subsubsection[{IsValideSome}]{\setlength{\rightskip}{0pt plus 5cm}\#define IsValideSome(p)~(IsValideSomeLowhalf(p) $|$$|$ IsValideSomeHighhalf(p))}}
+\label{speculativecpu_8h_a9deceb43114e6b00fc94797d00e2d747}
+\hypertarget{speculativecpu_8h_adbdf9afc401a1302399e2eb2a7539907}{
+\index{speculativecpu.h@{speculativecpu.h}!IsValideSomeHighhalf@{IsValideSomeHighhalf}}
+\index{IsValideSomeHighhalf@{IsValideSomeHighhalf}!speculativecpu.h@{speculativecpu.h}}
+\subsubsection[{IsValideSomeHighhalf}]{\setlength{\rightskip}{0pt plus 5cm}\#define IsValideSomeHighhalf(p)~(IsValide2(p) $|$$|$ IsValide3(p))}}
+\label{speculativecpu_8h_adbdf9afc401a1302399e2eb2a7539907}
+\hypertarget{speculativecpu_8h_acf53972045c1926b7fa23a2a73f8b433}{
+\index{speculativecpu.h@{speculativecpu.h}!IsValideSomeLowhalf@{IsValideSomeLowhalf}}
+\index{IsValideSomeLowhalf@{IsValideSomeLowhalf}!speculativecpu.h@{speculativecpu.h}}
+\subsubsection[{IsValideSomeLowhalf}]{\setlength{\rightskip}{0pt plus 5cm}\#define IsValideSomeLowhalf(p)~(IsValide0(p) $|$$|$ IsValide1(p))}}
+\label{speculativecpu_8h_acf53972045c1926b7fa23a2a73f8b433}
+\hypertarget{speculativecpu_8h_a76cc3041da593faae43cbe7e28959de2}{
+\index{speculativecpu.h@{speculativecpu.h}!IsValideWord@{IsValideWord}}
+\index{IsValideWord@{IsValideWord}!speculativecpu.h@{speculativecpu.h}}
+\subsubsection[{IsValideWord}]{\setlength{\rightskip}{0pt plus 5cm}\#define IsValideWord(p)~(IsValideLowhalfWord(p) \&\& IsValideHighhalfWord(p))}}
+\label{speculativecpu_8h_a76cc3041da593faae43cbe7e28959de2}
+\hypertarget{speculativecpu_8h_a9f1fc8d5f2328c7a4e9537cb02a3761c}{
+\index{speculativecpu.h@{speculativecpu.h}!LowhalfOfWord@{LowhalfOfWord}}
+\index{LowhalfOfWord@{LowhalfOfWord}!speculativecpu.h@{speculativecpu.h}}
+\subsubsection[{LowhalfOfWord}]{\setlength{\rightskip}{0pt plus 5cm}\#define LowhalfOfWord(value)~($\ast$((uint16$\ast$)((void$\ast$)(\&(value)))))}}
+\label{speculativecpu_8h_a9f1fc8d5f2328c7a4e9537cb02a3761c}
+\hypertarget{speculativecpu_8h_a9b7af9f1655a9304feb768109c9d2dbd}{
+\index{speculativecpu.h@{speculativecpu.h}!Modified0@{Modified0}}
+\index{Modified0@{Modified0}!speculativecpu.h@{speculativecpu.h}}
+\subsubsection[{Modified0}]{\setlength{\rightskip}{0pt plus 5cm}\#define Modified0(p)~((p)-\/$>$m\_\-Entry.m\_\-IsModified\mbox{[}0\mbox{]})}}
+\label{speculativecpu_8h_a9b7af9f1655a9304feb768109c9d2dbd}
+\hypertarget{speculativecpu_8h_aa642c224dd44d1214391d0e95fa7a8a1}{
+\index{speculativecpu.h@{speculativecpu.h}!Modified1@{Modified1}}
+\index{Modified1@{Modified1}!speculativecpu.h@{speculativecpu.h}}
+\subsubsection[{Modified1}]{\setlength{\rightskip}{0pt plus 5cm}\#define Modified1(p)~((p)-\/$>$m\_\-Entry.m\_\-IsModified\mbox{[}1\mbox{]})}}
+\label{speculativecpu_8h_aa642c224dd44d1214391d0e95fa7a8a1}
+\hypertarget{speculativecpu_8h_aad2066d26cca928a3c57401548d2705c}{
+\index{speculativecpu.h@{speculativecpu.h}!Modified2@{Modified2}}
+\index{Modified2@{Modified2}!speculativecpu.h@{speculativecpu.h}}
+\subsubsection[{Modified2}]{\setlength{\rightskip}{0pt plus 5cm}\#define Modified2(p)~((p)-\/$>$m\_\-Entry.m\_\-IsModified\mbox{[}2\mbox{]})}}
+\label{speculativecpu_8h_aad2066d26cca928a3c57401548d2705c}
+\hypertarget{speculativecpu_8h_a76bf98b7b97631df8aa753589788ba30}{
+\index{speculativecpu.h@{speculativecpu.h}!Modified3@{Modified3}}
+\index{Modified3@{Modified3}!speculativecpu.h@{speculativecpu.h}}
+\subsubsection[{Modified3}]{\setlength{\rightskip}{0pt plus 5cm}\#define Modified3(p)~((p)-\/$>$m\_\-Entry.m\_\-IsModified\mbox{[}3\mbox{]})}}
+\label{speculativecpu_8h_a76bf98b7b97631df8aa753589788ba30}
+\hypertarget{speculativecpu_8h_abb44a0c13874db6bb5210821b642ebd4}{
+\index{speculativecpu.h@{speculativecpu.h}!RemoteLoaded0@{RemoteLoaded0}}
+\index{RemoteLoaded0@{RemoteLoaded0}!speculativecpu.h@{speculativecpu.h}}
+\subsubsection[{RemoteLoaded0}]{\setlength{\rightskip}{0pt plus 5cm}\#define RemoteLoaded0(p)~((p)-\/$>$m\_\-Entry.m\_\-IsRemoteLoaded\mbox{[}0\mbox{]})}}
+\label{speculativecpu_8h_abb44a0c13874db6bb5210821b642ebd4}
+\hypertarget{speculativecpu_8h_ad006c8f70a9ec7ea91e03705c5ee2b23}{
+\index{speculativecpu.h@{speculativecpu.h}!RemoteLoaded1@{RemoteLoaded1}}
+\index{RemoteLoaded1@{RemoteLoaded1}!speculativecpu.h@{speculativecpu.h}}
+\subsubsection[{RemoteLoaded1}]{\setlength{\rightskip}{0pt plus 5cm}\#define RemoteLoaded1(p)~((p)-\/$>$m\_\-Entry.m\_\-IsRemoteLoaded\mbox{[}1\mbox{]})}}
+\label{speculativecpu_8h_ad006c8f70a9ec7ea91e03705c5ee2b23}
+\hypertarget{speculativecpu_8h_ab1273d47c2d5d3b9ccdbe6383e3ba405}{
+\index{speculativecpu.h@{speculativecpu.h}!RemoteLoaded2@{RemoteLoaded2}}
+\index{RemoteLoaded2@{RemoteLoaded2}!speculativecpu.h@{speculativecpu.h}}
+\subsubsection[{RemoteLoaded2}]{\setlength{\rightskip}{0pt plus 5cm}\#define RemoteLoaded2(p)~((p)-\/$>$m\_\-Entry.m\_\-IsRemoteLoaded\mbox{[}2\mbox{]})}}
+\label{speculativecpu_8h_ab1273d47c2d5d3b9ccdbe6383e3ba405}
+\hypertarget{speculativecpu_8h_a02c77d4fcefcbf53ef2f23785684a858}{
+\index{speculativecpu.h@{speculativecpu.h}!RemoteLoaded3@{RemoteLoaded3}}
+\index{RemoteLoaded3@{RemoteLoaded3}!speculativecpu.h@{speculativecpu.h}}
+\subsubsection[{RemoteLoaded3}]{\setlength{\rightskip}{0pt plus 5cm}\#define RemoteLoaded3(p)~((p)-\/$>$m\_\-Entry.m\_\-IsRemoteLoaded\mbox{[}3\mbox{]})}}
+\label{speculativecpu_8h_a02c77d4fcefcbf53ef2f23785684a858}
+\hypertarget{speculativecpu_8h_a4d01608345b8abd0d8d45b5ec889dbb7}{
+\index{speculativecpu.h@{speculativecpu.h}!Round4@{Round4}}
+\index{Round4@{Round4}!speculativecpu.h@{speculativecpu.h}}
+\subsubsection[{Round4}]{\setlength{\rightskip}{0pt plus 5cm}\#define Round4(a)~((a) / 4 $\ast$ 4)}}
+\label{speculativecpu_8h_a4d01608345b8abd0d8d45b5ec889dbb7}
+\hypertarget{speculativecpu_8h_ad5cf68dc7ebb2e213e6487b5ac1ccdb6}{
+\index{speculativecpu.h@{speculativecpu.h}!STABLE\_\-VERSION@{STABLE\_\-VERSION}}
+\index{STABLE\_\-VERSION@{STABLE\_\-VERSION}!speculativecpu.h@{speculativecpu.h}}
+\subsubsection[{STABLE\_\-VERSION}]{\setlength{\rightskip}{0pt plus 5cm}\#define STABLE\_\-VERSION~1}}
+\label{speculativecpu_8h_ad5cf68dc7ebb2e213e6487b5ac1ccdb6}
+\hypertarget{speculativecpu_8h_a630b6bfc3bddc88bbdfda9ed5b999ca6}{
+\index{speculativecpu.h@{speculativecpu.h}!SwapHalfWord@{SwapHalfWord}}
+\index{SwapHalfWord@{SwapHalfWord}!speculativecpu.h@{speculativecpu.h}}
+\subsubsection[{SwapHalfWord}]{\setlength{\rightskip}{0pt plus 5cm}\#define SwapHalfWord(value)~(((((value) \& 0x00ff) $<$$<$ 8)) $|$ (((value) $>$$>$ 8) \& 0x00ff))}}
+\label{speculativecpu_8h_a630b6bfc3bddc88bbdfda9ed5b999ca6}
+\hypertarget{speculativecpu_8h_a3f4ce376ca44101f68913d23a56d7cb8}{
+\index{speculativecpu.h@{speculativecpu.h}!SwapWord@{SwapWord}}
+\index{SwapWord@{SwapWord}!speculativecpu.h@{speculativecpu.h}}
+\subsubsection[{SwapWord}]{\setlength{\rightskip}{0pt plus 5cm}\#define SwapWord(value)}}
+\label{speculativecpu_8h_a3f4ce376ca44101f68913d23a56d7cb8}
+{\bfseries Value:}
+\begin{DoxyCode}
+((((value) << 24) & 0xff000000) | (((value) << 8) & 0x00ff0000) | \
+                        (((value) >> 8) & 0x0000ff00) | (((value) >> 24) & 0x0000
+      00ff))
+\end{DoxyCode}
+\hypertarget{speculativecpu_8h_af9edac23066e5fec83f9da7ece6311aa}{
+\index{speculativecpu.h@{speculativecpu.h}!Valide0@{Valide0}}
+\index{Valide0@{Valide0}!speculativecpu.h@{speculativecpu.h}}
+\subsubsection[{Valide0}]{\setlength{\rightskip}{0pt plus 5cm}\#define Valide0(p)~((p)-\/$>$m\_\-Entry.m\_\-IsValide\mbox{[}0\mbox{]})}}
+\label{speculativecpu_8h_af9edac23066e5fec83f9da7ece6311aa}
+\hypertarget{speculativecpu_8h_aae9441aacd4c807eceeb483cf7440eee}{
+\index{speculativecpu.h@{speculativecpu.h}!Valide1@{Valide1}}
+\index{Valide1@{Valide1}!speculativecpu.h@{speculativecpu.h}}
+\subsubsection[{Valide1}]{\setlength{\rightskip}{0pt plus 5cm}\#define Valide1(p)~((p)-\/$>$m\_\-Entry.m\_\-IsValide\mbox{[}1\mbox{]})}}
+\label{speculativecpu_8h_aae9441aacd4c807eceeb483cf7440eee}
+\hypertarget{speculativecpu_8h_a64ffc28b06a9a5fd891efebcda2653b4}{
+\index{speculativecpu.h@{speculativecpu.h}!Valide2@{Valide2}}
+\index{Valide2@{Valide2}!speculativecpu.h@{speculativecpu.h}}
+\subsubsection[{Valide2}]{\setlength{\rightskip}{0pt plus 5cm}\#define Valide2(p)~((p)-\/$>$m\_\-Entry.m\_\-IsValide\mbox{[}2\mbox{]})}}
+\label{speculativecpu_8h_a64ffc28b06a9a5fd891efebcda2653b4}
+\hypertarget{speculativecpu_8h_a930c90ed2260e70e7041933188262182}{
+\index{speculativecpu.h@{speculativecpu.h}!Valide3@{Valide3}}
+\index{Valide3@{Valide3}!speculativecpu.h@{speculativecpu.h}}
+\subsubsection[{Valide3}]{\setlength{\rightskip}{0pt plus 5cm}\#define Valide3(p)~((p)-\/$>$m\_\-Entry.m\_\-IsValide\mbox{[}3\mbox{]})}}
+\label{speculativecpu_8h_a930c90ed2260e70e7041933188262182}
+\hypertarget{speculativecpu_8h_a3a21012412df55046a3c9dd20763d55f}{
+\index{speculativecpu.h@{speculativecpu.h}!Value@{Value}}
+\index{Value@{Value}!speculativecpu.h@{speculativecpu.h}}
+\subsubsection[{Value}]{\setlength{\rightskip}{0pt plus 5cm}\#define Value(p)~((p)-\/$>$m\_\-Entry.m\_\-Value)}}
+\label{speculativecpu_8h_a3a21012412df55046a3c9dd20763d55f}
+\hypertarget{speculativecpu_8h_a3c62dfca2caf23f1d9df9555421d47f7}{
+\index{speculativecpu.h@{speculativecpu.h}!Version@{Version}}
+\index{Version@{Version}!speculativecpu.h@{speculativecpu.h}}
+\subsubsection[{Version}]{\setlength{\rightskip}{0pt plus 5cm}\#define Version(p)~((p)-\/$>$m\_\-Entry.m\_\-Version)}}
+\label{speculativecpu_8h_a3c62dfca2caf23f1d9df9555421d47f7}
+\hypertarget{speculativecpu_8h_aae0fbefb16b93d6e8a2a32c10461a7f7}{
+\index{speculativecpu.h@{speculativecpu.h}!Word@{Word}}
+\index{Word@{Word}!speculativecpu.h@{speculativecpu.h}}
+\subsubsection[{Word}]{\setlength{\rightskip}{0pt plus 5cm}\#define Word(startbyte)~($\ast$((uint32$\ast$)(\&(startbyte))))}}
+\label{speculativecpu_8h_aae0fbefb16b93d6e8a2a32c10461a7f7}
+
+
+\subsection{Function Documentation}
+\hypertarget{speculativecpu_8h_a2e9c193b6418879f716a9af9304d0fc4}{
+\index{speculativecpu.h@{speculativecpu.h}!PROPHET\_\-STAT\_\-CLASS@{PROPHET\_\-STAT\_\-CLASS}}
+\index{PROPHET\_\-STAT\_\-CLASS@{PROPHET\_\-STAT\_\-CLASS}!speculativecpu.h@{speculativecpu.h}}
+\subsubsection[{PROPHET\_\-STAT\_\-CLASS}]{\setlength{\rightskip}{0pt plus 5cm}PROPHET\_\-STAT\_\-CLASS (SpeculativeCPU)}}
+\label{speculativecpu_8h_a2e9c193b6418879f716a9af9304d0fc4}
+
+
+Here is the call graph for this function:
+

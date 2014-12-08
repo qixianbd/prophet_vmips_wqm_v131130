@@ -1,0 +1,72 @@
+.TH "Prophet" 3 "18 Dec 2013" "Doxygen" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Prophet \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <prophet_vmips.h>\fP
+.PP
+Inherits \fBvmips\fP.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBProphet\fP (uint32 argc, char **argv)"
+.br
+.ti -1c
+.RI "\fB~Prophet\fP ()  throw ()"
+.br
+.ti -1c
+.RI "void \fBsetup_machine\fP (void)"
+.br
+.ti -1c
+.RI "void \fBstep\fP (void)"
+.br
+.ti -1c
+.RI "int \fBrun\fP (void)"
+.br
+.ti -1c
+.RI "uint32 \fBgetCpuNum\fP ()"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPLOG_CLASS\fP (\fBProphet\fP)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "uint32 \fBm_CPUNum\fP"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Prophet::Prophet (uint32 argc, char ** argv)"
+.SS "Prophet::~Prophet ()  throw ()"
+.SH "Member Function Documentation"
+.PP 
+.SS "uint32 Prophet::getCpuNum ()\fC [inline]\fP"
+.SS "Prophet::PLOG_CLASS (\fBProphet\fP)\fC [private]\fP"
+.SS "int Prophet::run (void)\fC [virtual]\fP"
+.PP
+Reimplemented from \fBvmips\fP.
+.SS "void Prophet::setup_machine (void)\fC [virtual]\fP"
+.PP
+Reimplemented from \fBvmips\fP.
+.SS "void Prophet::step (void)\fC [virtual]\fP"
+.PP
+Reimplemented from \fBvmips\fP.
+.SH "Member Data Documentation"
+.PP 
+.SS "uint32 \fBProphet::m_CPUNum\fP\fC [private]\fP"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen from the source code.

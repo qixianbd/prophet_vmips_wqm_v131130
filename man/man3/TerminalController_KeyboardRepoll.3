@@ -1,0 +1,56 @@
+.TH "TerminalController::KeyboardRepoll" 3 "18 Dec 2013" "Doxygen" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+TerminalController::KeyboardRepoll \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <terminalcontroller.h>\fP
+.PP
+Inherits \fBCancelableTask\fP.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBKeyboardRepoll\fP (\fBTerminalController\fP *\fBcontroller\fP, int \fBline\fP)  throw ()"
+.br
+.ti -1c
+.RI "virtual \fB~KeyboardRepoll\fP ()  throw ()"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBreal_task\fP ()"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBTerminalController\fP * \fBcontroller\fP"
+.br
+.ti -1c
+.RI "int \fBline\fP"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "TerminalController::KeyboardRepoll::KeyboardRepoll (\fBTerminalController\fP * controller, int line)  throw ()"
+.SS "TerminalController::KeyboardRepoll::~KeyboardRepoll ()  throw ()\fC [virtual]\fP"
+.SH "Member Function Documentation"
+.PP 
+.SS "void TerminalController::KeyboardRepoll::real_task ()\fC [protected, virtual]\fP"
+.PP
+Implements \fBCancelableTask\fP.
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBTerminalController\fP* \fBTerminalController::KeyboardRepoll::controller\fP\fC [protected]\fP"
+.SS "int \fBTerminalController::KeyboardRepoll::line\fP\fC [protected]\fP"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen from the source code.

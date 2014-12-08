@@ -1,0 +1,124 @@
+.TH "Options" 3 "18 Dec 2013" "Doxygen" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Options \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <options.h>\fP
+.PP
+Inherited by \fBVmipstoolOptions\fP.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBOptions\fP ()"
+.br
+.ti -1c
+.RI "virtual \fB~Options\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBprocess_options\fP (int argc, char **argv)"
+.br
+.ti -1c
+.RI "union \fBOptionValue\fP * \fBoption\fP (char *name)"
+.br
+.in -1c
+.SS "Protected Types"
+
+.in +1c
+.ti -1c
+.RI "typedef std::map< std::string, \fBOption\fP > \fBOptionMap\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBprocess_defaults\fP (void)"
+.br
+.ti -1c
+.RI "void \fBprocess_one_option\fP (const char *const option)"
+.br
+.ti -1c
+.RI "int \fBprocess_first_option\fP (char **bufptr, int lineno=0, char *fn=NULL)"
+.br
+.ti -1c
+.RI "int \fBprocess_options_from_file\fP (char *filename)"
+.br
+.ti -1c
+.RI "int \fBtilde_expand\fP (char *filename)"
+.br
+.ti -1c
+.RI "virtual void \fBusage\fP (char *argv0)"
+.br
+.ti -1c
+.RI "void \fBset_str_option\fP (char *key, char *value)"
+.br
+.ti -1c
+.RI "void \fBset_num_option\fP (char *key, uint32 value)"
+.br
+.ti -1c
+.RI "void \fBset_flag_option\fP (char *key, bool value)"
+.br
+.ti -1c
+.RI "char * \fBstrprefix\fP (char *crack_smoker, char *crack)"
+.br
+.ti -1c
+.RI "int \fBfind_option_type\fP (char *option)"
+.br
+.ti -1c
+.RI "\fBOption\fP * \fBoptstruct\fP (char *name, bool install=false)"
+.br
+.ti -1c
+.RI "void \fBprint_package_version\fP (char *toolname, char *version)"
+.br
+.ti -1c
+.RI "void \fBprint_config_info\fP (void)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBOptionMap\fP \fBtable\fP"
+.br
+.in -1c
+.SH "Member Typedef Documentation"
+.PP 
+.SS "typedef std::map<std::string, \fBOption\fP> \fBOptions::OptionMap\fP\fC [protected]\fP"
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Options::Options ()\fC [inline]\fP"
+.SS "virtual Options::~Options ()\fC [inline, virtual]\fP"
+.SH "Member Function Documentation"
+.PP 
+.SS "int Options::find_option_type (char * option)\fC [protected]\fP"
+.SS "union \fBOptionValue\fP * Options::option (char * name)\fC [write]\fP"
+.SS "\fBOption\fP * Options::optstruct (char * name, bool install = \fCfalse\fP)\fC [protected]\fP"
+.SS "void Options::print_config_info (void)\fC [protected]\fP"
+.SS "void Options::print_package_version (char * toolname, char * version)\fC [protected]\fP"
+.SS "void Options::process_defaults (void)\fC [protected]\fP"
+.SS "int Options::process_first_option (char ** bufptr, int lineno = \fC0\fP, char * fn = \fCNULL\fP)\fC [protected]\fP"
+.SS "void Options::process_one_option (const char *const  option)\fC [protected]\fP"
+.SS "void Options::process_options (int argc, char ** argv)\fC [virtual]\fP"
+.PP
+Reimplemented in \fBVmipstoolOptions\fP.
+.SS "int Options::process_options_from_file (char * filename)\fC [protected]\fP"
+.SS "void Options::set_flag_option (char * key, bool value)\fC [protected]\fP"
+.SS "void Options::set_num_option (char * key, uint32 value)\fC [protected]\fP"
+.SS "void Options::set_str_option (char * key, char * value)\fC [protected]\fP"
+.SS "char * Options::strprefix (char * crack_smoker, char * crack)\fC [protected]\fP"
+.SS "int Options::tilde_expand (char * filename)\fC [protected]\fP"
+.SS "void Options::usage (char * argv0)\fC [protected, virtual]\fP"
+.PP
+Reimplemented in \fBVmipstoolOptions\fP.
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBOptionMap\fP \fBOptions::table\fP\fC [protected]\fP"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen from the source code.

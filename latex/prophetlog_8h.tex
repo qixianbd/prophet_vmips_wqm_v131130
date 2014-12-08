@@ -1,0 +1,129 @@
+\hypertarget{prophetlog_8h}{
+\section{prophetlog.h File Reference}
+\label{prophetlog_8h}\index{prophetlog.h@{prophetlog.h}}
+}
+{\ttfamily \#include $<$sstream$>$}\par
+{\ttfamily \#include $<$iostream$>$}\par
+{\ttfamily \#include $<$typeinfo$>$}\par
+{\ttfamily \#include \char`\"{}types.h\char`\"{}}\par
+Include dependency graph for prophetlog.h:This graph shows which files directly or indirectly include this file:\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classPlog_1_1Log}{Plog::Log}
+\item 
+class \hyperlink{classPlog_1_1CallSite}{Plog::CallSite}
+\item 
+class \hyperlink{classPlog_1_1End}{Plog::End}
+\item 
+class \hyperlink{classPlog_1_1NoClassInfo}{Plog::NoClassInfo}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \hyperlink{namespacePlog}{Plog}
+\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{prophetlog_8h_a6baf7f0f5787a1191120c8ca98266b6e}{PLOG\_\-CLASS}(c)~typedef c \hyperlink{classPlog_1_1NoClassInfo}{\_\-PROPHET\_\-CLASS\_\-TO\_\-LOG}
+\item 
+\#define \hyperlink{prophetlog_8h_a9930b2277fd763383e69935002542072}{plog}(level)
+\item 
+\#define \hyperlink{prophetlog_8h_ab91c35fae83ed4c7d2b27f4ea0889f22}{pendl}
+\item 
+\#define \hyperlink{prophetlog_8h_aaec1435f0cb5a96651424868564438cf}{pdebug}~plog(Plog::PLOG\_\-LEVEL\_\-DEBUG)
+\item 
+\#define \hyperlink{prophetlog_8h_a8c7817b022bdfcda98d24441b96511fb}{pinfo}~plog(Plog::PLOG\_\-LEVEL\_\-INFO)
+\item 
+\#define \hyperlink{prophetlog_8h_ad227908f6dfee14ef4b4c484bcda94dc}{pwarn}~plog(Plog::PLOG\_\-LEVEL\_\-WARNING)
+\item 
+\#define \hyperlink{prophetlog_8h_a9994e51978eb23726f10bb3a8d259d88}{perror}~plog(Plog::PLOG\_\-LEVEL\_\-ERROR)
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{classPlog_1_1NoClassInfo}{Plog::NoClassInfo} \hyperlink{prophetlog_8h_aa6530dd221b42392674c77619f7de49e}{\_\-PROPHET\_\-CLASS\_\-TO\_\-LOG}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{namespacePlog_a88d9c6f3fe99f813db1cab6246f93a5d}{Plog::PLOG\_\-LEVEL} \{ \par
+\hyperlink{namespacePlog_a88d9c6f3fe99f813db1cab6246f93a5dac6eefd105dc1dc3ae559e0cf830f25cb}{Plog::PLOG\_\-LEVEL\_\-ALL} =  0, 
+\hyperlink{namespacePlog_a88d9c6f3fe99f813db1cab6246f93a5dabe689a17b1f426bf3f1a9480dd4fd269}{Plog::PLOG\_\-LEVEL\_\-DEBUG} =  0, 
+\hyperlink{namespacePlog_a88d9c6f3fe99f813db1cab6246f93a5da4b8c994e274a65af060675766c4a3548}{Plog::PLOG\_\-LEVEL\_\-INFO} =  1, 
+\hyperlink{namespacePlog_a88d9c6f3fe99f813db1cab6246f93a5da4970ff2d9542c446f5262c1293b2867b}{Plog::PLOG\_\-LEVEL\_\-WARNING} =  2, 
+\par
+\hyperlink{namespacePlog_a88d9c6f3fe99f813db1cab6246f93a5da0b150da6fff82d63c0cc4dfb0bed689e}{Plog::PLOG\_\-LEVEL\_\-ERROR} =  3, 
+\hyperlink{namespacePlog_a88d9c6f3fe99f813db1cab6246f93a5da975a754e1e6ebbfccc6dfc500711e4be}{Plog::PLOG\_\-LEVEL\_\-NON} =  4
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{namespacePlog_ae5f46def759dfc94d36d871b68087cbf}{Plog::InitPlog} (bool filelog, bool consolelog)
+\item 
+std::ostream \& \hyperlink{namespacePlog_aa1ccb1c55ffb567c8da5dd4ed25dacd3}{Plog::operator$<$$<$} (std::ostream \&out, const End \&)
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{prophetlog_8h_aaec1435f0cb5a96651424868564438cf}{
+\index{prophetlog.h@{prophetlog.h}!pdebug@{pdebug}}
+\index{pdebug@{pdebug}!prophetlog.h@{prophetlog.h}}
+\subsubsection[{pdebug}]{\setlength{\rightskip}{0pt plus 5cm}\#define pdebug~plog(Plog::PLOG\_\-LEVEL\_\-DEBUG)}}
+\label{prophetlog_8h_aaec1435f0cb5a96651424868564438cf}
+\hypertarget{prophetlog_8h_ab91c35fae83ed4c7d2b27f4ea0889f22}{
+\index{prophetlog.h@{prophetlog.h}!pendl@{pendl}}
+\index{pendl@{pendl}!prophetlog.h@{prophetlog.h}}
+\subsubsection[{pendl}]{\setlength{\rightskip}{0pt plus 5cm}\#define pendl}}
+\label{prophetlog_8h_ab91c35fae83ed4c7d2b27f4ea0889f22}
+{\bfseries Value:}
+\begin{DoxyCode}
+Plog::End(); \
+                        Plog::Log::Flush(_out_stream, _log_site); \
+                } \
+        }while(0)
+\end{DoxyCode}
+\hypertarget{prophetlog_8h_a9994e51978eb23726f10bb3a8d259d88}{
+\index{prophetlog.h@{prophetlog.h}!perror@{perror}}
+\index{perror@{perror}!prophetlog.h@{prophetlog.h}}
+\subsubsection[{perror}]{\setlength{\rightskip}{0pt plus 5cm}\#define perror~plog(Plog::PLOG\_\-LEVEL\_\-ERROR)}}
+\label{prophetlog_8h_a9994e51978eb23726f10bb3a8d259d88}
+\hypertarget{prophetlog_8h_a8c7817b022bdfcda98d24441b96511fb}{
+\index{prophetlog.h@{prophetlog.h}!pinfo@{pinfo}}
+\index{pinfo@{pinfo}!prophetlog.h@{prophetlog.h}}
+\subsubsection[{pinfo}]{\setlength{\rightskip}{0pt plus 5cm}\#define pinfo~plog(Plog::PLOG\_\-LEVEL\_\-INFO)}}
+\label{prophetlog_8h_a8c7817b022bdfcda98d24441b96511fb}
+\hypertarget{prophetlog_8h_a9930b2277fd763383e69935002542072}{
+\index{prophetlog.h@{prophetlog.h}!plog@{plog}}
+\index{plog@{plog}!prophetlog.h@{prophetlog.h}}
+\subsubsection[{plog}]{\setlength{\rightskip}{0pt plus 5cm}\#define plog(level)}}
+\label{prophetlog_8h_a9930b2277fd763383e69935002542072}
+{\bfseries Value:}
+\begin{DoxyCode}
+do{ \
+                static Plog::CallSite _log_site(level, __FILE__, __LINE__, \
+                typeid(_PROPHET_CLASS_TO_LOG), __FUNCTION__); \
+                if(_log_site.ShouldLog()) \
+                { \
+                        std::ostringstream *_out_stream = Plog::Log::Out(); \
+                        (*_out_stream)
+\end{DoxyCode}
+\hypertarget{prophetlog_8h_a6baf7f0f5787a1191120c8ca98266b6e}{
+\index{prophetlog.h@{prophetlog.h}!PLOG\_\-CLASS@{PLOG\_\-CLASS}}
+\index{PLOG\_\-CLASS@{PLOG\_\-CLASS}!prophetlog.h@{prophetlog.h}}
+\subsubsection[{PLOG\_\-CLASS}]{\setlength{\rightskip}{0pt plus 5cm}\#define PLOG\_\-CLASS(c)~typedef c {\bf \_\-PROPHET\_\-CLASS\_\-TO\_\-LOG}}}
+\label{prophetlog_8h_a6baf7f0f5787a1191120c8ca98266b6e}
+\hypertarget{prophetlog_8h_ad227908f6dfee14ef4b4c484bcda94dc}{
+\index{prophetlog.h@{prophetlog.h}!pwarn@{pwarn}}
+\index{pwarn@{pwarn}!prophetlog.h@{prophetlog.h}}
+\subsubsection[{pwarn}]{\setlength{\rightskip}{0pt plus 5cm}\#define pwarn~plog(Plog::PLOG\_\-LEVEL\_\-WARNING)}}
+\label{prophetlog_8h_ad227908f6dfee14ef4b4c484bcda94dc}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{prophetlog_8h_aa6530dd221b42392674c77619f7de49e}{
+\index{prophetlog.h@{prophetlog.h}!\_\-PROPHET\_\-CLASS\_\-TO\_\-LOG@{\_\-PROPHET\_\-CLASS\_\-TO\_\-LOG}}
+\index{\_\-PROPHET\_\-CLASS\_\-TO\_\-LOG@{\_\-PROPHET\_\-CLASS\_\-TO\_\-LOG}!prophetlog.h@{prophetlog.h}}
+\subsubsection[{\_\-PROPHET\_\-CLASS\_\-TO\_\-LOG}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Plog::NoClassInfo} {\bf \_\-PROPHET\_\-CLASS\_\-TO\_\-LOG}}}
+\label{prophetlog_8h_aa6530dd221b42392674c77619f7de49e}

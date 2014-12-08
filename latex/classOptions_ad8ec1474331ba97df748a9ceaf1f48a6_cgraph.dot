@@ -1,0 +1,28 @@
+digraph G
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir=LR;
+  Node1 [label="Options::process_one_option",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="error",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$error_8cc.html#a158a1af99275c1555bf5fcc74709aa5a"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="format_help",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$error_8cc.html#aa182c84a77010100b5b8a15b1ff22e70"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="Options::find_option_type",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classOptions.html#a43c1b070c853edd7d3b227e300f6db80"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="Options::set_flag_option",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classOptions.html#a89174e246a138fd030eed58a2ca2f358"];
+  Node5 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="Options::optstruct",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classOptions.html#a4a9be4a96d5b12a8abb469fef02af7ee"];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="Options::set_num_option",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classOptions.html#ab7f5346ac22e0c72eafb3324fd84236e"];
+  Node7 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="Options::set_str_option",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classOptions.html#a6e6c73b2ed51467f7f076638e0726629"];
+  Node8 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node1 -> Node9 [color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="Options::strprefix",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classOptions.html#a1273ec7b1f585443952d3d43feec0010"];
+}

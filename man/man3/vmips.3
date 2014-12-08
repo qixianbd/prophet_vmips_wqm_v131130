@@ -1,0 +1,340 @@
+.TH "vmips" 3 "18 Dec 2013" "Doxygen" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+vmips \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <vmips.h>\fP
+.PP
+Inherited by \fBProphet\fP.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBrefresh_options\fP (void)"
+.br
+.ti -1c
+.RI "\fBvmips\fP (int argc, char **argv)"
+.br
+.ti -1c
+.RI "virtual \fB~vmips\fP ()  throw ()"
+.br
+.ti -1c
+.RI "virtual void \fBsetup_machine\fP (void)"
+.br
+.ti -1c
+.RI "void \fBrandomize\fP (void)"
+.br
+.ti -1c
+.RI "void \fBhalt\fP (void)  throw ()"
+.br
+.ti -1c
+.RI "int \fBhost_endian_selftest\fP (void)"
+.br
+.ti -1c
+.RI "virtual void \fBstep\fP (void)"
+.br
+.ti -1c
+.RI "virtual int \fBrun\fP (void)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static uint32 \fBget_file_size\fP (FILE *fp)  throw ()"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBMapper\fP * \fBphysmem\fP"
+.br
+.ti -1c
+.RI "\fBCPU\fP * \fBcpu\fP"
+.br
+.ti -1c
+.RI "\fBIntCtrl\fP * \fBintc\fP"
+.br
+.ti -1c
+.RI "\fBOptions\fP * \fBopt\fP"
+.br
+.ti -1c
+.RI "\fBMemoryModule\fP * \fBmemmod\fP"
+.br
+.ti -1c
+.RI "\fBDebug\fP * \fBdbgr\fP"
+.br
+.ti -1c
+.RI "\fBDisassembler\fP * \fBdisasm\fP"
+.br
+.ti -1c
+.RI "bool \fBhost_bigendian\fP"
+.br
+.ti -1c
+.RI "bool \fBhalted\fP"
+.br
+.ti -1c
+.RI "\fBDECCSRDevice\fP * \fBdeccsr_device\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBboot_msg\fP (const char *msg,...)  throw ()"
+.br
+.ti -1c
+.RI "virtual bool \fBsetup_spimconsole\fP ()  throw (std::bad_alloc)"
+.br
+.ti -1c
+.RI "virtual bool \fBsetup_clockdevice\fP ()  throw ( std::bad_alloc )"
+.br
+.ti -1c
+.RI "virtual bool \fBsetup_decrtc\fP ()  throw ( std::bad_alloc )"
+.br
+.ti -1c
+.RI "virtual bool \fBsetup_deccsr\fP ()  throw ( std::bad_alloc )"
+.br
+.ti -1c
+.RI "virtual bool \fBsetup_decstat\fP ()  throw ( std::bad_alloc )"
+.br
+.ti -1c
+.RI "virtual bool \fBsetup_decserial\fP ()  throw ( std::bad_alloc )"
+.br
+.ti -1c
+.RI "virtual bool \fBsetup_rom\fP ()"
+.br
+.ti -1c
+.RI "virtual bool \fBsetup_exe\fP ()"
+.br
+.ti -1c
+.RI "bool \fBload_elf\fP (FILE *fp)"
+.br
+.ti -1c
+.RI "bool \fBload_ecoff\fP (FILE *fp)"
+.br
+.ti -1c
+.RI "char * \fBtranslate_to_host_ram_pointer\fP (uint32 vaddr)"
+.br
+.ti -1c
+.RI "virtual bool \fBsetup_ram\fP ()  throw (std::bad_alloc)"
+.br
+.ti -1c
+.RI "virtual bool \fBsetup_clock\fP ()  throw (std::bad_alloc)"
+.br
+.ti -1c
+.RI "virtual void \fBsetup_console_line\fP (int l, char *name, \fBTerminalController\fP *c, const char *c_name)  throw ()"
+.br
+.ti -1c
+.RI "bool \fBsetup_haltdevice\fP ()  throw ( std::bad_alloc )"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBClock\fP * \fBclock\fP"
+.br
+.ti -1c
+.RI "\fBClockDevice\fP * \fBclock_device\fP"
+.br
+.ti -1c
+.RI "\fBHaltDevice\fP * \fBhalt_device\fP"
+.br
+.ti -1c
+.RI "\fBSpimConsoleDevice\fP * \fBspim_console\fP"
+.br
+.ti -1c
+.RI "\fBDECRTCDevice\fP * \fBdecrtc_device\fP"
+.br
+.ti -1c
+.RI "\fBDECStatDevice\fP * \fBdecstat_device\fP"
+.br
+.ti -1c
+.RI "\fBDECSerialDevice\fP * \fBdecserial_device\fP"
+.br
+.ti -1c
+.RI "bool \fBopt_bootmsg\fP"
+.br
+.ti -1c
+.RI "bool \fBopt_clockdevice\fP"
+.br
+.ti -1c
+.RI "bool \fBopt_debug\fP"
+.br
+.ti -1c
+.RI "bool \fBopt_dumpcpu\fP"
+.br
+.ti -1c
+.RI "bool \fBopt_dumpcp0\fP"
+.br
+.ti -1c
+.RI "bool \fBopt_haltdevice\fP"
+.br
+.ti -1c
+.RI "bool \fBopt_haltdumpcpu\fP"
+.br
+.ti -1c
+.RI "bool \fBopt_haltdumpcp0\fP"
+.br
+.ti -1c
+.RI "bool \fBopt_instcounts\fP"
+.br
+.ti -1c
+.RI "bool \fBopt_memdump\fP"
+.br
+.ti -1c
+.RI "bool \fBopt_realtime\fP"
+.br
+.ti -1c
+.RI "bool \fBopt_decrtc\fP"
+.br
+.ti -1c
+.RI "bool \fBopt_deccsr\fP"
+.br
+.ti -1c
+.RI "bool \fBopt_decstat\fP"
+.br
+.ti -1c
+.RI "bool \fBopt_decserial\fP"
+.br
+.ti -1c
+.RI "bool \fBopt_spimconsole\fP"
+.br
+.ti -1c
+.RI "uint32 \fBopt_clockspeed\fP"
+.br
+.ti -1c
+.RI "uint32 \fBclock_nanos\fP"
+.br
+.ti -1c
+.RI "uint32 \fBopt_clockintr\fP"
+.br
+.ti -1c
+.RI "uint32 \fBopt_clockdeviceirq\fP"
+.br
+.ti -1c
+.RI "uint32 \fBopt_loadaddr\fP"
+.br
+.ti -1c
+.RI "uint32 \fBopt_memsize\fP"
+.br
+.ti -1c
+.RI "uint32 \fBopt_timeratio\fP"
+.br
+.ti -1c
+.RI "char * \fBopt_image\fP"
+.br
+.ti -1c
+.RI "char * \fBopt_execname\fP"
+.br
+.ti -1c
+.RI "char * \fBopt_memdumpfile\fP"
+.br
+.ti -1c
+.RI "char * \fBopt_ttydev\fP"
+.br
+.ti -1c
+.RI "char * \fBopt_ttydev2\fP"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "uint32 \fBnum_instrs\fP"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "vmips::vmips (int argc, char ** argv)"
+.SS "vmips::~vmips ()  throw ()\fC [virtual]\fP"
+.SH "Member Function Documentation"
+.PP 
+.SS "void vmips::boot_msg (const char * msg,  ...)  throw ()\fC [protected, virtual]\fP"
+.SS "uint32 vmips::get_file_size (FILE * fp)  throw ()\fC [static]\fP"
+.SS "void vmips::halt (void)  throw ()"
+.SS "int vmips::host_endian_selftest (void)"
+.SS "bool vmips::load_ecoff (FILE * fp)\fC [protected]\fP"
+.SS "bool vmips::load_elf (FILE * fp)\fC [protected]\fP"
+.SS "void vmips::randomize (void)"
+.SS "void vmips::refresh_options (void)"
+.SS "int vmips::run (void)\fC [virtual]\fP"
+.PP
+Reimplemented in \fBProphet\fP.
+.SS "bool vmips::setup_clock ()  throw (std::bad_alloc)\fC [protected, virtual]\fP"
+.SS "bool vmips::setup_clockdevice ()  throw ( std::bad_alloc )\fC [protected, virtual]\fP"
+.SS "void vmips::setup_console_line (int l, char * name, \fBTerminalController\fP * c, const char * c_name)  throw ()\fC [protected, virtual]\fP"
+.SS "bool vmips::setup_deccsr ()  throw ( std::bad_alloc )\fC [protected, virtual]\fP"
+.SS "bool vmips::setup_decrtc ()  throw ( std::bad_alloc )\fC [protected, virtual]\fP"
+.SS "bool vmips::setup_decserial ()  throw ( std::bad_alloc )\fC [protected, virtual]\fP"
+.SS "bool vmips::setup_decstat ()  throw ( std::bad_alloc )\fC [protected, virtual]\fP"
+.SS "bool vmips::setup_exe ()\fC [protected, virtual]\fP"
+.SS "bool vmips::setup_haltdevice ()  throw ( std::bad_alloc )\fC [protected]\fP"
+.SS "void vmips::setup_machine (void)\fC [virtual]\fP"
+.PP
+Reimplemented in \fBProphet\fP.
+.SS "bool vmips::setup_ram ()  throw (std::bad_alloc)\fC [protected, virtual]\fP"
+.SS "bool vmips::setup_rom ()\fC [protected, virtual]\fP"
+.SS "bool vmips::setup_spimconsole ()  throw (std::bad_alloc)\fC [protected, virtual]\fP"
+.SS "void vmips::step (void)\fC [virtual]\fP"
+.PP
+Reimplemented in \fBProphet\fP.
+.SS "char * vmips::translate_to_host_ram_pointer (uint32 vaddr)\fC [protected]\fP"Translate vaddr to a physical address, then return a host-machine pointer to where it is in the simulated machine's RAM. vaddr must be in one of the non-mapped kernel-mode segments (KSEG0 or KSEG1), and it must be within the bounds of the simulated machine's physical RAM. Otherwise a null pointer is returned. 
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBClock\fP* \fBvmips::clock\fP\fC [protected]\fP"
+.SS "\fBClockDevice\fP* \fBvmips::clock_device\fP\fC [protected]\fP"
+.SS "uint32 \fBvmips::clock_nanos\fP\fC [protected]\fP"
+.SS "\fBCPU\fP* \fBvmips::cpu\fP"
+.SS "\fBDebug\fP* \fBvmips::dbgr\fP"
+.SS "\fBDECCSRDevice\fP* \fBvmips::deccsr_device\fP"
+.SS "\fBDECRTCDevice\fP* \fBvmips::decrtc_device\fP\fC [protected]\fP"
+.SS "\fBDECSerialDevice\fP* \fBvmips::decserial_device\fP\fC [protected]\fP"
+.SS "\fBDECStatDevice\fP* \fBvmips::decstat_device\fP\fC [protected]\fP"
+.SS "\fBDisassembler\fP* \fBvmips::disasm\fP"
+.SS "\fBHaltDevice\fP* \fBvmips::halt_device\fP\fC [protected]\fP"
+.SS "bool \fBvmips::halted\fP"
+.SS "bool \fBvmips::host_bigendian\fP"
+.SS "\fBIntCtrl\fP* \fBvmips::intc\fP"
+.SS "\fBMemoryModule\fP* \fBvmips::memmod\fP"
+.SS "uint32 \fBvmips::num_instrs\fP\fC [private]\fP"
+.SS "\fBOptions\fP* \fBvmips::opt\fP"
+.SS "bool \fBvmips::opt_bootmsg\fP\fC [protected]\fP"
+.SS "bool \fBvmips::opt_clockdevice\fP\fC [protected]\fP"
+.SS "uint32 \fBvmips::opt_clockdeviceirq\fP\fC [protected]\fP"
+.SS "uint32 \fBvmips::opt_clockintr\fP\fC [protected]\fP"
+.SS "uint32 \fBvmips::opt_clockspeed\fP\fC [protected]\fP"
+.SS "bool \fBvmips::opt_debug\fP\fC [protected]\fP"
+.SS "bool \fBvmips::opt_deccsr\fP\fC [protected]\fP"
+.SS "bool \fBvmips::opt_decrtc\fP\fC [protected]\fP"
+.SS "bool \fBvmips::opt_decserial\fP\fC [protected]\fP"
+.SS "bool \fBvmips::opt_decstat\fP\fC [protected]\fP"
+.SS "bool \fBvmips::opt_dumpcp0\fP\fC [protected]\fP"
+.SS "bool \fBvmips::opt_dumpcpu\fP\fC [protected]\fP"
+.SS "char* \fBvmips::opt_execname\fP\fC [protected]\fP"
+.SS "bool \fBvmips::opt_haltdevice\fP\fC [protected]\fP"
+.SS "bool \fBvmips::opt_haltdumpcp0\fP\fC [protected]\fP"
+.SS "bool \fBvmips::opt_haltdumpcpu\fP\fC [protected]\fP"
+.SS "char* \fBvmips::opt_image\fP\fC [protected]\fP"
+.SS "bool \fBvmips::opt_instcounts\fP\fC [protected]\fP"
+.SS "uint32 \fBvmips::opt_loadaddr\fP\fC [protected]\fP"
+.SS "bool \fBvmips::opt_memdump\fP\fC [protected]\fP"
+.SS "char* \fBvmips::opt_memdumpfile\fP\fC [protected]\fP"
+.SS "uint32 \fBvmips::opt_memsize\fP\fC [protected]\fP"
+.SS "bool \fBvmips::opt_realtime\fP\fC [protected]\fP"
+.SS "bool \fBvmips::opt_spimconsole\fP\fC [protected]\fP"
+.SS "uint32 \fBvmips::opt_timeratio\fP\fC [protected]\fP"
+.SS "char* \fBvmips::opt_ttydev\fP\fC [protected]\fP"
+.SS "char* \fBvmips::opt_ttydev2\fP\fC [protected]\fP"
+.SS "\fBMapper\fP* \fBvmips::physmem\fP"
+.SS "\fBSpimConsoleDevice\fP* \fBvmips::spim_console\fP\fC [protected]\fP"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen from the source code.

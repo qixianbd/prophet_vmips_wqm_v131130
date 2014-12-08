@@ -1,0 +1,73 @@
+\hypertarget{exeloader_8cc}{
+\section{exeloader.cc File Reference}
+\label{exeloader_8cc}\index{exeloader.cc@{exeloader.cc}}
+}
+{\ttfamily \#include $<$string$>$}\par
+{\ttfamily \#include $<$cerrno$>$}\par
+{\ttfamily \#include $<$cstdio$>$}\par
+{\ttfamily \#include \char`\"{}vmips.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}cpzeroreg.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}memorymodule.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}range.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}error.h\char`\"{}}\par
+{\ttfamily \#include $<$string.h$>$}\par
+Include dependency graph for exeloader.cc:This graph shows which files directly or indirectly include this file:\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structcoff__file__header}{coff\_\-file\_\-header}
+\item 
+struct \hyperlink{structcoff__section__header}{coff\_\-section\_\-header}
+\item 
+struct \hyperlink{structcoff__info}{coff\_\-info}
+\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{exeloader_8cc_ab7284bd57c19234e2b01232a1d11f61b}{MIPSEBMAGIC}~0x0160
+\item 
+\#define \hyperlink{exeloader_8cc_a793adebbaaab0108473ed5c51bec05c7}{MIPSELMAGIC}~0x0162
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \hyperlink{exeloader_8cc_a7fa32d09a8c17605956e34fd1a6195b8}{good\_\-ecoff\_\-magic} (struct \hyperlink{structcoff__file__header}{coff\_\-file\_\-header} $\ast$fhdr)
+\item 
+static bool \hyperlink{exeloader_8cc_a59e34180e562f04eb76be9c1a70c1324}{file\_\-is\_\-ecoff} (FILE $\ast$fp)
+\item 
+static bool \hyperlink{exeloader_8cc_af08acf83bd5286642331afc8071eb1c6}{file\_\-is\_\-elf} (FILE $\ast$fp)
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{exeloader_8cc_ab7284bd57c19234e2b01232a1d11f61b}{
+\index{exeloader.cc@{exeloader.cc}!MIPSEBMAGIC@{MIPSEBMAGIC}}
+\index{MIPSEBMAGIC@{MIPSEBMAGIC}!exeloader.cc@{exeloader.cc}}
+\subsubsection[{MIPSEBMAGIC}]{\setlength{\rightskip}{0pt plus 5cm}\#define MIPSEBMAGIC~0x0160}}
+\label{exeloader_8cc_ab7284bd57c19234e2b01232a1d11f61b}
+\hypertarget{exeloader_8cc_a793adebbaaab0108473ed5c51bec05c7}{
+\index{exeloader.cc@{exeloader.cc}!MIPSELMAGIC@{MIPSELMAGIC}}
+\index{MIPSELMAGIC@{MIPSELMAGIC}!exeloader.cc@{exeloader.cc}}
+\subsubsection[{MIPSELMAGIC}]{\setlength{\rightskip}{0pt plus 5cm}\#define MIPSELMAGIC~0x0162}}
+\label{exeloader_8cc_a793adebbaaab0108473ed5c51bec05c7}
+
+
+\subsection{Function Documentation}
+\hypertarget{exeloader_8cc_a59e34180e562f04eb76be9c1a70c1324}{
+\index{exeloader.cc@{exeloader.cc}!file\_\-is\_\-ecoff@{file\_\-is\_\-ecoff}}
+\index{file\_\-is\_\-ecoff@{file\_\-is\_\-ecoff}!exeloader.cc@{exeloader.cc}}
+\subsubsection[{file\_\-is\_\-ecoff}]{\setlength{\rightskip}{0pt plus 5cm}static bool file\_\-is\_\-ecoff (FILE $\ast$ {\em fp})\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{exeloader_8cc_a59e34180e562f04eb76be9c1a70c1324}
+
+
+Here is the call graph for this function:
+
+\hypertarget{exeloader_8cc_af08acf83bd5286642331afc8071eb1c6}{
+\index{exeloader.cc@{exeloader.cc}!file\_\-is\_\-elf@{file\_\-is\_\-elf}}
+\index{file\_\-is\_\-elf@{file\_\-is\_\-elf}!exeloader.cc@{exeloader.cc}}
+\subsubsection[{file\_\-is\_\-elf}]{\setlength{\rightskip}{0pt plus 5cm}static bool file\_\-is\_\-elf (FILE $\ast$ {\em fp})\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{exeloader_8cc_af08acf83bd5286642331afc8071eb1c6}
+\hypertarget{exeloader_8cc_a7fa32d09a8c17605956e34fd1a6195b8}{
+\index{exeloader.cc@{exeloader.cc}!good\_\-ecoff\_\-magic@{good\_\-ecoff\_\-magic}}
+\index{good\_\-ecoff\_\-magic@{good\_\-ecoff\_\-magic}!exeloader.cc@{exeloader.cc}}
+\subsubsection[{good\_\-ecoff\_\-magic}]{\setlength{\rightskip}{0pt plus 5cm}static bool good\_\-ecoff\_\-magic (struct {\bf coff\_\-file\_\-header} $\ast$ {\em fhdr})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}
+\label{exeloader_8cc_a7fa32d09a8c17605956e34fd1a6195b8}

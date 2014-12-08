@@ -1,0 +1,124 @@
+\hypertarget{classSpeculativeLogic}{
+\section{SpeculativeLogic Class Reference}
+\label{classSpeculativeLogic}\index{SpeculativeLogic@{SpeculativeLogic}}
+}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classSpeculativeLogic_a2461a666684d4cdcf00181732a8688b3}{
+typedef std::list$<$ SpeculativeCPU $\ast$ $>$ {\bfseries SpList}}
+\label{classSpeculativeLogic_a2461a666684d4cdcf00181732a8688b3}
+
+\item 
+\hypertarget{classSpeculativeLogic_a0f88679e7c8857e42f0d80838ea7cf5c}{
+typedef std::list$<$ SpeculativeCPU $\ast$ $>$::iterator {\bfseries SpListIterator}}
+\label{classSpeculativeLogic_a0f88679e7c8857e42f0d80838ea7cf5c}
+
+\item 
+\hypertarget{classSpeculativeLogic_aa34206026defbc01f2dc57f5a8ff0c67}{
+typedef std::list$<$ SpeculativeCPU $\ast$ $>$::const\_\-iterator {\bfseries SpListConstIterator}}
+\label{classSpeculativeLogic_aa34206026defbc01f2dc57f5a8ff0c67}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classSpeculativeLogic_acb0f37017ed611ab21c131ed65b21702}{
+void {\bfseries SwapToSpList} (SpeculativeCPU $\ast$, SpeculativeCPU $\ast$)}
+\label{classSpeculativeLogic_acb0f37017ed611ab21c131ed65b21702}
+
+\item 
+\hypertarget{classSpeculativeLogic_a8e5f35ba96b8b0d8f43620550a994529}{
+void {\bfseries SwapToFreeList} (SpeculativeCPU $\ast$)}
+\label{classSpeculativeLogic_a8e5f35ba96b8b0d8f43620550a994529}
+
+\item 
+\hypertarget{classSpeculativeLogic_a84ae57d761581365e019cab467a9b577}{
+SpeculativeCPU $\ast$ {\bfseries GetParent} (SpeculativeCPU $\ast$)}
+\label{classSpeculativeLogic_a84ae57d761581365e019cab467a9b577}
+
+\item 
+\hypertarget{classSpeculativeLogic_a30a3107c14fd7196dc8874ab4177902c}{
+SpeculativeCPU $\ast$ {\bfseries GetSubthread} (SpeculativeCPU $\ast$)}
+\label{classSpeculativeLogic_a30a3107c14fd7196dc8874ab4177902c}
+
+\item 
+\hypertarget{classSpeculativeLogic_a6c5d1030f697921ae4a6dec57c7d9317}{
+SpeculativeCPU $\ast$ {\bfseries NotifySpawn} (SpeculativeCPU $\ast$)}
+\label{classSpeculativeLogic_a6c5d1030f697921ae4a6dec57c7d9317}
+
+\item 
+\hypertarget{classSpeculativeLogic_aa8e34fc7b001120855e0856d9cdd396e}{
+void {\bfseries SquashSubthread} (SpeculativeCPU $\ast$, SpeculativeCPU::SQUASH\_\-REASON)}
+\label{classSpeculativeLogic_aa8e34fc7b001120855e0856d9cdd396e}
+
+\item 
+\hypertarget{classSpeculativeLogic_ae61a5e6d7c9b2fb555396a5ba5aa452b}{
+bool {\bfseries VerifySubthread} (SpeculativeCPU $\ast$)}
+\label{classSpeculativeLogic_ae61a5e6d7c9b2fb555396a5ba5aa452b}
+
+\item 
+\hypertarget{classSpeculativeLogic_aa4eca95eca5abcdeed41287ea6581d09}{
+bool {\bfseries PassStableToken} (SpeculativeCPU $\ast$)}
+\label{classSpeculativeLogic_aa4eca95eca5abcdeed41287ea6581d09}
+
+\item 
+\hypertarget{classSpeculativeLogic_aea27ed6fe3808b6731d3d2e6e9aa1521}{
+uint32 {\bfseries GetStackTop} (SpeculativeCPU $\ast$)}
+\label{classSpeculativeLogic_aea27ed6fe3808b6731d3d2e6e9aa1521}
+
+\item 
+\hypertarget{classSpeculativeLogic_a3b5cfbc29580d96258bff914f8be5f61}{
+SpeculativeCPU $\ast$ {\bfseries GetRunner} ()}
+\label{classSpeculativeLogic_a3b5cfbc29580d96258bff914f8be5f61}
+
+\item 
+\hypertarget{classSpeculativeLogic_a3fd5927ddc4a29f415a016ab38bd6e93}{
+void {\bfseries Step} (void)}
+\label{classSpeculativeLogic_a3fd5927ddc4a29f415a016ab38bd6e93}
+
+\item 
+\hypertarget{classSpeculativeLogic_a6d44073e699460877f7840e4ed7bdaf5}{
+void {\bfseries Reset} (void)}
+\label{classSpeculativeLogic_a6d44073e699460877f7840e4ed7bdaf5}
+
+\item 
+\hypertarget{classSpeculativeLogic_a0e1c5d513f123870ef2722d5b9969d74}{
+bool {\bfseries CheckStateOnQuit} ()}
+\label{classSpeculativeLogic_a0e1c5d513f123870ef2722d5b9969d74}
+
+\item 
+\hypertarget{classSpeculativeLogic_ae8addd001c76eff87101f1c8a3911a23}{
+size\_\-t {\bfseries FreeListSize} ()}
+\label{classSpeculativeLogic_ae8addd001c76eff87101f1c8a3911a23}
+
+\item 
+\hypertarget{classSpeculativeLogic_aefbc24db69f077274b14f607955a7358}{
+size\_\-t {\bfseries SpListSize} ()}
+\label{classSpeculativeLogic_aefbc24db69f077274b14f607955a7358}
+
+\item 
+\hypertarget{classSpeculativeLogic_a0f0e9ab0f1def2f9248b61324f2fc21f}{
+int {\bfseries PosInSpList} (SpeculativeCPU $\ast$sender, SpeculativeCPU $\ast$)}
+\label{classSpeculativeLogic_a0f0e9ab0f1def2f9248b61324f2fc21f}
+
+\item 
+\hypertarget{classSpeculativeLogic_a69fc56353e58b2a63f0711ed2b4831d6}{
+int {\bfseries getSpDegree} (SpeculativeCPU $\ast$)}
+\label{classSpeculativeLogic_a69fc56353e58b2a63f0711ed2b4831d6}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classSpeculativeLogic_af95e558b3c77884f73b10a0fcf480fe5}{
+static \hyperlink{classSpeculativeLogic}{SpeculativeLogic} $\ast$ {\bfseries GetInstance} ()}
+\label{classSpeculativeLogic_af95e558b3c77884f73b10a0fcf480fe5}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+speculativelogic.h\item 
+speculativelogic.cc\end{DoxyCompactItemize}

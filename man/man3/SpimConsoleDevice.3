@@ -1,0 +1,139 @@
+.TH "SpimConsoleDevice" 3 "18 Dec 2013" "Doxygen" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SpimConsoleDevice \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <spimconsole.h>\fP
+.PP
+Inherits \fBTerminalController\fP, \fBDeviceMap\fP, and \fBDeviceInt\fP.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBClockTrigger\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSpimConsoleDevice\fP (\fBClock\fP *\fBclock\fP)  throw ( std::bad_alloc )"
+.br
+.ti -1c
+.RI "virtual \fB~SpimConsoleDevice\fP ()  throw ()"
+.br
+.ti -1c
+.RI "virtual void \fBready_display\fP (int line)  throw ()"
+.br
+.ti -1c
+.RI "virtual void \fBunready_display\fP (int line, char data)  throw ( std::bad_alloc )"
+.br
+.ti -1c
+.RI "virtual void \fBunready_keyboard\fP (int line)  throw ()"
+.br
+.ti -1c
+.RI "virtual void \fBready_clock\fP ()  throw ( std::bad_alloc )"
+.br
+.ti -1c
+.RI "virtual void \fBunready_clock\fP ()  throw ()"
+.br
+.ti -1c
+.RI "virtual uint32 \fBfetch_word\fP (uint32 offset, int mode, \fBDeviceExc\fP *client)"
+.br
+.ti -1c
+.RI "virtual void \fBstore_word\fP (uint32 offset, uint32 data, \fBDeviceExc\fP *client)"
+.br
+.ti -1c
+.RI "virtual const char * \fBdescriptor_str\fP () const "
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBready_keyboard\fP (int line)  throw ()"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBClockTrigger\fP * \fBtrigger\fP"
+.br
+.ti -1c
+.RI "bool \fBdisplay_interrupt_enable\fP [2]"
+.br
+.ti -1c
+.RI "bool \fBkeyboard_interrupt_enable\fP [2]"
+.br
+.ti -1c
+.RI "bool \fBclock_interrupt\fP"
+.br
+.ti -1c
+.RI "\fBState\fP \fBclock_state\fP"
+.br
+.in -1c
+.SS "Static Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "static const long \fBKEYBOARD_POLL_NS\fP = 400 * 1000"
+.br
+.ti -1c
+.RI "static const long \fBKEYBOARD_REPOLL_NS\fP = 40 * 1000 * 1000"
+.br
+.ti -1c
+.RI "static const long \fBDISPLAY_READY_DELAY_NS\fP = 40 * 1000 * 1000"
+.br
+.ti -1c
+.RI "static const long \fBCLOCK_TRIGGER_NS\fP = 1000 * 1000 *1000"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "SpimConsoleDevice::SpimConsoleDevice (\fBClock\fP * clock)  throw ( std::bad_alloc )"
+.SS "SpimConsoleDevice::~SpimConsoleDevice ()  throw ()\fC [virtual]\fP"
+.SH "Member Function Documentation"
+.PP 
+.SS "const char * SpimConsoleDevice::descriptor_str (void) const\fC [virtual]\fP"
+.PP
+Implements \fBDeviceInt\fP.
+.SS "uint32 SpimConsoleDevice::fetch_word (uint32 offset, int mode, \fBDeviceExc\fP * client)\fC [virtual]\fP"
+.PP
+Implements \fBDeviceMap\fP.
+.SS "void SpimConsoleDevice::ready_clock ()  throw ( std::bad_alloc )\fC [virtual]\fP"
+.SS "void SpimConsoleDevice::ready_display (int line)  throw ()\fC [virtual]\fP"
+.PP
+Reimplemented from \fBTerminalController\fP.
+.SS "void SpimConsoleDevice::ready_keyboard (int line)  throw ()\fC [protected, virtual]\fP"
+.PP
+Reimplemented from \fBTerminalController\fP.
+.SS "void SpimConsoleDevice::store_word (uint32 offset, uint32 data, \fBDeviceExc\fP * client)\fC [virtual]\fP"
+.PP
+Implements \fBDeviceMap\fP.
+.SS "void SpimConsoleDevice::unready_clock ()  throw ()\fC [virtual]\fP"
+.SS "void SpimConsoleDevice::unready_display (int line, char data)  throw ( std::bad_alloc )\fC [virtual]\fP"
+.PP
+Reimplemented from \fBTerminalController\fP.
+.SS "void SpimConsoleDevice::unready_keyboard (int line)  throw ()\fC [virtual]\fP"
+.PP
+Reimplemented from \fBTerminalController\fP.
+.SH "Member Data Documentation"
+.PP 
+.SS "bool \fBSpimConsoleDevice::clock_interrupt\fP\fC [protected]\fP"
+.SS "\fBState\fP \fBSpimConsoleDevice::clock_state\fP\fC [protected]\fP"
+.SS "const long \fBSpimConsoleDevice::CLOCK_TRIGGER_NS\fP = 1000 * 1000 *1000\fC [static, protected]\fP"
+.SS "bool \fBSpimConsoleDevice::display_interrupt_enable\fP[2]\fC [protected]\fP"
+.SS "const long \fBSpimConsoleDevice::DISPLAY_READY_DELAY_NS\fP = 40 * 1000 * 1000\fC [static, protected]\fP"
+.SS "bool \fBSpimConsoleDevice::keyboard_interrupt_enable\fP[2]\fC [protected]\fP"
+.SS "const long \fBSpimConsoleDevice::KEYBOARD_POLL_NS\fP = 400 * 1000\fC [static, protected]\fP"
+.SS "const long \fBSpimConsoleDevice::KEYBOARD_REPOLL_NS\fP = 40 * 1000 * 1000\fC [static, protected]\fP"
+.SS "\fBClockTrigger\fP* \fBSpimConsoleDevice::trigger\fP\fC [protected]\fP"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen from the source code.

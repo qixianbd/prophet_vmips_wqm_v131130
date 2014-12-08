@@ -1,0 +1,58 @@
+.TH "HaltDevice" 3 "18 Dec 2013" "Doxygen" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+HaltDevice \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <haltdev.h>\fP
+.PP
+Inherits \fBDeviceMap\fP.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBHaltDevice\fP (\fBvmips\fP *\fBmachine\fP)  throw ()"
+.br
+.ti -1c
+.RI "virtual \fB~HaltDevice\fP ()  throw ()"
+.br
+.ti -1c
+.RI "virtual uint32 \fBfetch_word\fP (uint32 offset, int mode, \fBDeviceExc\fP *client)"
+.br
+.ti -1c
+.RI "virtual void \fBstore_word\fP (uint32 offset, uint32 data, \fBDeviceExc\fP *client)"
+.br
+.ti -1c
+.RI "char * \fBdescriptor_str\fP ()"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBvmips\fP * \fBmachine\fP"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "HaltDevice::HaltDevice (\fBvmips\fP * machine)  throw ()"
+.SS "HaltDevice::~HaltDevice ()  throw ()\fC [virtual]\fP"
+.SH "Member Function Documentation"
+.PP 
+.SS "char * HaltDevice::descriptor_str (void)"
+.SS "uint32 HaltDevice::fetch_word (uint32 offset, int mode, \fBDeviceExc\fP * client)\fC [virtual]\fP"
+.PP
+Implements \fBDeviceMap\fP.
+.SS "void HaltDevice::store_word (uint32 offset, uint32 data, \fBDeviceExc\fP * client)\fC [virtual]\fP"
+.PP
+Implements \fBDeviceMap\fP.
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBvmips\fP* \fBHaltDevice::machine\fP\fC [protected]\fP"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen from the source code.

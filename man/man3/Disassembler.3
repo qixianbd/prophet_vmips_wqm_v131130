@@ -1,0 +1,48 @@
+.TH "Disassembler" 3 "18 Dec 2013" "Doxygen" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Disassembler \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <stub-dis.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDisassembler\fP (bool host_is_bigendian, FILE *stream)"
+.br
+.ti -1c
+.RI "\fB~Disassembler\fP ()"
+.br
+.ti -1c
+.RI "void \fBdisassemble\fP (uint32 pc, uint32 instr)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "struct disassemble_info \fBdisasm_info\fP"
+.br
+.ti -1c
+.RI "int(* \fBinsn_printer_func\fP )(unsigned long, struct disassemble_info *)"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Disassembler::Disassembler (bool host_is_bigendian, FILE * stream)"
+.SS "Disassembler::~Disassembler ()\fC [inline]\fP"
+.SH "Member Function Documentation"
+.PP 
+.SS "void Disassembler::disassemble (uint32 pc, uint32 instr)"
+.SH "Member Data Documentation"
+.PP 
+.SS "struct disassemble_info \fBDisassembler::disasm_info\fP\fC [private]\fP"
+.SS "int(* \fBDisassembler::insn_printer_func\fP)(unsigned long, struct disassemble_info *)\fC [private]\fP"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen from the source code.

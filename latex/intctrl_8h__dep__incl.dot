@@ -1,0 +1,48 @@
+digraph G
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node1 [label="intctrl.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir=back,color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="cpzero.cc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$cpzero_8cc.html"];
+  Node1 -> Node3 [dir=back,color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="deviceint.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$deviceint_8h.html"];
+  Node3 -> Node4 [dir=back,color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="clockdev.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$clockdev_8h.html"];
+  Node4 -> Node5 [dir=back,color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="vmips.cc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$vmips_8cc.html"];
+  Node5 -> Node5 [dir=back,color="midnightblue",fontsize="10",style="solid"];
+  Node3 -> Node6 [dir=back,color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="deccsr.cc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$deccsr_8cc.html"];
+  Node6 -> Node6 [dir=back,color="midnightblue",fontsize="10",style="solid"];
+  Node3 -> Node7 [dir=back,color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="deccsr.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$deccsr_8h.html"];
+  Node7 -> Node8 [dir=back,color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="decserial.cc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$decserial_8cc.html"];
+  Node8 -> Node8 [dir=back,color="midnightblue",fontsize="10",style="solid"];
+  Node7 -> Node5 [dir=back,color="midnightblue",fontsize="10",style="solid"];
+  Node3 -> Node9 [dir=back,color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="decrtc.cc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$decrtc_8cc.html"];
+  Node9 -> Node9 [dir=back,color="midnightblue",fontsize="10",style="solid"];
+  Node3 -> Node10 [dir=back,color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="decrtc.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$decrtc_8h.html"];
+  Node10 -> Node5 [dir=back,color="midnightblue",fontsize="10",style="solid"];
+  Node3 -> Node8 [dir=back,color="midnightblue",fontsize="10",style="solid"];
+  Node3 -> Node11 [dir=back,color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="decserial.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$decserial_8h.html"];
+  Node11 -> Node5 [dir=back,color="midnightblue",fontsize="10",style="solid"];
+  Node3 -> Node12 [dir=back,color="midnightblue",fontsize="10",style="solid"];
+  Node12 [label="deviceint.cc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$deviceint_8cc.html"];
+  Node3 -> Node13 [dir=back,color="midnightblue",fontsize="10",style="solid"];
+  Node13 [label="intctrl.cc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$intctrl_8cc.html"];
+  Node3 -> Node14 [dir=back,color="midnightblue",fontsize="10",style="solid"];
+  Node14 [label="spimconsole.cc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$spimconsole_8cc.html"];
+  Node14 -> Node14 [dir=back,color="midnightblue",fontsize="10",style="solid"];
+  Node3 -> Node15 [dir=back,color="midnightblue",fontsize="10",style="solid"];
+  Node15 [label="spimconsole.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$spimconsole_8h.html"];
+  Node15 -> Node5 [dir=back,color="midnightblue",fontsize="10",style="solid"];
+  Node1 -> Node13 [dir=back,color="midnightblue",fontsize="10",style="solid"];
+  Node1 -> Node16 [dir=back,color="midnightblue",fontsize="10",style="solid"];
+  Node16 [label="prophetfpu.cc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$prophetfpu_8cc.html"];
+  Node1 -> Node5 [dir=back,color="midnightblue",fontsize="10",style="solid"];
+}

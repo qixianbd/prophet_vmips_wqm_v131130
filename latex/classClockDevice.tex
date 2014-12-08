@@ -1,0 +1,97 @@
+\hypertarget{classClockDevice}{
+\section{ClockDevice Class Reference}
+\label{classClockDevice}\index{ClockDevice@{ClockDevice}}
+}
+Inheritance diagram for ClockDevice:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{classClockDevice}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classClockDevice_1_1ClockTrigger}{ClockTrigger}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classClockDevice_aba00ae8b6155e4b9e8570b8cbec432b6}{
+{\bfseries ClockDevice} (\hyperlink{classClock}{Clock} $\ast$clock, uint32 irq, long frequency\_\-ns)  throw ( std::bad\_\-alloc )}
+\label{classClockDevice_aba00ae8b6155e4b9e8570b8cbec432b6}
+
+\item 
+\hypertarget{classClockDevice_ac837bd6024524e14733fef9a3caf20bd}{
+virtual void {\bfseries ready\_\-clock} ()  throw ( std::bad\_\-alloc )}
+\label{classClockDevice_ac837bd6024524e14733fef9a3caf20bd}
+
+\item 
+\hypertarget{classClockDevice_a8fac0caef40e255d93162bdd0e2b0a63}{
+virtual uint32 {\bfseries fetch\_\-word} (uint32 offset, int mode, \hyperlink{classDeviceExc}{DeviceExc} $\ast$client)}
+\label{classClockDevice_a8fac0caef40e255d93162bdd0e2b0a63}
+
+\item 
+\hypertarget{classClockDevice_a87082836fc257de250ad4612ff50a281}{
+virtual void {\bfseries store\_\-word} (uint32 offset, uint32 data, \hyperlink{classDeviceExc}{DeviceExc} $\ast$client)}
+\label{classClockDevice_a87082836fc257de250ad4612ff50a281}
+
+\item 
+\hypertarget{classClockDevice_afb660217da1d9ce3142df8ffd04e6569}{
+virtual const char $\ast$ {\bfseries descriptor\_\-str} () const }
+\label{classClockDevice_afb660217da1d9ce3142df8ffd04e6569}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bfseries State} \{ {\bfseries UNREADY} =  0, 
+{\bfseries READY} =  CTL\_\-RDY
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classClockDevice_aad402cce484ce8c1fc8730029022a730}{
+virtual void {\bfseries unready\_\-clock} ()  throw ()}
+\label{classClockDevice_aad402cce484ce8c1fc8730029022a730}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classClockDevice_a43d305efaa3b4ce21fec56209b77b936}{
+const uint32 {\bfseries irq}}
+\label{classClockDevice_a43d305efaa3b4ce21fec56209b77b936}
+
+\item 
+\hypertarget{classClockDevice_a0b398fdd22019bbac72426bcd035731b}{
+const long {\bfseries frequency\_\-ns}}
+\label{classClockDevice_a0b398fdd22019bbac72426bcd035731b}
+
+\item 
+\hypertarget{classClockDevice_a7d249ac5fcd2bab6dced445926363eaf}{
+\hyperlink{classClock}{Clock} $\ast$ {\bfseries clock}}
+\label{classClockDevice_a7d249ac5fcd2bab6dced445926363eaf}
+
+\item 
+\hypertarget{classClockDevice_a59429aef5d33a07cd1bf72ecb743c956}{
+\hyperlink{classClockDevice_1_1ClockTrigger}{ClockTrigger} $\ast$ {\bfseries clock\_\-trigger}}
+\label{classClockDevice_a59429aef5d33a07cd1bf72ecb743c956}
+
+\item 
+\hypertarget{classClockDevice_ac166cba15b49be2b29f3d6d7cd7da087}{
+State {\bfseries clock\_\-state}}
+\label{classClockDevice_ac166cba15b49be2b29f3d6d7cd7da087}
+
+\item 
+\hypertarget{classClockDevice_aee58d6b7d301a0791a511002d2ead157}{
+bool {\bfseries interrupt\_\-enabled}}
+\label{classClockDevice_aee58d6b7d301a0791a511002d2ead157}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+clockdev.h\item 
+clockdev.cc\end{DoxyCompactItemize}

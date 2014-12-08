@@ -1,0 +1,29 @@
+digraph G
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir=LR;
+  Node1 [label="vmips::setup_ram",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="vmips::boot_msg",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classvmips.html#a2e203897ea48f719ff7a3a1007fcf0fe"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="Range::getAddress",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classRange.html#accb1e300390e551b7b35408413aa99b5"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="Range::getBase",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classRange.html#ab4b6e3925cd4559eb8879deed47cb806"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="Range::getExtent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classRange.html#addefe753334150b3cbaca2d5f157f17b"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="Mapper::map_at_physical_address",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classMapper.html#a1c30883b6490a8283f4dab8dfe797860"];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="Mapper::add_range",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classMapper.html#a8733fffed63e13e9a0584d2e3c85d0b4"];
+  Node7 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="error",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$error_8cc.html#a158a1af99275c1555bf5fcc74709aa5a"];
+  Node8 -> Node9 [color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="format_help",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$error_8cc.html#aa182c84a77010100b5b8a15b1ff22e70"];
+  Node7 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 -> Node10 [color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="Range::overlaps",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classRange.html#a73ad70c479cc77fcf6cb65a8da2993cb"];
+  Node6 -> Node11 [color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="Range::setBase",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classRange.html#a5f60a7e0ad9e6d61d86b82163a78f776"];
+}

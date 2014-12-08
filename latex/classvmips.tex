@@ -1,0 +1,387 @@
+\hypertarget{classvmips}{
+\section{vmips Class Reference}
+\label{classvmips}\index{vmips@{vmips}}
+}
+Inheritance diagram for vmips:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classvmips}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classvmips_a637840190b95211ff10a780e03a9e528}{
+void {\bfseries refresh\_\-options} (void)}
+\label{classvmips_a637840190b95211ff10a780e03a9e528}
+
+\item 
+\hypertarget{classvmips_a7b5449e9f0ba819a3a3364222c8d31d3}{
+{\bfseries vmips} (int argc, char $\ast$$\ast$argv)}
+\label{classvmips_a7b5449e9f0ba819a3a3364222c8d31d3}
+
+\item 
+\hypertarget{classvmips_a69ec3a670b86d802f91157dc791b4617}{
+virtual void {\bfseries setup\_\-machine} (void)}
+\label{classvmips_a69ec3a670b86d802f91157dc791b4617}
+
+\item 
+\hypertarget{classvmips_aa8d4ad6d657ddb10b54b6281a31b0a1c}{
+void {\bfseries randomize} (void)}
+\label{classvmips_aa8d4ad6d657ddb10b54b6281a31b0a1c}
+
+\item 
+\hypertarget{classvmips_a59555b31b9b80731838b73a9fb6d9166}{
+void {\bfseries halt} (void)  throw ()}
+\label{classvmips_a59555b31b9b80731838b73a9fb6d9166}
+
+\item 
+\hypertarget{classvmips_a9d9b546b6cdabd0e813dd7cf8e6a9a12}{
+int {\bfseries host\_\-endian\_\-selftest} (void)}
+\label{classvmips_a9d9b546b6cdabd0e813dd7cf8e6a9a12}
+
+\item 
+\hypertarget{classvmips_a6ba4b580d4069985bcac2dfa653bda2c}{
+virtual void {\bfseries step} (void)}
+\label{classvmips_a6ba4b580d4069985bcac2dfa653bda2c}
+
+\item 
+\hypertarget{classvmips_adf103ab6badbdd18cdd22ba98ac8d9f4}{
+virtual int {\bfseries run} (void)}
+\label{classvmips_adf103ab6badbdd18cdd22ba98ac8d9f4}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classvmips_a4354f7aef601f61d923f8794e73d17aa}{
+static uint32 {\bfseries get\_\-file\_\-size} (FILE $\ast$fp)  throw ()}
+\label{classvmips_a4354f7aef601f61d923f8794e73d17aa}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classvmips_a205bf9dd1afc05f8472862411c5662bc}{
+\hyperlink{classMapper}{Mapper} $\ast$ {\bfseries physmem}}
+\label{classvmips_a205bf9dd1afc05f8472862411c5662bc}
+
+\item 
+\hypertarget{classvmips_a894fc31ccd3e941302d94bfa1ed4ccf2}{
+\hyperlink{classCPU}{CPU} $\ast$ {\bfseries cpu}}
+\label{classvmips_a894fc31ccd3e941302d94bfa1ed4ccf2}
+
+\item 
+\hypertarget{classvmips_a8181ed4a2475f6f46c100e864b43223c}{
+\hyperlink{classIntCtrl}{IntCtrl} $\ast$ {\bfseries intc}}
+\label{classvmips_a8181ed4a2475f6f46c100e864b43223c}
+
+\item 
+\hypertarget{classvmips_a553a8e8bf5c557ab9bf66bd643e7e8b5}{
+\hyperlink{classOptions}{Options} $\ast$ {\bfseries opt}}
+\label{classvmips_a553a8e8bf5c557ab9bf66bd643e7e8b5}
+
+\item 
+\hypertarget{classvmips_ab9df9188bbd2505338201a19552c0cb7}{
+\hyperlink{classMemoryModule}{MemoryModule} $\ast$ {\bfseries memmod}}
+\label{classvmips_ab9df9188bbd2505338201a19552c0cb7}
+
+\item 
+\hypertarget{classvmips_af4540ce57a78b02824f91ab26033e388}{
+\hyperlink{classDebug}{Debug} $\ast$ {\bfseries dbgr}}
+\label{classvmips_af4540ce57a78b02824f91ab26033e388}
+
+\item 
+\hypertarget{classvmips_a6882445296ef06c42b790ca04b9174ab}{
+\hyperlink{classDisassembler}{Disassembler} $\ast$ {\bfseries disasm}}
+\label{classvmips_a6882445296ef06c42b790ca04b9174ab}
+
+\item 
+\hypertarget{classvmips_a8e30b10692502c8dd15d53204fd7b9d5}{
+bool {\bfseries host\_\-bigendian}}
+\label{classvmips_a8e30b10692502c8dd15d53204fd7b9d5}
+
+\item 
+\hypertarget{classvmips_a302365e929db9b1a3a9fc11d2bea5c56}{
+bool {\bfseries halted}}
+\label{classvmips_a302365e929db9b1a3a9fc11d2bea5c56}
+
+\item 
+\hypertarget{classvmips_a514ae1b7c652d4a60afc146d5043b0a0}{
+\hyperlink{classDECCSRDevice}{DECCSRDevice} $\ast$ {\bfseries deccsr\_\-device}}
+\label{classvmips_a514ae1b7c652d4a60afc146d5043b0a0}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classvmips_a2e203897ea48f719ff7a3a1007fcf0fe}{
+virtual void {\bfseries boot\_\-msg} (const char $\ast$msg,...)  throw ()}
+\label{classvmips_a2e203897ea48f719ff7a3a1007fcf0fe}
+
+\item 
+\hypertarget{classvmips_ab3966b7e461c76e01e1794c2302c1264}{
+virtual bool {\bfseries setup\_\-spimconsole} ()  throw (std::bad\_\-alloc)}
+\label{classvmips_ab3966b7e461c76e01e1794c2302c1264}
+
+\item 
+\hypertarget{classvmips_a1690e2f7dc015006579396258fc9ec09}{
+virtual bool {\bfseries setup\_\-clockdevice} ()  throw ( std::bad\_\-alloc )}
+\label{classvmips_a1690e2f7dc015006579396258fc9ec09}
+
+\item 
+\hypertarget{classvmips_aaca514986ff2099e5b2749b38b5b83de}{
+virtual bool {\bfseries setup\_\-decrtc} ()  throw ( std::bad\_\-alloc )}
+\label{classvmips_aaca514986ff2099e5b2749b38b5b83de}
+
+\item 
+\hypertarget{classvmips_a11077bfbc7b6851733526afcd6bc0511}{
+virtual bool {\bfseries setup\_\-deccsr} ()  throw ( std::bad\_\-alloc )}
+\label{classvmips_a11077bfbc7b6851733526afcd6bc0511}
+
+\item 
+\hypertarget{classvmips_a064bd152d3a1a003f9190cfec219fd48}{
+virtual bool {\bfseries setup\_\-decstat} ()  throw ( std::bad\_\-alloc )}
+\label{classvmips_a064bd152d3a1a003f9190cfec219fd48}
+
+\item 
+\hypertarget{classvmips_a6f7b8aacf8a8ab3ff1b58f0c4e7e2450}{
+virtual bool {\bfseries setup\_\-decserial} ()  throw ( std::bad\_\-alloc )}
+\label{classvmips_a6f7b8aacf8a8ab3ff1b58f0c4e7e2450}
+
+\item 
+\hypertarget{classvmips_adaf982c53a952510e342b6c20f6a07fa}{
+virtual bool {\bfseries setup\_\-rom} ()}
+\label{classvmips_adaf982c53a952510e342b6c20f6a07fa}
+
+\item 
+\hypertarget{classvmips_affc49823a8f7c7b01313208eeab24958}{
+virtual bool {\bfseries setup\_\-exe} ()}
+\label{classvmips_affc49823a8f7c7b01313208eeab24958}
+
+\item 
+\hypertarget{classvmips_a1174dbe6a6e0318145c2aeaee01c4a93}{
+bool {\bfseries load\_\-elf} (FILE $\ast$fp)}
+\label{classvmips_a1174dbe6a6e0318145c2aeaee01c4a93}
+
+\item 
+\hypertarget{classvmips_a4476a0bc2039e7a43ec2208d7ae5addb}{
+bool {\bfseries load\_\-ecoff} (FILE $\ast$fp)}
+\label{classvmips_a4476a0bc2039e7a43ec2208d7ae5addb}
+
+\item 
+char $\ast$ \hyperlink{classvmips_aca7c30f28c9be1cbf9d0780d66d3393c}{translate\_\-to\_\-host\_\-ram\_\-pointer} (uint32 vaddr)
+\item 
+\hypertarget{classvmips_a8374e36944913b2a41f9a72bef18f691}{
+virtual bool {\bfseries setup\_\-ram} ()  throw (std::bad\_\-alloc)}
+\label{classvmips_a8374e36944913b2a41f9a72bef18f691}
+
+\item 
+\hypertarget{classvmips_a2ede92940f80c240d6550987d280a39b}{
+virtual bool {\bfseries setup\_\-clock} ()  throw (std::bad\_\-alloc)}
+\label{classvmips_a2ede92940f80c240d6550987d280a39b}
+
+\item 
+\hypertarget{classvmips_a441e17463fe05a71a960e1f98f11019b}{
+virtual void {\bfseries setup\_\-console\_\-line} (int l, char $\ast$name, \hyperlink{classTerminalController}{TerminalController} $\ast$c, const char $\ast$c\_\-name)  throw ()}
+\label{classvmips_a441e17463fe05a71a960e1f98f11019b}
+
+\item 
+\hypertarget{classvmips_ace907fda17fe54e632f871ba19405744}{
+bool {\bfseries setup\_\-haltdevice} ()  throw ( std::bad\_\-alloc )}
+\label{classvmips_ace907fda17fe54e632f871ba19405744}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classvmips_a0953c7ad4349b5cf5c4396b0b85d6aba}{
+\hyperlink{classClock}{Clock} $\ast$ {\bfseries clock}}
+\label{classvmips_a0953c7ad4349b5cf5c4396b0b85d6aba}
+
+\item 
+\hypertarget{classvmips_a5434d8b73ef3d316e3c7c254ef445028}{
+\hyperlink{classClockDevice}{ClockDevice} $\ast$ {\bfseries clock\_\-device}}
+\label{classvmips_a5434d8b73ef3d316e3c7c254ef445028}
+
+\item 
+\hypertarget{classvmips_a1e36783bf8b1e79e8b6d5b34feaf12db}{
+\hyperlink{classHaltDevice}{HaltDevice} $\ast$ {\bfseries halt\_\-device}}
+\label{classvmips_a1e36783bf8b1e79e8b6d5b34feaf12db}
+
+\item 
+\hypertarget{classvmips_aa51d2bbd33d18409ff22698c4cd6f924}{
+\hyperlink{classSpimConsoleDevice}{SpimConsoleDevice} $\ast$ {\bfseries spim\_\-console}}
+\label{classvmips_aa51d2bbd33d18409ff22698c4cd6f924}
+
+\item 
+\hypertarget{classvmips_ae94fc21627cb58c51d2924ac34fc159a}{
+\hyperlink{classDECRTCDevice}{DECRTCDevice} $\ast$ {\bfseries decrtc\_\-device}}
+\label{classvmips_ae94fc21627cb58c51d2924ac34fc159a}
+
+\item 
+\hypertarget{classvmips_a65a336362e2697c44e29ac552956e601}{
+\hyperlink{classDECStatDevice}{DECStatDevice} $\ast$ {\bfseries decstat\_\-device}}
+\label{classvmips_a65a336362e2697c44e29ac552956e601}
+
+\item 
+\hypertarget{classvmips_ac048b9d198c5c6aa60bd08b1cae9c589}{
+\hyperlink{classDECSerialDevice}{DECSerialDevice} $\ast$ {\bfseries decserial\_\-device}}
+\label{classvmips_ac048b9d198c5c6aa60bd08b1cae9c589}
+
+\item 
+\hypertarget{classvmips_a562fa4cb239eac6ea40f91acd5be8842}{
+bool {\bfseries opt\_\-bootmsg}}
+\label{classvmips_a562fa4cb239eac6ea40f91acd5be8842}
+
+\item 
+\hypertarget{classvmips_a0b4556b2e97d14a33240e6712700fea2}{
+bool {\bfseries opt\_\-clockdevice}}
+\label{classvmips_a0b4556b2e97d14a33240e6712700fea2}
+
+\item 
+\hypertarget{classvmips_ae17758697d6d44d04f19a9f269ccadbe}{
+bool {\bfseries opt\_\-debug}}
+\label{classvmips_ae17758697d6d44d04f19a9f269ccadbe}
+
+\item 
+\hypertarget{classvmips_a46e7e40fb65be2d316f8b317e63f849c}{
+bool {\bfseries opt\_\-dumpcpu}}
+\label{classvmips_a46e7e40fb65be2d316f8b317e63f849c}
+
+\item 
+\hypertarget{classvmips_add942d2c47c4dbb52336775165019697}{
+bool {\bfseries opt\_\-dumpcp0}}
+\label{classvmips_add942d2c47c4dbb52336775165019697}
+
+\item 
+\hypertarget{classvmips_a50549bb2d6a97523ad12ba30cf5b71f7}{
+bool {\bfseries opt\_\-haltdevice}}
+\label{classvmips_a50549bb2d6a97523ad12ba30cf5b71f7}
+
+\item 
+\hypertarget{classvmips_a4a6b2c9d6271460231b461d93027a3e8}{
+bool {\bfseries opt\_\-haltdumpcpu}}
+\label{classvmips_a4a6b2c9d6271460231b461d93027a3e8}
+
+\item 
+\hypertarget{classvmips_aeadd614ab54a14c44976cfb6ff1e945a}{
+bool {\bfseries opt\_\-haltdumpcp0}}
+\label{classvmips_aeadd614ab54a14c44976cfb6ff1e945a}
+
+\item 
+\hypertarget{classvmips_adf13dd6895b81ce6070edf9aebde1cc2}{
+bool {\bfseries opt\_\-instcounts}}
+\label{classvmips_adf13dd6895b81ce6070edf9aebde1cc2}
+
+\item 
+\hypertarget{classvmips_a241d92d606f1578fbd7d8a965adffbf4}{
+bool {\bfseries opt\_\-memdump}}
+\label{classvmips_a241d92d606f1578fbd7d8a965adffbf4}
+
+\item 
+\hypertarget{classvmips_a67853be6d92b63df5be4ab5f995af92c}{
+bool {\bfseries opt\_\-realtime}}
+\label{classvmips_a67853be6d92b63df5be4ab5f995af92c}
+
+\item 
+\hypertarget{classvmips_a6d1bbb851cbd3f42e345c53168885d67}{
+bool {\bfseries opt\_\-decrtc}}
+\label{classvmips_a6d1bbb851cbd3f42e345c53168885d67}
+
+\item 
+\hypertarget{classvmips_ad4fad72fddd561a9b911ff1517f2d0e2}{
+bool {\bfseries opt\_\-deccsr}}
+\label{classvmips_ad4fad72fddd561a9b911ff1517f2d0e2}
+
+\item 
+\hypertarget{classvmips_afd847beb4fd38de8749d64b08484c74c}{
+bool {\bfseries opt\_\-decstat}}
+\label{classvmips_afd847beb4fd38de8749d64b08484c74c}
+
+\item 
+\hypertarget{classvmips_a1c0b2005865aa0fef47900fd15f0f101}{
+bool {\bfseries opt\_\-decserial}}
+\label{classvmips_a1c0b2005865aa0fef47900fd15f0f101}
+
+\item 
+\hypertarget{classvmips_ac83c39cf33c020edc6a4ecb62b83fd66}{
+bool {\bfseries opt\_\-spimconsole}}
+\label{classvmips_ac83c39cf33c020edc6a4ecb62b83fd66}
+
+\item 
+\hypertarget{classvmips_a509accc98158cb32497aaa73c064f5ad}{
+uint32 {\bfseries opt\_\-clockspeed}}
+\label{classvmips_a509accc98158cb32497aaa73c064f5ad}
+
+\item 
+\hypertarget{classvmips_a0233d4fb0ecc150e915c8df3b86d6c7a}{
+uint32 {\bfseries clock\_\-nanos}}
+\label{classvmips_a0233d4fb0ecc150e915c8df3b86d6c7a}
+
+\item 
+\hypertarget{classvmips_ac0d668e4be7fbe09a58bc2212c9364b7}{
+uint32 {\bfseries opt\_\-clockintr}}
+\label{classvmips_ac0d668e4be7fbe09a58bc2212c9364b7}
+
+\item 
+\hypertarget{classvmips_af1707a050c33609fc873632e1a9a7f38}{
+uint32 {\bfseries opt\_\-clockdeviceirq}}
+\label{classvmips_af1707a050c33609fc873632e1a9a7f38}
+
+\item 
+\hypertarget{classvmips_ad10ae1ddb3f0f3e6f8c8d6702c04cca9}{
+uint32 {\bfseries opt\_\-loadaddr}}
+\label{classvmips_ad10ae1ddb3f0f3e6f8c8d6702c04cca9}
+
+\item 
+\hypertarget{classvmips_a6c58f9361ce92d3286ad2f26ede4c5b8}{
+uint32 {\bfseries opt\_\-memsize}}
+\label{classvmips_a6c58f9361ce92d3286ad2f26ede4c5b8}
+
+\item 
+\hypertarget{classvmips_aced781c93879f5a69c4721753a35949a}{
+uint32 {\bfseries opt\_\-timeratio}}
+\label{classvmips_aced781c93879f5a69c4721753a35949a}
+
+\item 
+\hypertarget{classvmips_a52bbd49d9f9198be2774298f9822c6b9}{
+char $\ast$ {\bfseries opt\_\-image}}
+\label{classvmips_a52bbd49d9f9198be2774298f9822c6b9}
+
+\item 
+\hypertarget{classvmips_a85a78486d34873c71b5a38ec0d7c95cd}{
+char $\ast$ {\bfseries opt\_\-execname}}
+\label{classvmips_a85a78486d34873c71b5a38ec0d7c95cd}
+
+\item 
+\hypertarget{classvmips_a8cd1c860c1cb22767a3778330f18cdcc}{
+char $\ast$ {\bfseries opt\_\-memdumpfile}}
+\label{classvmips_a8cd1c860c1cb22767a3778330f18cdcc}
+
+\item 
+\hypertarget{classvmips_a174b8c59d240d8d8c69b07ae34d2b896}{
+char $\ast$ {\bfseries opt\_\-ttydev}}
+\label{classvmips_a174b8c59d240d8d8c69b07ae34d2b896}
+
+\item 
+\hypertarget{classvmips_ab9e2192b3fe2b29179fa01142055e2a6}{
+char $\ast$ {\bfseries opt\_\-ttydev2}}
+\label{classvmips_ab9e2192b3fe2b29179fa01142055e2a6}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classvmips_aca7c30f28c9be1cbf9d0780d66d3393c}{
+\index{vmips@{vmips}!translate\_\-to\_\-host\_\-ram\_\-pointer@{translate\_\-to\_\-host\_\-ram\_\-pointer}}
+\index{translate\_\-to\_\-host\_\-ram\_\-pointer@{translate\_\-to\_\-host\_\-ram\_\-pointer}!vmips@{vmips}}
+\subsubsection[{translate\_\-to\_\-host\_\-ram\_\-pointer}]{\setlength{\rightskip}{0pt plus 5cm}char $\ast$ vmips::translate\_\-to\_\-host\_\-ram\_\-pointer (uint32 {\em vaddr})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classvmips_aca7c30f28c9be1cbf9d0780d66d3393c}
+Translate vaddr to a physical address, then return a host-\/machine pointer to where it is in the simulated machine's RAM. vaddr must be in one of the non-\/mapped kernel-\/mode segments (KSEG0 or KSEG1), and it must be within the bounds of the simulated machine's physical RAM. Otherwise a null pointer is returned. 
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+vmips.h\item 
+exeloader.cc\item 
+vmips.cc\end{DoxyCompactItemize}

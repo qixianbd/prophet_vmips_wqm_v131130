@@ -1,0 +1,20 @@
+digraph G
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir=LR;
+  Node1 [label="vmips::load_ecoff",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="error",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$error_8cc.html#a158a1af99275c1555bf5fcc74709aa5a"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="format_help",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$error_8cc.html#aa182c84a77010100b5b8a15b1ff22e70"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="vmips::translate_to_host_ram_pointer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classvmips.html#aca7c30f28c9be1cbf9d0780d66d3393c"];
+  Node4 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="Range::getAddress",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classRange.html#accb1e300390e551b7b35408413aa99b5"];
+  Node4 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="Range::getBase",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classRange.html#ab4b6e3925cd4559eb8879deed47cb806"];
+  Node4 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="Range::incorporates",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classRange.html#a5076637f68d20251b9800db6a1922ca7"];
+}

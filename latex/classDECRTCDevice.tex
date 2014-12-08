@@ -1,0 +1,49 @@
+\hypertarget{classDECRTCDevice}{
+\section{DECRTCDevice Class Reference}
+\label{classDECRTCDevice}\index{DECRTCDevice@{DECRTCDevice}}
+}
+Inheritance diagram for DECRTCDevice:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{classDECRTCDevice}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classDECRTCDevice_1_1ClockTrigger}{ClockTrigger}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classDECRTCDevice_a1f73f358dc6fb4714cb983696a549a94}{
+{\bfseries DECRTCDevice} (\hyperlink{classClock}{Clock} $\ast$\_\-clock, uint32 \_\-irq)}
+\label{classDECRTCDevice_a1f73f358dc6fb4714cb983696a549a94}
+
+\item 
+\hypertarget{classDECRTCDevice_a89869f71b157a3c6c81a7be897d0e223}{
+uint32 {\bfseries fetch\_\-word} (uint32 offset, int mode, \hyperlink{classDeviceExc}{DeviceExc} $\ast$client)}
+\label{classDECRTCDevice_a89869f71b157a3c6c81a7be897d0e223}
+
+\item 
+\hypertarget{classDECRTCDevice_ad9c476569ab6e229da0ecb9e610f4efb}{
+void {\bfseries store\_\-word} (uint32 offset, uint32 data, \hyperlink{classDeviceExc}{DeviceExc} $\ast$client)}
+\label{classDECRTCDevice_ad9c476569ab6e229da0ecb9e610f4efb}
+
+\item 
+\hypertarget{classDECRTCDevice_a0e319a33e2e91b94f787a4043b796baa}{
+const char $\ast$ {\bfseries descriptor\_\-str} () const }
+\label{classDECRTCDevice_a0e319a33e2e91b94f787a4043b796baa}
+
+\item 
+\hypertarget{classDECRTCDevice_a1e79a0b3fecf8a717dee6454c1f830e0}{
+void {\bfseries ready\_\-clock} ()}
+\label{classDECRTCDevice_a1e79a0b3fecf8a717dee6454c1f830e0}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+decrtc.h\item 
+decrtc.cc\end{DoxyCompactItemize}

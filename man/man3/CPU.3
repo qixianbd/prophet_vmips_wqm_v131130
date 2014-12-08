@@ -1,0 +1,642 @@
+.TH "CPU" 3 "18 Dec 2013" "Doxygen" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+CPU \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <cpu.h>\fP
+.PP
+Inherits \fBDeviceExc\fP.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "uint16 \fBopcode\fP (const uint32 \fBinstr\fP) const "
+.br
+.ti -1c
+.RI "uint16 \fBrs\fP (const uint32 \fBinstr\fP) const "
+.br
+.ti -1c
+.RI "uint16 \fBrt\fP (const uint32 \fBinstr\fP) const "
+.br
+.ti -1c
+.RI "uint16 \fBrd\fP (const uint32 \fBinstr\fP) const "
+.br
+.ti -1c
+.RI "uint16 \fBimmed\fP (const uint32 \fBinstr\fP) const "
+.br
+.ti -1c
+.RI "uint16 \fBshamt\fP (const uint32 \fBinstr\fP) const "
+.br
+.ti -1c
+.RI "uint16 \fBfunct\fP (const uint32 \fBinstr\fP) const "
+.br
+.ti -1c
+.RI "uint32 \fBjumptarg\fP (const uint32 \fBinstr\fP) const "
+.br
+.ti -1c
+.RI "int16 \fBs_immed\fP (const uint32 \fBinstr\fP) const "
+.br
+.ti -1c
+.RI "uint32 \fBstacktop\fP () const "
+.br
+.ti -1c
+.RI "\fBCPU\fP (\fBMapper\fP &m, \fBIntCtrl\fP &i)"
+.br
+.ti -1c
+.RI "virtual void \fBdump_regs\fP (FILE *f)"
+.br
+.ti -1c
+.RI "virtual void \fBdump_regs_and_stack\fP (FILE *f)"
+.br
+.ti -1c
+.RI "virtual void \fBcpzero_dump_regs_and_tlb\fP (FILE *f)"
+.br
+.ti -1c
+.RI "virtual void \fBstep\fP ()"
+.br
+.ti -1c
+.RI "char *const \fBstrexccode\fP (const uint16 excCode)"
+.br
+.ti -1c
+.RI "char *const \fBstrdelaystate\fP (const int state)"
+.br
+.ti -1c
+.RI "char *const \fBstrmemmode\fP (const int memmode)"
+.br
+.ti -1c
+.RI "virtual void \fBexception\fP (uint16 excCode, int mode=ANY, int coprocno=-1)"
+.br
+.ti -1c
+.RI "virtual void \fBreset\fP (void)"
+.br
+.ti -1c
+.RI "void \fBmaybe_dump_trace\fP ()"
+.br
+.ti -1c
+.RI "char * \fBdebug_registers_to_packet\fP (void)"
+.br
+.ti -1c
+.RI "void \fBdebug_packet_to_registers\fP (char *packet)"
+.br
+.ti -1c
+.RI "uint8 \fBpending_exception\fP (void)"
+.br
+.ti -1c
+.RI "uint32 \fBdebug_get_pc\fP (void)"
+.br
+.ti -1c
+.RI "void \fBdebug_set_pc\fP (uint32 newpc)"
+.br
+.ti -1c
+.RI "void \fBdebug_packet_push_word\fP (char *packet, uint32 n)"
+.br
+.ti -1c
+.RI "void \fBdebug_packet_push_byte\fP (char *packet, uint8 n)"
+.br
+.ti -1c
+.RI "int \fBdebug_fetch_region\fP (uint32 addr, uint32 len, char *packet, \fBDeviceExc\fP *client)"
+.br
+.ti -1c
+.RI "int \fBdebug_store_region\fP (uint32 addr, uint32 len, char *packet, \fBDeviceExc\fP *client)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static int32 \fBsrl\fP (int32, int32)"
+.br
+.ti -1c
+.RI "static int32 \fBsra\fP (int32, int32)"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBstart_tracing\fP ()"
+.br
+.ti -1c
+.RI "void \fBwrite_trace_to_file\fP ()"
+.br
+.ti -1c
+.RI "void \fBwrite_trace_instr_inputs\fP (uint32 \fBinstr\fP)"
+.br
+.ti -1c
+.RI "void \fBwrite_trace_instr_outputs\fP (uint32 \fBinstr\fP)"
+.br
+.ti -1c
+.RI "void \fBwrite_trace_record_1\fP (uint32 \fBpc\fP, uint32 \fBinstr\fP)"
+.br
+.ti -1c
+.RI "void \fBwrite_trace_record_2\fP (uint32 \fBpc\fP, uint32 \fBinstr\fP)"
+.br
+.ti -1c
+.RI "void \fBstop_tracing\fP ()"
+.br
+.ti -1c
+.RI "virtual \fB~CPU\fP ()"
+.br
+.ti -1c
+.RI "int \fBexception_priority\fP (uint16 excCode, int mode)"
+.br
+.ti -1c
+.RI "uint32 \fBcalc_jump_target\fP (uint32 \fBinstr\fP, uint32 \fBpc\fP)"
+.br
+.ti -1c
+.RI "void \fBbranch\fP (uint32 \fBinstr\fP, uint32 \fBpc\fP)"
+.br
+.ti -1c
+.RI "void \fBmult64\fP (uint32 *\fBhi\fP, uint32 *\fBlo\fP, uint32 n, uint32 m)"
+.br
+.ti -1c
+.RI "void \fBmult64s\fP (uint32 *\fBhi\fP, uint32 *\fBlo\fP, int32 n, int32 m)"
+.br
+.ti -1c
+.RI "void \fBcop_unimpl\fP (int coprocno, uint32 \fBinstr\fP, uint32 \fBpc\fP)"
+.br
+.ti -1c
+.RI "uint32 \fBlwr\fP (uint32 regval, uint32 memval, uint8 offset)"
+.br
+.ti -1c
+.RI "uint32 \fBlwl\fP (uint32 regval, uint32 memval, uint8 offset)"
+.br
+.ti -1c
+.RI "uint32 \fBswl\fP (uint32 regval, uint32 memval, uint8 offset)"
+.br
+.ti -1c
+.RI "uint32 \fBswr\fP (uint32 regval, uint32 memval, uint8 offset)"
+.br
+.ti -1c
+.RI "virtual void \fBfunct_emulate\fP (uint32 \fBinstr\fP, uint32 \fBpc\fP)"
+.br
+.ti -1c
+.RI "virtual void \fBregimm_emulate\fP (uint32 \fBinstr\fP, uint32 \fBpc\fP)"
+.br
+.ti -1c
+.RI "virtual void \fBj_emulate\fP (uint32 \fBinstr\fP, uint32 \fBpc\fP)"
+.br
+.ti -1c
+.RI "virtual void \fBjal_emulate\fP (uint32 \fBinstr\fP, uint32 \fBpc\fP)"
+.br
+.ti -1c
+.RI "virtual void \fBbeq_emulate\fP (uint32 \fBinstr\fP, uint32 \fBpc\fP)"
+.br
+.ti -1c
+.RI "virtual void \fBbne_emulate\fP (uint32 \fBinstr\fP, uint32 \fBpc\fP)"
+.br
+.ti -1c
+.RI "virtual void \fBblez_emulate\fP (uint32 \fBinstr\fP, uint32 \fBpc\fP)"
+.br
+.ti -1c
+.RI "virtual void \fBbgtz_emulate\fP (uint32 \fBinstr\fP, uint32 \fBpc\fP)"
+.br
+.ti -1c
+.RI "virtual void \fBaddi_emulate\fP (uint32 \fBinstr\fP, uint32 \fBpc\fP)"
+.br
+.ti -1c
+.RI "virtual void \fBaddiu_emulate\fP (uint32 \fBinstr\fP, uint32 \fBpc\fP)"
+.br
+.ti -1c
+.RI "virtual void \fBslti_emulate\fP (uint32 \fBinstr\fP, uint32 \fBpc\fP)"
+.br
+.ti -1c
+.RI "virtual void \fBsltiu_emulate\fP (uint32 \fBinstr\fP, uint32 \fBpc\fP)"
+.br
+.ti -1c
+.RI "virtual void \fBandi_emulate\fP (uint32 \fBinstr\fP, uint32 \fBpc\fP)"
+.br
+.ti -1c
+.RI "virtual void \fBori_emulate\fP (uint32 \fBinstr\fP, uint32 \fBpc\fP)"
+.br
+.ti -1c
+.RI "virtual void \fBxori_emulate\fP (uint32 \fBinstr\fP, uint32 \fBpc\fP)"
+.br
+.ti -1c
+.RI "virtual void \fBlui_emulate\fP (uint32 \fBinstr\fP, uint32 \fBpc\fP)"
+.br
+.ti -1c
+.RI "virtual void \fBcpzero_emulate\fP (uint32 \fBinstr\fP, uint32 \fBpc\fP)"
+.br
+.ti -1c
+.RI "virtual void \fBcpone_emulate\fP (uint32 \fBinstr\fP, uint32 \fBpc\fP)"
+.br
+.ti -1c
+.RI "virtual void \fBcptwo_emulate\fP (uint32 \fBinstr\fP, uint32 \fBpc\fP)"
+.br
+.ti -1c
+.RI "virtual void \fBcpthree_emulate\fP (uint32 \fBinstr\fP, uint32 \fBpc\fP)"
+.br
+.ti -1c
+.RI "virtual void \fBlb_emulate\fP (uint32 \fBinstr\fP, uint32 \fBpc\fP)"
+.br
+.ti -1c
+.RI "virtual void \fBlh_emulate\fP (uint32 \fBinstr\fP, uint32 \fBpc\fP)"
+.br
+.ti -1c
+.RI "virtual void \fBlwl_emulate\fP (uint32 \fBinstr\fP, uint32 \fBpc\fP)"
+.br
+.ti -1c
+.RI "virtual void \fBlw_emulate\fP (uint32 \fBinstr\fP, uint32 \fBpc\fP)"
+.br
+.ti -1c
+.RI "virtual void \fBlbu_emulate\fP (uint32 \fBinstr\fP, uint32 \fBpc\fP)"
+.br
+.ti -1c
+.RI "virtual void \fBlhu_emulate\fP (uint32 \fBinstr\fP, uint32 \fBpc\fP)"
+.br
+.ti -1c
+.RI "virtual void \fBlwr_emulate\fP (uint32 \fBinstr\fP, uint32 \fBpc\fP)"
+.br
+.ti -1c
+.RI "virtual void \fBsb_emulate\fP (uint32 \fBinstr\fP, uint32 \fBpc\fP)"
+.br
+.ti -1c
+.RI "virtual void \fBsh_emulate\fP (uint32 \fBinstr\fP, uint32 \fBpc\fP)"
+.br
+.ti -1c
+.RI "virtual void \fBswl_emulate\fP (uint32 \fBinstr\fP, uint32 \fBpc\fP)"
+.br
+.ti -1c
+.RI "virtual void \fBsw_emulate\fP (uint32 \fBinstr\fP, uint32 \fBpc\fP)"
+.br
+.ti -1c
+.RI "virtual void \fBswr_emulate\fP (uint32 \fBinstr\fP, uint32 \fBpc\fP)"
+.br
+.ti -1c
+.RI "virtual void \fBlwc1_emulate\fP (uint32 \fBinstr\fP, uint32 \fBpc\fP)"
+.br
+.ti -1c
+.RI "virtual void \fBlwc2_emulate\fP (uint32 \fBinstr\fP, uint32 \fBpc\fP)"
+.br
+.ti -1c
+.RI "virtual void \fBlwc3_emulate\fP (uint32 \fBinstr\fP, uint32 \fBpc\fP)"
+.br
+.ti -1c
+.RI "virtual void \fBswc1_emulate\fP (uint32 \fBinstr\fP, uint32 \fBpc\fP)"
+.br
+.ti -1c
+.RI "virtual void \fBswc2_emulate\fP (uint32 \fBinstr\fP, uint32 \fBpc\fP)"
+.br
+.ti -1c
+.RI "virtual void \fBswc3_emulate\fP (uint32 \fBinstr\fP, uint32 \fBpc\fP)"
+.br
+.ti -1c
+.RI "virtual void \fBsll_emulate\fP (uint32 \fBinstr\fP, uint32 \fBpc\fP)"
+.br
+.ti -1c
+.RI "virtual void \fBsrl_emulate\fP (uint32 \fBinstr\fP, uint32 \fBpc\fP)"
+.br
+.ti -1c
+.RI "virtual void \fBsra_emulate\fP (uint32 \fBinstr\fP, uint32 \fBpc\fP)"
+.br
+.ti -1c
+.RI "virtual void \fBsllv_emulate\fP (uint32 \fBinstr\fP, uint32 \fBpc\fP)"
+.br
+.ti -1c
+.RI "virtual void \fBsrlv_emulate\fP (uint32 \fBinstr\fP, uint32 \fBpc\fP)"
+.br
+.ti -1c
+.RI "virtual void \fBsrav_emulate\fP (uint32 \fBinstr\fP, uint32 \fBpc\fP)"
+.br
+.ti -1c
+.RI "virtual void \fBjr_emulate\fP (uint32 \fBinstr\fP, uint32 \fBpc\fP)"
+.br
+.ti -1c
+.RI "virtual void \fBjalr_emulate\fP (uint32 \fBinstr\fP, uint32 \fBpc\fP)"
+.br
+.ti -1c
+.RI "virtual void \fBsyscall_emulate\fP (uint32 \fBinstr\fP, uint32 \fBpc\fP)"
+.br
+.ti -1c
+.RI "virtual void \fBbreak_emulate\fP (uint32 \fBinstr\fP, uint32 \fBpc\fP)"
+.br
+.ti -1c
+.RI "virtual void \fBmfhi_emulate\fP (uint32 \fBinstr\fP, uint32 \fBpc\fP)"
+.br
+.ti -1c
+.RI "virtual void \fBmthi_emulate\fP (uint32 \fBinstr\fP, uint32 \fBpc\fP)"
+.br
+.ti -1c
+.RI "virtual void \fBmflo_emulate\fP (uint32 \fBinstr\fP, uint32 \fBpc\fP)"
+.br
+.ti -1c
+.RI "virtual void \fBmtlo_emulate\fP (uint32 \fBinstr\fP, uint32 \fBpc\fP)"
+.br
+.ti -1c
+.RI "virtual void \fBmult_emulate\fP (uint32 \fBinstr\fP, uint32 \fBpc\fP)"
+.br
+.ti -1c
+.RI "virtual void \fBmultu_emulate\fP (uint32 \fBinstr\fP, uint32 \fBpc\fP)"
+.br
+.ti -1c
+.RI "virtual void \fBdiv_emulate\fP (uint32 \fBinstr\fP, uint32 \fBpc\fP)"
+.br
+.ti -1c
+.RI "virtual void \fBdivu_emulate\fP (uint32 \fBinstr\fP, uint32 \fBpc\fP)"
+.br
+.ti -1c
+.RI "virtual void \fBadd_emulate\fP (uint32 \fBinstr\fP, uint32 \fBpc\fP)"
+.br
+.ti -1c
+.RI "virtual void \fBaddu_emulate\fP (uint32 \fBinstr\fP, uint32 \fBpc\fP)"
+.br
+.ti -1c
+.RI "virtual void \fBsub_emulate\fP (uint32 \fBinstr\fP, uint32 \fBpc\fP)"
+.br
+.ti -1c
+.RI "virtual void \fBsubu_emulate\fP (uint32 \fBinstr\fP, uint32 \fBpc\fP)"
+.br
+.ti -1c
+.RI "virtual void \fBand_emulate\fP (uint32 \fBinstr\fP, uint32 \fBpc\fP)"
+.br
+.ti -1c
+.RI "virtual void \fBor_emulate\fP (uint32 \fBinstr\fP, uint32 \fBpc\fP)"
+.br
+.ti -1c
+.RI "virtual void \fBxor_emulate\fP (uint32 \fBinstr\fP, uint32 \fBpc\fP)"
+.br
+.ti -1c
+.RI "virtual void \fBnor_emulate\fP (uint32 \fBinstr\fP, uint32 \fBpc\fP)"
+.br
+.ti -1c
+.RI "virtual void \fBslt_emulate\fP (uint32 \fBinstr\fP, uint32 \fBpc\fP)"
+.br
+.ti -1c
+.RI "virtual void \fBsltu_emulate\fP (uint32 \fBinstr\fP, uint32 \fBpc\fP)"
+.br
+.ti -1c
+.RI "virtual void \fBbltz_emulate\fP (uint32 \fBinstr\fP, uint32 \fBpc\fP)"
+.br
+.ti -1c
+.RI "virtual void \fBbgez_emulate\fP (uint32 \fBinstr\fP, uint32 \fBpc\fP)"
+.br
+.ti -1c
+.RI "virtual void \fBbltzal_emulate\fP (uint32 \fBinstr\fP, uint32 \fBpc\fP)"
+.br
+.ti -1c
+.RI "virtual void \fBbgezal_emulate\fP (uint32 \fBinstr\fP, uint32 \fBpc\fP)"
+.br
+.ti -1c
+.RI "virtual void \fBRI_emulate\fP (uint32 \fBinstr\fP, uint32 \fBpc\fP)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "bool \fBtracing\fP"
+.br
+.ti -1c
+.RI "\fBTrace\fP \fBcurrent_trace\fP"
+.br
+.ti -1c
+.RI "\fBTrace::Record\fP \fBcurrent_trace_record\fP"
+.br
+.ti -1c
+.RI "uint32 \fBpc\fP"
+.br
+.ti -1c
+.RI "uint32 \fBreg\fP [CPU_REG_NUMBER]"
+.br
+.ti -1c
+.RI "uint32 \fBinstr\fP"
+.br
+.ti -1c
+.RI "uint32 \fBhi\fP"
+.br
+.ti -1c
+.RI "uint32 \fBlo\fP"
+.br
+.ti -1c
+.RI "uint32 \fBlast_epc\fP"
+.br
+.ti -1c
+.RI "int \fBlast_prio\fP"
+.br
+.ti -1c
+.RI "uint32 \fBnext_epc\fP"
+.br
+.ti -1c
+.RI "\fBMapper\fP * \fBmem\fP"
+.br
+.ti -1c
+.RI "\fBCPZero\fP * \fBcpzero\fP"
+.br
+.ti -1c
+.RI "int \fBdelay_state\fP"
+.br
+.ti -1c
+.RI "uint32 \fBdelay_pc\fP"
+.br
+.ti -1c
+.RI "bool \fBopt_excmsg\fP"
+.br
+.ti -1c
+.RI "bool \fBopt_reportirq\fP"
+.br
+.ti -1c
+.RI "bool \fBopt_excpriomsg\fP"
+.br
+.ti -1c
+.RI "bool \fBopt_haltbreak\fP"
+.br
+.ti -1c
+.RI "bool \fBopt_haltibe\fP"
+.br
+.ti -1c
+.RI "bool \fBopt_haltjrra\fP"
+.br
+.ti -1c
+.RI "bool \fBopt_instdump\fP"
+.br
+.ti -1c
+.RI "bool \fBopt_tracing\fP"
+.br
+.ti -1c
+.RI "uint32 \fBopt_tracesize\fP"
+.br
+.ti -1c
+.RI "uint32 \fBopt_tracestartpc\fP"
+.br
+.ti -1c
+.RI "uint32 \fBopt_traceendpc\fP"
+.br
+.ti -1c
+.RI "bool \fBopt_bigendian\fP"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fBCPZero\fP"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "virtual CPU::~CPU ()\fC [inline, protected, virtual]\fP"
+.SS "CPU::CPU (\fBMapper\fP & m, \fBIntCtrl\fP & i)"
+.SH "Member Function Documentation"
+.PP 
+.SS "void CPU::add_emulate (uint32 instr, uint32 pc)\fC [protected, virtual]\fP"
+.SS "void CPU::addi_emulate (uint32 instr, uint32 pc)\fC [protected, virtual]\fP"
+.SS "void CPU::addiu_emulate (uint32 instr, uint32 pc)\fC [protected, virtual]\fP"
+.SS "void CPU::addu_emulate (uint32 instr, uint32 pc)\fC [protected, virtual]\fP"
+.SS "void CPU::and_emulate (uint32 instr, uint32 pc)\fC [protected, virtual]\fP"
+.SS "void CPU::andi_emulate (uint32 instr, uint32 pc)\fC [protected, virtual]\fP"
+.SS "void CPU::beq_emulate (uint32 instr, uint32 pc)\fC [protected, virtual]\fP"
+.SS "void CPU::bgez_emulate (uint32 instr, uint32 pc)\fC [protected, virtual]\fP"
+.SS "void CPU::bgezal_emulate (uint32 instr, uint32 pc)\fC [protected, virtual]\fP"
+.SS "void CPU::bgtz_emulate (uint32 instr, uint32 pc)\fC [protected, virtual]\fP"
+.SS "void CPU::blez_emulate (uint32 instr, uint32 pc)\fC [protected, virtual]\fP"
+.SS "void CPU::bltz_emulate (uint32 instr, uint32 pc)\fC [protected, virtual]\fP"
+.SS "void CPU::bltzal_emulate (uint32 instr, uint32 pc)\fC [protected, virtual]\fP"
+.SS "void CPU::bne_emulate (uint32 instr, uint32 pc)\fC [protected, virtual]\fP"
+.SS "void CPU::branch (uint32 instr, uint32 pc)\fC [protected]\fP"
+.SS "void CPU::break_emulate (uint32 instr, uint32 pc)\fC [protected, virtual]\fP"
+.SS "uint32 CPU::calc_jump_target (uint32 instr, uint32 pc)\fC [protected]\fP"
+.SS "void CPU::cop_unimpl (int coprocno, uint32 instr, uint32 pc)\fC [protected]\fP"
+.SS "void CPU::cpone_emulate (uint32 instr, uint32 pc)\fC [protected, virtual]\fP"
+.SS "void CPU::cpthree_emulate (uint32 instr, uint32 pc)\fC [protected, virtual]\fP"
+.SS "void CPU::cptwo_emulate (uint32 instr, uint32 pc)\fC [protected, virtual]\fP"
+.SS "void CPU::cpzero_dump_regs_and_tlb (FILE * f)\fC [virtual]\fP"
+.SS "void CPU::cpzero_emulate (uint32 instr, uint32 pc)\fC [protected, virtual]\fP"
+.SS "int CPU::debug_fetch_region (uint32 addr, uint32 len, char * packet, \fBDeviceExc\fP * client)"
+.SS "uint32 CPU::debug_get_pc (void)"
+.SS "void CPU::debug_packet_push_byte (char * packet, uint8 n)"
+.SS "void CPU::debug_packet_push_word (char * packet, uint32 n)"
+.SS "void CPU::debug_packet_to_registers (char * packet)"
+.SS "char * CPU::debug_registers_to_packet (void)"
+.SS "void CPU::debug_set_pc (uint32 newpc)"
+.SS "int CPU::debug_store_region (uint32 addr, uint32 len, char * packet, \fBDeviceExc\fP * client)"
+.SS "void CPU::div_emulate (uint32 instr, uint32 pc)\fC [protected, virtual]\fP"
+.SS "void CPU::divu_emulate (uint32 instr, uint32 pc)\fC [protected, virtual]\fP"
+.SS "void CPU::dump_regs (FILE * f)\fC [virtual]\fP"
+.SS "void CPU::dump_regs_and_stack (FILE * f)\fC [virtual]\fP"
+.SS "void CPU::exception (uint16 excCode, int mode = \fCANY\fP, int coprocno = \fC-1\fP)\fC [virtual]\fP"
+.PP
+Implements \fBDeviceExc\fP.
+.SS "int CPU::exception_priority (uint16 excCode, int mode)\fC [protected]\fP"
+.SS "uint16 CPU::funct (const uint32 instr) const"
+.SS "void CPU::funct_emulate (uint32 instr, uint32 pc)\fC [protected, virtual]\fP"
+.SS "uint16 CPU::immed (const uint32 instr) const"
+.SS "void CPU::j_emulate (uint32 instr, uint32 pc)\fC [protected, virtual]\fP"
+.SS "void CPU::jal_emulate (uint32 instr, uint32 pc)\fC [protected, virtual]\fP"
+.SS "void CPU::jalr_emulate (uint32 instr, uint32 pc)\fC [protected, virtual]\fP"
+.SS "void CPU::jr_emulate (uint32 instr, uint32 pc)\fC [protected, virtual]\fP"
+.SS "uint32 CPU::jumptarg (const uint32 instr) const"
+.SS "void CPU::lb_emulate (uint32 instr, uint32 pc)\fC [protected, virtual]\fP"
+.SS "void CPU::lbu_emulate (uint32 instr, uint32 pc)\fC [protected, virtual]\fP"
+.SS "void CPU::lh_emulate (uint32 instr, uint32 pc)\fC [protected, virtual]\fP"
+.SS "void CPU::lhu_emulate (uint32 instr, uint32 pc)\fC [protected, virtual]\fP"
+.SS "void CPU::lui_emulate (uint32 instr, uint32 pc)\fC [protected, virtual]\fP"
+.SS "void CPU::lw_emulate (uint32 instr, uint32 pc)\fC [protected, virtual]\fP"
+.SS "void CPU::lwc1_emulate (uint32 instr, uint32 pc)\fC [protected, virtual]\fP"
+.SS "void CPU::lwc2_emulate (uint32 instr, uint32 pc)\fC [protected, virtual]\fP"
+.SS "void CPU::lwc3_emulate (uint32 instr, uint32 pc)\fC [protected, virtual]\fP"
+.SS "uint32 CPU::lwl (uint32 regval, uint32 memval, uint8 offset)\fC [protected]\fP"
+.SS "void CPU::lwl_emulate (uint32 instr, uint32 pc)\fC [protected, virtual]\fP"
+.SS "uint32 CPU::lwr (uint32 regval, uint32 memval, uint8 offset)\fC [protected]\fP"
+.SS "void CPU::lwr_emulate (uint32 instr, uint32 pc)\fC [protected, virtual]\fP"
+.SS "void CPU::maybe_dump_trace ()"
+.SS "void CPU::mfhi_emulate (uint32 instr, uint32 pc)\fC [protected, virtual]\fP"
+.SS "void CPU::mflo_emulate (uint32 instr, uint32 pc)\fC [protected, virtual]\fP"
+.SS "void CPU::mthi_emulate (uint32 instr, uint32 pc)\fC [protected, virtual]\fP"
+.SS "void CPU::mtlo_emulate (uint32 instr, uint32 pc)\fC [protected, virtual]\fP"
+.SS "void CPU::mult64 (uint32 * hi, uint32 * lo, uint32 n, uint32 m)\fC [protected]\fP"
+.SS "void CPU::mult64s (uint32 * hi, uint32 * lo, int32 n, int32 m)\fC [protected]\fP"
+.SS "void CPU::mult_emulate (uint32 instr, uint32 pc)\fC [protected, virtual]\fP"
+.SS "void CPU::multu_emulate (uint32 instr, uint32 pc)\fC [protected, virtual]\fP"
+.SS "void CPU::nor_emulate (uint32 instr, uint32 pc)\fC [protected, virtual]\fP"
+.SS "uint16 CPU::opcode (const uint32 instr) const"
+.SS "void CPU::or_emulate (uint32 instr, uint32 pc)\fC [protected, virtual]\fP"
+.SS "void CPU::ori_emulate (uint32 instr, uint32 pc)\fC [protected, virtual]\fP"
+.SS "uint8 CPU::pending_exception (void)"
+.SS "uint16 CPU::rd (const uint32 instr) const"
+.SS "void CPU::regimm_emulate (uint32 instr, uint32 pc)\fC [protected, virtual]\fP"
+.SS "void CPU::reset (void)\fC [virtual]\fP"
+.SS "void CPU::RI_emulate (uint32 instr, uint32 pc)\fC [protected, virtual]\fP"
+.SS "uint16 CPU::rs (const uint32 instr) const"
+.SS "uint16 CPU::rt (const uint32 instr) const"
+.SS "short CPU::s_immed (const uint32 instr) const"
+.SS "void CPU::sb_emulate (uint32 instr, uint32 pc)\fC [protected, virtual]\fP"
+.SS "void CPU::sh_emulate (uint32 instr, uint32 pc)\fC [protected, virtual]\fP"
+.SS "uint16 CPU::shamt (const uint32 instr) const"
+.SS "void CPU::sll_emulate (uint32 instr, uint32 pc)\fC [protected, virtual]\fP"
+.SS "void CPU::sllv_emulate (uint32 instr, uint32 pc)\fC [protected, virtual]\fP"
+.SS "void CPU::slt_emulate (uint32 instr, uint32 pc)\fC [protected, virtual]\fP"
+.SS "void CPU::slti_emulate (uint32 instr, uint32 pc)\fC [protected, virtual]\fP"
+.SS "void CPU::sltiu_emulate (uint32 instr, uint32 pc)\fC [protected, virtual]\fP"
+.SS "void CPU::sltu_emulate (uint32 instr, uint32 pc)\fC [protected, virtual]\fP"
+.SS "int32 CPU::sra (int32 a, int32 b)\fC [static]\fP"
+.SS "void CPU::sra_emulate (uint32 instr, uint32 pc)\fC [protected, virtual]\fP"
+.SS "void CPU::srav_emulate (uint32 instr, uint32 pc)\fC [protected, virtual]\fP"
+.SS "int32 CPU::srl (int32 a, int32 b)\fC [static]\fP"
+.SS "void CPU::srl_emulate (uint32 instr, uint32 pc)\fC [protected, virtual]\fP"
+.SS "void CPU::srlv_emulate (uint32 instr, uint32 pc)\fC [protected, virtual]\fP"
+.SS "uint32 CPU::stacktop () const"
+.SS "void CPU::start_tracing ()\fC [protected]\fP"
+.SS "void CPU::step ()\fC [virtual]\fP"
+.SS "void CPU::stop_tracing ()\fC [protected]\fP"
+.SS "char *const CPU::strdelaystate (const int state)"
+.SS "char *const CPU::strexccode (const uint16 excCode)"
+.SS "char *const CPU::strmemmode (const int memmode)"
+.SS "void CPU::sub_emulate (uint32 instr, uint32 pc)\fC [protected, virtual]\fP"
+.SS "void CPU::subu_emulate (uint32 instr, uint32 pc)\fC [protected, virtual]\fP"
+.SS "void CPU::sw_emulate (uint32 instr, uint32 pc)\fC [protected, virtual]\fP"
+.SS "void CPU::swc1_emulate (uint32 instr, uint32 pc)\fC [protected, virtual]\fP"
+.SS "void CPU::swc2_emulate (uint32 instr, uint32 pc)\fC [protected, virtual]\fP"
+.SS "void CPU::swc3_emulate (uint32 instr, uint32 pc)\fC [protected, virtual]\fP"
+.SS "uint32 CPU::swl (uint32 regval, uint32 memval, uint8 offset)\fC [protected]\fP"
+.SS "void CPU::swl_emulate (uint32 instr, uint32 pc)\fC [protected, virtual]\fP"
+.SS "uint32 CPU::swr (uint32 regval, uint32 memval, uint8 offset)\fC [protected]\fP"
+.SS "void CPU::swr_emulate (uint32 instr, uint32 pc)\fC [protected, virtual]\fP"
+.SS "void CPU::syscall_emulate (uint32 instr, uint32 pc)\fC [protected, virtual]\fP"
+.SS "void CPU::write_trace_instr_inputs (uint32 instr)\fC [protected]\fP"
+.SS "void CPU::write_trace_instr_outputs (uint32 instr)\fC [protected]\fP"
+.SS "void CPU::write_trace_record_1 (uint32 pc, uint32 instr)\fC [protected]\fP"
+.SS "void CPU::write_trace_record_2 (uint32 pc, uint32 instr)\fC [protected]\fP"
+.SS "void CPU::write_trace_to_file ()\fC [protected]\fP"
+.SS "void CPU::xor_emulate (uint32 instr, uint32 pc)\fC [protected, virtual]\fP"
+.SS "void CPU::xori_emulate (uint32 instr, uint32 pc)\fC [protected, virtual]\fP"
+.SH "Friends And Related Function Documentation"
+.PP 
+.SS "friend class \fBCPZero\fP\fC [friend]\fP"
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBCPZero\fP* \fBCPU::cpzero\fP\fC [protected]\fP"
+.SS "\fBTrace\fP \fBCPU::current_trace\fP\fC [protected]\fP"
+.SS "\fBTrace::Record\fP \fBCPU::current_trace_record\fP\fC [protected]\fP"
+.SS "uint32 \fBCPU::delay_pc\fP\fC [protected]\fP"
+.SS "int \fBCPU::delay_state\fP\fC [protected]\fP"
+.SS "uint32 \fBCPU::hi\fP\fC [protected]\fP"
+.SS "uint32 \fBCPU::instr\fP\fC [protected]\fP"
+.SS "uint32 \fBCPU::last_epc\fP\fC [protected]\fP"
+.SS "int \fBCPU::last_prio\fP\fC [protected]\fP"
+.SS "uint32 \fBCPU::lo\fP\fC [protected]\fP"
+.SS "\fBMapper\fP* \fBCPU::mem\fP\fC [protected]\fP"
+.SS "uint32 \fBCPU::next_epc\fP\fC [protected]\fP"
+.SS "bool \fBCPU::opt_bigendian\fP\fC [protected]\fP"
+.SS "bool \fBCPU::opt_excmsg\fP\fC [protected]\fP"
+.SS "bool \fBCPU::opt_excpriomsg\fP\fC [protected]\fP"
+.SS "bool \fBCPU::opt_haltbreak\fP\fC [protected]\fP"
+.SS "bool \fBCPU::opt_haltibe\fP\fC [protected]\fP"
+.SS "bool \fBCPU::opt_haltjrra\fP\fC [protected]\fP"
+.SS "bool \fBCPU::opt_instdump\fP\fC [protected]\fP"
+.SS "bool \fBCPU::opt_reportirq\fP\fC [protected]\fP"
+.SS "uint32 \fBCPU::opt_traceendpc\fP\fC [protected]\fP"
+.SS "uint32 \fBCPU::opt_tracesize\fP\fC [protected]\fP"
+.SS "uint32 \fBCPU::opt_tracestartpc\fP\fC [protected]\fP"
+.SS "bool \fBCPU::opt_tracing\fP\fC [protected]\fP"
+.SS "uint32 \fBCPU::pc\fP\fC [protected]\fP"
+.SS "uint32 \fBCPU::reg\fP[CPU_REG_NUMBER]\fC [protected]\fP"
+.SS "bool \fBCPU::tracing\fP\fC [protected]\fP"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen from the source code.

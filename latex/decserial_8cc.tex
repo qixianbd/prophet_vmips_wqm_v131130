@@ -1,0 +1,51 @@
+\hypertarget{decserial_8cc}{
+\section{decserial.cc File Reference}
+\label{decserial_8cc}\index{decserial.cc@{decserial.cc}}
+}
+{\ttfamily \#include \char`\"{}cpu.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}deccsr.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}decserial.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}deviceint.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}devicemap.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}devreg.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}task.h\char`\"{}}\par
+{\ttfamily \#include $<$new$>$}\par
+{\ttfamily \#include $<$sys/types.h$>$}\par
+{\ttfamily \#include $<$termios.h$>$}\par
+{\ttfamily \#include \char`\"{}deviceexc.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}mapper.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}vmips.h\char`\"{}}\par
+Include dependency graph for decserial.cc:This graph shows which files directly or indirectly include this file:\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \hyperlink{decserial_8cc_a381d404e7c194bd38c5f7017d9db571a}{TCR\_\-LINE\_\-ENABLED} (uint32 Tcr, unsigned int Line)
+\item 
+static unsigned int \hyperlink{decserial_8cc_af90407d11c0e0a2c5cdba376a448e802}{CSR\_\-TLINE} (unsigned int Line)
+\item 
+static unsigned int \hyperlink{decserial_8cc_aae4336a23394dfced9147761dd6bb51b}{GET\_\-CURRENT\_\-CSR\_\-TLINE} (uint32 Csr)
+\item 
+static unsigned int \hyperlink{decserial_8cc_a078452080698754de2d3bd2463c16786}{RBUF\_\-RLINE} (unsigned int Line)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{decserial_8cc_af90407d11c0e0a2c5cdba376a448e802}{
+\index{decserial.cc@{decserial.cc}!CSR\_\-TLINE@{CSR\_\-TLINE}}
+\index{CSR\_\-TLINE@{CSR\_\-TLINE}!decserial.cc@{decserial.cc}}
+\subsubsection[{CSR\_\-TLINE}]{\setlength{\rightskip}{0pt plus 5cm}static unsigned int CSR\_\-TLINE (unsigned int {\em Line})\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{decserial_8cc_af90407d11c0e0a2c5cdba376a448e802}
+\hypertarget{decserial_8cc_aae4336a23394dfced9147761dd6bb51b}{
+\index{decserial.cc@{decserial.cc}!GET\_\-CURRENT\_\-CSR\_\-TLINE@{GET\_\-CURRENT\_\-CSR\_\-TLINE}}
+\index{GET\_\-CURRENT\_\-CSR\_\-TLINE@{GET\_\-CURRENT\_\-CSR\_\-TLINE}!decserial.cc@{decserial.cc}}
+\subsubsection[{GET\_\-CURRENT\_\-CSR\_\-TLINE}]{\setlength{\rightskip}{0pt plus 5cm}static unsigned int GET\_\-CURRENT\_\-CSR\_\-TLINE (uint32 {\em Csr})\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{decserial_8cc_aae4336a23394dfced9147761dd6bb51b}
+\hypertarget{decserial_8cc_a078452080698754de2d3bd2463c16786}{
+\index{decserial.cc@{decserial.cc}!RBUF\_\-RLINE@{RBUF\_\-RLINE}}
+\index{RBUF\_\-RLINE@{RBUF\_\-RLINE}!decserial.cc@{decserial.cc}}
+\subsubsection[{RBUF\_\-RLINE}]{\setlength{\rightskip}{0pt plus 5cm}static unsigned int RBUF\_\-RLINE (unsigned int {\em Line})\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{decserial_8cc_a078452080698754de2d3bd2463c16786}
+\hypertarget{decserial_8cc_a381d404e7c194bd38c5f7017d9db571a}{
+\index{decserial.cc@{decserial.cc}!TCR\_\-LINE\_\-ENABLED@{TCR\_\-LINE\_\-ENABLED}}
+\index{TCR\_\-LINE\_\-ENABLED@{TCR\_\-LINE\_\-ENABLED}!decserial.cc@{decserial.cc}}
+\subsubsection[{TCR\_\-LINE\_\-ENABLED}]{\setlength{\rightskip}{0pt plus 5cm}static bool TCR\_\-LINE\_\-ENABLED (uint32 {\em Tcr}, \/  unsigned int {\em Line})\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{decserial_8cc_a381d404e7c194bd38c5f7017d9db571a}

@@ -1,0 +1,9 @@
+<map id="G" name="G">
+<area shape="rect" href="$structTerminalController_1_1LineState.html" title="TerminalController::LineState" alt="" coords="281,261,468,291"/>
+<area shape="rect" href="$classCancelableTask.html" title="CancelableTask" alt="" coords="192,85,304,115"/>
+<area shape="rect" href="$classTerminalController_1_1KeyboardPoll.html" title="TerminalController::KeyboardPoll" alt="" coords="5,453,213,483"/>
+<area shape="rect" href="$classTerminalController_1_1KeyboardRepoll.html" title="TerminalController::KeyboardRepoll" alt="" coords="265,453,489,483"/>
+<area shape="rect" href="$classTask.html" title="Task" alt="" coords="224,5,272,35"/>
+<area shape="rect" href="$classTerminalController.html" title="TerminalController" alt="" coords="149,357,275,387"/>
+<area shape="rect" href="$classClock.html" title="Clock" alt="" coords="204,261,257,291"/>
+</map>

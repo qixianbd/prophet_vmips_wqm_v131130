@@ -1,0 +1,92 @@
+.TH "DECCSRDevice" 3 "18 Dec 2013" "Doxygen" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+DECCSRDevice \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <deccsr.h>\fP
+.PP
+Inherits \fBDeviceMap\fP, and \fBDeviceInt\fP.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBassertInt\fP (uint8 line)"
+.br
+.ti -1c
+.RI "void \fBdeassertInt\fP (uint8 line)"
+.br
+.ti -1c
+.RI "\fBDECCSRDevice\fP (uint32 irq_)"
+.br
+.ti -1c
+.RI "uint32 \fBfetch_word\fP (uint32 offset, int mode, \fBDeviceExc\fP *client)"
+.br
+.ti -1c
+.RI "void \fBstore_word\fP (uint32 offset, uint32 data, \fBDeviceExc\fP *client)"
+.br
+.ti -1c
+.RI "const char * \fBdescriptor_str\fP () const "
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "uint32 \fBupdate_status_reg\fP ()"
+.br
+.ti -1c
+.RI "void \fBupdate_control_reg\fP (uint32 data)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "uint32 \fBrobits\fP"
+.br
+.ti -1c
+.RI "uint32 \fBrwbits\fP"
+.br
+.ti -1c
+.RI "uint8 \fBioint\fP"
+.br
+.ti -1c
+.RI "uint32 \fBleds\fP"
+.br
+.ti -1c
+.RI "uint32 \fBirq\fP"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "DECCSRDevice::DECCSRDevice (uint32 irq_)\fC [inline]\fP"
+.SH "Member Function Documentation"
+.PP 
+.SS "void DECCSRDevice::assertInt (uint8 line)"
+.SS "void DECCSRDevice::deassertInt (uint8 line)"
+.SS "const char* DECCSRDevice::descriptor_str (void) const\fC [inline, virtual]\fP"
+.PP
+Implements \fBDeviceInt\fP.
+.SS "uint32 DECCSRDevice::fetch_word (uint32 offset, int mode, \fBDeviceExc\fP * client)\fC [virtual]\fP"
+.PP
+Implements \fBDeviceMap\fP.
+.SS "void DECCSRDevice::store_word (uint32 offset, uint32 data, \fBDeviceExc\fP * client)\fC [virtual]\fP"
+.PP
+Implements \fBDeviceMap\fP.
+.SS "void DECCSRDevice::update_control_reg (uint32 data)\fC [private]\fP"
+.SS "uint32 DECCSRDevice::update_status_reg (void)\fC [private]\fP"
+.SH "Member Data Documentation"
+.PP 
+.SS "uint8 \fBDECCSRDevice::ioint\fP\fC [private]\fP"
+.SS "uint32 \fBDECCSRDevice::irq\fP\fC [private]\fP"
+.SS "uint32 \fBDECCSRDevice::leds\fP\fC [private]\fP"
+.SS "uint32 \fBDECCSRDevice::robits\fP\fC [private]\fP"
+.SS "uint32 \fBDECCSRDevice::rwbits\fP\fC [private]\fP"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen from the source code.

@@ -1,0 +1,188 @@
+.TH "prophetstatistic.h" 3 "18 Dec 2013" "Doxygen" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+prophetstatistic.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'prophetxmlelement.h'\fP
+.br
+\fC#include <list>\fP
+.br
+\fC#include <map>\fP
+.br
+\fC#include 'types.h'\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBProphetStat::StatTime\fP"
+.br
+.ti -1c
+.RI "struct \fBProphetStat::StatCpu\fP"
+.br
+.ti -1c
+.RI "class \fBProphetStat::StatRecord\fP"
+.br
+.RI "\fIa class to store the statistical variables \fP"
+.ti -1c
+.RI "class \fBProphetStat::RecAdder\fP"
+.br
+.RI "\fIclass \fBRecAdder\fP wil be inherited by the classes needing statistic to add a \fBStatRecord\fP instance \fP"
+.ti -1c
+.RI "struct \fBProphetStat::StatItem\fP"
+.br
+.RI "\fIinstruction hash list item, its content is loaded from setting file \fP"
+.ti -1c
+.RI "struct \fBSpawnClientData\fP"
+.br
+.RI "\fIuser defined data passed to its associated actions \fP"
+.ti -1c
+.RI "struct \fBSquashClientData\fP"
+.br
+.ti -1c
+.RI "struct \fBCpzeroClientData\fP"
+.br
+.ti -1c
+.RI "struct \fBCponeClientData\fP"
+.br
+.in -1c
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBProphetStat\fP"
+.br
+.in -1c
+.SS "Defines"
+
+.in +1c
+.ti -1c
+.RI "#define \fBSTAT_PATH\fP   '/home/qmwx/workspace/prophet_vmips_final_keyming_131130/inst_cost.ini'"
+.br
+.ti -1c
+.RI "#define \fBPROPHET_STAT_CLASS\fP(name)   class name : public \fBProphetStat::RecAdder\fP"
+.br
+.RI "\fImacros for declareing the class needing statistic \fP"
+.ti -1c
+.RI "#define \fBWITH_PUBLIC_ROOT\fP(name)   , public name"
+.br
+.ti -1c
+.RI "#define \fBWITH_PRIVATE_ROOT\fP(name)   , private name"
+.br
+.ti -1c
+.RI "#define \fBWITH_PROTECTED_ROOT\fP(name)   , protected name"
+.br
+.ti -1c
+.RI "#define \fBDO_STATISTIC\fP(instname, condition, userdata...)"
+.br
+.RI "\fIthis macros can only be used in a member function inherited from PROPHET_STAT_CLASS \fP"
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef void(* \fBProphetStat::STAT_ACTION\fP )(StatRecord *, \fBStatCondition\fP, int, void *)"
+.br
+.RI "\fIstatistic action for a specific instruction \fP"
+.ti -1c
+.RI "typedef struct \fBProphetStat::StatItem\fP \fBProphetStat::StatItem\fP"
+.br
+.RI "\fIinstruction hash list item, its content is loaded from setting file \fP"
+.ti -1c
+.RI "typedef std::map< std::string, StatItem > \fBProphetStat::StatMap\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBSpawnClientData\fP \fBSpawnClientData\fP"
+.br
+.RI "\fIuser defined data passed to its associated actions \fP"
+.ti -1c
+.RI "typedef struct \fBSquashClientData\fP \fBSquashClientData\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBCpzeroClientData\fP \fBCpzeroClientData\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBCponeClientData\fP \fBCponeClientData\fP"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBStatCondition\fP { \fBFAILED\fP =  0, \fBSUCCESS\fP =  1 }"
+.br
+.RI "\fIenumerate all the instruction condition for statistic \fP"
+.ti -1c
+.RI "enum \fBProphetStat::StatState\fP { \fBProphetStat::IDLE\fP =  0, \fBProphetStat::PSLICE\fP, \fBProphetStat::SPEXE\fP, \fBProphetStat::NOSPEXE\fP, \fBProphetStat::WAIT\fP }"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBProphetStat::InitStat\fP (const char *prgname)"
+.br
+.RI "\fIinitialize the \fBStatistic\fP module \fP"
+.ti -1c
+.RI "void \fBProphetStat::ReportStat\fP ()"
+.br
+.in -1c
+.SH "Define Documentation"
+.PP 
+.SS "#define DO_STATISTIC(instname, condition, userdata...)"\fBValue:\fP
+.PP
+.nf
+if(ProphetStat::gStatInited) \
+        { \
+                ProphetStat::StatItem item = ProphetStat::gStatMap[instname]; \
+                ProphetStat::STAT_ACTION action = item.m_Action; \
+                action(RecAdder::m_Record, condition, item.m_Cost, ##userdata); \
+                /*std::cerr<< 'in DO_STATSTICS' << std::endl;*/ \
+        }NULL
+.fi
+.PP
+this macros can only be used in a member function inherited from PROPHET_STAT_CLASS \fBParameters:\fP
+.RS 4
+\fIinstname\fP the name of the instruction 
+.br
+\fIcondition\fP the condition state of the execution of the instruction 
+.br
+\fIuserdata\fP the data needed to pass to the registered action function for \fBinstname\fP 
+.RE
+.PP
+
+.SS "#define PROPHET_STAT_CLASS(name)   class name : public \fBProphetStat::RecAdder\fP"
+.PP
+macros for declareing the class needing statistic 
+.SS "#define STAT_PATH   '/home/qmwx/workspace/prophet_vmips_final_keyming_131130/inst_cost.ini'"
+.SS "#define WITH_PRIVATE_ROOT(name)   , private name"
+.SS "#define WITH_PROTECTED_ROOT(name)   , protected name"
+.SS "#define WITH_PUBLIC_ROOT(name)   , public name"
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef struct \fBCponeClientData\fP \fBCponeClientData\fP"
+.SS "typedef struct \fBCpzeroClientData\fP \fBCpzeroClientData\fP"
+.SS "typedef struct \fBSpawnClientData\fP \fBSpawnClientData\fP"
+.PP
+user defined data passed to its associated actions 
+.SS "typedef struct \fBSquashClientData\fP \fBSquashClientData\fP"
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBStatCondition\fP"
+.PP
+enumerate all the instruction condition for statistic 
+.PP
+\fBEnumerator: \fP
+.in +1c
+.TP
+\fB\fIFAILED \fP\fP
+.TP
+\fB\fISUCCESS \fP\fP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen from the source code.

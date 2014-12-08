@@ -1,0 +1,62 @@
+.TH "DECStatDevice" 3 "18 Dec 2013" "Doxygen" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+DECStatDevice \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <decstat.h>\fP
+.PP
+Inherits \fBDeviceMap\fP.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDECStatDevice\fP ()  throw ()"
+.br
+.ti -1c
+.RI "uint32 \fBfetch_word\fP (uint32 offset, int mode, \fBDeviceExc\fP *client)"
+.br
+.ti -1c
+.RI "void \fBstore_word\fP (uint32 offset, uint32 data, \fBDeviceExc\fP *client)"
+.br
+.ti -1c
+.RI "const char * \fBdescriptor_str\fP () const "
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "uint32 \fBchksyn_reg\fP"
+.br
+.ti -1c
+.RI "uint32 \fBerradr_reg\fP"
+.br
+.ti -1c
+.RI "bool \fBinterrupt\fP"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "DECStatDevice::DECStatDevice ()  throw ()"
+.SH "Member Function Documentation"
+.PP 
+.SS "const char* DECStatDevice::descriptor_str (void) const\fC [inline]\fP"
+.SS "uint32 DECStatDevice::fetch_word (uint32 offset, int mode, \fBDeviceExc\fP * client)\fC [virtual]\fP"
+.PP
+Implements \fBDeviceMap\fP.
+.SS "void DECStatDevice::store_word (uint32 offset, uint32 data, \fBDeviceExc\fP * client)\fC [virtual]\fP"
+.PP
+Implements \fBDeviceMap\fP.
+.SH "Member Data Documentation"
+.PP 
+.SS "uint32 \fBDECStatDevice::chksyn_reg\fP\fC [private]\fP"
+.SS "uint32 \fBDECStatDevice::erradr_reg\fP\fC [private]\fP"
+.SS "bool \fBDECStatDevice::interrupt\fP\fC [private]\fP"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen from the source code.

@@ -1,0 +1,78 @@
+.TH "cpu.h" 3 "18 Dec 2013" "Doxygen" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+cpu.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'deviceexc.h'\fP
+.br
+\fC#include <cstdio>\fP
+.br
+\fC#include <deque>\fP
+.br
+\fC#include <map>\fP
+.br
+\fC#include <vector>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBexcPriority\fP"
+.br
+.ti -1c
+.RI "struct \fBlast_change\fP"
+.br
+.ti -1c
+.RI "class \fBTrace\fP"
+.br
+.ti -1c
+.RI "struct \fBTrace::Operand\fP"
+.br
+.ti -1c
+.RI "struct \fBTrace::Record\fP"
+.br
+.ti -1c
+.RI "class \fBCPU\fP"
+.br
+.in -1c
+.SS "Defines"
+
+.in +1c
+.ti -1c
+.RI "#define \fBCPU_REG_NUMBER\fP   32"
+.br
+.ti -1c
+.RI "#define \fBSP_REG\fP   29"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum { \fBNORMAL\fP, \fBDELAYING\fP, \fBDELAYSLOT\fP }"
+.br
+.in -1c
+.SH "Define Documentation"
+.PP 
+.SS "#define CPU_REG_NUMBER   32"
+.SS "#define SP_REG   29"
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "anonymous enum"
+.PP
+\fBEnumerator: \fP
+.in +1c
+.TP
+\fB\fINORMAL \fP\fP
+.TP
+\fB\fIDELAYING \fP\fP
+.TP
+\fB\fIDELAYSLOT \fP\fP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen from the source code.
